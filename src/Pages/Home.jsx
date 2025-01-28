@@ -1,4 +1,4 @@
-import ServicesSlider from '../components/ServicesSlider';
+import ServicesSlider from "../components/ServicesSlider";
 
 import React, { useState, useEffect } from "react";
 import {
@@ -495,10 +495,11 @@ const Home = () => {
               className="h-full w-full object-contain object-right"
             />
             {/* Floating Card */}
-            <div className="absolute top-1/4 left-0 bg-gray-800/80 backdrop-blur-sm p-3 rounded-lg text-white shadow-lg">
+            <div className="absolute top-1/4 left-0 bg-white/3 backdrop-blur-md p-3 rounded-lg text-white shadow-lg border border-cyan-400 shadow-cyan-400/20">
               <p className="text-base">Driving Success</p>
               <p className="text-sm text-gray-300">Through Innovation</p>
             </div>
+
             {/* Phone Glow Effect */}
             <div className="absolute top-[40%] right-[30%] w-16 h-24 bg-white/10 blur-md rounded-full"></div>
             <div className="absolute top-[40%] right-[30%] w-1 h-24 bg-white/30 rounded-full"></div>
