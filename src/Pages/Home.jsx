@@ -445,20 +445,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black text-white relative">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src="h1-bg-main-1.webp"
-          alt="Background"
-          className="w-full h-full object-cover"
-        />
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/90 to-gray-800/90" />
-        {/* Green Tint Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-emerald-900/10 to-transparent" />
-      </div>
-
+    <div className="min-h-screen bg-gray-900/90 backdrop-blur-md text-white relative">
       {/* Navigation */}
       <nav className="relative z-10 flex justify-between items-center p-3">
         <div className="flex items-center">
@@ -478,8 +465,20 @@ const Home = () => {
 
       {/* Main Content */}
       <main className="relative z-10 container mx-auto px-4 pt-16 pb-6 flex flex-col lg:flex-row items-center">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="h1-bg-main-1.webp"
+            alt="Background"
+            className="w-full h-full object-cover"
+          />
+          {/* Dark Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900/90 to-gray-800/90" />
+          {/* Green Tint Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-emerald-900/10 to-transparent" />
+        </div>
         {/* Left Content */}
-        <div className="lg:w-1/2">
+        <div className="lg:w-1/2 z-11">
           <h1 className="text-4xl lg:text-5xl font-bold mb-4 text-white">
             Transforming
             <br />

@@ -2,25 +2,22 @@ import React, { useState, useEffect } from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isAtTop, setIsAtTop] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolledNow = window.scrollY > window.innerHeight - 100;
-      if (isScrolledNow !== isScrolled) {
-        setIsScrolled(isScrolledNow);
-      }
+      setIsAtTop(window.scrollY < 50);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [isScrolled]);
+  }, []);
 
   return (
     <nav
-      className={`transition-all duration-300 ${
-        isScrolled ? "fixed top-0" : "absolute bottom-0"
-      } left-0 right-0 z-50`}
+      className={`transition-transform duration-300 fixed left-0 right-0 z-50 ${
+        isAtTop ? "bottom-0" : "top-0"
+      }`}
     >
       <div className="max-w-3xl mx-auto px-4">
         <div className="flex justify-center items-center h-12">
@@ -34,36 +31,25 @@ const Navbar = () => {
               <div className="absolute top-0 right-0 w-0.5 h-full animate-[gradientMoveVertical_2s_linear_infinite] bg-gradient-to-b from-cyan-800 via-cyan-400 to-cyan-800"></div>
             </div>
 
-            {/* Navigation Links with reduced spacing */}
+            {/* Navigation Links */}
             <div className="flex items-center space-x-6">
-              <div className="relative">
-                <button className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm">
-                  Home
-                </button>
-              </div>
-
-              <div className="relative">
-                <button className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm">
-                  Services
-                </button>
-              </div>
-
+              <button className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm">
+                Home
+              </button>
+              <button className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm">
+                Services
+              </button>
               <button className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm">
                 About
               </button>
-
-              <div className="relative">
-                <button className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm">
-                  Pages
-                </button>
-              </div>
-
+              <button className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm">
+                Pages
+              </button>
               <button className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm">
                 Contact
               </button>
             </div>
           </div>
-
           {/* Mobile menu button */}
           <div className="md:hidden bg-black bg-opacity-50 p-1.5 rounded-lg">
             <button
@@ -127,25 +113,6 @@ const Navbar = () => {
           </div>
         )}
       </div>
-
-      <style jsx>{`
-        @keyframes gradientMove {
-          0% {
-            transform: translateX(-100%);
-          }
-          100% {
-            transform: translateX(100%);
-          }
-        }
-        @keyframes gradientMoveVertical {
-          0% {
-            transform: translateY(-100%);
-          }
-          100% {
-            transform: translateY(100%);
-          }
-        }
-      `}</style>
     </nav>
   );
 };
