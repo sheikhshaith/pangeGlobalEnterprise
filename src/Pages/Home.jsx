@@ -295,7 +295,7 @@ const EarthSection = () => {
             <img
               src="o1-earth-3.webp"
               alt="Digital Earth"
-              className="w-4/5 h-4/5 object-contain"
+              className="w-4/5 h-4/5 object-contain animate-spin-once"
             />
           </div>
 
@@ -446,23 +446,6 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-gray-900/90 backdrop-blur-md text-white relative">
-      {/* Navigation */}
-      <nav className="relative z-10 flex justify-between items-center p-3">
-        <div className="flex items-center">
-          <div className="text-cyan-400 text-2xl font-bold flex items-center">
-            <span className="text-3xl mr-1">P</span>ixify
-          </div>
-        </div>
-        <div className="flex items-center gap-2">
-          <button className="p-1 rounded-full hover:bg-gray-700">
-            <Search className="w-5 h-5 text-white" />
-          </button>
-          <button className="p-1 rounded-full hover:bg-gray-700">
-            <Menu className="w-5 h-5 text-white" />
-          </button>
-        </div>
-      </nav>
-
       {/* Main Content */}
       <main className="relative z-10 container mx-auto px-4 pt-16 pb-6 flex flex-col lg:flex-row items-center">
         {/* Background Image */}
@@ -477,8 +460,14 @@ const Home = () => {
           {/* Green Tint Overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-transparent via-emerald-900/10 to-transparent" />
         </div>
+
+        {/* Text on Top-Left Corner */}
+        <div className="absolute top-4 left-4 text-4xl lg:text-5xl font-bold z-10 bg-transparent">
+          <span className=" text-5xl mr-1">P</span>ixify
+        </div>
+
         {/* Left Content */}
-        <div className="lg:w-1/2 z-11">
+        <div className="lg:w-1/2 z-0">
           <h1 className="text-4xl lg:text-5xl font-bold mb-4 text-white">
             Transforming
             <br />
@@ -512,6 +501,13 @@ const Home = () => {
             <div className="absolute top-[40%] right-[30%] w-16 h-24 bg-white/10 blur-md rounded-full"></div>
             <div className="absolute top-[40%] right-[30%] w-1 h-24 bg-white/30 rounded-full"></div>
           </div>
+          {/* Social Links */}
+          <div className="fixed right-8 top-1/2 -translate-y-1/2 flex flex-col gap-6">
+            <SocialLink Icon={Twitter} />
+            <SocialLink Icon={Facebook} />
+            <SocialLink Icon={Linkedin} />
+            <SocialLink Icon={Instagram} />
+          </div>
         </div>
       </main>
 
@@ -522,14 +518,6 @@ const Home = () => {
 
       {/* Services Section */}
       <EarthSection />
-
-      {/* Social Links */}
-      <div className="fixed right-8 top-1/2 -translate-y-1/2 flex flex-col gap-6">
-        <SocialLink Icon={Twitter} />
-        <SocialLink Icon={Facebook} />
-        <SocialLink Icon={Linkedin} />
-        <SocialLink Icon={Instagram} />
-      </div>
     </div>
   );
 };
