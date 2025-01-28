@@ -1,3 +1,5 @@
+import ServicesSlider from '../components/ServicesSlider';
+
 import React, { useState, useEffect } from "react";
 import {
   Search,
@@ -518,6 +520,8 @@ const Home = () => {
 
       {/* Services Section */}
       <EarthSection />
+
+      <ServicesSlider />
     </div>
   );
 };
