@@ -752,7 +752,9 @@ const Home = () => {
 
         {/* Text on Top-Left Corner */}
         <div className="absolute top-4 left-4 text-4xl lg:text-5xl font-bold z-10 bg-transparent">
-          <span className=" text-5xl mr-1">P</span>ixify
+          <span className="text-5xl text-cyan-400 mr-1 transform rotate-[90deg]">
+            PGE
+          </span>
         </div>
 
         {/* Left Content */}
