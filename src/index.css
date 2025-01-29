@@ -404,3 +404,71 @@ button:focus {
 .bg-gradient-to-t {
   background-image: linear-gradient(to top, #0b0d10, transparent);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* index.css */
+
+/* Define custom keyframe for animation */
+/* index.css */
+
+/* Custom Keyframe for smooth movement */
+/* index.css */
+
+/* Custom Keyframe for smooth movement */
+/* index.css */
+
+/* Custom Keyframe for smooth movement */
+/* index.css */
+
+/* index.css */
+
+/* Smooth keyframe animation for continuous movement */
+/* index.css */
+
+/* Smooth keyframe animation for continuous movement */
+@keyframes moveAlongSteps {
+  0% {
+    transform: translate(-50%, -50%) translateX(0) translateY(0);
+  }
+  25% {
+    transform: translate(-50%, -50%) translateX(50px) translateY(50px);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateX(100px) translateY(100px);
+  }
+  75% {
+    transform: translate(-50%, -50%) translateX(150px) translateY(150px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateX(200px) translateY(200px);
+  }
+}
+
+/* Animation that moves the image */
+.animate-moveAlongSteps {
+  animation: moveAlongSteps 4s linear infinite;  /* Smooth infinite animation */
+  animation-play-state: running; /* Ensures animation runs when not hovered */
+}
+
+/* Pause the animation without resetting on hover */
+.paused {
+  animation-play-state: paused;  /* Pauses the animation */
+  animation-timing-function: ease;  /* Smooth transition while pausing */
+}
+
+/* Optional: A smooth transition for the hover effect */
+.transition-transform {
+  transition: transform 0.5s ease-in-out;  /* Smooth transition for transform */
+}
+

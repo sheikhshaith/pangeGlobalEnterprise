@@ -24,6 +24,7 @@ import {
   Zap,
   Circle,
 } from "lucide-react";
+import ExpertButton from "../components/ExpertButton";
 
 // Logo Section Component
 const LogoSection = () => {
@@ -715,8 +716,9 @@ const Home = () => {
       </div>
       <Global />
       <FAQSection />
+      <ExpertButton/>
       <TestimonialSlider />
-      <ContactForm />
+      <ContactForm />      
 
       {/* Social Links */}
       <div className="fixed right-8 top-1/2 -translate-y-1/2 flex flex-col gap-6">
