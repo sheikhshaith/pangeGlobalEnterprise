@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 // import "./App.css"; // Ensure you add the styles here
 import { ChevronDown, ChevronUp } from "lucide-react";
 import ServicesSlider from "../components/ServicesSlider";
+import FeaturesSection from '../components/FeaturesSection';
+import FAQSection from '../components/FAQSection';
 import {
   Search,
   Menu,
@@ -440,90 +442,6 @@ const StatsSection = () => {
   );
 };
 
-const BrowserServices = () => {
-  return (
-    <section className="bg-dark text-white py-16 relative">
-      <div className="container mx-auto text-center px-4">
-        <p className="text-teal-400 text-sm uppercase mb-4">Our Unique Way</p>
-        <h2 className="text-3xl md:text-4xl font-extrabold mb-8 leading-relaxed text-white">
-          Accelerating Future Growth With <br></br>Technology, Innovation, And
-          Expertise.
-        </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          <div className="text-center transition-transform hover:scale-105">
-            <div className="text-teal-400 text-4xl mb-4">👥</div>
-            <h3 className="text-xl font-bold text-white mb-2">
-              Customer Focus
-            </h3>
-            <p className="text-gray-300">
-              Our customer focus delivers personalized service, ensuring
-              satisfaction and fostering long-term relationships.
-            </p>
-          </div>
-          <div className="text-center transition-transform hover:scale-105">
-            <div className="text-teal-400 text-4xl mb-4">📈</div>
-            <h3 className="text-xl font-bold text-white mb-2">
-              Market Analysis
-            </h3>
-            <p className="text-gray-300">
-              Market analysis identifies opportunities, informs strategy, and
-              drives business growth and success.
-            </p>
-          </div>
-          <div className="text-center transition-transform hover:scale-105">
-            <div className="text-teal-400 text-4xl mb-4">📊</div>
-            <h3 className="text-xl font-bold text-white mb-2">
-              Data Analytics
-            </h3>
-            <p className="text-gray-300">
-              Data analytics drives informed decisions, optimizing performance
-              and achieving measurable business success.
-            </p>
-          </div>
-          <div className="text-center transition-transform hover:scale-105">
-            <div className="text-teal-400 text-4xl mb-4">🧑‍🤝‍🧑</div>
-            <h3 className="text-xl font-bold text-white mb-2">
-              Agile Management
-            </h3>
-            <p className="text-gray-300">
-              Agile management enhances flexibility, accelerates project
-              delivery, and improves overall team efficiency.
-            </p>
-          </div>
-          <div className="text-center transition-transform hover:scale-105">
-            <div className="text-teal-400 text-4xl mb-4">🌍</div>
-            <h3 className="text-xl font-bold text-white mb-2">
-              Sustainable Practice
-            </h3>
-            <p className="text-gray-300">
-              Our commitment to sustainable practices ensures environmental
-              responsibility and business resilience.
-            </p>
-          </div>
-          <div className="text-center transition-transform hover:scale-105">
-            <div className="text-teal-400 text-4xl mb-4">📊</div>
-            <h3 className="text-xl font-bold text-white mb-2">
-              Data Analytics
-            </h3>
-            <p className="text-gray-300">
-              Data analytics drives informed decisions, optimizing performance
-              and achieving measurable business success.
-            </p>
-          </div>
-        </div>
-
-        <div className="mt-10">
-          <button className="bg-teal-400 text-dark font-medium py-3 px-8 rounded-full shadow-lg hover:bg-teal-300 focus:ring-4 focus:ring-teal-200">
-            Browse All Services
-          </button>
-        </div>
-      </div>
-      <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-dark to-transparent"></div>
-    </section>
-  );
-};
-
 const Global = () => {
   return (
     <section className="relative min-h-screen bg-black overflow-hidden">
@@ -599,90 +517,6 @@ const Global = () => {
   );
 };
 
-const FAQSection = () => {
-  const faqs = [
-    {
-      question: "What Is Corporate Business?",
-      answer:
-        "Corporate business refers to an entity that operates legally and is separate from its owners, ensuring limited liability and structured governance.",
-    },
-    {
-      question: "How Do Corporate Businesses Differ From Small Businesses?",
-      answer:
-        "Corporate business refers to large-scale operations involving multiple stakeholders and structured governance for achieving specific business goals.",
-    },
-    {
-      question: "What Are The Key Benefits Of Forming A Corporate Entity?",
-      answer:
-        "Key benefits include limited liability, ease of raising capital, perpetual existence, and structured management.",
-    },
-    {
-      question: "How Can Corporate Businesses Ensure Sustainability?",
-      answer:
-        "Corporate businesses ensure sustainability by adopting ethical practices, focusing on long-term goals, and integrating corporate social responsibility initiatives.",
-    },
-    {
-      question: "What Challenges Do Corporate Businesses Commonly Face?",
-      answer:
-        "Common challenges include regulatory compliance, market competition, financial management, and adapting to technological advancements.",
-    },
-  ];
-
-  const [openIndex, setOpenIndex] = useState(null);
-  const [animateBorder, setAnimateBorder] = useState(null);
-
-  const handleToggle = (index) => {
-    if (openIndex === index) {
-      setOpenIndex(null);
-    } else {
-      setOpenIndex(index);
-      setAnimateBorder(index);
-      setTimeout(() => setAnimateBorder(null), 200); // Remove border after 0.2s
-    }
-  };
-
-  return (
-    <section className="bg-black text-white min-h-screen flex flex-col items-center p-10">
-      <span className="bg-gray-800 text-gray-300 px-4 py-1 rounded-full text-sm mb-4 hover:bg-gray-700 transition">
-        Frequently Asked Questions
-      </span>
-      <h2 className="text-gray-300 text-3xl font-bold text-center mb-6 hover:text-gray-30 transition">
-        Your Questions Answered: Pixify’s Corporate Business Solutions.
-      </h2>
-      <div className="w-full max-w-2xl">
-        {faqs.map((faq, index) => (
-          <div
-            key={index}
-            className={`border-b border-gray-700 relative transition-all duration-200 ${
-              animateBorder === index ? "border-green-500" : ""
-            }`}
-          >
-            <button
-              className="w-full flex justify-between items-center p-4 text-lg font-medium text-left hover:bg-gray-800 transition duration-300"
-              onClick={() => handleToggle(index)}
-            >
-              {faq.question}
-              {openIndex === index ? (
-                <ChevronUp className="text-gray-400" />
-              ) : (
-                <ChevronDown className="text-gray-400" />
-              )}
-            </button>
-            <div
-              className={`overflow-hidden transition-all duration-300 ${
-                openIndex === index
-                  ? "max-h-40 opacity-100 p-4"
-                  : "max-h-0 opacity-0"
-              }`}
-            >
-              <p className="text-gray-300">{faq.answer}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-};
 
 // Social Link Component
 const SocialLink = ({ Icon }) => (
@@ -869,7 +703,10 @@ const Home = () => {
       <EarthSection />
       <StatsSection />
       <ServicesSlider />
-      <BrowserServices />
+      <div className="min-h-screen bg-black text-white relative">
+       <ServicesSection />
+       <FeaturesSection />
+      </div>
       <Global />
       <FAQSection />
 
