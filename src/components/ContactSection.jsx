@@ -2,9 +2,9 @@ import React from 'react';
 
 const ContactSection = () => {
   return (
-    <div className="bg-gradient-to-r from-teal-950 to-teal-900 min-h-screen p-8 relative overflow-hidden">
+    <div className="bg-gradient-to-r from-teal-800 to-teal-900  relative overflow-hidden">
       {/* Main Content Container */}
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-6xl mx-auto py-8 relative z-10">
         {/* Top Label */}
         <div className="inline-block px-4 py-2 border border-teal-400 text-teal-400 rounded-full mb-6">
           Let's Build Together
@@ -44,12 +44,14 @@ const ContactSection = () => {
       </div>
 
       {/* Right Side Image */}
-      <div className="absolute right-0 top-0 h-full w-2/3 overflow-hidden">
+      <div className="absolute right-0  top-0 h-full w-2/3 overflow-hidden">
         <img 
           src="/a2-earth.webp"
           alt="Geometric Pattern"
-          className="h-full w-full object-cover object-left"
-          style={{ transform: 'translateX(45%)' }} // Moved further to the right
+          className="h-[400px] w-[400px] object-cover object-left"
+          style={{
+            transform: 'translateX(790px) translateY(30px)', // Moves the element 100px to the right and 50px down
+          }} // Moved further to the right
         />
       </div>
 
