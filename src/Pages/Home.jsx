@@ -63,9 +63,9 @@ const ServiceCard = ({ icon: Icon, title, description }) => {
   );
 };
 
-// Client Slider Component
 const ClientSlider = () => {
   const [selectedClient, setSelectedClient] = useState(null);
+  const [isPaused, setIsPaused] = useState(false);
 
   const clients = [
     { 
@@ -94,53 +94,73 @@ const ClientSlider = () => {
     }
   ];
 
-  const handleClientClick = (name) => {
-    setSelectedClient(name === selectedClient ? null : name);
+  const handleClientClick = (clientName) => {
+    setSelectedClient(clientName);
+    setIsPaused(true);
+    
+    // Reset after 3 seconds
+    setTimeout(() => {
+      setSelectedClient(null);
+      setIsPaused(false);
+    }, 3000);
   };
 
   return (
-    <div className="w-full bg-black py-16 overflow-hidden">
+    <section className="w-full bg-black py-16 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-gray-400 text-xl font-normal">
-            Satisfied clients from 170+ organizations in different fields
+          <h2 className="text-3xl font-semibold text-white mb-4">
+            Our Trusted Clients
           </h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            Trusted by 170+ organizations across diverse industries, 
+            driving innovation and excellence
+          </p>
         </div>
         
         <div className="relative">
-          <div className="flex space-x-16 animate-scroll">
+          <div 
+            className={`flex space-x-16 ${!isPaused ? 'animate-scroll' : ''} transition-transform duration-300`}
+          >
             {[...clients, ...clients].map((client, index) => (
               <div
                 key={`${client.name}-${index}`}
-                className="group flex items-center space-x-3 min-w-[200px] cursor-pointer"
+                className={`group flex items-center space-x-3 min-w-[200px] cursor-pointer transform transition-all duration-300
+                  ${selectedClient === client.name ? 'scale-110' : ''}
+                `}
                 onClick={() => handleClientClick(client.name)}
               >
                 <client.Icon 
                   className={`w-6 h-6 transition-colors duration-300
-                    ${selectedClient === client.name 
-                      ? 'text-white' 
-                      : 'text-gray-400 group-hover:text-gray-200'}`}
+                    ${selectedClient === client.name ? 'text-white' : 'text-gray-400 group-hover:text-white'}
+                  `}
                 />
-                <div className="flip-card">
-                  <div className={`flip-card-inner ${selectedClient === client.name ? 'flipped' : ''}`}>
-                    <div className="flip-card-front">
-                      <span className="font-medium text-lg text-gray-400 group-hover:text-gray-200 transition-colors duration-300">
-                        {client.name}
-                      </span>
-                    </div>
-                    <div className="flip-card-back">
-                      <span className="font-medium text-lg text-white">
-                        {client.name}
-                      </span>
-                    </div>
-                  </div>
-                </div>
+                <span className={`font-medium text-lg transition-colors duration-300
+                  ${selectedClient === client.name ? 'text-white' : 'text-gray-400 group-hover:text-white'}
+                `}>
+                  {client.name}
+                </span>
               </div>
             ))}
           </div>
         </div>
       </div>
-    </div>
+      
+      <style jsx="true">{`
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+        
+        .animate-scroll {
+          animation: scroll 20s linear infinite;
+        }
+      `}</style>
+    </section>
   );
 };
 
@@ -192,6 +212,185 @@ const ServicesSection = () => {
     </section>
   );
 };
+
+
+
+
+
+const EarthSection = () => {
+  return (
+    <section className="relative min-h-screen bg-black overflow-hidden">
+      {/* Main Content Container */}
+      <div className="container mx-auto px-4 py-16 relative">
+        {/* Heading */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white max-w-3xl mx-auto leading-tight">
+            Comprehensive Business
+            <br />
+            Consulting Services For Growth
+            <br />
+            And Efficiency
+          </h2>
+        </div>
+
+        {/* Earth Image and Elements Container */}
+        <div className="relative w-full max-w-4xl mx-auto aspect-square">
+          {/* Background Lines */}
+          <div className="absolute inset-0">
+            <div className="absolute w-full h-full">
+              <div className="absolute left-0 right-0 top-1/2 h-0.5 bg-gradient-to-r from-transparent via-cyan-500/20 to-transparent"></div>
+              <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-transparent via-cyan-500/20 to-transparent"></div>
+            </div>
+          </div>
+
+          {/* Earth Image */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <img 
+              src="o1-earth-3.webp"
+              alt="Digital Earth"
+              className="w-4/5 h-4/5 object-contain"
+            />
+          </div>
+
+          {/* Curved Lines */}
+          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
+            <path
+              d="M 10,50 Q 50,70 90,50"
+              fill="none"
+              stroke="rgb(6, 182, 212)"
+              strokeWidth="0.2"
+              opacity="0.3"
+            />
+          </svg>
+
+          {/* Floating Text Elements */}
+          <div className="absolute top-1/4 left-0 transform -translate-x-1/2 bg-gray-900/80 backdrop-blur-sm p-3 rounded-lg">
+            <p className="text-white text-sm whitespace-nowrap">
+              Innovate. Lead.
+              <br />
+              Succeed. Thrive.
+            </p>
+          </div>
+
+          <div className="absolute top-1/4 right-0 transform translate-x-1/2 bg-gray-900/80 backdrop-blur-sm p-3 rounded-lg">
+            <p className="text-white text-sm whitespace-nowrap">
+              Empowering Growth
+              <br />
+              with Innovation.
+            </p>
+          </div>
+
+          {/* Glowing Dots */}
+          <div className="absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400 rounded-full blur-[2px]"></div>
+          <div className="absolute bottom-1/3 right-1/4 w-2 h-2 bg-cyan-400 rounded-full blur-[2px]"></div>
+          <div className="absolute top-1/2 right-1/3 w-2 h-2 bg-cyan-400 rounded-full blur-[2px]"></div>
+        </div>
+      </div>
+
+      {/* Additional Glow Effects */}
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-transparent to-cyan-500/5"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-500/5 to-transparent"></div>
+    </section>
+  );
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const App = () => {
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.pageYOffset > 100) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-black text-white relative">
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/90 to-gray-800/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-emerald-900/10 to-transparent"></div>
+      </div>
+
+      <div className="relative z-10 container mx-auto px-4 py-16">
+        <h2 className="text-4xl font-semibold mb-8">
+          Our business consulting services aim to optimize operations and strategies, driving growth and ensuring sustained organizational success and development.
+        </h2>
+
+        <div className="grid grid-cols-3 gap-8">
+          <div className="flex items-center space-x-4">
+            <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center">
+              <span className="text-teal-400 font-bold">13+</span>
+            </div>
+            <span>Years of Experience</span>
+          </div>
+          <div className="flex items-center space-x-4">
+            <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center">
+              <span className="text-teal-400 font-bold">25+</span>
+            </div>
+            <span>Projects Worldwide</span>
+          </div>
+          <div className="flex items-center space-x-4">
+            <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center">
+              <span className="text-teal-400 font-bold">93+</span>
+            </div>
+            <span>Clients Worldwide</span>
+          </div>
+        </div>
+
+        {showButton && (
+          <div className="fixed bottom-8 right-8">
+            <button className="bg-teal-400 text-black px-4 py-2 rounded-full hover:bg-teal-500 transition-colors">
+              Know About Us
+            </button>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Social Link Component
 const SocialLink = ({ Icon }) => (
@@ -298,45 +497,88 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-black text-white relative">
-      {/* Navigation */}
-      <nav className="fixed w-full top-0 z-50 px-8 py-6 flex justify-between items-center bg-transparent">
-        <LogoSection />
-        <div className="flex items-center gap-8">
-          <button className="p-2 rounded-lg hover:bg-gray-800 transition-all duration-300 hover:scale-110">
-            <Search className="h-6 w-6" />
-          </button>
-          <button 
-            className="p-2 rounded-lg hover:bg-gray-800 transition-all duration-300 hover:scale-110"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            <Menu className="h-6 w-6" />
-          </button>
-        </div>
-      </nav>
+    {/* Background Image */}
+    <div className="absolute inset-0 z-0">
+      <img 
+        src="h1-bg-main-1.webp" 
+        alt="Background" 
+        className="w-full h-full object-cover"
+      />
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900/90 to-gray-800/90" />
+      {/* Green Tint Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-emerald-900/10 to-transparent" />
+    </div>
 
-      {/* Hero Section */}
-      <div className="container mx-auto px-8 h-screen flex items-center">
-        <div className="max-w-2xl animate-fade-in-up">
-          <h1 className="text-6xl font-bold mb-6 opacity-0 animate-slide-up" style={{ animationDelay: '200ms' }}>
-            Transforming<br />
-            Businesses With<br />
-            <span className="text-gray-400">Expertise.</span>
-          </h1>
-          <p className="text-xl text-gray-400 mb-8 opacity-0 animate-slide-up" style={{ animationDelay: '400ms' }}>
-            Our consulting service drives growth, enhances efficiency,<br />
-            and transforms businesses for lasting success.
-          </p>
-          <button className="px-8 py-3 border-2 border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-white transition-all duration-300 ease-in-out transform hover:-translate-y-1 opacity-0 animate-slide-up" style={{ animationDelay: '600ms' }}>
-            Free Consultation
-          </button>
+    {/* Navigation */}
+    <nav className="relative z-10 flex justify-between items-center p-3">
+      <div className="flex items-center">
+        <div className="text-cyan-400 text-2xl font-bold flex items-center">
+          <span className="text-3xl mr-1">P</span>ixify
         </div>
       </div>
+      <div className="flex items-center gap-2">
+        <button className="p-1 rounded-full hover:bg-gray-700">
+          <Search className="w-5 h-5 text-white" />
+        </button>
+        <button className="p-1 rounded-full hover:bg-gray-700">
+          <Menu className="w-5 h-5 text-white" />
+        </button>
+      </div>
+    </nav>
 
-      {/* Client Slider Section */}
-      <ClientSlider />
+    {/* Main Content */}
+    <main className="relative z-10 container mx-auto px-4 pt-16 pb-6 flex flex-col lg:flex-row items-center">
+      {/* Left Content */}
+      <div className="lg:w-1/2">
+        <h1 className="text-4xl lg:text-5xl font-bold mb-4 text-white">
+          Transforming<br />
+          Businesses With<br />
+          Expertise<span className="text-cyan-400">.</span>
+        </h1>
+        <p className="text-gray-300 text-lg mb-6 max-w-lg">
+          Our consulting service drives growth, enhances efficiency,
+          and transforms businesses for lasting success.
+        </p>
+        <button className="bg-transparent border-2 border-cyan-400 text-cyan-400 px-6 py-2 rounded-full text-base hover:bg-cyan-400 hover:text-white transition-colors">
+          Free Consultation
+        </button>
+      </div>
+
+      {/* Right Content - Person Image */}
+      <div className="lg:w-1/2 mt-6 lg:mt-0 relative flex justify-end">
+        <div className="h-[550px] w-full lg:w-[90%] relative">
+          <img 
+            src="h1-img-1.webp" 
+            alt="Business professional" 
+            className="h-full w-full object-contain object-right"
+          />
+          {/* Floating Card */}
+          <div className="absolute top-1/4 left-0 bg-gray-800/80 backdrop-blur-sm p-3 rounded-lg text-white shadow-lg">
+            <p className="text-base">Driving Success</p>
+            <p className="text-sm text-gray-300">Through Innovation</p>
+          </div>
+          {/* Phone Glow Effect */}
+          <div className="absolute top-[40%] right-[30%] w-16 h-24 bg-white/10 blur-md rounded-full"></div>
+          <div className="absolute top-[40%] right-[30%] w-1 h-24 bg-white/30 rounded-full"></div>
+        </div>
+      </div>
+    </main>
+
+
+
+
+    
+
+    <ClientSlider />    
 
       {/* Services Section */}
       <ServicesSection />
+
+ {/* Services Section */}
+ <EarthSection />
+ <app/>
+
 
       {/* Social Links */}
       <div className="fixed right-8 top-1/2 -translate-y-1/2 flex flex-col gap-6">
