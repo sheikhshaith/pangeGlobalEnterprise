@@ -57,7 +57,7 @@ const ContactForm = () => {
 
           {/* Right Column - Form */}
           <div className="w-full lg:w-6/12 lg:ml-auto">
-            <div className="relative bg-black/30 backdrop-blur-sm p-8 border border-cyan-500/20 rounded-lg">
+            <div className="relative bg-black/30 backdrop-blur-sm p-8 border border-cyan-500/80 rounded-lg">
               <h2 className="text-2xl text-white mb-6">Contact Us</h2>
 
               {/* Services Selection */}
