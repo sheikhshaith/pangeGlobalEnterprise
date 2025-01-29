@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 // import "./App.css"; // Ensure you add the styles here
 import { ChevronDown, ChevronUp } from "lucide-react";
 import ServicesSlider from "../components/ServicesSlider";
-import FeaturesSection from '../components/FeaturesSection';
-import TestimonialSlider from '../components/TestimonialSlider';
-import ContactForm from '../components/ContactForm';
-import ContactSection from '../components/ContactSection';
-import FAQSection from '../components/FAQSection';
+import FeaturesSection from "../components/FeaturesSection";
+import TestimonialSlider from "../components/TestimonialSlider";
+import ContactForm from "../components/ContactForm";
+import ContactSection from "../components/ContactSection";
+import FAQSection from "../components/FAQSection";
 import {
   Search,
   Menu,
@@ -521,7 +521,6 @@ const Global = () => {
   );
 };
 
-
 // Social Link Component
 const SocialLink = ({ Icon }) => (
   <a
@@ -668,7 +667,6 @@ const Home = () => {
             </button>
           </div>
         </div>
-
         {/* Right Content - Person Image */}
         <div className="w-full lg:w-1/2 mt-12 lg:mt-0 relative flex justify-center lg:justify-end">
           <div className="h-[550px] w-full lg:w-[90%] relative">
@@ -679,26 +677,17 @@ const Home = () => {
             />
 
             {/* Floating Card - Hidden on mobile */}
-            <div className="hidden sm:block md:absolute top-[25%] sm:top-[30%] md:top-[32%] lg:top-[33%] left-24 sm:left-12 md:left-3 lg:left-36 bg-white/3 backdrop-blur-md p-3 rounded-lg text-white shadow-lg border border-cyan-400 shadow-cyan-400/20"> 
-                         <p className="text-base">Driving Success</p>
+            <div className="hidden sm:block md:absolute top-[25%] sm:top-[30%] md:top-[32%] lg:top-[33%] left-24 sm:left-12 md:left-3 lg:left-36 bg-white/3 backdrop-blur-md p-3 rounded-lg text-white shadow-lg border border-cyan-400 shadow-cyan-400/20">
+              <p className="text-base">Driving Success</p>
               <p className="text-sm text-gray-300">Through Innovation</p>
             </div>
 
             {/* Connecting Lines - All hidden on mobile */}
             {/* Connecting Lines - Responsive for sm, md, and lg */}
-<div className="hidden sm:block md:absolute top-[30%] sm:top-[20%] md:top-[37%] lg:top-[39%] right-[60.9%] sm:right-[50%] md:right-[76.9%] lg:right-[53.9%] w-[8px] sm:w-[10px] md:w-[12px] h-[8px] sm:h-[10px] md:h-[12px] bg-cyan-400 rounded-full shadow-[0_0_10px_4px_rgba(6,182,212,0.8)]"></div>
-<div className="hidden sm:block md:absolute top-[20%] sm:top-[15%] md:top-[27%] lg:top-[29%] left-[47.3%] sm:left-[45%] md:left-[30.9%] lg:left-[55.3%] sm:h-[80px] md:h-[120px] sm:w-[0.8px] md:w-[1px] bg-cyan-400 transform rotate-[90deg] shadow-[0_0_15px_rgba(6,182,212,0.7)]"></div>
-<div className="hidden sm:block md:absolute bottom-[37.1%] sm:bottom-[40%] md:bottom-[30.1%] lg:bottom-[28.1%] right-[34%] sm:right-[30%] md:right-[52%] lg:right-[26%] sm:h-[160px] md:h-[200px] sm:w-[0.8px] md:w-[1px] bg-cyan-400 rotate-[140deg] shadow-[0_0_15px_rgba(6,182,212,0.7)]"></div>
-<div className="hidden sm:block md:absolute bottom-[40%] sm:bottom-[42%] md:bottom-[32%] lg:bottom-[31%] right-[23.5%] sm:right-[20%] md:right-[41.5%] lg:right-[15.5%] w-[8px] sm:w-[10px] md:w-[12px] h-[8px] sm:h-[10px] md:h-[12px] bg-cyan-400 rounded-full shadow-[0_0_10px_4px_rgba(6,182,212,0.8)]"></div>
-
-          </div>
-
-          {/* Social Links */}
-          <div className="fixed right-4 sm:right-6 lg:right-8 top-1/2 -translate-y-1/2 flex flex-col gap-4 sm:gap-6 z-20">
-            <SocialLink Icon={Twitter} />
-            <SocialLink Icon={Facebook} />
-            <SocialLink Icon={Linkedin} />
-            <SocialLink Icon={Instagram} />
+            <div className="hidden sm:block md:absolute top-[30%] sm:top-[20%] md:top-[37%] lg:top-[39%] right-[60.9%] sm:right-[50%] md:right-[76.9%] lg:right-[53.9%] w-[8px] sm:w-[10px] md:w-[12px] h-[8px] sm:h-[10px] md:h-[12px] bg-cyan-400 rounded-full shadow-[0_0_10px_4px_rgba(6,182,212,0.8)]"></div>
+            <div className="hidden sm:block md:absolute top-[20%] sm:top-[15%] md:top-[27%] lg:top-[29%] left-[47.3%] sm:left-[45%] md:left-[30.9%] lg:left-[55.3%] sm:h-[80px] md:h-[120px] sm:w-[0.8px] md:w-[1px] bg-cyan-400 transform rotate-[90deg] shadow-[0_0_15px_rgba(6,182,212,0.7)]"></div>
+            <div className="hidden sm:block md:absolute bottom-[37.1%] sm:bottom-[40%] md:bottom-[30.1%] lg:bottom-[28.1%] right-[34%] sm:right-[30%] md:right-[52%] lg:right-[26%] sm:h-[160px] md:h-[200px] sm:w-[0.8px] md:w-[1px] bg-cyan-400 rotate-[140deg] shadow-[0_0_15px_rgba(6,182,212,0.7)]"></div>
+            <div className="hidden sm:block md:absolute bottom-[40%] sm:bottom-[42%] md:bottom-[32%] lg:bottom-[31%] right-[23.5%] sm:right-[20%] md:right-[41.5%] lg:right-[15.5%] w-[8px] sm:w-[10px] md:w-[12px] h-[8px] sm:h-[10px] md:h-[12px] bg-cyan-400 rounded-full shadow-[0_0_10px_4px_rgba(6,182,212,0.8)]"></div>
           </div>
         </div>
       </main>
@@ -712,23 +701,14 @@ const Home = () => {
       <StatsSection />
       <ServicesSlider />
       <div className="min-h-screen bg-black text-white relative">
-       <ServicesSection />
-       <FeaturesSection />
+        <ServicesSection />
+        <FeaturesSection />
       </div>
       <Global />
       <FAQSection />
-      <ExpertButton/>
       <TestimonialSlider />
       <ContactForm />
-      <ContactSection />      
-
-      {/* Social Links */}
-      <div className="fixed right-8 top-1/2 -translate-y-1/2 flex flex-col gap-6">
-        <SocialLink Icon={Twitter} />
-        <SocialLink Icon={Facebook} />
-        <SocialLink Icon={Linkedin} />
-        <SocialLink Icon={Instagram} />
-      </div>
+      <ContactSection />
     </div>
   );
 };
