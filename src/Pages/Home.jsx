@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { 
-  Search, 
-  Menu, 
-  Facebook, 
-  Twitter, 
-  Linkedin, 
+import ServicesSlider from "../components/ServicesSlider";
+
+import React, { useState, useEffect } from "react";
+import {
+  Search,
+  Menu,
+  Facebook,
+  Twitter,
+  Linkedin,
   Instagram,
   Briefcase,
   Target,
@@ -15,25 +17,41 @@ import {
   Plus,
   LayoutGrid,
   Zap,
-  Circle
-} from 'lucide-react';
+  Circle,
+} from "lucide-react";
 
 // Logo Section Component
 const LogoSection = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div 
+    <div
       className="flex items-center group cursor-pointer"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <span className="text-3xl font-bold text-teal-400 relative overflow-hidden">
         Pixify
-        <div className={`absolute bottom-0 left-0 w-full h-0.5 bg-teal-400 transform transition-transform duration-300 ${isHovered ? 'translate-x-0' : '-translate-x-full'}`} />
-        <div className={`absolute top-0 right-0 w-0.5 h-full bg-teal-400 transform transition-transform duration-300 ${isHovered ? 'translate-y-0 delay-150' : '-translate-y-full'}`} />
-        <div className={`absolute top-0 left-0 w-full h-0.5 bg-teal-400 transform transition-transform duration-300 ${isHovered ? 'translate-x-0 delay-300' : 'translate-x-full'}`} />
-        <div className={`absolute top-0 left-0 w-0.5 h-full bg-teal-400 transform transition-transform duration-300 ${isHovered ? 'translate-y-0 delay-450' : 'translate-y-full'}`} />
+        <div
+          className={`absolute bottom-0 left-0 w-full h-0.5 bg-teal-400 transform transition-transform duration-300 ${
+            isHovered ? "translate-x-0" : "-translate-x-full"
+          }`}
+        />
+        <div
+          className={`absolute top-0 right-0 w-0.5 h-full bg-teal-400 transform transition-transform duration-300 ${
+            isHovered ? "translate-y-0 delay-150" : "-translate-y-full"
+          }`}
+        />
+        <div
+          className={`absolute top-0 left-0 w-full h-0.5 bg-teal-400 transform transition-transform duration-300 ${
+            isHovered ? "translate-x-0 delay-300" : "translate-x-full"
+          }`}
+        />
+        <div
+          className={`absolute top-0 left-0 w-0.5 h-full bg-teal-400 transform transition-transform duration-300 ${
+            isHovered ? "translate-y-0 delay-450" : "translate-y-full"
+          }`}
+        />
       </span>
     </div>
   );
@@ -44,21 +62,35 @@ const ServiceCard = ({ icon: Icon, title, description }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div 
+    <div
       className="relative flex flex-col items-start space-y-4 p-6 transition-all duration-300 hover:bg-gray-900/30"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className={`w-16 h-16 flex items-center justify-center transition-transform duration-500 ${isHovered ? 'scale-110' : ''}`}>
-        <Icon className={`w-full h-full transition-colors duration-300 ${isHovered ? 'text-teal-400' : 'text-gray-300'}`} />
+      <div
+        className={`w-16 h-16 flex items-center justify-center transition-transform duration-500 ${
+          isHovered ? "scale-110" : ""
+        }`}
+      >
+        <Icon
+          className={`w-full h-full transition-colors duration-300 ${
+            isHovered ? "text-teal-400" : "text-gray-300"
+          }`}
+        />
       </div>
-      <h3 className={`text-2xl font-normal transition-colors duration-300 ${isHovered ? 'text-teal-400' : 'text-gray-200'}`}>
+      <h3
+        className={`text-2xl font-normal transition-colors duration-300 ${
+          isHovered ? "text-teal-400" : "text-gray-200"
+        }`}
+      >
         {title}
       </h3>
-      <p className="text-gray-400 text-lg leading-relaxed">
-        {description}
-      </p>
-      <div className={`absolute bottom-0 left-0 h-1 bg-teal-400 transition-all duration-300 ${isHovered ? 'w-full' : 'w-0'}`} />
+      <p className="text-gray-400 text-lg leading-relaxed">{description}</p>
+      <div
+        className={`absolute bottom-0 left-0 h-1 bg-teal-400 transition-all duration-300 ${
+          isHovered ? "w-full" : "w-0"
+        }`}
+      />
     </div>
   );
 };
@@ -68,36 +100,36 @@ const ClientSlider = () => {
   const [isPaused, setIsPaused] = useState(false);
 
   const clients = [
-    { 
-      name: 'EasyTax', 
+    {
+      name: "EasyTax",
       Icon: CircleDashed,
     },
-    { 
-      name: 'Europa', 
+    {
+      name: "Europa",
       Icon: Globe,
     },
-    { 
-      name: 'Clandestine', 
+    {
+      name: "Clandestine",
       Icon: Plus,
     },
-    { 
-      name: '3Portals', 
+    {
+      name: "3Portals",
       Icon: LayoutGrid,
     },
-    { 
-      name: 'Boltshift', 
+    {
+      name: "Boltshift",
       Icon: Zap,
     },
-    { 
-      name: 'Chromatools', 
+    {
+      name: "Chromatools",
       Icon: Circle,
-    }
+    },
   ];
 
   const handleClientClick = (clientName) => {
     setSelectedClient(clientName);
     setIsPaused(true);
-    
+
     // Reset after 3 seconds
     setTimeout(() => {
       setSelectedClient(null);
@@ -113,31 +145,43 @@ const ClientSlider = () => {
             Our Trusted Clients
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Trusted by 170+ organizations across diverse industries, 
-            driving innovation and excellence
+            Trusted by 170+ organizations across diverse industries, driving
+            innovation and excellence
           </p>
         </div>
-        
+
         <div className="relative">
-          <div 
-            className={`flex space-x-16 ${!isPaused ? 'animate-scroll' : ''} transition-transform duration-300`}
+          <div
+            className={`flex space-x-16 ${
+              !isPaused ? "animate-scroll" : ""
+            } transition-transform duration-300`}
           >
             {[...clients, ...clients].map((client, index) => (
               <div
                 key={`${client.name}-${index}`}
                 className={`group flex items-center space-x-3 min-w-[200px] cursor-pointer transform transition-all duration-300
-                  ${selectedClient === client.name ? 'scale-110' : ''}
+                  ${selectedClient === client.name ? "scale-110" : ""}
                 `}
                 onClick={() => handleClientClick(client.name)}
               >
-                <client.Icon 
+                <client.Icon
                   className={`w-6 h-6 transition-colors duration-300
-                    ${selectedClient === client.name ? 'text-white' : 'text-gray-400 group-hover:text-white'}
+                    ${
+                      selectedClient === client.name
+                        ? "text-white"
+                        : "text-gray-400 group-hover:text-white"
+                    }
                   `}
                 />
-                <span className={`font-medium text-lg transition-colors duration-300
-                  ${selectedClient === client.name ? 'text-white' : 'text-gray-400 group-hover:text-white'}
-                `}>
+                <span
+                  className={`font-medium text-lg transition-colors duration-300
+                  ${
+                    selectedClient === client.name
+                      ? "text-white"
+                      : "text-gray-400 group-hover:text-white"
+                  }
+                `}
+                >
                   {client.name}
                 </span>
               </div>
@@ -145,7 +189,7 @@ const ClientSlider = () => {
           </div>
         </div>
       </div>
-      
+
       <style jsx="true">{`
         @keyframes scroll {
           0% {
@@ -155,7 +199,7 @@ const ClientSlider = () => {
             transform: translateX(-50%);
           }
         }
-        
+
         .animate-scroll {
           animation: scroll 20s linear infinite;
         }
@@ -170,18 +214,21 @@ const ServicesSection = () => {
     {
       icon: Briefcase,
       title: "Strategic Planning",
-      description: "We offer strategic planning to drive sustainable growth, operational efficiency, and long-term success."
+      description:
+        "We offer strategic planning to drive sustainable growth, operational efficiency, and long-term success.",
     },
     {
       icon: Target,
       title: "Operational Optimization",
-      description: "We optimize operations to enhance efficiency, reduce costs, and improve overall performance."
+      description:
+        "We optimize operations to enhance efficiency, reduce costs, and improve overall performance.",
     },
     {
       icon: Lightbulb,
       title: "Financial Consulting",
-      description: "Our financial consulting services drive growth, improve profitability, and ensure sound financial management."
-    }
+      description:
+        "Our financial consulting services drive growth, improve profitability, and ensure sound financial management.",
+    },
   ];
 
   return (
@@ -197,7 +244,11 @@ const ServicesSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-b border-gray-800">
           {services.map((service, index) => (
-            <div key={service.title} className="transform translate-y-10 animate-slide-up" style={{ animationDelay: `${index * 200}ms` }}>
+            <div
+              key={service.title}
+              className="transform translate-y-10 animate-slide-up"
+              style={{ animationDelay: `${index * 200}ms` }}
+            >
               <ServiceCard {...service} />
             </div>
           ))}
@@ -206,16 +257,14 @@ const ServicesSection = () => {
         <div className="mt-12 flex items-center justify-center text-gray-400 space-x-2 animate-pulse hover:animate-none cursor-pointer group">
           <Phone className="w-5 h-5 group-hover:text-teal-400 transition-colors duration-300" />
           <span>Have any questions? Free:</span>
-          <span className="text-gray-200 group-hover:text-teal-400 transition-colors duration-300">+1 917 265 8444</span>
+          <span className="text-gray-200 group-hover:text-teal-400 transition-colors duration-300">
+            +1 917 265 8444
+          </span>
         </div>
       </div>
     </section>
   );
 };
-
-
-
-
 
 const EarthSection = () => {
   return (
@@ -245,10 +294,10 @@ const EarthSection = () => {
 
           {/* Earth Image */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <img 
+            <img
               src="o1-earth-3.webp"
               alt="Digital Earth"
-              className="w-4/5 h-4/5 object-contain"
+              className="w-4/5 h-4/5 object-contain animate-spin-once"
             />
           </div>
 
@@ -294,108 +343,10 @@ const EarthSection = () => {
   );
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const App = () => {
-  const [showButton, setShowButton] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.pageYOffset > 100) {
-        setShowButton(true);
-      } else {
-        setShowButton(false);
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  return (
-    <div className="min-h-screen bg-black text-white relative">
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/90 to-gray-800/90"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-emerald-900/10 to-transparent"></div>
-      </div>
-
-      <div className="relative z-10 container mx-auto px-4 py-16">
-        <h2 className="text-4xl font-semibold mb-8">
-          Our business consulting services aim to optimize operations and strategies, driving growth and ensuring sustained organizational success and development.
-        </h2>
-
-        <div className="grid grid-cols-3 gap-8">
-          <div className="flex items-center space-x-4">
-            <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center">
-              <span className="text-teal-400 font-bold">13+</span>
-            </div>
-            <span>Years of Experience</span>
-          </div>
-          <div className="flex items-center space-x-4">
-            <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center">
-              <span className="text-teal-400 font-bold">25+</span>
-            </div>
-            <span>Projects Worldwide</span>
-          </div>
-          <div className="flex items-center space-x-4">
-            <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center">
-              <span className="text-teal-400 font-bold">93+</span>
-            </div>
-            <span>Clients Worldwide</span>
-          </div>
-        </div>
-
-        {showButton && (
-          <div className="fixed bottom-8 right-8">
-            <button className="bg-teal-400 text-black px-4 py-2 rounded-full hover:bg-teal-500 transition-colors">
-              Know About Us
-            </button>
-          </div>
-        )}
-      </div>
-    </div>
-  );
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Social Link Component
 const SocialLink = ({ Icon }) => (
-  <a 
-    href="#" 
+  <a
+    href="#"
     className="w-10 h-10 rounded-full bg-gray-800/50 flex items-center justify-center hover:bg-teal-400 transition-all duration-300 ease-in-out transform hover:scale-110"
   >
     <Icon className="h-5 w-5" />
@@ -486,7 +437,7 @@ const Home = () => {
       }
     `;
 
-    const styleElement = document.createElement('style');
+    const styleElement = document.createElement("style");
     styleElement.textContent = style;
     document.head.appendChild(styleElement);
 
@@ -496,97 +447,82 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black text-white relative">
-    {/* Background Image */}
-    <div className="absolute inset-0 z-0">
-      <img 
-        src="h1-bg-main-1.webp" 
-        alt="Background" 
-        className="w-full h-full object-cover"
-      />
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900/90 to-gray-800/90" />
-      {/* Green Tint Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-emerald-900/10 to-transparent" />
-    </div>
-
-    {/* Navigation */}
-    <nav className="relative z-10 flex justify-between items-center p-3">
-      <div className="flex items-center">
-        <div className="text-cyan-400 text-2xl font-bold flex items-center">
-          <span className="text-3xl mr-1">P</span>ixify
-        </div>
-      </div>
-      <div className="flex items-center gap-2">
-        <button className="p-1 rounded-full hover:bg-gray-700">
-          <Search className="w-5 h-5 text-white" />
-        </button>
-        <button className="p-1 rounded-full hover:bg-gray-700">
-          <Menu className="w-5 h-5 text-white" />
-        </button>
-      </div>
-    </nav>
-
-    {/* Main Content */}
-    <main className="relative z-10 container mx-auto px-4 pt-16 pb-6 flex flex-col lg:flex-row items-center">
-      {/* Left Content */}
-      <div className="lg:w-1/2">
-        <h1 className="text-4xl lg:text-5xl font-bold mb-4 text-white">
-          Transforming<br />
-          Businesses With<br />
-          Expertise<span className="text-cyan-400">.</span>
-        </h1>
-        <p className="text-gray-300 text-lg mb-6 max-w-lg">
-          Our consulting service drives growth, enhances efficiency,
-          and transforms businesses for lasting success.
-        </p>
-        <button className="bg-transparent border-2 border-cyan-400 text-cyan-400 px-6 py-2 rounded-full text-base hover:bg-cyan-400 hover:text-white transition-colors">
-          Free Consultation
-        </button>
-      </div>
-
-      {/* Right Content - Person Image */}
-      <div className="lg:w-1/2 mt-6 lg:mt-0 relative flex justify-end">
-        <div className="h-[550px] w-full lg:w-[90%] relative">
-          <img 
-            src="h1-img-1.webp" 
-            alt="Business professional" 
-            className="h-full w-full object-contain object-right"
+    <div className="min-h-screen bg-gray-900/90 backdrop-blur-md text-white relative">
+      {/* Main Content */}
+      <main className="relative z-10 container mx-auto px-4 pt-16 pb-6 flex flex-col lg:flex-row items-center">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="h1-bg-main-1.webp"
+            alt="Background"
+            className="w-full h-full object-cover"
           />
-          {/* Floating Card */}
-          <div className="absolute top-1/4 left-0 bg-gray-800/80 backdrop-blur-sm p-3 rounded-lg text-white shadow-lg">
-            <p className="text-base">Driving Success</p>
-            <p className="text-sm text-gray-300">Through Innovation</p>
-          </div>
-          {/* Phone Glow Effect */}
-          <div className="absolute top-[40%] right-[30%] w-16 h-24 bg-white/10 blur-md rounded-full"></div>
-          <div className="absolute top-[40%] right-[30%] w-1 h-24 bg-white/30 rounded-full"></div>
+          {/* Dark Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900/90 to-gray-800/90" />
+          {/* Green Tint Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-emerald-900/10 to-transparent" />
         </div>
-      </div>
-    </main>
 
+        {/* Text on Top-Left Corner */}
+        <div className="absolute top-4 left-4 text-4xl lg:text-5xl font-bold z-10 bg-transparent">
+          <span className=" text-5xl mr-1">P</span>ixify
+        </div>
 
+        {/* Left Content */}
+        <div className="lg:w-1/2 z-0">
+          <h1 className="text-4xl lg:text-5xl font-bold mb-4 text-white">
+            Transforming
+            <br />
+            Businesses With
+            <br />
+            Expertise<span className="text-cyan-400">.</span>
+          </h1>
+          <p className="text-gray-300 text-lg mb-6 max-w-lg">
+            Our consulting service drives growth, enhances efficiency, and
+            transforms businesses for lasting success.
+          </p>
+          <button className="bg-transparent border-2 border-cyan-400 text-cyan-400 px-6 py-2 rounded-full text-base hover:bg-cyan-400 hover:text-white transition-colors">
+            Free Consultation
+          </button>
+        </div>
 
+        {/* Right Content - Person Image */}
+        <div className="lg:w-1/2 mt-6 lg:mt-0 relative flex justify-end">
+          <div className="h-[550px] w-full lg:w-[90%] relative">
+            <img
+              src="h1-img-1.webp"
+              alt="Business professional"
+              className="h-full w-full object-contain object-right"
+            />
+            {/* Floating Card */}
+            <div className="absolute top-1/4 left-0 bg-white/3 backdrop-blur-md p-3 rounded-lg text-white shadow-lg border border-cyan-400 shadow-cyan-400/20">
+              <p className="text-base">Driving Success</p>
+              <p className="text-sm text-gray-300">Through Innovation</p>
+            </div>
 
-    
+            {/* Phone Glow Effect */}
+            <div className="absolute top-[40%] right-[30%] w-16 h-24 bg-white/10 blur-md rounded-full"></div>
+            <div className="absolute top-[40%] right-[30%] w-1 h-24 bg-white/30 rounded-full"></div>
+          </div>
+          {/* Social Links */}
+          <div className="fixed right-8 top-1/2 -translate-y-1/2 flex flex-col gap-6">
+            <SocialLink Icon={Twitter} />
+            <SocialLink Icon={Facebook} />
+            <SocialLink Icon={Linkedin} />
+            <SocialLink Icon={Instagram} />
+          </div>
+        </div>
+      </main>
 
-    <ClientSlider />    
+      <ClientSlider />
 
       {/* Services Section */}
       <ServicesSection />
 
- {/* Services Section */}
- <EarthSection />
- <app/>
+      {/* Services Section */}
+      <EarthSection />
 
-
-      {/* Social Links */}
-      <div className="fixed right-8 top-1/2 -translate-y-1/2 flex flex-col gap-6">
-        <SocialLink Icon={Twitter} />
-        <SocialLink Icon={Facebook} />
-        <SocialLink Icon={Linkedin} />
-        <SocialLink Icon={Instagram} />
-      </div>
+      <ServicesSlider />
     </div>
   );
 };
