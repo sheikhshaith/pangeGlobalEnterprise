@@ -99,28 +99,12 @@ const ServicesSlider = () => {
               </div>
             </div>
 
-            {/* Center - Navigation Dots */}
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col gap-8 z-10">
-              {sections.map((dot) => (
-                <div
-                  key={dot.id}
-                  className={`w-8 h-8 rounded-full border-2 flex items-center justify-center transition-colors duration-300 ${
-                    dot.id === activeSection
-                      ? "border-cyan-400 text-cyan-400"
-                      : "border-gray-400 text-gray-400"
-                  }`}
-                >
-                  {dot.id}
-                </div>
-              ))}
-            </div>
-
             {/* Right Side - Content */}
             <div className="w-1/2 h-full bg-gray-900">
               <div className="h-full flex items-center">
                 <div className="px-12 max-w-xl mx-auto">
                   <div>
-                    <p className="text-gray-400 mb-2">{section.number}</p>
+                    <p className="text-cyan-400 mb-2">{section.number}</p>
                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                       {section.title}
                     </h2>
