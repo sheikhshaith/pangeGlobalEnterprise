@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 // import "./App.css"; // Ensure you add the styles here
 import { ChevronDown, ChevronUp } from "lucide-react";
 import ServicesSlider from "../components/ServicesSlider";
-import TestimonialSlider from "../components/TestimonialSlider";
-
 import {
   Search,
   Menu,
@@ -442,90 +440,6 @@ const StatsSection = () => {
   );
 };
 
-const BrowserServices = () => {
-  return (
-    <section className="bg-dark text-white py-16 relative">
-      <div className="container mx-auto text-center px-4">
-        <p className="text-teal-400 text-sm uppercase mb-4">Our Unique Way</p>
-        <h2 className="text-3xl md:text-4xl font-extrabold mb-8 leading-relaxed text-white">
-          Accelerating Future Growth With <br></br>Technology, Innovation, And
-          Expertise.
-        </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          <div className="text-center transition-transform hover:scale-105">
-            <div className="text-teal-400 text-4xl mb-4">👥</div>
-            <h3 className="text-xl font-bold text-white mb-2">
-              Customer Focus
-            </h3>
-            <p className="text-gray-300">
-              Our customer focus delivers personalized service, ensuring
-              satisfaction and fostering long-term relationships.
-            </p>
-          </div>
-          <div className="text-center transition-transform hover:scale-105">
-            <div className="text-teal-400 text-4xl mb-4">📈</div>
-            <h3 className="text-xl font-bold text-white mb-2">
-              Market Analysis
-            </h3>
-            <p className="text-gray-300">
-              Market analysis identifies opportunities, informs strategy, and
-              drives business growth and success.
-            </p>
-          </div>
-          <div className="text-center transition-transform hover:scale-105">
-            <div className="text-teal-400 text-4xl mb-4">📊</div>
-            <h3 className="text-xl font-bold text-white mb-2">
-              Data Analytics
-            </h3>
-            <p className="text-gray-300">
-              Data analytics drives informed decisions, optimizing performance
-              and achieving measurable business success.
-            </p>
-          </div>
-          <div className="text-center transition-transform hover:scale-105">
-            <div className="text-teal-400 text-4xl mb-4">🧑‍🤝‍🧑</div>
-            <h3 className="text-xl font-bold text-white mb-2">
-              Agile Management
-            </h3>
-            <p className="text-gray-300">
-              Agile management enhances flexibility, accelerates project
-              delivery, and improves overall team efficiency.
-            </p>
-          </div>
-          <div className="text-center transition-transform hover:scale-105">
-            <div className="text-teal-400 text-4xl mb-4">🌍</div>
-            <h3 className="text-xl font-bold text-white mb-2">
-              Sustainable Practice
-            </h3>
-            <p className="text-gray-300">
-              Our commitment to sustainable practices ensures environmental
-              responsibility and business resilience.
-            </p>
-          </div>
-          <div className="text-center transition-transform hover:scale-105">
-            <div className="text-teal-400 text-4xl mb-4">📊</div>
-            <h3 className="text-xl font-bold text-white mb-2">
-              Data Analytics
-            </h3>
-            <p className="text-gray-300">
-              Data analytics drives informed decisions, optimizing performance
-              and achieving measurable business success.
-            </p>
-          </div>
-        </div>
-
-        <div className="mt-10">
-          <button className="bg-teal-400 text-dark font-medium py-3 px-8 rounded-full shadow-lg hover:bg-teal-300 focus:ring-4 focus:ring-teal-200">
-            Browse All Services
-          </button>
-        </div>
-      </div>
-      <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-dark to-transparent"></div>
-    </section>
-  );
-};
-
 const Global = () => {
   return (
     <section className="relative min-h-screen bg-black overflow-hidden">
@@ -686,9 +600,6 @@ const FAQSection = () => {
   );
 };
 
-
-
-
 // Social Link Component
 const SocialLink = ({ Icon }) => (
   <a
@@ -795,10 +706,10 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-gray-900/90 backdrop-blur-md text-white relative">
       {/* Main Content */}
-      <main className="relative z-10 container mx-auto px-4 pt-16 pb-6 flex flex-col lg:flex-row items-center">
+      <main className="relative z-10  mx-auto px-4 pt-16 pb-6 flex flex-col lg:flex-row items-center">
         {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <img
+        <div className=" absolute inset-0 z-0">
+        <img
             src="h1-bg-main-1.webp"
             alt="Background"
             className="w-full h-full object-cover"
@@ -810,47 +721,49 @@ const Home = () => {
         </div>
 
         {/* Text on Top-Left Corner */}
-        <div className="absolute top-4 left-4 text-4xl lg:text-5xl font-bold z-10 bg-transparent">
+        <div className="absolute top-4 left-4 px-28 text-4xl lg:text-5xl font-bold z-10 bg-transparent">
           <span className="text-5xl text-cyan-400 mr-1 transform rotate-[90deg]">
             PGE
           </span>
         </div>
 
         {/* Left Content */}
-        <div className="lg:w-1/2 z-0">
-          <h1 className="text-4xl lg:text-5xl font-bold mb-4 text-white">
+        <div className="lg:w-2/5 z-0">
+          <h1 className="text-4xl lg:text-5xl font-bold mb-5 px-28 text-white">
             Transforming
             <br />
             Businesses With
             <br />
             Expertise<span className="text-cyan-400">.</span>
           </h1>
-          <p className="text-gray-300 text-lg mb-6 max-w-lg">
+          <p className="text-gray-300 text-lg mb-6 px-28 max-w-lg">
             Our consulting service drives growth, enhances efficiency, and
             transforms businesses for lasting success.
           </p>
-          <button className="bg-transparent border-2 border-cyan-400 text-cyan-400 px-6 py-2 rounded-full text-base hover:bg-cyan-400 hover:text-white transition-colors">
+          <button className=" ml-32 bg-transparent border-2  border-cyan-400 text-cyan-400 px-6 py-2 rounded-full text-base hover:bg-cyan-400 hover:text-white transition-colors">
             Free Consultation
           </button>
         </div>
 
         {/* Right Content - Person Image */}
         <div className="lg:w-1/2 mt-6 lg:mt-0 relative flex justify-end">
-          <div className="h-[550px] w-full lg:w-[90%] relative">
-            <img
-              src="h1-img-1.webp"
-              alt="Business professional"
-              className="h-full w-full object-contain object-right"
-            />
+        <div className="h-[550px] w-full lg:w-[90%] relative">
+  <img
+    src="h1-img-1.webp"
+    alt="Business professional"
+    className="h-full w-full object-contain object-right relative top-6"
+  />
+
+
             {/* Floating Card */}
-            <div className="absolute top-1/4 left-0 bg-white/3 backdrop-blur-md p-3 rounded-lg text-white shadow-lg border border-cyan-400 shadow-cyan-400/20">
+            <div className="absolute top-1/4 left-24 bg-white/3 backdrop-blur-md p-3 rounded-lg text-white shadow-lg border border-cyan-400 shadow-cyan-400/20">
               <p className="text-base">Driving Success</p>
               <p className="text-sm text-gray-300">Through Innovation</p>
             </div>
             {/* Connecting Line */}
-            <div className="absolute top-[30%] right-[70.9%] w-[10px] h-[10px] bg-cyan-400 rounded-full shadow-[0_0_10px_4px_rgba(6,182,212,0.8)]"></div>
-            <div className="absolute top-[20%] left-[39.2%] h-[120px] w-[1px] bg-cyan-400 transform rotate-[90deg] shadow-[0_0_15px_rgba(6,182,212,0.7)]"></div>
-            <div className="absolute bottom-[37.1%] right-[37%] w-[1px] h-[200px] bg-cyan-400 rotate-[140deg] shadow-[0_0_15px_rgba(6,182,212,0.7)]"></div>
+            <div className="absolute top-[30%] right-[60.9%] w-[10px] h-[10px] bg-cyan-400 rounded-full shadow-[0_0_10px_4px_rgba(6,182,212,0.8)]"></div>
+            <div className="absolute top-[20%] left-[47.3%] h-[120px] w-[1px] bg-cyan-400 transform rotate-[90deg] shadow-[0_0_15px_rgba(6,182,212,0.7)]"></div>
+            <div className="absolute bottom-[37.1%] right-[34%] w-[1px] h-[200px] bg-cyan-400 rotate-[140deg] shadow-[0_0_15px_rgba(6,182,212,0.7)]"></div>
             <div className="absolute bottom-[40%] right-[23.5%] w-[10px] h-[10px] bg-cyan-400 rounded-full shadow-[0_0_10px_4px_rgba(6,182,212,0.8)]"></div>
           </div>
           {/* Social Links */}
@@ -872,7 +785,10 @@ const Home = () => {
       <EarthSection />
       <StatsSection />
       <ServicesSlider />
-      <BrowserServices />
+      <div className="min-h-screen bg-black text-white relative">
+       <ServicesSection />
+       <FeaturesSection />
+      </div>
       <Global />
       <FAQSection />
       <TestimonialSlider />
