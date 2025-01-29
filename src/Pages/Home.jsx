@@ -308,19 +308,37 @@ const EarthSection = () => {
             />
           </div>
 
-          {/* Curved Lines */}
+          {/* Continuous Moving Thin Glowing Curved Lines */}
           <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
             <path
-              d="M 10,50 Q 50,70 90,50"
+              d="M 5,30 Q 20,50 35,30 T 65,30 T 95,30"
               fill="none"
-              stroke="rgb(6, 182, 212)"
-              strokeWidth="0.2"
-              opacity="0.3"
+              stroke="white"
+              strokeWidth="0.1"
+              className="animate-glow-line"
+              filter="url(#glow)"
             />
+            <path
+              d="M 5,60 Q 20,80 35,60 T 65,60 T 95,60"
+              fill="none"
+              stroke="white"
+              strokeWidth="0.1"
+              className="animate-glow-line delay-1"
+              filter="url(#glow)"
+            />
+            <defs>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="1.5" result="coloredBlur" />
+                <feMerge>
+                  <feMergeNode in="coloredBlur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
           </svg>
 
           {/* Floating Text Elements */}
-          <div className="absolute top-1/4 left-0 transform -translate-x-1/2 bg-white/3 backdrop-blur-md p-3 rounded-lg text-white shadow-lg border border-cyan-400 shadow-cyan-400/20">
+          <div className="absolute top-1/4 left-0 transform -translate-x-1/2 bg-gray-900/80 backdrop-blur-sm p-3 rounded-lg">
             <p className="text-white text-sm whitespace-nowrap">
               Innovate. Lead.
               <br />
@@ -328,18 +346,13 @@ const EarthSection = () => {
             </p>
           </div>
 
-          <div className="absolute top-1/4 right-0 transform translate-x-1/2 bg-white/3 backdrop-blur-md p-3 rounded-lg text-white shadow-lg border border-cyan-400 shadow-cyan-400/20">
+          <div className="absolute top-1/4 right-0 transform translate-x-1/2 bg-gray-900/80 backdrop-blur-sm p-3 rounded-lg">
             <p className="text-white text-sm whitespace-nowrap">
               Empowering Growth
               <br />
               with Innovation.
             </p>
           </div>
-
-          {/* Glowing Dots */}
-          <div className="absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400 rounded-full blur-[2px]"></div>
-          <div className="absolute bottom-1/3 right-1/4 w-2 h-2 bg-cyan-400 rounded-full blur-[2px]"></div>
-          <div className="absolute top-1/2 right-1/3 w-2 h-2 bg-cyan-400 rounded-full blur-[2px]"></div>
         </div>
       </div>
 
@@ -347,7 +360,7 @@ const EarthSection = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-transparent to-cyan-500/5"></div>
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-500/5 to-transparent"></div>
 
-      {/* CSS for Earth Rotation */}
+      {/* CSS Animations */}
       <style jsx="true">{`
         @keyframes rotate-earth {
           0% {
@@ -360,6 +373,25 @@ const EarthSection = () => {
 
         .animate-rotate-earth {
           animation: rotate-earth 20s linear infinite;
+        }
+
+        @keyframes glow-line {
+          0% {
+            stroke-dasharray: 0, 100;
+            stroke-dashoffset: 100;
+          }
+          100% {
+            stroke-dasharray: 100, 0;
+            stroke-dashoffset: 0;
+          }
+        }
+
+        .animate-glow-line {
+          animation: glow-line 4s linear infinite;
+        }
+
+        .delay-1 {
+          animation-delay: 2s;
         }
       `}</style>
     </section>
