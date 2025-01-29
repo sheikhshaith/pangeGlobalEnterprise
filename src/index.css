@@ -226,3 +226,80 @@ h2 {
     width: 80%;
   }
 }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.animate-scroll {
+  animation: scroll 25s linear infinite;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+
+
+
+
+
+
+
+/* Existing animations remain the same */
+
+/* Add these new animations */
+.perspective {
+  perspective: 1000px;
+}
+
+@keyframes flipDown {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(-180deg);
+  }
+}
+
+@keyframes flipUp {
+  0% {
+    transform: rotateX(-180deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+.animate-flip-down {
+  animation: flipDown 0.5s ease forwards;
+}
+
+.animate-flip-up {
+  animation: flipUp 0.5s ease forwards;
+}
+
+/* Make text readable during flip */
+.perspective > div > span {
+  backface-visibility: visible;
+}

@@ -1,243 +1,350 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { 
+  Search, 
+  Menu, 
+  Facebook, 
+  Twitter, 
+  Linkedin, 
+  Instagram,
+  Briefcase,
+  Target,
+  Lightbulb,
+  Phone,
+  CircleDashed,
+  Globe,
+  Plus,
+  LayoutGrid,
+  Zap,
+  Circle
+} from 'lucide-react';
 
-const Home= () => {
+// Logo Section Component
+const LogoSection = () => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <div className="min-h-screen bg-gray-100">
-      {/* Header */}
-      <header className="bg-white shadow">
-        <div className="container mx-auto px-6 py-3">
-          <div className="flex items-center justify-between">
-            <div>
-              <a href="/" className="text-gray-800 text-xl font-bold md:text-2xl hover:text-gray-700">
-                Pangea360
-              </a>
-            </div>
-            <div className="flex md:hidden">
-              <button type="button" className="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600" aria-label="toggle menu">
-                <svg viewBox="0 0 24 24" className="h-6 w-6 fill-current">
-                  <path d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
-                </svg>
-              </button>
-            </div>
-            <nav className="hidden md:flex space-x-10 text-gray-700 capitalize">
-              <a href="/about" className="text-gray-800 hover:text-blue-500">About Us</a>
-              <a href="/services" className="text-gray-800 hover:text-blue-500">Services</a>
-              <a href="/industries" className="text-gray-800 hover:text-blue-500">Industries</a>
-              <a href="/case-studies" className="text-gray-800 hover:text-blue-500">Case Studies</a>
-              <a href="/resources" className="text-gray-800 hover:text-blue-500">Resources</a>
-              <a href="/contact" className="text-gray-800 hover:text-blue-500">Contact Us</a>
-            </nav>
+    <div 
+      className="flex items-center group cursor-pointer"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <span className="text-3xl font-bold text-teal-400 relative overflow-hidden">
+        Pixify
+        <div className={`absolute bottom-0 left-0 w-full h-0.5 bg-teal-400 transform transition-transform duration-300 ${isHovered ? 'translate-x-0' : '-translate-x-full'}`} />
+        <div className={`absolute top-0 right-0 w-0.5 h-full bg-teal-400 transform transition-transform duration-300 ${isHovered ? 'translate-y-0 delay-150' : '-translate-y-full'}`} />
+        <div className={`absolute top-0 left-0 w-full h-0.5 bg-teal-400 transform transition-transform duration-300 ${isHovered ? 'translate-x-0 delay-300' : 'translate-x-full'}`} />
+        <div className={`absolute top-0 left-0 w-0.5 h-full bg-teal-400 transform transition-transform duration-300 ${isHovered ? 'translate-y-0 delay-450' : 'translate-y-full'}`} />
+      </span>
+    </div>
+  );
+};
+
+// Service Card Component
+const ServiceCard = ({ icon: Icon, title, description }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <div 
+      className="relative flex flex-col items-start space-y-4 p-6 transition-all duration-300 hover:bg-gray-900/30"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div className={`w-16 h-16 flex items-center justify-center transition-transform duration-500 ${isHovered ? 'scale-110' : ''}`}>
+        <Icon className={`w-full h-full transition-colors duration-300 ${isHovered ? 'text-teal-400' : 'text-gray-300'}`} />
+      </div>
+      <h3 className={`text-2xl font-normal transition-colors duration-300 ${isHovered ? 'text-teal-400' : 'text-gray-200'}`}>
+        {title}
+      </h3>
+      <p className="text-gray-400 text-lg leading-relaxed">
+        {description}
+      </p>
+      <div className={`absolute bottom-0 left-0 h-1 bg-teal-400 transition-all duration-300 ${isHovered ? 'w-full' : 'w-0'}`} />
+    </div>
+  );
+};
+
+// Client Slider Component
+const ClientSlider = () => {
+  const [selectedClient, setSelectedClient] = useState(null);
+
+  const clients = [
+    { 
+      name: 'EasyTax', 
+      Icon: CircleDashed,
+    },
+    { 
+      name: 'Europa', 
+      Icon: Globe,
+    },
+    { 
+      name: 'Clandestine', 
+      Icon: Plus,
+    },
+    { 
+      name: '3Portals', 
+      Icon: LayoutGrid,
+    },
+    { 
+      name: 'Boltshift', 
+      Icon: Zap,
+    },
+    { 
+      name: 'Chromatools', 
+      Icon: Circle,
+    }
+  ];
+
+  const handleClientClick = (name) => {
+    setSelectedClient(name === selectedClient ? null : name);
+  };
+
+  return (
+    <div className="w-full bg-black py-16 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-gray-400 text-xl font-normal">
+            Satisfied clients from 170+ organizations in different fields
+          </h2>
+        </div>
+        
+        <div className="relative">
+          <div className="flex space-x-16 animate-scroll">
+            {[...clients, ...clients].map((client, index) => (
+              <div
+                key={`${client.name}-${index}`}
+                className="group flex items-center space-x-3 min-w-[200px] cursor-pointer"
+                onClick={() => handleClientClick(client.name)}
+              >
+                <client.Icon 
+                  className={`w-6 h-6 transition-colors duration-300
+                    ${selectedClient === client.name 
+                      ? 'text-white' 
+                      : 'text-gray-400 group-hover:text-gray-200'}`}
+                />
+                <div className="flip-card">
+                  <div className={`flip-card-inner ${selectedClient === client.name ? 'flipped' : ''}`}>
+                    <div className="flip-card-front">
+                      <span className="font-medium text-lg text-gray-400 group-hover:text-gray-200 transition-colors duration-300">
+                        {client.name}
+                      </span>
+                    </div>
+                    <div className="flip-card-back">
+                      <span className="font-medium text-lg text-white">
+                        {client.name}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      </header>
+      </div>
+    </div>
+  );
+};
+
+// Services Section Component
+const ServicesSection = () => {
+  const services = [
+    {
+      icon: Briefcase,
+      title: "Strategic Planning",
+      description: "We offer strategic planning to drive sustainable growth, operational efficiency, and long-term success."
+    },
+    {
+      icon: Target,
+      title: "Operational Optimization",
+      description: "We optimize operations to enhance efficiency, reduce costs, and improve overall performance."
+    },
+    {
+      icon: Lightbulb,
+      title: "Financial Consulting",
+      description: "Our financial consulting services drive growth, improve profitability, and ensure sound financial management."
+    }
+  ];
+
+  return (
+    <section className="w-full bg-black py-20 opacity-0 animate-fade-in">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mb-20 transform translate-y-10 animate-slide-up">
+          <h2 className="text-4xl text-gray-200 font-medium leading-tight">
+            We Offer Expert Consulting For Strategic
+            <br />
+            Growth And Operational Excellence Solutions.
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-b border-gray-800">
+          {services.map((service, index) => (
+            <div key={service.title} className="transform translate-y-10 animate-slide-up" style={{ animationDelay: `${index * 200}ms` }}>
+              <ServiceCard {...service} />
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-12 flex items-center justify-center text-gray-400 space-x-2 animate-pulse hover:animate-none cursor-pointer group">
+          <Phone className="w-5 h-5 group-hover:text-teal-400 transition-colors duration-300" />
+          <span>Have any questions? Free:</span>
+          <span className="text-gray-200 group-hover:text-teal-400 transition-colors duration-300">+1 917 265 8444</span>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// Social Link Component
+const SocialLink = ({ Icon }) => (
+  <a 
+    href="#" 
+    className="w-10 h-10 rounded-full bg-gray-800/50 flex items-center justify-center hover:bg-teal-400 transition-all duration-300 ease-in-out transform hover:scale-110"
+  >
+    <Icon className="h-5 w-5" />
+  </a>
+);
+
+// Main Home Component
+const Home = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const style = `
+      .flip-card {
+        perspective: 1000px;
+        height: 30px;
+      }
+
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: left;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+      }
+
+      .flipped {
+        transform: rotateX(180deg);
+      }
+
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        align-items: center;
+      }
+
+      .flip-card-back {
+        transform: rotateX(180deg);
+      }
+
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      .animate-slide-up {
+        animation: slideUp 0.6s ease-out forwards;
+      }
+
+      .animate-fade-in {
+        animation: fadeIn 0.6s ease-out forwards;
+      }
+
+      .animate-scroll {
+        animation: scroll 25s linear infinite;
+      }
+
+      .animate-scroll:hover {
+        animation-play-state: paused;
+      }
+    `;
+
+    const styleElement = document.createElement('style');
+    styleElement.textContent = style;
+    document.head.appendChild(styleElement);
+
+    return () => {
+      document.head.removeChild(styleElement);
+    };
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-black text-white relative">
+      {/* Navigation */}
+      <nav className="fixed w-full top-0 z-50 px-8 py-6 flex justify-between items-center bg-transparent">
+        <LogoSection />
+        <div className="flex items-center gap-8">
+          <button className="p-2 rounded-lg hover:bg-gray-800 transition-all duration-300 hover:scale-110">
+            <Search className="h-6 w-6" />
+          </button>
+          <button 
+            className="p-2 rounded-lg hover:bg-gray-800 transition-all duration-300 hover:scale-110"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <Menu className="h-6 w-6" />
+          </button>
+        </div>
+      </nav>
 
       {/* Hero Section */}
-      <section className="bg-white py-20">
-        <div className="container mx-auto px-6">
-          <div className="md:flex md:items-center">
-            <div className="md:w-1/2">
-              <h2 className="text-4xl font-bold text-gray-800 mb-2">
-                Empowering Your Digital Growth with 360° Marketing Solutions
-              </h2>
-              <p className="text-gray-700 mb-6">
-                From strategy to execution, we craft tailored digital marketing solutions to elevate your business in the competitive online landscape.
-              </p>
-              <a
-                href="/contact"
-                className="bg-blue-500 text-white rounded-full py-4 px-8 hover:bg-blue-600 focus:outline-none focus:shadow-outline"
-              >
-                Let's Talk! Get a Free Consultation
-              </a>
-            </div>
-            <div className="md:w-1/2">
-              <img src="Banner_5.png" alt="Digital Transformation" className="w-full rounded-lg shadow-md hover:shadow-xl transition duration-300" />
-            </div>
-          </div>
+      <div className="container mx-auto px-8 h-screen flex items-center">
+        <div className="max-w-2xl animate-fade-in-up">
+          <h1 className="text-6xl font-bold mb-6 opacity-0 animate-slide-up" style={{ animationDelay: '200ms' }}>
+            Transforming<br />
+            Businesses With<br />
+            <span className="text-gray-400">Expertise.</span>
+          </h1>
+          <p className="text-xl text-gray-400 mb-8 opacity-0 animate-slide-up" style={{ animationDelay: '400ms' }}>
+            Our consulting service drives growth, enhances efficiency,<br />
+            and transforms businesses for lasting success.
+          </p>
+          <button className="px-8 py-3 border-2 border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-white transition-all duration-300 ease-in-out transform hover:-translate-y-1 opacity-0 animate-slide-up" style={{ animationDelay: '600ms' }}>
+            Free Consultation
+          </button>
         </div>
-      </section>
+      </div>
 
-      {/* About Us */}
-      <section className="bg-gray-100 py-20">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-8 text-gray-800">About Us</h2>
-          <div className="md:flex">
-            <div className="md:w-1/2">
-              <p className="text-gray-700 mb-4">
-                Pangea360 is a full-service digital marketing agency and a subsidiary of Pangea Global Enterprises. We specialize in delivering tailored marketing solutions to businesses across various industries.
-              </p>
-              <p className="text-gray-700 mb-4">
-                Our mission is to help our clients achieve their goals through innovative strategies and data-driven approaches. We thrive on innovation, results, and customer satisfaction.
-              </p>
-            </div>
-            <div className="md:w-1/2 md:pl-8">
-              <img src="Banner_4.png" alt="About Us" className="w-full rounded-lg shadow-md hover:shadow-xl transition duration-300" />
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Client Slider Section */}
+      <ClientSlider />
 
-      {/* Services Overview */}
-      <section className="bg-white py-20">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-8 text-gray-800">Our Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div>
-              <img src="Popular.png" alt="SEO" className="mx-auto mb-4" />
-              <h3 className="text-lg font-bold mb-2 text-gray-800">SEO</h3>
-              <p className="text-gray-700">Increase your online visibility and drive organic traffic with our SEO strategies.</p>
-            </div>
-            <div>
-              <img src="Lottery.png" alt="Social Media Marketing" className="mx-auto mb-4" />
-              <h3 className="text-lg font-bold mb-2 text-gray-800">Social Media Marketing</h3>
-              <p className="text-gray-700">Engage your audience and grow your brand with our social media marketing services.</p>
-            </div>
-            <div>
-              <img src="Slots.png" alt="PPC Ads" className="mx-auto mb-4" />
-              <h3 className="text-lg font-bold mb-2 text-gray-800">PPC Ads</h3>
-              <p className="text-gray-700">Drive targeted traffic and increase conversions with our PPC advertising solutions.</p>
-            </div>
-            <div>
-              <img src="Popular.png" alt="Branding" className="mx-auto mb-4" />
-              <h3 className="text-lg font-bold mb-2 text-gray-800">Branding</h3>
-              <p className="text-gray-700">Build a strong brand identity that resonates with your target audience.</p>
-            </div>
-            <div>
-              <img src="Lottery.png" alt="Content Marketing" className="mx-auto mb-4" />
-              <h3 className="text-lg font-bold mb-2 text-gray-800">Content Marketing</h3>
-              <p className="text-gray-700">Attract, engage, and convert your audience with our content marketing strategies.</p>
-            </div>
-            <div>
-              <img src="Slots.png" alt="Graphics Design" className="mx-auto mb-4" />
-              <h3 className="text-lg font-bold mb-2 text-gray-800">Graphics Design</h3>
-              <p className="text-gray-700">Enhance your visual brand with our creative graphics design services.</p>
-            </div>
-            <div>
-              <img src="Lottery.png" alt="Lead Generation" className="mx-auto mb-4" />
-              <h3 className="text-lg font-bold mb-2 text-gray-800">Lead Generation</h3>
-              <p className="text-gray-700">Fill your sales pipeline with qualified leads through our lead generation strategies.</p>
-            </div>
-            <div>
-              <img src="Popular.png" alt="VFX/3D Animation" className="mx-auto mb-4" />
-              <h3 className="text-lg font-bold mb-2 text-gray-800">VFX/3D Animation</h3>
-              <p className="text-gray-700">Bring your ideas to life with stunning visual effects and 3D animations.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Services Section */}
+      <ServicesSection />
 
-      {/* Industries We Serve */}
-      <section className="bg-gray-100 py-20">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-8 text-gray-800">Industries We Serve</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div>
-              <img src="Banner_1.png" alt="Consultants" className="mx-auto mb-4" />
-              <h3 className="text-lg font-bold mb-2 text-gray-800">Consultants</h3>
-            </div>
-            <div>
-              <img src="Banner_2.png" alt="Corporate Businesses" className="mx-auto mb-4" />
-              <h3 className="text-lg font-bold mb-2 text-gray-800">Corporate Businesses</h3>
-            </div>
-            <div>
-              <img src="Banner_3.png" alt="Law Firms" className="mx-auto mb-4" />
-              <h3 className="text-lg font-bold mb-2 text-gray-800">Law Firms</h3>
-            </div>
-            <div>
-              <img src="Banner_4.png" alt="Healthcare" className="mx-auto mb-4" />
-              <h3 className="text-lg font-bold mb-2 text-gray-800">Healthcare</h3>
-            </div>
-            <div>
-              <img src="Banner_5.png" alt="Real Estate" className="mx-auto mb-4" />
-              <h3 className="text-lg font-bold mb-2 text-gray-800">Real Estate</h3>
-            </div>
-            <div>
-              <img src="Banner_2.png" alt="Education" className="mx-auto mb-4" />
-              <h3 className="text-lg font-bold mb-2 text-gray-800">Education</h3>
-            </div>
-            <div>
-              <img src="Banner_4.png" alt="E-commerce" className="mx-auto mb-4" />
-              <h3 className="text-lg font-bold mb-2 text-gray-800">E-commerce</h3>
-            </div>
-            <div>
-              <img src="Banner_1.png" alt="Hospitality" className="mx-auto mb-4" />
-              <h3 className="text-lg font-bold mb-2 text-gray-800">Hospitality</h3>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="bg-white py-20">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-8 text-gray-800">Why Choose Us</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <img src="Banner_4.png" alt="Why Choose Us" className="w-full rounded-lg shadow-md hover:shadow-xl transition duration-300" />
-            </div>
-            <div>
-              <ul className="list-disc pl-6 text-gray-700">
-                <li className="mb-2">Results-driven strategies</li>
-                <li className="mb-2">Comprehensive services</li>
-                <li className="mb-2">Niche expertise</li>
-                <li className="mb-2">Transparency</li>
-                <li>Innovative solutions</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="bg-gray-100 py-20">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-8 text-gray-800">What Our Clients Say</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <p className="text-gray-700 mb-4">
-                "Pangea360 helped us increase our online visibility and generate more leads. Their team is professional, responsive, and truly cares about our success."
-              </p>
-              <p className="font-bold text-gray-800">John Doe</p>
-              <p className="text-sm text-gray-600">CEO, ABC Company</p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <p className="text-gray-700 mb-4">
-                "We saw a significant increase in our website traffic and conversions after working with Pangea360. Their SEO and PPC strategies really work!"
-              </p>
-              <p className="font-bold text-gray-800">Jane Smith</p>
-              <p className="text-sm text-gray-600">Marketing Manager, XYZ Inc.</p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <p className="text-gray-700 mb-4">
-                "Pangea360's branding and design services helped us establish a strong brand identity. We highly recommend them!"
-              </p>
-              <p className="font-bold text-gray-800">Mark Johnson</p>
-              <p className="text-sm text-gray-600">Owner, DEF Company</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Call-to-Action */}
-      <section className="bg-white py-20">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold mb-6 text-gray-800">Ready to Grow Your Business?</h2>
-          <p className="text-gray-700 mb-8">Let's Make It Happen!</p>
-          <a
-            href="/contact"
-            className="bg-blue-500 text-white rounded-full py-4 px-8 hover:bg-blue-600 focus:outline-none focus:shadow-outline"
-          >
-            Contact Us
-          </a>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-800 py-8">
-        <div className="container mx-auto px-6 text-center">
-          <p className="text-white">&copy; 2025 Pangea360. All rights reserved.</p>
-        </div>
-      </footer>
-      
+      {/* Social Links */}
+      <div className="fixed right-8 top-1/2 -translate-y-1/2 flex flex-col gap-6">
+        <SocialLink Icon={Twitter} />
+        <SocialLink Icon={Facebook} />
+        <SocialLink Icon={Linkedin} />
+        <SocialLink Icon={Instagram} />
+      </div>
     </div>
   );
 };
