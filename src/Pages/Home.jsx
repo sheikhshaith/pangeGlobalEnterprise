@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import ServicesSlider from "../components/ServicesSlider";
 import FeaturesSection from '../components/FeaturesSection';
+import TestimonialSlider from '../components/TestimonialSlider';
 import FAQSection from '../components/FAQSection';
 import {
   Search,
@@ -713,6 +714,7 @@ const Home = () => {
       </div>
       <Global />
       <FAQSection />
+      <TestimonialSlider />
 
       {/* Social Links */}
       <div className="fixed right-8 top-1/2 -translate-y-1/2 flex flex-col gap-6">
