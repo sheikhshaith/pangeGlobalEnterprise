@@ -338,7 +338,7 @@ const EarthSection = () => {
           </svg>
 
           {/* Floating Text Elements */}
-          <div className="absolute top-1/4 left-0 transform -translate-x-1/2 bg-gray-900/80 backdrop-blur-sm p-3 rounded-lg">
+          <div className="absolute top-1/4 left-0 transform -translate-x-1/2 bg-gray-900/80 backdrop-blur-md p-3 rounded-lg text-white shadow-lg border border-cyan-400 shadow-cyan-400/20">
             <p className="text-white text-sm whitespace-nowrap">
               Innovate. Lead.
               <br />
@@ -346,7 +346,7 @@ const EarthSection = () => {
             </p>
           </div>
 
-          <div className="absolute top-1/4 right-0 transform translate-x-1/2 bg-gray-900/80 backdrop-blur-sm p-3 rounded-lg">
+          <div className="absolute top-1/4 right-0 transform translate-x-1/2 bg-gray-900/80  backdrop-blur-md p-3 rounded-lg text-white shadow-lg border border-cyan-400 shadow-cyan-400/20">
             <p className="text-white text-sm whitespace-nowrap">
               Empowering Growth
               <br />
