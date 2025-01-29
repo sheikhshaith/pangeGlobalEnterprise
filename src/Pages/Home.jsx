@@ -661,7 +661,6 @@ const Home = () => {
       <TestimonialSlider />
       <ContactForm />
       <ContactSection />
-      <ContactSection />
     </div>
   );
 };

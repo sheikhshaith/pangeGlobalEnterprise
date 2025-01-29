@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const ContactSection = () => {
   return (
@@ -45,12 +45,12 @@ const ContactSection = () => {
 
       {/* Right Side Image */}
       <div className="absolute right-0  top-0 h-full w-2/3 overflow-hidden">
-        <img 
+        <img
           src="/a2-earth.webp"
           alt="Geometric Pattern"
           className="h-[400px] w-[400px] object-cover object-left"
           style={{
-            transform: 'translateX(790px) translateY(30px)', // Moves the element 100px to the right and 50px down
+            transform: "translateX(650px) translateY(30px)", // Moves the element 100px to the right and 50px down
           }} // Moved further to the right
         />
       </div>
