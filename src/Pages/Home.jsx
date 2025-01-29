@@ -7,6 +7,7 @@ import TestimonialSlider from "../components/TestimonialSlider";
 import ContactForm from "../components/ContactForm";
 import ContactSection from "../components/ContactSection";
 import FAQSection from "../components/FAQSection";
+import StatsSection from "../components/StatsSection";
 import {
   Search,
   Menu,
@@ -25,7 +26,6 @@ import {
   Zap,
   Circle,
 } from "lucide-react";
-import ExpertButton from "../components/ExpertButton";
 
 // Logo Section Component
 const LogoSection = () => {
@@ -404,48 +404,6 @@ const EarthSection = () => {
   );
 };
 
-const StatsSection = () => {
-  return (
-    <section className="bg-dark text-white py-16 relative">
-      <div className="container mx-auto text-center px-4">
-        <h2 className="text-xl md:text-2xl font-light mb-8 leading-relaxed text-gray-300">
-          Our business consulting services aim to optimize operations and
-          strategies, driving growth and ensuring sustained organizational
-          success and development.
-        </h2>
-
-        <div className="flex flex-col md:flex-row justify-center gap-10 text-center font-bold text-3xl md:text-4xl text-teal-400">
-          <div className="transition-transform hover:scale-110">
-            <span>13+</span>
-            <span className="block text-lg md:text-xl text-gray-300 mt-2">
-              Years of Experience
-            </span>
-          </div>
-          <div className="transition-transform hover:scale-110">
-            <span>25+</span>
-            <span className="block text-lg md:text-xl text-gray-300 mt-2">
-              Projects Worldwide
-            </span>
-          </div>
-          <div className="transition-transform hover:scale-110">
-            <span>93+</span>
-            <span className="block text-lg md:text-xl text-gray-300 mt-2">
-              Clients Worldwide
-            </span>
-          </div>
-        </div>
-
-        <div className="mt-10">
-          <button className="bg-teal-400 text-dark font-medium py-3 px-8 rounded-full shadow-lg hover:bg-teal-300 focus:ring-4 focus:ring-teal-200">
-            Know About Us
-          </button>
-        </div>
-      </div>
-      <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-dark to-transparent"></div>
-    </section>
-  );
-};
-
 const Global = () => {
   return (
     <section className="relative min-h-screen bg-black overflow-hidden">
@@ -520,16 +478,6 @@ const Global = () => {
     </section>
   );
 };
-
-// Social Link Component
-const SocialLink = ({ Icon }) => (
-  <a
-    href="#"
-    className="w-10 h-10 rounded-full bg-gray-800/50 flex items-center justify-center hover:bg-teal-400 transition-all duration-300 ease-in-out transform hover:scale-110"
-  >
-    <Icon className="h-5 w-5" />
-  </a>
-);
 
 // Main Home Component
 const Home = () => {
@@ -688,6 +636,10 @@ const Home = () => {
             <div className="hidden sm:block md:absolute top-[20%] sm:top-[15%] md:top-[27%] lg:top-[29%] left-[47.3%] sm:left-[45%] md:left-[30.9%] lg:left-[55.3%] sm:h-[80px] md:h-[120px] sm:w-[0.8px] md:w-[1px] bg-cyan-400 transform rotate-[90deg] shadow-[0_0_15px_rgba(6,182,212,0.7)]"></div>
             <div className="hidden sm:block md:absolute bottom-[37.1%] sm:bottom-[40%] md:bottom-[30.1%] lg:bottom-[28.1%] right-[34%] sm:right-[30%] md:right-[52%] lg:right-[26%] sm:h-[160px] md:h-[200px] sm:w-[0.8px] md:w-[1px] bg-cyan-400 rotate-[140deg] shadow-[0_0_15px_rgba(6,182,212,0.7)]"></div>
             <div className="hidden sm:block md:absolute bottom-[40%] sm:bottom-[42%] md:bottom-[32%] lg:bottom-[31%] right-[23.5%] sm:right-[20%] md:right-[41.5%] lg:right-[15.5%] w-[8px] sm:w-[10px] md:w-[12px] h-[8px] sm:h-[10px] md:h-[12px] bg-cyan-400 rounded-full shadow-[0_0_10px_4px_rgba(6,182,212,0.8)]"></div>
+            <div className="hidden sm:block md:absolute top-[30%] sm:top-[20%] md:top-[37%] lg:top-[39%] right-[60.9%] sm:right-[50%] md:right-[76.9%] lg:right-[53.9%] w-[8px] sm:w-[10px] md:w-[12px] h-[8px] sm:h-[10px] md:h-[12px] bg-cyan-400 rounded-full shadow-[0_0_10px_4px_rgba(6,182,212,0.8)]"></div>
+            <div className="hidden sm:block md:absolute top-[20%] sm:top-[15%] md:top-[27%] lg:top-[29%] left-[47.3%] sm:left-[45%] md:left-[30.9%] lg:left-[55.3%] sm:h-[80px] md:h-[120px] sm:w-[0.8px] md:w-[1px] bg-cyan-400 transform rotate-[90deg] shadow-[0_0_15px_rgba(6,182,212,0.7)]"></div>
+            <div className="hidden sm:block md:absolute bottom-[37.1%] sm:bottom-[40%] md:bottom-[30.1%] lg:bottom-[28.1%] right-[34%] sm:right-[30%] md:right-[52%] lg:right-[26%] sm:h-[160px] md:h-[200px] sm:w-[0.8px] md:w-[1px] bg-cyan-400 rotate-[140deg] shadow-[0_0_15px_rgba(6,182,212,0.7)]"></div>
+            <div className="hidden sm:block md:absolute bottom-[40%] sm:bottom-[42%] md:bottom-[32%] lg:bottom-[31%] right-[23.5%] sm:right-[20%] md:right-[41.5%] lg:right-[15.5%] w-[8px] sm:w-[10px] md:w-[12px] h-[8px] sm:h-[10px] md:h-[12px] bg-cyan-400 rounded-full shadow-[0_0_10px_4px_rgba(6,182,212,0.8)]"></div>
           </div>
         </div>
       </main>
@@ -708,6 +660,7 @@ const Home = () => {
       <FAQSection />
       <TestimonialSlider />
       <ContactForm />
+      <ContactSection />
       <ContactSection />
     </div>
   );
