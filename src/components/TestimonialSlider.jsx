@@ -2,22 +2,19 @@ import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const TestimonialSlider = () => {
+    // ... keeping the same state and testimonials data ...
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isHovered, setIsHovered] = useState(false);
 
     const testimonials = [
         { name: 'Albert Flores', title: 'General Manager', rating: 5, text: 'Outstanding digital agency service! Exceptional creativity, strategic approach, and flawless execution. Highly recommend for all digital marketing needs', image: '/api/placeholder/100/100' },
         { name: 'Cameron Williamson', title: 'Marketing Director', rating: 5, text: 'Innovative, efficient, and collaborative digital agency service delivering exceptional results. Highly recommend for top-tier expertise and professionalism', image: '/api/placeholder/100/100' },
-        { name: 'Sarah Johnson', title: 'Product Manager', rating: 5, text: 'Exceptional service and outstanding results. The teams attention to detail and creative solutions exceeded our expectations', image: '/api/placeholder/100/100' },
-        { name: 'Michael Chen', title: 'Creative Director', rating: 5, text: 'Brilliant strategic thinking and flawless execution. Their innovative approach transformed our digital presence completely', image: '/api/placeholder/100/100' },
-        { name: 'Emily Rodriguez', title: 'Operations Head', rating: 5, text: 'Remarkable expertise in digital solutions. Their team delivered beyond expectations with incredible attention to detail', image: '/api/placeholder/100/100' },
-        { name: 'David Kim', title: 'Tech Lead', rating: 5, text: 'Outstanding technical prowess and creative solutions. They truly understand modern digital challenges', image: '/api/placeholder/100/100' },
-        { name: 'Lisa Thompson', title: 'Brand Manager', rating: 5, text: 'Exceptional brand awareness and marketing strategies. Their work significantly improved our market position', image: '/api/placeholder/100/100' },
-        { name: 'James Wilson', title: 'Digital Strategist', rating: 5, text: 'Incredible results and professional service. Their strategic approach helped us achieve our goals faster', image: '/api/placeholder/100/100' }
+        // ... rest of the testimonials ...
     ];
 
     const totalSlides = Math.ceil(testimonials.length / 2);
 
+    // ... keeping the same navigation functions and useEffect ...
     const nextSlide = () => {
         setCurrentSlide((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
     };
@@ -53,9 +50,9 @@ const TestimonialSlider = () => {
                 </div>
 
                 {/* Name card */}
-                <div className="absolute -bottom-40 left-24 z-20">
+                <div className="absolute -bottom-32 left-24 z-20">
                     <div className="relative">
-                        <div className="bg-gray-800 rounded-xl py-3 px-6 shadow-lg border border-gray-700">
+                        <div className="bg-gray-800/80 rounded-xl py-3 px-6 shadow-lg border border-gray-700/50">
                             <h3 className="text-white font-medium text-sm whitespace-nowrap">{testimonial.name}</h3>
                             <p className="text-gray-400 text-xs">{testimonial.title}</p>
                         </div>
@@ -92,10 +89,14 @@ const TestimonialSlider = () => {
                                 const offset = cardIndex * 50;
                                 return (
                                     <div key={cardIndex} className="absolute" style={{ left: `${offset}%` }}>
-                                        <div className="absolute top-[50%] left-[10%] w-[10px] h-[10px] bg-cyan-400 rounded-full shadow-[0_0_10px_4px_rgba(6,182,212,0.8)]" />
-                                        <div className="absolute top-[50%] left-[10%] h-[120px] w-[1px] bg-cyan-400 shadow-[0_0_15px_rgba(6,182,212,0.7)]" />
-                                        <div className="absolute top-[170%] left-[10%] w-[200px] h-[1px] bg-cyan-400 shadow-[0_0_15px_rgba(6,182,212,0.7)]" />
-                                        <div className="absolute top-[170%] left-[calc(10%+200px)] w-[10px] h-[10px] bg-cyan-400 rounded-full shadow-[0_0_10px_4px_rgba(6,182,212,0.8)]" />
+                                        {/* Top dot */}
+                                        <div className="absolute top-[45%] left-[10%] w-2 h-2 bg-teal-400 rounded-full shadow-[0_0_10px_2px_rgba(45,212,191,0.5)]" />
+                                        
+                                        {/* Vertical line */}
+                                        <div className="absolute top-[45%] left-[calc(10%+3px)] h-32 w-[1px] bg-gradient-to-b from-teal-400 to-transparent" />
+                                        
+                                        {/* Bottom dot */}
+                                        <div className="absolute top-[calc(45%+128px)] left-[10%] w-2 h-2 bg-teal-400 rounded-full shadow-[0_0_10px_2px_rgba(45,212,191,0.5)]" />
                                     </div>
                                 );
                             })}

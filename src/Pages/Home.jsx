@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 // import "./App.css"; // Ensure you add the styles here
 import { ChevronDown, ChevronUp } from "lucide-react";
 import ServicesSlider from "../components/ServicesSlider";
+import FeaturesSection from '../components/FeaturesSection';
+import TestimonialSlider from '../components/TestimonialSlider';
+import FAQSection from '../components/FAQSection';
 import {
   Search,
   Menu,
@@ -515,90 +518,6 @@ const Global = () => {
   );
 };
 
-const FAQSection = () => {
-  const faqs = [
-    {
-      question: "What Is Corporate Business?",
-      answer:
-        "Corporate business refers to an entity that operates legally and is separate from its owners, ensuring limited liability and structured governance.",
-    },
-    {
-      question: "How Do Corporate Businesses Differ From Small Businesses?",
-      answer:
-        "Corporate business refers to large-scale operations involving multiple stakeholders and structured governance for achieving specific business goals.",
-    },
-    {
-      question: "What Are The Key Benefits Of Forming A Corporate Entity?",
-      answer:
-        "Key benefits include limited liability, ease of raising capital, perpetual existence, and structured management.",
-    },
-    {
-      question: "How Can Corporate Businesses Ensure Sustainability?",
-      answer:
-        "Corporate businesses ensure sustainability by adopting ethical practices, focusing on long-term goals, and integrating corporate social responsibility initiatives.",
-    },
-    {
-      question: "What Challenges Do Corporate Businesses Commonly Face?",
-      answer:
-        "Common challenges include regulatory compliance, market competition, financial management, and adapting to technological advancements.",
-    },
-  ];
-
-  const [openIndex, setOpenIndex] = useState(null);
-  const [animateBorder, setAnimateBorder] = useState(null);
-
-  const handleToggle = (index) => {
-    if (openIndex === index) {
-      setOpenIndex(null);
-    } else {
-      setOpenIndex(index);
-      setAnimateBorder(index);
-      setTimeout(() => setAnimateBorder(null), 200); // Remove border after 0.2s
-    }
-  };
-
-  return (
-    <section className="bg-black text-white min-h-screen flex flex-col items-center p-10">
-      <span className="bg-gray-800 text-gray-300 px-4 py-1 rounded-full text-sm mb-4 hover:bg-gray-700 transition">
-        Frequently Asked Questions
-      </span>
-      <h2 className="text-gray-300 text-3xl font-bold text-center mb-6 hover:text-gray-30 transition">
-        Your Questions Answered: Pixify’s Corporate Business Solutions.
-      </h2>
-      <div className="w-full max-w-2xl">
-        {faqs.map((faq, index) => (
-          <div
-            key={index}
-            className={`border-b border-gray-700 relative transition-all duration-200 ${
-              animateBorder === index ? "border-green-500" : ""
-            }`}
-          >
-            <button
-              className="w-full flex justify-between items-center p-4 text-lg font-medium text-left hover:bg-gray-800 transition duration-300"
-              onClick={() => handleToggle(index)}
-            >
-              {faq.question}
-              {openIndex === index ? (
-                <ChevronUp className="text-gray-400" />
-              ) : (
-                <ChevronDown className="text-gray-400" />
-              )}
-            </button>
-            <div
-              className={`overflow-hidden transition-all duration-300 ${
-                openIndex === index
-                  ? "max-h-40 opacity-100 p-4"
-                  : "max-h-0 opacity-0"
-              }`}
-            >
-              <p className="text-gray-300">{faq.answer}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-};
 
 // Social Link Component
 const SocialLink = ({ Icon }) => (
