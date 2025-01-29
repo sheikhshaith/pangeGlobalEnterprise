@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 // import "./App.css"; // Ensure you add the styles here
 import { ChevronDown, ChevronUp } from "lucide-react";
 import ServicesSlider from "../components/ServicesSlider";
+import TestimonialSlider from "../components/TestimonialSlider";
+
 import {
   Search,
   Menu,
@@ -684,6 +686,9 @@ const FAQSection = () => {
   );
 };
 
+
+
+
 // Social Link Component
 const SocialLink = ({ Icon }) => (
   <a
@@ -870,6 +875,7 @@ const Home = () => {
       <BrowserServices />
       <Global />
       <FAQSection />
+      <TestimonialSlider />
 
       {/* Social Links */}
       <div className="fixed right-8 top-1/2 -translate-y-1/2 flex flex-col gap-6">
