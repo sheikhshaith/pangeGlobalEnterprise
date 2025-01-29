@@ -165,15 +165,17 @@ const ClientSlider = () => {
                 `}
                 onClick={() => handleClientClick(client.name)}
               >
-                <client.Icon
-                  className={`w-6 h-6 transition-colors duration-300
-                    ${
-                      selectedClient === client.name
-                        ? "text-white"
-                        : "text-gray-400 group-hover:text-white"
-                    }
-                  `}
-                />
+                <div className="relative w-6 h-6 group-hover:transform group-hover:rotate-x-180 transition-transform duration-300">
+                  <client.Icon
+                    className={`w-6 h-6 transition-colors duration-300
+                      ${
+                        selectedClient === client.name
+                          ? "text-white"
+                          : "text-gray-400 group-hover:text-white"
+                      }
+                    `}
+                  />
+                </div>
                 <span
                   className={`font-medium text-lg transition-colors duration-300
                   ${
@@ -203,6 +205,10 @@ const ClientSlider = () => {
 
         .animate-scroll {
           animation: scroll 20s linear infinite;
+        }
+
+        .rotate-x-180 {
+          transform: rotateX(180deg);
         }
       `}</style>
     </section>
@@ -298,7 +304,7 @@ const EarthSection = () => {
             <img
               src="o1-earth-3.webp"
               alt="Digital Earth"
-              className="w-4/5 h-4/5 object-contain"
+              className="w-4/5 h-4/5 object-contain animate-rotate-earth"
             />
           </div>
 
@@ -314,7 +320,7 @@ const EarthSection = () => {
           </svg>
 
           {/* Floating Text Elements */}
-          <div className="absolute top-1/4 left-0 transform -translate-x-1/2 bg-gray-900/80 backdrop-blur-sm p-3 rounded-lg">
+          <div className="absolute top-1/4 left-0 transform -translate-x-1/2 bg-white/3 backdrop-blur-md p-3 rounded-lg text-white shadow-lg border border-cyan-400 shadow-cyan-400/20">
             <p className="text-white text-sm whitespace-nowrap">
               Innovate. Lead.
               <br />
@@ -322,7 +328,7 @@ const EarthSection = () => {
             </p>
           </div>
 
-          <div className="absolute top-1/4 right-0 transform translate-x-1/2 bg-gray-900/80 backdrop-blur-sm p-3 rounded-lg">
+          <div className="absolute top-1/4 right-0 transform translate-x-1/2 bg-white/3 backdrop-blur-md p-3 rounded-lg text-white shadow-lg border border-cyan-400 shadow-cyan-400/20">
             <p className="text-white text-sm whitespace-nowrap">
               Empowering Growth
               <br />
@@ -340,6 +346,22 @@ const EarthSection = () => {
       {/* Additional Glow Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-transparent to-cyan-500/5"></div>
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-500/5 to-transparent"></div>
+
+      {/* CSS for Earth Rotation */}
+      <style jsx="true">{`
+        @keyframes rotate-earth {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+
+        .animate-rotate-earth {
+          animation: rotate-earth 20s linear infinite;
+        }
+      `}</style>
     </section>
   );
 };
