@@ -244,6 +244,7 @@ const AboutPage = () => {
           </div>
         </div>
         <BusinessTeam />
+        <TestimonialSection />
       </main>
     </div>
   );
