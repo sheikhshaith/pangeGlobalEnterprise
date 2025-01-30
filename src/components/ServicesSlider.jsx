@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 
 const ServicesSlider = () => {
@@ -17,13 +16,12 @@ const ServicesSlider = () => {
     const handleScroll = () => {
       const sectionElements = document.querySelectorAll(".scroll-section");
       const windowHeight = window.innerHeight;
-      const threshold = windowHeight / 3; // Trigger point at 1/3 of viewport height
+      const threshold = windowHeight / 3;
 
       let activeIndex = 1;
       
       sectionElements.forEach((section, index) => {
         const rect = section.getBoundingClientRect();
-        // Check if section is in view (allowing for some buffer)
         if (rect.top <= threshold && rect.bottom >= threshold) {
           activeIndex = index + 1;
         }
@@ -32,10 +30,7 @@ const ServicesSlider = () => {
       setActiveSection(activeIndex);
     };
 
-    // Initial check
     handleScroll();
-
-    // Add scroll listener
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -45,22 +40,28 @@ const ServicesSlider = () => {
       {sections.map((section) => (
         <div 
           key={section.id} 
-          className="h-screen w-full sticky top-0 overflow-hidden scroll-section"
+          className="min-h-screen w-full sticky top-0 overflow-hidden scroll-section"
         >
-          <div className="relative h-full w-full flex items-center">
-            {/* Left Side - Image */}
-            <div className="w-1/2 h-full relative">
+          <div className="relative h-full w-full flex flex-col lg:flex-row items-center">
+            {/* Image Section - Full width on mobile, half on desktop */}
+            <div className="w-full lg:w-1/2 h-[40vh] lg:h-screen relative">
               <div className="absolute inset-0 bg-black/60">
-                <img src={section.image} alt={section.title} className="w-full h-full object-cover opacity-60" />
+                <img 
+                  src={section.image} 
+                  alt={section.title} 
+                  className="w-full h-full object-cover opacity-60" 
+                />
               </div>
             </div>
 
-            {/* Center - Navigation Dots */}
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col gap-8 z-10">
+            {/* Navigation Dots - Horizontal on mobile, vertical on desktop */}
+            <div className="absolute left-1/2 -translate-x-1/2 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 bottom-4 lg:bottom-auto 
+                          flex flex-row lg:flex-col gap-4 lg:gap-8 z-10">
               {sections.map((dot) => (
                 <div
                   key={dot.id}
-                  className={`w-8 h-8 rounded-full border-2 flex items-center justify-center transition-all duration-300 ${
+                  className={`w-6 h-6 lg:w-8 lg:h-8 rounded-full border-2 flex items-center justify-center 
+                            text-sm lg:text-base transition-all duration-300 ${
                     dot.id === activeSection 
                       ? "border-cyan-400 bg-cyan-400 text-white scale-110" 
                       : "border-gray-400 text-gray-400 scale-100"
@@ -71,15 +72,21 @@ const ServicesSlider = () => {
               ))}
             </div>
 
-            {/* Right Side - Content */}
-            <div className="w-1/2 h-full bg-gray-900">
-              <div className="h-full flex items-center">
-                <div className="px-12 max-w-xl mx-auto">
+            {/* Content Section - Full width on mobile, half on desktop */}
+            <div className="w-full lg:w-1/2 min-h-[60vh] lg:h-screen bg-gray-900">
+              <div className="h-full flex items-center py-12 lg:py-0">
+                <div className="px-6 md:px-8 lg:px-12 max-w-xl mx-auto">
                   <div>
-                    <p className="text-gray-400 mb-2">{section.number}</p>
-                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">{section.title}</h2>
-                    <p className="text-gray-300 text-lg mb-8 leading-relaxed">{section.description}</p>
-                    <button className="bg-transparent hover:bg-cyan-400 text-cyan-400 hover:text-white px-6 py-3 rounded-full border-2 border-cyan-400 transition-colors duration-300">
+                    <p className="text-gray-400 mb-2 text-sm md:text-base">{section.number}</p>
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 lg:mb-6">
+                      {section.title}
+                    </h2>
+                    <p className="text-gray-300 text-base md:text-lg mb-6 lg:mb-8 leading-relaxed">
+                      {section.description}
+                    </p>
+                    <button className="w-full sm:w-auto bg-transparent hover:bg-cyan-400 text-cyan-400 
+                                     hover:text-white px-6 py-3 rounded-full border-2 border-cyan-400 
+                                     transition-colors duration-300 text-sm md:text-base">
                       Discover More
                     </button>
                   </div>
