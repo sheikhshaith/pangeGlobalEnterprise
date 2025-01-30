@@ -1,0 +1,359 @@
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from "framer-motion";
+import { useState, useEffect } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+const ServicesPage = () => {
+  const services = [
+    {
+      title: "HR Development",
+      description: "We enhance workforce skills through targeted training and professional development ...",
+      image: "s1.webp", // Replace with actual image
+    },
+    {
+      title: "Technology Integration",
+      description: "We integrate advanced technology solutions to optimize operations and drive innovation ...",
+      image: "s2.webp",
+    },
+    {
+      title: "Marketing Strategy",
+      description: "Our marketing strategies drive brand awareness, customer engagement, and business growth ...",
+      image: "s3.webp",
+    },
+    {
+      title: "Strategic Planning",
+      description: "Our strategic planning ensures sustainable growth and long-term success for your business ...",
+      image: "s4.webp",
+    },
+    {
+      title: "Financial Consulting",
+      description: "We provide expert financial consulting to maximize profitability and ensure fiscal stability ...",
+      image: "s5.webp",
+    },
+    {
+      title: "Operational Optimization",
+      description: "We optimize operations to enhance efficiency, reduce costs, and improve performance ...",
+      image: "s6.webp",
+    },
+  ];
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 100);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  const achievements = [
+    { title: "Excellence Recognizing", subtitle: "Design Awards – Innovation", year: "2018" },
+    { title: "Recognizing Excellence", subtitle: "Design Awards – Innovation", year: "202" },
+    { title: "Construction", subtitle: "Design Awards – Innovation", year: "22" },
+    { title: "Projects Planning", subtitle: "Design Awards – Innovation", year: "2024" },
+  ];
+  const testimonials = [
+    {
+      name: "Cameron Williamson",
+      role: "Head Of Products",
+      rating: 5,
+      feedback:
+        "Pixify Transformed Our Website Into A Powerful Business Tool. The Design Is Sleek, User-Friendly, And Perfectly Aligns With Our Brand. Our Online Presence Has Never Been Stronger, Thanks To Their Incredible Team!",
+      image: "/review-1.avif",
+    },
+    {
+      name: "Cameron Williamson",
+      role: "Head Of Products",
+      rating: 5,
+      feedback:
+        "Pixify Transformed Our Website Into A Powerful Business Tool. The Design Is Sleek, User-Friendly, And Perfectly Aligns With Our Brand. Our Online Presence Has Never Been Stronger, Thanks To Their Incredible Team!",
+      image: "/review-1.avif",
+    },
+    {
+      name: "Cameron Williamson",
+      role: "Head Of Products",
+      rating: 5,
+      feedback:
+        "Pixify Transformed Our Website Into A Powerful Business Tool. The Design Is Sleek, User-Friendly, And Perfectly Aligns With Our Brand. Our Online Presence Has Never Been Stronger, Thanks To Their Incredible Team!",
+      image: "/review-1.avif",
+    },
+    {
+      name: "Cameron Williamson",
+      role: "Head Of Products",
+      rating: 5,
+      feedback:
+        "Pixify Transformed Our Website Into A Powerful Business Tool. The Design Is Sleek, User-Friendly, And Perfectly Aligns With Our Brand. Our Online Presence Has Never Been Stronger, Thanks To Their Incredible Team!",
+      image: "/review-1.avif",
+    },
+    // Add more testimonials here
+  ];
+  
+  return (
+    <div className="min-h-screen bg-gradient-to-b bg-black">
+      {/* Centered Navigation */}
+      <div className="flex justify-center mt-0">
+        <div className="flex space-x-6 bg-black bg-opacity-50 px-6 py-2 mt-12 rounded-lg relative overflow-hidden">
+          {/* Animated Border */}
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveX_2s_linear_infinite]"></div>
+            <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveX_2s_linear_infinite]"></div>
+            <div className="absolute top-0 left-0 h-full w-0.5 bg-gradient-to-b from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveY_2s_linear_infinite]"></div>
+            <div className="absolute top-0 right-0 h-full w-0.5 bg-gradient-to-b from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveY_2s_linear_infinite]"></div>
+          </div>
+
+          {/* Navigation Links */}
+          <Link to="/" className="text-white hover:text-cyan-400 px-3 py-1 transition-colors duration-200 text-sm">
+            Home
+          </Link>
+          <Link to="/ServicesPage" className="text-white hover:text-cyan-400 px-3 py-1 transition-colors duration-200 text-sm">
+            Services
+          </Link>
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <main className="container mx-auto px-2 md:px-6 pt-12 pb-20">
+        {/* Hero Section */}
+        <div className="text-center mb-12">
+          <h1 className="text-white text-4xl md:text-5xl font-bold mb-12 tracking-tight">
+            Empowering Businesses With
+            <br />
+            Strategic Growth Solutions
+          </h1>
+        </div>
+
+        {/* Image Section */}
+        <div className="rounded-2xl overflow-hidden mb-12">
+          <img
+            src="/person.png"
+            alt="Business meeting"
+            className="w-full h-[400px] md:h-[500px] object-cover"
+          />
+        </div>
+
+        {/* Description */}
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-lg leading-relaxed text-white">
+            We offer a wide range of services, including strategic planning, 
+            financial management, marketing, and technology integration. 
+            By leveraging the latest industry insights and innovative strategies, 
+            we ensure your business stays ahead of the curve.
+          </p>
+        </div>
+        <div className="min-h-screen flex flex-col items-center p-8">
+      <h2 className="text-center text-4xl font-bold mb-4">
+        <span className="text-white">Comprehensive</span>
+        <span className="text-white"> Business Consulting Services</span>
+        <span className="text-white"> For Growth And Efficiency</span>
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl">
+        {services.map((service, index) => (
+          <div key={index} className="bg-white rounded-xl shadow-lg p-4 relative">
+          <img src={service.image} alt={service.title} className="rounded-lg w-full h-48 object-cover" />
+          <h3 className="text-xl font-semibold mt-4">{service.title}</h3>
+          <p className="text-gray-600 mt-2">{service.description}</p>
+      
+          {/* Move the button to the right with percentage positioning */}
+          <button className="absolute right-[2%] bottom-[25%]  text-blue-500 text-2xl font-bold h-12 w-12 flex items-center justify-center p-4 rounded-full border-2 border-blue-500 transition-transform duration-300 ease-in-out hover:bg-blue-500 hover:text-white hover:rotate-45 hover:scale-105 active:scale-95 
+    animate-pulse">
+              <span className="material-icons transform rotate-[320deg]">→</span>
+          </button>
+      </div>
+      
+        ))}
+      </div>
+      {/* <button className="mt-6 px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 
+    transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95">
+    Browse All Services 
+</button> */}
+<button className="mt-6 px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 
+    transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95 
+    animate-pulse">
+    Browse All Services 
+</button>
+
+
+    </div>
+    <div className="relative h-screen w-[133%] left-[-16%] overflow-hidden">
+  {/* Background Image */}
+  <motion.div
+    className="absolute  w-[100%] h-[100%] bg-cover bg-center opacity-20"
+    style={{ backgroundImage: "url('/bac.webp')" }}
+    animate={{ scale: scrolled ? 1.2 : 1 }}
+    transition={{ duration: 4 }}
+  />
+  
+  {/* Video Drop Effect */}
+  {scrolled && (
+    <motion.video
+      className="absolute top-[28%] left-[29%] transform -translate-x-1/2 -translate-y-1/2 rounded-lg shadow-lg"
+      src="/video.mp4"
+      autoPlay
+      loop
+      muted
+      width="600"
+      height="400"
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 2 }}
+    />
+  )}
+</div>
+<div className=" py-24 px-6 md:px-16 lg:px-24 flex flex-col md:flex-row items-center md:items-start gap-12">
+      {/* Left Image */}
+      <div className="w-full md:w-1/2">
+        <img
+          src="/bac.webp"
+          alt="Business Meeting"
+          className="w-full rounded-lg shadow-lg"
+        />
+      </div>
+
+      {/* Right Content */}
+      <div className="w-full md:w-1/2 ">
+        <h5 className="text-gray-500 uppercase tracking-widest text-sm font-medium mb-2">
+          How It Work
+        </h5>
+        <h2 className="text-3xl font-bold text-black mb-8 leading-tight ">
+          Our Company <br /> Working Process
+        </h2>
+
+        {/* Process Steps */}
+        <div className="space-y-8">
+          {/* Step 1 */}
+          <div className="relative">
+            <span className="absolute left-[-9%] top-[-23%] text-6xl text-gray-200 font-bold">01</span>
+            <div className="ml-12">
+              <h4 className="text-lg font-semibold text-blue-900">DISCUSSIONS ABOUT PROJECT</h4>
+              <p className="text-gray-600 mt-1">
+                Forging relationships between multinational corporations, governments, and global NGOs.
+              </p>
+            </div>
+          </div>
+
+          {/* Step 2 */}
+          <div className="relative">
+            <span className="absolute left-[-9%] top-[-23%] text-6xl text-gray-200 font-bold">02</span>
+            <div className="ml-12">
+              <h4 className="text-lg font-semibold text-blue-900">START WORK WITH TEAM</h4>
+              <p className="text-gray-600 mt-1">
+                Design studio founded in London and expanded our services, and became a multinational firm.
+              </p>
+            </div>
+          </div>
+
+          {/* Step 3 */}
+          <div className="relative">
+            <span className="absolute left-[-9%] top-[-23%] text-6xl text-gray-200 font-bold">03</span>
+            <div className="ml-12">
+              <h4 className="text-lg font-semibold text-blue-900">HANDOVER & SAVE WORLD</h4>
+              <p className="text-gray-600 mt-1">
+                We understand the importance of approaching each work integrally and believe in the power.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Small Image at Bottom Right */}
+        <div className="mt-4 flex justify-end">
+          <img
+            src="/pro.webp"
+            alt="Smiling Woman"
+            className="w-44 h-44 rounded-lg shadow-lg"
+          />
+        </div>
+      </div>
+    </div>
+  
+    <div className="min-h-screen flex items-center justify-center px-10  ">
+      <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-1">
+        {/* Left Side Content */}
+        <div className="relative flex flex-col justify-center top-[-70%]">
+          <h4 className="text-sm text-white underline ">Our Award</h4>
+          <h2 className="text-4xl font-bold mt-2 text-blue-700">Our Greatest Achievement</h2>
+          
+          {/* Background Faded Image */}
+          <img
+            src="/h1-img-1.webp" // Change to your actual image path
+            alt="Award Winner"
+            className="absolute -bottom-60 left-0 opacity-20 w-64"
+          />
+        </div>
+
+        {/* Right Side Content */}
+        <div>
+          <div className="space-y-9 ">
+            {achievements.map((item, index) => (
+              <div
+                key={index}
+                className="flex justify-between items-center border-b pb-4"
+              >
+                <div>
+                  <h3 className="text-lg font-semibold">{item.title}</h3>
+                  <p className="text-sm text-white">{item.subtitle}</p>
+                </div>
+                <span className="text-sm font-semibold text-white">{item.year}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div className="max-w-5xl mx-auto py-16 px-6">
+      <Swiper
+        modules={[Navigation]}
+        navigation
+        spaceBetween={50}
+        slidesPerView={1}
+        className="relative"
+      >
+        {testimonials.map((testimonial, index) => (
+          <SwiperSlide key={index} className="flex items-center space-x-8">
+            <div className="w-1/3 relative">
+              <img
+                src={testimonial.image}
+                alt={testimonial.name}
+                className="rounded-lg w-full"
+              />
+            </div>
+            <div className="w-2/3">
+              <h4 className="text-white text-sm font-medium">
+                Client Testimonials
+              </h4>
+              <h2 className="text-3xl font-bold mt-2 text-blue-700">
+                Clients Share Their Success Stories
+              </h2>
+              <div className="flex text-red-500 mt-3">
+                {"★".repeat(testimonial.rating)}
+              </div>
+              <p className="mt-4 text-white">{testimonial.feedback}</p>
+              <h3 className="font-semibold mt-4">{testimonial.name}</h3>
+              <p className="text-white text-sm">{testimonial.role}</p>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+      </main>
+
+      {/* CSS Animations */}
+      <style jsx>{`
+        @keyframes borderMoveX {
+          0% { transform: translateX(-100%); }
+          100% { transform: translateX(100%); }
+        }
+        @keyframes borderMoveY {
+          0% { transform: translateY(-100%); }
+          100% { transform: translateY(100%); }
+        }
+      `}</style>
+    </div>
+    
+  );
+};
+
+export default ServicesPage;

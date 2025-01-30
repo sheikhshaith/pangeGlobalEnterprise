@@ -28,6 +28,7 @@
     "react-query": "^3.39.3",
     "react-router-dom": "^6.28.0",
     "recharts": "^2.15.0",
+    "swiper": "^11.2.1",
     "tronweb": "^6.0.0"
   },
   "devDependencies": {

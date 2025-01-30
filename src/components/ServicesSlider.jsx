@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from "react";
 
 const PageSlider = () => {
@@ -6,7 +5,7 @@ const PageSlider = () => {
   const isTransitioning = useRef(false);
   const lastScrollTime = useRef(0);
   const scrollCooldown = 1000; // 1 second cooldown between scrolls
-  
+
   const pages = [
     { id: 1, title: "Market Analysis", text: "Our financial consulting services drive growth, improve profitability, and ensure sound financial management." },
     { id: 2, title: "Strategic Planning", text: "Transform your business with our expert strategic planning services." },
@@ -83,7 +82,7 @@ const PageSlider = () => {
   return (
     <div className="h-screen w-full overflow-hidden relative bg-gray-900">
       {/* Base/Static page */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 top-0">
         <PageContent page={pages[0]} />
       </div>
 
@@ -91,7 +90,7 @@ const PageSlider = () => {
       {pages.slice(1).map((page) => (
         <div
           key={page.id}
-          className={`absolute inset-0 transition-all duration-700 ease-in-out bg-gray-900
+          className={`absolute inset-0 top-0 transition-all duration-700 ease-in-out bg-gray-900
             ${page.id <= activePage ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'}`}
         >
           <PageContent page={page} />
