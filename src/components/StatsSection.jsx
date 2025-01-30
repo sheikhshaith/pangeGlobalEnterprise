@@ -1,0 +1,76 @@
+import { motion } from "framer-motion";
+
+const StatsSection = () => {
+  return (
+    <section className="bg-dark text-white py-20 relative overflow-hidden">
+      <motion.div
+        className="container mx-auto text-center px-6"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <motion.h2
+          className="text-xl md:text-2xl font-light mb-12 leading-relaxed text-gray-300 max-w-2xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 1 }}
+        >
+          Our business consulting services aim to optimize operations and
+          strategies, driving growth and ensuring sustained organizational
+          success and development.
+        </motion.h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 text-center text-3xl md:text-4xl text-teal-400">
+          {[
+            { value: "13+", label: "Years of Experience" },
+            { value: "25+", label: "Projects Worldwide" },
+            { value: "93+", label: "Clients Worldwide" },
+          ].map((stat, index) => (
+            <motion.div
+              key={index}
+              className="p-6 rounded-xl bg-gray-800 bg-opacity-50 transition-all transform hover:scale-110 hover:shadow-xl relative"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.2 + 0.5, duration: 0.8 }}
+              whileHover={{ y: -5, boxShadow: "0px 10px 20px rgba(0, 255, 255, 0.3)" }}
+            >
+              <span className="block">{stat.value}</span>
+              <span className="block text-lg md:text-xl text-gray-300 mt-2">
+                {stat.label}
+              </span>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Button with hover & click animation */}
+        <motion.div
+          className="mt-12"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1, duration: 0.8 }}
+        >
+          <motion.button
+            className="bg-teal-400 text-dark font-medium py-3 px-10 rounded-full shadow-lg transition-all focus:ring-4 focus:ring-teal-200"
+            whileHover={{
+              scale: 1.1,
+              boxShadow: "0px 10px 20px rgba(0, 255, 255, 0.5)",
+              backgroundColor: "#20c997",
+            }}
+            whileTap={{ scale: 0.9 }}
+            animate={{
+              scale: [1, 1.05, 1],
+              transition: { repeat: Infinity, duration: 1.5, ease: "easeInOut" },
+            }}
+          >
+            Know About Us
+          </motion.button>
+        </motion.div>
+      </motion.div>
+
+      {/* Background gradient effect */}
+      <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-dark to-transparent"></div>
+    </section>
+  );
+};
+
+export default StatsSection;

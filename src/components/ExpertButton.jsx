@@ -29,3 +29,31 @@ const MovingImageOnPath = () => {
 };
 
 export default MovingImageOnPath;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -88,13 +88,6 @@ const FAQSection = () => {
             </div>
           ))}
         </div>
-
-        {/* Decorative Circle */}
-        <div className="mt-20 flex justify-center">
-          <div className="w-24 h-24 rounded-full border-2 border-gray-800 flex items-center justify-center">
-            <div className="w-16 h-16 rounded-full border-2 border-teal-400/30" />
-          </div>
-        </div>
       </div>
     </section>
   );

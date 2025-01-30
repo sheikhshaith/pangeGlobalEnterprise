@@ -5,6 +5,7 @@ import ServicesSlider from "../components/ServicesSlider";
 import FeaturesSection from '../components/FeaturesSection';
 import TestimonialSlider from '../components/TestimonialSlider';
 import FAQSection from '../components/FAQSection';
+import StatsSection from '../components/StatsSection';
 import {
   Search,
   Menu,
@@ -402,47 +403,7 @@ const EarthSection = () => {
   );
 };
 
-const StatsSection = () => {
-  return (
-    <section className="bg-dark text-white py-16 relative">
-      <div className="container mx-auto text-center px-4">
-        <h2 className="text-xl md:text-2xl font-light mb-8 leading-relaxed text-gray-300">
-          Our business consulting services aim to optimize operations and
-          strategies, driving growth and ensuring sustained organizational
-          success and development.
-        </h2>
 
-        <div className="flex flex-col md:flex-row justify-center gap-10 text-center font-bold text-3xl md:text-4xl text-teal-400">
-          <div className="transition-transform hover:scale-110">
-            <span>13+</span>
-            <span className="block text-lg md:text-xl text-gray-300 mt-2">
-              Years of Experience
-            </span>
-          </div>
-          <div className="transition-transform hover:scale-110">
-            <span>25+</span>
-            <span className="block text-lg md:text-xl text-gray-300 mt-2">
-              Projects Worldwide
-            </span>
-          </div>
-          <div className="transition-transform hover:scale-110">
-            <span>93+</span>
-            <span className="block text-lg md:text-xl text-gray-300 mt-2">
-              Clients Worldwide
-            </span>
-          </div>
-        </div>
-
-        <div className="mt-10">
-          <button className="bg-teal-400 text-dark font-medium py-3 px-8 rounded-full shadow-lg hover:bg-teal-300 focus:ring-4 focus:ring-teal-200">
-            Know About Us
-          </button>
-        </div>
-      </div>
-      <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-dark to-transparent"></div>
-    </section>
-  );
-};
 
 const Global = () => {
   return (
@@ -520,15 +481,7 @@ const Global = () => {
 };
 
 
-// Social Link Component
-const SocialLink = ({ Icon }) => (
-  <a
-    href="#"
-    className="w-10 h-10 rounded-full bg-gray-800/50 flex items-center justify-center hover:bg-teal-400 transition-all duration-300 ease-in-out transform hover:scale-110"
-  >
-    <Icon className="h-5 w-5" />
-  </a>
-);
+
 
 // Main Home Component
 const Home = () => {
@@ -690,14 +643,6 @@ const Home = () => {
 <div className="hidden sm:block md:absolute bottom-[40%] sm:bottom-[42%] md:bottom-[32%] lg:bottom-[31%] right-[23.5%] sm:right-[20%] md:right-[41.5%] lg:right-[15.5%] w-[8px] sm:w-[10px] md:w-[12px] h-[8px] sm:h-[10px] md:h-[12px] bg-cyan-400 rounded-full shadow-[0_0_10px_4px_rgba(6,182,212,0.8)]"></div>
 
           </div>
-
-          {/* Social Links */}
-          <div className="fixed right-4 sm:right-6 lg:right-8 top-1/2 -translate-y-1/2 flex flex-col gap-4 sm:gap-6 z-20">
-            <SocialLink Icon={Twitter} />
-            <SocialLink Icon={Facebook} />
-            <SocialLink Icon={Linkedin} />
-            <SocialLink Icon={Instagram} />
-          </div>
         </div>
       </main>
       <ClientSlider />
@@ -717,15 +662,7 @@ const Home = () => {
       <FAQSection />
       <ExpertButton/>
       <TestimonialSlider />
-      
-
-      {/* Social Links */}
-      <div className="fixed right-8 top-1/2 -translate-y-1/2 flex flex-col gap-6">
-        <SocialLink Icon={Twitter} />
-        <SocialLink Icon={Facebook} />
-        <SocialLink Icon={Linkedin} />
-        <SocialLink Icon={Instagram} />
-      </div>
+     
     </div>
   );
 };
