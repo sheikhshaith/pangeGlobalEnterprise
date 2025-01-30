@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import ServicesSlider from "../components/ServicesSlider";
 import FeaturesSection from '../components/FeaturesSection';
+import TestimonialSlider from '../components/TestimonialSlider';
 import FAQSection from '../components/FAQSection';
 import {
   Search,
@@ -625,7 +626,7 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-gray-900/90 backdrop-blur-md text-white relative">
       {/* Main Content */}
-      <main className="relative z-10 container mx-auto px-4 pt-16 pb-6 flex flex-col lg:flex-row items-center">
+      <main className="relative z-10 mx-auto px-4 pt-16 pb-6 flex flex-col lg:flex-row items-center">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
@@ -639,52 +640,59 @@ const Home = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-transparent via-emerald-900/10 to-transparent" />
         </div>
 
-        {/* Text on Top-Left Corner */}
-        <div className="absolute top-4 left-4 text-4xl lg:text-5xl font-bold z-10 bg-transparent">
-          <span className="text-5xl text-cyan-400 mr-1 transform rotate-[90deg]">
+        {/* Logo */}
+        <div className="absolute top-4 left-4 px-4 sm:px-8 lg:px-28 z-10">
+          <span className="text-3xl sm:text-4xl lg:text-5xl text-cyan-400 font-bold inline-block transform ">
             PGE
           </span>
         </div>
 
         {/* Left Content */}
-        <div className="lg:w-1/2 z-0">
-          <h1 className="text-4xl lg:text-5xl font-bold mb-4 text-white">
+        <div className="w-full lg:w-2/5 z-10 mt-16 lg:mt-0">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-5 px-4 sm:px-8 lg:px-28 text-white">
             Transforming
             <br />
             Businesses With
             <br />
             Expertise<span className="text-cyan-400">.</span>
           </h1>
-          <p className="text-gray-300 text-lg mb-6 max-w-lg">
+          <p className="text-gray-300 text-base sm:text-lg mb-6 px-4 sm:px-8 lg:px-28 max-w-lg">
             Our consulting service drives growth, enhances efficiency, and
             transforms businesses for lasting success.
           </p>
-          <button className="bg-transparent border-2 border-cyan-400 text-cyan-400 px-6 py-2 rounded-full text-base hover:bg-cyan-400 hover:text-white transition-colors">
-            Free Consultation
-          </button>
+          <div className="px-4 sm:px-8 lg:px-28">
+            <button className="bg-transparent border-2 border-cyan-400 text-cyan-400 px-6 py-2 rounded-full text-base hover:bg-cyan-400 hover:text-white transition-colors">
+              Free Consultation
+            </button>
+          </div>
         </div>
 
         {/* Right Content - Person Image */}
-        <div className="lg:w-1/2 mt-6 lg:mt-0 relative flex justify-end">
+        <div className="w-full lg:w-1/2 mt-12 lg:mt-0 relative flex justify-center lg:justify-end">
           <div className="h-[550px] w-full lg:w-[90%] relative">
             <img
               src="h1-img-1.webp"
               alt="Business professional"
-              className="h-full w-full object-contain object-right"
+              className="h-[495px] sm:h-[300px]  md:h-[480px] lg:h-[87%] w-full object-contain object-center lg:object-right relative top-20 sm:top-24"
             />
-            {/* Floating Card */}
-            <div className="absolute top-1/4 left-0 bg-white/3 backdrop-blur-md p-3 rounded-lg text-white shadow-lg border border-cyan-400 shadow-cyan-400/20">
-              <p className="text-base">Driving Success</p>
+
+            {/* Floating Card - Hidden on mobile */}
+            <div className="hidden sm:block md:absolute top-[25%] sm:top-[30%] md:top-[32%] lg:top-[33%] left-24 sm:left-12 md:left-3 lg:left-36 bg-white/3 backdrop-blur-md p-3 rounded-lg text-white shadow-lg border border-cyan-400 shadow-cyan-400/20"> 
+                         <p className="text-base">Driving Success</p>
               <p className="text-sm text-gray-300">Through Innovation</p>
             </div>
-            {/* Connecting Line */}
-            <div className="absolute top-[30%] right-[70.9%] w-[10px] h-[10px] bg-cyan-400 rounded-full shadow-[0_0_10px_4px_rgba(6,182,212,0.8)]"></div>
-            <div className="absolute top-[20%] left-[39.2%] h-[120px] w-[1px] bg-cyan-400 transform rotate-[90deg] shadow-[0_0_15px_rgba(6,182,212,0.7)]"></div>
-            <div className="absolute bottom-[37.1%] right-[37%] w-[1px] h-[200px] bg-cyan-400 rotate-[140deg] shadow-[0_0_15px_rgba(6,182,212,0.7)]"></div>
-            <div className="absolute bottom-[40%] right-[23.5%] w-[10px] h-[10px] bg-cyan-400 rounded-full shadow-[0_0_10px_4px_rgba(6,182,212,0.8)]"></div>
+
+            {/* Connecting Lines - All hidden on mobile */}
+            {/* Connecting Lines - Responsive for sm, md, and lg */}
+<div className="hidden sm:block md:absolute top-[30%] sm:top-[20%] md:top-[37%] lg:top-[39%] right-[60.9%] sm:right-[50%] md:right-[76.9%] lg:right-[53.9%] w-[8px] sm:w-[10px] md:w-[12px] h-[8px] sm:h-[10px] md:h-[12px] bg-cyan-400 rounded-full shadow-[0_0_10px_4px_rgba(6,182,212,0.8)]"></div>
+<div className="hidden sm:block md:absolute top-[20%] sm:top-[15%] md:top-[27%] lg:top-[29%] left-[47.3%] sm:left-[45%] md:left-[30.9%] lg:left-[55.3%] sm:h-[80px] md:h-[120px] sm:w-[0.8px] md:w-[1px] bg-cyan-400 transform rotate-[90deg] shadow-[0_0_15px_rgba(6,182,212,0.7)]"></div>
+<div className="hidden sm:block md:absolute bottom-[37.1%] sm:bottom-[40%] md:bottom-[30.1%] lg:bottom-[28.1%] right-[34%] sm:right-[30%] md:right-[52%] lg:right-[26%] sm:h-[160px] md:h-[200px] sm:w-[0.8px] md:w-[1px] bg-cyan-400 rotate-[140deg] shadow-[0_0_15px_rgba(6,182,212,0.7)]"></div>
+<div className="hidden sm:block md:absolute bottom-[40%] sm:bottom-[42%] md:bottom-[32%] lg:bottom-[31%] right-[23.5%] sm:right-[20%] md:right-[41.5%] lg:right-[15.5%] w-[8px] sm:w-[10px] md:w-[12px] h-[8px] sm:h-[10px] md:h-[12px] bg-cyan-400 rounded-full shadow-[0_0_10px_4px_rgba(6,182,212,0.8)]"></div>
+
           </div>
+
           {/* Social Links */}
-          <div className="fixed right-8 top-1/2 -translate-y-1/2 flex flex-col gap-6">
+          <div className="fixed right-4 sm:right-6 lg:right-8 top-1/2 -translate-y-1/2 flex flex-col gap-4 sm:gap-6 z-20">
             <SocialLink Icon={Twitter} />
             <SocialLink Icon={Facebook} />
             <SocialLink Icon={Linkedin} />
@@ -692,7 +700,6 @@ const Home = () => {
           </div>
         </div>
       </main>
-
       <ClientSlider />
 
       {/* Services Section */}
@@ -708,6 +715,9 @@ const Home = () => {
       </div>
       <Global />
       <FAQSection />
+      <ExpertButton/>
+      <TestimonialSlider />
+      
 
       {/* Social Links */}
       <div className="fixed right-8 top-1/2 -translate-y-1/2 flex flex-col gap-6">
