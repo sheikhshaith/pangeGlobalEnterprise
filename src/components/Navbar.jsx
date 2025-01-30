@@ -37,7 +37,7 @@ const Navbar = () => {
             {/* Navigation Links */}
             <div className="flex items-center space-x-6">
               {[
-                { name: "Home", path: "/Home" },
+                { name: "Home", path: "/" },
                 { name: "Services", path: "/ServicesPage" },
                 { name: "About", path: "/about" },
                 { name: "Client", path: "/Client" },
@@ -84,7 +84,7 @@ const Navbar = () => {
           <div className="md:hidden mt-2">
             <div className="bg-black bg-opacity-50 rounded-lg px-3 py-1.5 space-y-0.5">
               {[
-                { name: "Home", path: "/Home" },
+                { name: "Home", path: "/" },
                 { name: "Services", path: "/ServicesPage" },
                 { name: "About", path: "/about" },
                 { name: "Pages", path: "/pages" },
