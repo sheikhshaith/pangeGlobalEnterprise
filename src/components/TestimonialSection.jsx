@@ -14,37 +14,37 @@ const testimonials = [
     position: "Marketing Director",
   },
   {
-    image: "/api/placeholder/500/500",
+    image: "/review-1.avif",
     text: "We couldn’t be happier with our website revamp. The Pixify team delivered beyond expectations!",
     name: "Kristin Watson",
     position: "CEO, Startup Inc.",
   },
   {
-    image: "/api/placeholder/500/500",
+    image: "/review-4.jpg",
     text: "Our user engagement has tripled since the redesign. Highly recommend Pixify!",
     name: "Robert Fox",
     position: "CTO, TechCorp",
   },
   {
-    image: "/api/placeholder/500/500",
+    image: "/review-5.jpg",
     text: "Absolutely love our new website! The team at Pixify truly understands modern design trends.",
     name: "Jane Cooper",
     position: "Creative Director",
   },
   {
-    image: "/api/placeholder/500/500",
+    image: "/review-2.jpg",
     text: "Working with Pixify was a game-changer. The team’s professionalism and expertise were outstanding!",
     name: "Wade Warren",
     position: "Founder, BrandX",
   },
   {
-    image: "/api/placeholder/500/500",
+    image: "/review-3.jpg",
     text: "The best decision we made for our online presence. Highly recommended!",
     name: "Esther Howard",
     position: "COO, Enterprise Ltd.",
   },
   {
-    image: "/api/placeholder/500/500",
+    image: "/review-5.jpg",
     text: "Exceptional service and stunning results. Thank you, Pixify!",
     name: "Marvin McKinney",
     position: "VP of Sales",
@@ -102,7 +102,7 @@ const TestimonialSection = () => {
           </div>
           {/* Author Details */}
           <div>
-            <h2 className="text-xl font-semibold">{testimonials[currentIndex].name}</h2>
+            <h2 className="text-xl text-white font-semibold">{testimonials[currentIndex].name}</h2>
             <p className="text-gray-600 mt-1">{testimonials[currentIndex].position}</p>
           </div>
         </div>
