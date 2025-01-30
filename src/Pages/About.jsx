@@ -1,215 +1,251 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import BusinessTeam from '../components/BusinessTeam'
+import React from "react";
+import { Link } from "react-router-dom";
+import BusinessTeam from "../components/BusinessTeam";
 
 const AboutPage = () => {
-    return (
-        <div className="min-h-screen bg-black text-white">
-            {/* Previous sections remain the same until the last section */}
-            <nav className="py-4">
-                <div className="flex justify-center">
-                    <div className="bg-white/10 px-6 py-2 rounded-full">
-                        <Link to="/" className="mx-3 opacity-70 hover:opacity-100 transition-opacity">Home</Link>
-                        <Link to="/about" className="mx-3 opacity-70 hover:opacity-100 transition-opacity">About</Link>
-                    </div>
-                </div>
-            </nav>
+  return (
+    <div className="min-h-screen bg-black text-white">
+      {/* Previous sections remain the same until the last section */}
+      <nav className="py-4">
+        <div className="flex justify-center">
+          <div className="bg-white/10 px-6 py-2 rounded-full">
+            <Link
+              to="/"
+              className="mx-3 opacity-70 hover:opacity-100 transition-opacity"
+            >
+              Home
+            </Link>
+            <Link
+              to="/about"
+              className="mx-3 opacity-70 hover:opacity-100 transition-opacity"
+            >
+              About
+            </Link>
+          </div>
+        </div>
+      </nav>
 
-            <main className="container mx-auto px-4">
-                {/* Previous sections remain unchanged */}
-                <div className="text-center py-8 md:py-12">
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8">
-                        Leading Provider Of
-                        <br />
-                        Comprehensive Business Solutions
-                    </h1>
-
-                    <div className="relative w-full max-w-6xl mx-auto rounded-2xl overflow-hidden my-8">
-                        <img
-                            src="/breadcrumb-img-1.webp"
-                            alt="Business meeting"
-                            className="w-full h-auto"
-                        />
-                    </div>
-
-                    <div className="max-w-4xl mx-auto text-gray-300 text-lg md:text-xl leading-relaxed px-4">
-                        We offer a wide range of services, including strategic planning, financial management, marketing,
-                        and technology integration. By leveraging the latest industry insights and innovative strategies,
-                        we ensure your business stays ahead of the curve.
-                    </div>
-                </div>
-
-                <section className="max-w-7xl mx-auto px-4 py-12 md:py-16">
-                    <div className="space-y-8">
-                        <div className="space-y-2">
-                            <h2 className="text-sm uppercase text-gray-400">Who We Are</h2>
-                            <h1 className="text-3xl md:text-4xl font-bold leading-tight">
-                                Empowering Growth With Expert Guidance:
-                                <br />
-                                Your Trusted Partners In Business Strategy
-                                <br />
-                                And Innovation
-                            </h1>
-                        </div>
-
-                        <div className="flex flex-col md:flex-row gap-8 items-center justify-between mt-12">
-                            <div className="relative flex-shrink-0 w-48 h-48 overflow-hidden rounded-lg bg-gray-900 self-center">
-                                <img
-                                    src="/a-inner-img-1.webp"
-                                    alt="Customer Focus"
-                                    className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity"
-                                />
-                                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-center py-2">
-                                    <p className="text-sm font-bold">Customer Focus</p>
-                                    <p className="text-xs">We offer strategic planning to drive sustainable growth, operational efficiency</p>
-                                </div>
-                            </div>
-
-                            <div className="flex-shrink-0 w-80 space-y-4">
-                                <div className="text-gray-400 text-md">
-                                    We are a team of dedicated consultants with a passion for helping businesses
-                                    grow, innovate, and thrive. We offer tailored strategies and actionable insights
-                                    that drive results. Our expertise spans everything from market analysis and
-                                    operational optimization to digital transformation and leadership
-                                    development.
-                                </div>
-                                <div className="h-96 overflow-hidden rounded-lg bg-gray-900">
-                                    <img
-                                        src="/a-inner-img-2.webp"
-                                        alt="Team Meeting"
-                                        className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity"
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* Updated last section to match the image layout */}
-                <section className="max-w-7xl mx-auto px-4 py-12 md:py-16">
-                    <div className="flex flex-col md:flex-row gap-8">
-                        {/* Left side - Background blended image with placeholder */}
-                        <div className="w-full md:w-1/2 relative h-[400px]"> {/* Reduced height */}
-                            <img
-                                src="/h1-bg-main-1.webp"
-                                alt="Team"
-                                className="w-full h-full object-cover rounded-lg"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/30 to-transparent mix-blend-overlay rounded-lg"></div>
-                        </div>
-
-                        {/* Right side - Content */}
-                        <div className="w-full md:w-1/2 space-y-8">
-                            <div className="space-y-4">
-                                <p className="text-lg text-gray-300">
-                                    We are a team of dedicated consultants with a passion for helping businesses grow, innovate, and thrive. 
-                                    We offer tailored strategies and actionable insights that drive results. Our expertise spans everything 
-                                    from market analysis and operational optimization to digital transformation and leadership development.
-                                </p>
-                            </div>
-
-                            <div className="flex space-x-12">
-                                <div>
-                                    <p className="text-5xl font-bold">13<span className="text-3xl">+</span></p>
-                                    <p className="mt-2 text-sm text-gray-400">Years of Experience</p>
-                                </div>
-                                <div>
-                                    <p className="text-5xl font-bold">25<span className="text-3xl">+</span></p>
-                                    <p className="mt-2 text-sm text-gray-400">Projects Worldwide</p>
-                                </div>
-                            </div>
-
-                            <div>
-                                <button className="px-6 py-3 bg-cyan-400 text-black rounded-full font-medium hover:bg-cyan-300 transition-colors flex items-center space-x-2">
-                                    <span>Know About Us</span>
-                                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                        <path d="M5 12h14m-7-7l7 7-7 7"/>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      {/* Hero Section */}
-      <div className="py-12">
-        <div className="space-y-4">
-          <h1 className="text-4xl font-bold tracking-tight">
-            Building Success Through Vision,<br />
-            Innovation, And Trusted Client Partnerships
+      <main className="container mx-auto px-4">
+        {/* Previous sections remain unchanged */}
+        <div className="text-center py-8 md:py-12">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8">
+            Leading Provider Of
+            <br />
+            Comprehensive Business Solutions
           </h1>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <p className="text-gray-600">
-              We build multi-family and affordable housing communities, public
-              and private healthcare facilities, fitness centers and office
-              buildings. We improve the supply chain management process,
-              increase operational efficiencies and build environments.
-            </p>
-            <p className="text-gray-600">
-              We are dedicated to constructing homes of the highest
-              quality, ensuring excellence in every detail. Our
-              commitment to superior craftsmanship guarantees a
-              living space that exceeds your expectations.
-            </p>
-          </div>
-        </div>
-      </div>
 
-      {/* Team Image Section */}
-      <div className="my-12">
-        <div className="rounded-lg overflow-hidden">
-          <img 
-            src="/s1-img.webp"
-            alt="Team meeting"
-            className="w-full h-auto object-cover"
-          />
-        </div>
-      </div>
-
-      {/* Mission and Vision Section */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-12">
-        {/* Mission Section */}
-        <div className="bg-white rounded-lg p-8 shadow-lg">
-          <h2 className="text-2xl font-bold mb-4">OUR MISSION</h2>
-          <p className="text-gray-600">
-            Welcome to Industrie, a leading industry innovator with a rich 
-            history excellence. With a passion for precision and 
-            commitment to quality we have been empowering industries 
-            and driving progress.
-          </p>
-          <div className="mt-6">
-            <img 
-              src="/s1-img-2.webp"
-              alt="Mission visual"
-              className="rounded-lg w-full"
+          <div className="relative w-full max-w-6xl mx-auto rounded-2xl overflow-hidden my-8">
+            <img
+              src="/breadcrumb-img-1.webp"
+              alt="Business meeting"
+              className="w-full h-auto"
             />
           </div>
-        </div>
 
-        {/* Vision Section */}
-        <div className="bg-white rounded-lg p-8 shadow-lg">
-          <h2 className="text-2xl font-bold mb-4">OUR VISION</h2>
-          <p className="text-gray-600">
-            Our vision in the industry is to lead with innovative solutions
-            that set new standards for excellence. We are committed to
-            harnessing the latest technologies and best practices to drive
-            progress and efficiency.
-          </p>
-          <div className="mt-6">
-            <img 
-              src="/s1-img-3.webp"
-              alt="Vision visual"
-              className="rounded-lg w-full"
-            />
+          <div className="max-w-4xl mx-auto text-gray-300 text-lg md:text-xl leading-relaxed px-4">
+            We offer a wide range of services, including strategic planning,
+            financial management, marketing, and technology integration. By
+            leveraging the latest industry insights and innovative strategies,
+            we ensure your business stays ahead of the curve.
           </div>
         </div>
-      </div>
+
+        <section className="max-w-7xl mx-auto px-4 py-12 md:py-16">
+          <div className="space-y-8">
+            <div className="space-y-2">
+              <h2 className="text-sm uppercase text-gray-400">Who We Are</h2>
+              <h1 className="text-3xl md:text-4xl font-bold leading-tight">
+                Empowering Growth With Expert Guidance:
+                <br />
+                Your Trusted Partners In Business Strategy
+                <br />
+                And Innovation
+              </h1>
+            </div>
+
+            <div className="flex flex-col md:flex-row gap-8 items-center justify-between mt-12">
+              <div className="relative flex-shrink-0 w-48 h-48 overflow-hidden rounded-lg bg-gray-900 self-center">
+                <img
+                  src="/a-inner-img-1.webp"
+                  alt="Customer Focus"
+                  className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-center py-2">
+                  <p className="text-sm font-bold">Customer Focus</p>
+                  <p className="text-xs">
+                    We offer strategic planning to drive sustainable growth,
+                    operational efficiency
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex-shrink-0 w-80 space-y-4">
+                <div className="text-gray-400 text-md">
+                  We are a team of dedicated consultants with a passion for
+                  helping businesses grow, innovate, and thrive. We offer
+                  tailored strategies and actionable insights that drive
+                  results. Our expertise spans everything from market analysis
+                  and operational optimization to digital transformation and
+                  leadership development.
+                </div>
+                <div className="h-96 overflow-hidden rounded-lg bg-gray-900">
+                  <img
+                    src="/a-inner-img-2.webp"
+                    alt="Team Meeting"
+                    className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Updated last section to match the image layout */}
+        <section className="max-w-7xl mx-auto px-4 py-12 md:py-16">
+          <div className="flex flex-col md:flex-row gap-8">
+            {/* Left side - Background blended image with placeholder */}
+            <div className="w-full md:w-1/2 relative h-[400px]">
+              {" "}
+              {/* Reduced height */}
+              <img
+                src="/h1-bg-main-1.webp"
+                alt="Team"
+                className="w-full h-full object-cover rounded-lg"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/30 to-transparent mix-blend-overlay rounded-lg"></div>
+            </div>
+
+            {/* Right side - Content */}
+            <div className="w-full md:w-1/2 space-y-8">
+              <div className="space-y-4">
+                <p className="text-lg text-gray-300">
+                  We are a team of dedicated consultants with a passion for
+                  helping businesses grow, innovate, and thrive. We offer
+                  tailored strategies and actionable insights that drive
+                  results. Our expertise spans everything from market analysis
+                  and operational optimization to digital transformation and
+                  leadership development.
+                </p>
+              </div>
+
+              <div className="flex space-x-12">
+                <div>
+                  <p className="text-5xl font-bold">
+                    13<span className="text-3xl">+</span>
+                  </p>
+                  <p className="mt-2 text-sm text-gray-400">
+                    Years of Experience
+                  </p>
+                </div>
+                <div>
+                  <p className="text-5xl font-bold">
+                    25<span className="text-3xl">+</span>
+                  </p>
+                  <p className="mt-2 text-sm text-gray-400">
+                    Projects Worldwide
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <button className="px-6 py-3 bg-cyan-400 text-black rounded-full font-medium hover:bg-cyan-300 transition-colors flex items-center space-x-2">
+                  <span>Know About Us</span>
+                  <svg
+                    className="w-4 h-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path d="M5 12h14m-7-7l7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Hero Section */}
+          <div className="py-12">
+            <div className="space-y-4">
+              <h1 className="text-4xl font-bold tracking-tight">
+                Building Success Through Vision,
+                <br />
+                Innovation, And Trusted Client Partnerships
+              </h1>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <p className="text-gray-600">
+                  We build multi-family and affordable housing communities,
+                  public and private healthcare facilities, fitness centers and
+                  office buildings. We improve the supply chain management
+                  process, increase operational efficiencies and build
+                  environments.
+                </p>
+                <p className="text-gray-600">
+                  We are dedicated to constructing homes of the highest quality,
+                  ensuring excellence in every detail. Our commitment to
+                  superior craftsmanship guarantees a living space that exceeds
+                  your expectations.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Team Image Section */}
+          <div className="my-12">
+            <div className="rounded-lg overflow-hidden">
+              <img
+                src="/s1-img.webp"
+                alt="Team meeting"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+
+          {/* Mission and Vision Section */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-12">
+            {/* Mission Section */}
+            <div className="bg-white rounded-lg p-8 shadow-lg">
+              <h2 className="text-2xl font-bold mb-4">OUR MISSION</h2>
+              <p className="text-gray-600">
+                Welcome to Industrie, a leading industry innovator with a rich
+                history excellence. With a passion for precision and commitment
+                to quality we have been empowering industries and driving
+                progress.
+              </p>
+              <div className="mt-6">
+                <img
+                  src="/s1-img-2.webp"
+                  alt="Mission visual"
+                  className="rounded-lg w-full"
+                />
+              </div>
+            </div>
+
+            {/* Vision Section */}
+            <div className="bg-white rounded-lg p-8 shadow-lg">
+              <h2 className="text-2xl font-bold mb-4">OUR VISION</h2>
+              <p className="text-gray-600">
+                Our vision in the industry is to lead with innovative solutions
+                that set new standards for excellence. We are committed to
+                harnessing the latest technologies and best practices to drive
+                progress and efficiency.
+              </p>
+              <div className="mt-6">
+                <img
+                  src="/s1-img-3.webp"
+                  alt="Vision visual"
+                  className="rounded-lg w-full"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <BusinessTeam />
+      </main>
     </div>
-    <BusinessTeam />
-            </main>
-        </div>
-    );
+  );
 };
 
 export default AboutPage;
