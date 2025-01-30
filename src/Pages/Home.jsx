@@ -4,6 +4,8 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 import ServicesSlider from "../components/ServicesSlider";
 import FeaturesSection from '../components/FeaturesSection';
 import TestimonialSlider from '../components/TestimonialSlider';
+import ContactForm from '../components/ContactForm';
+import ContactSection from '../components/ContactSection';
 import FAQSection from '../components/FAQSection';
 import StatsSection from '../components/StatsSection';
 import {
@@ -24,7 +26,6 @@ import {
   Zap,
   Circle,
 } from "lucide-react";
-import ExpertButton from "../components/ExpertButton";
 
 // Logo Section Component
 const LogoSection = () => {
@@ -660,9 +661,11 @@ const Home = () => {
       </div>
       <Global />
       <FAQSection />
-      <ExpertButton/>
       <TestimonialSlider />
-     
+      <ContactForm />
+      <ContactSection />      
+
+    
     </div>
   );
 };
