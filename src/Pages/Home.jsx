@@ -22,6 +22,7 @@ import {
   Zap,
   Circle,
 } from "lucide-react";
+import ExpertButton from "../components/ExpertButton";
 
 // Logo Section Component
 const LogoSection = () => {
