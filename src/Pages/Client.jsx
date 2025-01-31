@@ -28,43 +28,62 @@ const logos = [
 ];
 
 const LogoFlip = () => {
-  return (
-    <div className="grid  grid-cols-5 gap-6 justify-center py-10">
-      {logos.map((logo, index) => (
-        <div
-          key={index}
-          className="relative w-24 h-16 transition-transform duration-500 perspective-1000 group"
-        >
-          {/* Normal Logo */}
-          <img
-            src={logo.normal}
-            alt={`Logo ${index + 1}`}
-            className="absolute w-full h-full transition-opacity duration-500 group-hover:opacity-0"
-          />
-          {/* Bold Logo */}
-          <img
-            src={logo.bold}
-            alt={`Bold Logo ${index + 1}`}
-            className="absolute w-full h-full transition-opacity duration-500 opacity-0 group-hover:opacity-100"
-          />
+    return (
+      <div className="grid grid-cols-5 gap-6 justify-center py-10">
+        {/* First row with full-width logos */}
+        <div className="col-span-5 grid grid-cols-5 gap-6 justify-center">
+          {logos.map((logo, index) => (
+            <div
+              key={index}
+              className="relative w-full h-24 transition-transform duration-500 perspective-1000 group border-2 border-gray-500 rounded-lg"
+            >
+              {/* Normal Logo */}
+              <img
+                src={logo.normal}
+                alt={`Logo ${index + 1}`}
+                className="absolute w-full h-full transition-opacity duration-500 group-hover:opacity-0"
+              />
+              {/* Bold Logo */}
+              <img
+                src={logo.bold}
+                alt={`Bold Logo ${index + 1}`}
+                className="absolute w-full h-full transition-opacity duration-500 opacity-0 group-hover:opacity-100"
+              />
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
-  );
-};
+  
+        {/* Other rows with logos */}
+        {logos.slice(5).map((logo, index) => (
+          <div
+            key={index + 5}
+            className="relative w-24 h-16 transition-transform duration-500 perspective-1000 group border-2 border-gray-500 rounded-lg"
+          >
+            {/* Normal Logo */}
+            <img
+              src={logo.normal}
+              alt={`Logo ${index + 6}`}
+              className="absolute w-full h-full transition-opacity duration-500 group-hover:opacity-0"
+            />
+            {/* Bold Logo */}
+            <img
+              src={logo.bold}
+              alt={`Bold Logo ${index + 6}`}
+              className="absolute w-full h-full transition-opacity duration-500 opacity-0 group-hover:opacity-100"
+            />
+          </div>
+        ))}
+      </div>
+    );
+  };
+  
+  
 
 
 const HeroSection = () => {
     return (
       <div className="relative w-full">
-        <div className="bg-white">
-        {/* Upper Image (Wave Pattern) */}
-        <img
-          src="client-shape.webp"
-          alt="Wave Shape"
-          className="w-full h-auto"
-        />
-        </div>
+       
   
         {/* Lower Section with Text */}
         <div className="bg-black text-white text-center py-16">
