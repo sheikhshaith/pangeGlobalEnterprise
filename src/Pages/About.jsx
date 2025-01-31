@@ -7,29 +7,36 @@ const AboutPage = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Previous sections remain the same until the last section */}
-      <nav className="py-4">
-        <div className="flex justify-center">
-          <div className="bg-white/10 px-6 py-2 rounded-full">
-            <Link
-              to="/"
-              className="mx-3 opacity-70 hover:opacity-100 transition-opacity"
-            >
-              Home
-            </Link>
-            <Link
-              to="/about"
-              className="mx-3 opacity-70 hover:opacity-100 transition-opacity"
-            >
-              About
-            </Link>
+      <div className="flex justify-center mt-0">
+        <div className="flex space-x-6 bg-black bg-opacity-50 px-6 py-2 mt-12 rounded-lg relative overflow-hidden">
+          {/* Animated Border */}
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveX_2s_linear_infinite]"></div>
+            <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveX_2s_linear_infinite]"></div>
+            <div className="absolute top-0 left-0 h-full w-0.5 bg-gradient-to-b from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveY_2s_linear_infinite]"></div>
+            <div className="absolute top-0 right-0 h-full w-0.5 bg-gradient-to-b from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveY_2s_linear_infinite]"></div>
           </div>
+
+          {/* Navigation Links */}
+          <Link
+            to="/"
+            className="text-white hover:text-cyan-400 px-3 py-1 transition-colors duration-200 text-sm"
+          >
+            Home
+          </Link>
+          <Link
+            to="/About"
+            className="text-white hover:text-cyan-400 px-3 py-1 transition-colors duration-200 text-sm"
+          >
+            About
+          </Link>
         </div>
-      </nav>
+      </div>
 
       <main className="container mx-auto px-4">
         {/* Previous sections remain unchanged */}
         <div className="text-center py-8 md:py-12">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8">
+          <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold leading-tight mb-8">
             Leading Provider Of
             <br />
             Comprehensive Business Solutions
@@ -65,22 +72,27 @@ const AboutPage = () => {
             </div>
 
             <div className="flex flex-col md:flex-row gap-8 items-center justify-between mt-12">
-              <div className="relative flex-shrink-0 w-48 h-48 overflow-hidden rounded-lg bg-gray-900 self-center">
-                <img
-                  src="/a-inner-img-1.webp"
-                  alt="Customer Focus"
-                  className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-center py-2">
-                  <p className="text-sm font-bold">Customer Focus</p>
-                  <p className="text-xs">
+              <div className="flex flex-col w-48 self-center">
+                {/* Image Container */}
+                <div className="relative flex-shrink-0 w-48 h-48 overflow-hidden rounded-lg bg-gray-900">
+                  <img
+                    src="/a-inner-img-1.webp"
+                    alt="Customer Focus"
+                    className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity"
+                  />
+                </div>
+
+                {/* Text Container */}
+                <div className="mt-3 text-center">
+                  <p className="text-sm font-bold text-white">Customer Focus</p>
+                  <p className="text-xs text-gray-300 mt-1">
                     We offer strategic planning to drive sustainable growth,
                     operational efficiency
                   </p>
                 </div>
               </div>
 
-              <div className="flex-shrink-0 w-80 space-y-4">
+              <div className="flex-shrink-0 w-full max-w-xl space-y-4">
                 <div className="text-gray-400 text-md">
                   We are a team of dedicated consultants with a passion for
                   helping businesses grow, innovate, and thrive. We offer
@@ -89,7 +101,7 @@ const AboutPage = () => {
                   and operational optimization to digital transformation and
                   leadership development.
                 </div>
-                <div className="h-96 overflow-hidden rounded-lg bg-gray-900">
+                <div className="h-144 overflow-hidden rounded-lg bg-gray-900">
                   <img
                     src="/a-inner-img-2.webp"
                     alt="Team Meeting"
@@ -175,15 +187,15 @@ const AboutPage = () => {
                 <br />
                 Innovation, And Trusted Client Partnerships
               </h1>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <p className="text-gray-600">
+              <div className="grid grid-cols-1 pt-8 lg:grid-cols-2 gap-8">
+                <p className="text-gray-300">
                   We build multi-family and affordable housing communities,
                   public and private healthcare facilities, fitness centers and
                   office buildings. We improve the supply chain management
                   process, increase operational efficiencies and build
                   environments.
                 </p>
-                <p className="text-gray-600">
+                <p className="text-gray-300">
                   We are dedicated to constructing homes of the highest quality,
                   ensuring excellence in every detail. Our commitment to
                   superior craftsmanship guarantees a living space that exceeds
@@ -194,7 +206,7 @@ const AboutPage = () => {
           </div>
 
           {/* Team Image Section */}
-          <div className="my-12">
+          <div className="my-8">
             <div className="rounded-lg overflow-hidden">
               <img
                 src="/s1-img.webp"
@@ -205,43 +217,57 @@ const AboutPage = () => {
           </div>
 
           {/* Mission and Vision Section */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-12">
-            {/* Mission Section */}
-            <div className="bg-white rounded-lg p-8 shadow-lg">
-              <h2 className="text-2xl font-bold mb-4">OUR MISSION</h2>
-              <p className="text-gray-600">
-                Welcome to Industrie, a leading industry innovator with a rich
-                history excellence. With a passion for precision and commitment
-                to quality we have been empowering industries and driving
-                progress.
-              </p>
-              <div className="mt-6">
-                <img
-                  src="/s1-img-2.webp"
-                  alt="Mission visual"
-                  className="rounded-lg w-full"
-                />
-              </div>
-            </div>
+          <div className="w-full min-h-screen bg-black">
+            <div className="max-w-6xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Mission Section */}
+              <div className="space-y-4">
+                {/* Mission Content */}
+                <div className="space-y-4">
+                  <h2 className="text-3xl font-bold text-white">OUR MISSION</h2>
+                  <p className="text-gray-300 text-lg">
+                    Welcome to Industrie, a leading industry innovator with a rich
+                    history excellence. With a passion for precision and
+                    commitment to quality we have been empowering industries
+                    and driving progress.
+                  </p>
+                </div>
 
-            {/* Vision Section */}
-            <div className="bg-white rounded-lg p-8 shadow-lg">
-              <h2 className="text-2xl font-bold mb-4">OUR VISION</h2>
-              <p className="text-gray-600">
-                Our vision in the industry is to lead with innovative solutions
-                that set new standards for excellence. We are committed to
-                harnessing the latest technologies and best practices to drive
-                progress and efficiency.
-              </p>
-              <div className="mt-6">
-                <img
-                  src="/s1-img-3.webp"
-                  alt="Vision visual"
-                  className="rounded-lg w-full"
-                />
+                {/* Mission Image */}
+                <div className="w-full">
+                  <img
+                    src="/s1-img-2.webp"
+                    alt="Mission representation"
+                    className="w-full h-64 object-cover rounded-bl-lg rounded-br-lg"
+                  />
+                </div>
+              </div>
+
+              {/* Vision Section */}
+              <div className="space-y-4">
+                {/* Vision Image */}
+                <div className="w-full">
+                  <img
+                    src="/s1-img-3.webp"
+                    alt="Vision representation"
+                    className="w-full h-64 object-cover rounded-tl-lg rounded-tr-lg"
+                  />
+                </div>
+
+                {/* Vision Content */}
+                <div className="space-y-4">
+                  <h2 className="text-3xl font-bold text-white">OUR VISION</h2>
+                  <p className="text-gray-300 text-lg">
+                    Our vision in the industry is to lead with innovative solutions
+                    that set new standards for excellence. We are committed to
+                    harnessing the latest technologies and best practices to drive
+                    progress and efficiency.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
+
+
         </div>
         <BusinessTeam />
         <TestimonialSection />

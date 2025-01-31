@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import ServicesSlider from "../components/ServicesSlider";
 import FeaturesSection from "../components/FeaturesSection";
-import TestimonialSlider from "../components/TestimonialSlider";
+import TestimonialHome from "../components/TestimonialHome";
 import ContactForm from "../components/ContactForm";
 import ContactSection from "../components/ContactSection";
 import FAQSection from "../components/FAQSection";
@@ -658,7 +658,7 @@ const Home = () => {
       </div>
       <Global />
       <FAQSection />
-      <TestimonialSlider />
+      <TestimonialHome />
       <ContactForm />
       <ContactSection />
     </div>
