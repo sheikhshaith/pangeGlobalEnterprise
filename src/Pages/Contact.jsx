@@ -1,304 +1,359 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Check, X, CircleDashed, Globe, Plus, LayoutGrid, Zap, Circle } from 'lucide-react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import {
+  Check,
+  X,
+  CircleDashed,
+  Globe,
+  Plus,
+  LayoutGrid,
+  Zap,
+  Circle,
+} from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const ContactPage = () => {
-    return (
-        <div className="min-h-screen bg-black text-white">
-            <div className="flex justify-center mt-0">
-                <div className="flex space-x-6 bg-black bg-opacity-50 px-6 py-2 mt-12 rounded-lg relative overflow-hidden">
-                    {/* Animated Border */}
-                    <div className="absolute inset-0 pointer-events-none">
-                        <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveX_2s_linear_infinite]"></div>
-                        <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveX_2s_linear_infinite]"></div>
-                        <div className="absolute top-0 left-0 h-full w-0.5 bg-gradient-to-b from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveY_2s_linear_infinite]"></div>
-                        <div className="absolute top-0 right-0 h-full w-0.5 bg-gradient-to-b from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveY_2s_linear_infinite]"></div>
-                    </div>
+  return (
+    <div className="min-h-screen bg-black text-white">
+      <div className="flex justify-center mt-0">
+        <div className="flex space-x-6 bg-black bg-opacity-50 px-6 py-2 mt-12 rounded-lg relative overflow-hidden">
+          {/* Animated Border */}
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveX_2s_linear_infinite]"></div>
+            <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveX_2s_linear_infinite]"></div>
+            <div className="absolute top-0 left-0 h-full w-0.5 bg-gradient-to-b from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveY_2s_linear_infinite]"></div>
+            <div className="absolute top-0 right-0 h-full w-0.5 bg-gradient-to-b from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveY_2s_linear_infinite]"></div>
+          </div>
 
-                    {/* Navigation Links */}
-                    <Link
-                        to="/"
-                        className="text-white hover:text-cyan-400 px-3 py-1 transition-colors duration-200 text-sm"
-                    >
-                        Home
-                    </Link>
-                    <Link
-                        to="/Contact"
-                        className="text-white hover:text-cyan-400 px-3 py-1 transition-colors duration-200 text-sm"
-                    >
-                        Contact
-                    </Link>
+          {/* Navigation Links */}
+          <Link
+            to="/"
+            className="text-white hover:text-cyan-400 px-3 py-1 transition-colors duration-200 text-sm"
+          >
+            Home
+          </Link>
+          <Link
+            to="/Contact"
+            className="text-white hover:text-cyan-400 px-3 py-1 transition-colors duration-200 text-sm"
+          >
+            Contact
+          </Link>
+        </div>
+      </div>
+
+      <main className="container mx-auto px-4">
+        <div className="text-center py-8 md:py-12">
+          <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold leading-tight mb-8">
+            Get in Touch: Expert Business
+            <br />
+            Consulting Tailored to You
+          </h1>
+
+          <div className="relative w-full max-w-6xl mx-auto rounded-2xl overflow-hidden my-8">
+            <img
+              src="/breadcrumb-img-1.webp"
+              alt="Business meeting"
+              className="w-full h-auto"
+            />
+          </div>
+
+          <div className="max-w-4xl mx-auto text-gray-300 text-lg md:text-xl leading-relaxed px-4">
+            We offer a wide range of services, including strategic planning,
+            financial management, marketing, and technology integration. By
+            leveraging the latest industry insights and innovative strategies,
+            we ensure your business stays ahead of the curve.
+          </div>
+        </div>
+      </main>
+
+      <section className="bg-black py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="text-gray-300 text-sm mb-2 underline">
+              Pricing Table
+            </p>
+            <h2 className="text-white text-4xl font-bold">
+              Flexible Pricing Plan For Everyone.
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Basic Plan */}
+            <div className="bg-white rounded-lg p-8 shadow-lg">
+              <h3 className="text-3xl text-black text-center font-bold mb-4">
+                Basic Plan
+              </h3>
+              <p className="text-gray-600 mb-8 text-center">
+                The Basic Plan offers essential features at an affordable price.
+              </p>
+
+              <div className="mb-8">
+                <span className="text-5xl text-black font-bold">$199</span>
+                <span className="text-gray-600">/Monthly</span>
+              </div>
+
+              <div className="space-y-4 mb-8">
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-cyan-400" />
+                  <span className="text-gray-900">24h customer support</span>
                 </div>
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-cyan-400" />
+                  <span className="text-gray-900">Project Management</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <X className="w-5 h-5 text-gray-400" />
+                  <span className="text-gray-500">Basic Reporting</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <X className="w-5 h-5 text-gray-400" />
+                  <span className="text-gray-500">Up to 10 Team Members</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <X className="w-5 h-5 text-gray-400" />
+                  <span className="text-gray-500">Professional Support</span>
+                </div>
+              </div>
+
+              <button className="w-full py-3 px-4 border border-black text-black bg-white rounded hover:bg-cyan-400 hover:border-cyan-400 hover:text-white transition-colors duration-200 flex items-center justify-center gap-2">
+                Select Plan
+                <svg
+                  className="w-4 h-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12H19M19 12L12 5M19 12L12 19"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
             </div>
 
-            <main className="container mx-auto px-4">
-                <div className="text-center py-8 md:py-12">
-                    <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold leading-tight mb-8">
-                        Get in Touch: Expert Business
-                        <br />
-                        Consulting Tailored to You
-                    </h1>
+            {/* Premium Plan */}
+            <div className="bg-white rounded-lg p-8 shadow-lg">
+              <h3 className="text-3xl text-black text-center font-bold mb-4">
+                Premium Plan
+              </h3>
+              <p className="text-gray-600 mb-8 text-center">
+                The Basic Plan offers essential features at an affordable price.
+              </p>
 
-                    <div className="relative w-full max-w-6xl mx-auto rounded-2xl overflow-hidden my-8">
-                        <img
-                            src="/breadcrumb-img-1.webp"
-                            alt="Business meeting"
-                            className="w-full h-auto"
-                        />
-                    </div>
+              <div className="mb-8">
+                <span className="text-5xl text-black font-bold">$299</span>
+                <span className="text-gray-600">/Monthly</span>
+              </div>
 
-                    <div className="max-w-4xl mx-auto text-gray-300 text-lg md:text-xl leading-relaxed px-4">
-                        We offer a wide range of services, including strategic planning,
-                        financial management, marketing, and technology integration. By
-                        leveraging the latest industry insights and innovative strategies,
-                        we ensure your business stays ahead of the curve.
-                    </div>
+              <div className="space-y-4 mb-8">
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-cyan-400" />
+                  <span className="text-gray-900">24h customer support</span>
                 </div>
-            </main>
-
-            <section className="bg-black py-16 px-4">
-            <div className="max-w-7xl mx-auto">
-                    <div className="text-center mb-12">
-                        <p className="text-gray-300 text-sm mb-2 underline">Pricing Table</p>
-                        <h2 className="text-white text-4xl font-bold">Flexible Pricing Plan For Everyone.</h2>
-                    </div>
-
-                    <div className="grid md:grid-cols-3 gap-8">
-                        {/* Basic Plan */}
-                        <div className="bg-white rounded-lg p-8 shadow-lg">
-                            <h3 className="text-3xl text-black text-center font-bold mb-4">Basic Plan</h3>
-                            <p className="text-gray-600 mb-8 text-center">The Basic Plan offers essential features at an affordable price.</p>
-
-                            <div className="mb-8">
-                                <span className="text-5xl text-black font-bold">$199</span>
-                                <span className="text-gray-600">/Monthly</span>
-                            </div>
-
-                            <div className="space-y-4 mb-8">
-                                <div className="flex items-center gap-3">
-                                    <Check className="w-5 h-5 text-cyan-400" />
-                                    <span className="text-gray-900">24h customer support</span>
-                                </div>
-                                <div className="flex items-center gap-3">
-                                    <Check className="w-5 h-5 text-cyan-400" />
-                                    <span className="text-gray-900">Project Management</span>
-                                </div>
-                                <div className="flex items-center gap-3">
-                                    <X className="w-5 h-5 text-gray-400" />
-                                    <span className="text-gray-500">Basic Reporting</span>
-                                </div>
-                                <div className="flex items-center gap-3">
-                                    <X className="w-5 h-5 text-gray-400" />
-                                    <span className="text-gray-500">Up to 10 Team Members</span>
-                                </div>
-                                <div className="flex items-center gap-3">
-                                    <X className="w-5 h-5 text-gray-400" />
-                                    <span className="text-gray-500">Professional Support</span>
-                                </div>
-                            </div>
-
-                            <button className="w-full py-3 px-4 border border-black text-black bg-white rounded hover:bg-cyan-400 hover:border-cyan-400 hover:text-white transition-colors duration-200 flex items-center justify-center gap-2">
-                                Select Plan
-                                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
-                            </button>
-                        </div>
-
-                        {/* Premium Plan */}
-                        <div className="bg-white rounded-lg p-8 shadow-lg">
-                            <h3 className="text-3xl text-black text-center font-bold mb-4">Premium Plan</h3>
-                            <p className="text-gray-600 mb-8 text-center">The Basic Plan offers essential features at an affordable price.</p>
-
-                            <div className="mb-8">
-                                <span className="text-5xl text-black font-bold">$299</span>
-                                <span className="text-gray-600">/Monthly</span>
-                            </div>
-
-                            <div className="space-y-4 mb-8">
-                                <div className="flex items-center gap-3">
-                                    <Check className="w-5 h-5 text-cyan-400" />
-                                    <span className="text-gray-900">24h customer support</span>
-                                </div>
-                                <div className="flex items-center gap-3">
-                                    <Check className="w-5 h-5 text-cyan-400" />
-                                    <span className="text-gray-900">Project Management</span>
-                                </div>
-                                <div className="flex items-center gap-3">
-                                    <Check className="w-5 h-5 text-cyan-400" />
-                                    <span className="text-gray-900">Basic Reporting</span>
-                                </div>
-                                <div className="flex items-center gap-3">
-                                    <Check className="w-5 h-5 text-cyan-400" />
-                                    <span className="text-gray-900">Up to 10 Team Members</span>
-                                </div>
-                                <div className="flex items-center gap-3">
-                                    <X className="w-5 h-5 text-gray-400" />
-                                    <span className="text-gray-500">Professional Support</span>
-                                </div>
-                            </div>
-
-                            <button className="w-full py-3 px-4 border border-black text-black bg-white rounded hover:bg-cyan-400 hover:border-cyan-400 hover:text-white transition-colors duration-200 flex items-center justify-center gap-2">
-                                Select Plan
-                                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
-                            </button>
-                        </div>
-
-                        {/* Advance Plan */}
-                        <div className="bg-white rounded-lg p-8 shadow-lg">
-                            <h3 className="text-3xl text-black text-center font-bold mb-4">Advance Plan</h3>
-                            <p className="text-gray-600 text-center mb-8">The Basic Plan offers essential features at an affordable price.</p>
-
-                            <div className="mb-8">
-                                <span className="text-5xl text-black font-bold">$499</span>
-                                <span className="text-gray-600">/Monthly</span>
-                            </div>
-
-                            <div className="space-y-4 mb-8">
-                                <div className="flex items-center gap-3">
-                                    <Check className="w-5 h-5 text-cyan-400" />
-                                    <span className="text-gray-900">24h customer support</span>
-                                </div>
-                                <div className="flex items-center gap-3">
-                                    <Check className="w-5 h-5 text-cyan-400" />
-                                    <span className="text-gray-900">Project Management</span>
-                                </div>
-                                <div className="flex items-center gap-3">
-                                    <Check className="w-5 h-5 text-cyan-400" />
-                                    <span className="text-gray-900">Basic Reporting</span>
-                                </div>
-                                <div className="flex items-center gap-3">
-                                    <Check className="w-5 h-5 text-cyan-400" />
-                                    <span className="text-gray-900">Up to 10 Team Members</span>
-                                </div>
-                                <div className="flex items-center gap-3">
-                                    <Check className="w-5 h-5 text-cyan-400" />
-                                    <span className="text-gray-900">Professional Support</span>
-                                </div>
-                            </div>
-
-                            <button className="w-full py-3 px-4 border border-black text-black bg-white rounded hover:bg-cyan-400 hover:border-cyan-400 hover:text-white transition-colors duration-200 flex items-center justify-center gap-2">
-                                Select Plan
-                                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-cyan-400" />
+                  <span className="text-gray-900">Project Management</span>
                 </div>
-            </section>
-          
-            <ContactSlider />
-            <ContactTestimonials />
-            <ContectSection />
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-cyan-400" />
+                  <span className="text-gray-900">Basic Reporting</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-cyan-400" />
+                  <span className="text-gray-900">Up to 10 Team Members</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <X className="w-5 h-5 text-gray-400" />
+                  <span className="text-gray-500">Professional Support</span>
+                </div>
+              </div>
+
+              <button className="w-full py-3 px-4 border border-black text-black bg-white rounded hover:bg-cyan-400 hover:border-cyan-400 hover:text-white transition-colors duration-200 flex items-center justify-center gap-2">
+                Select Plan
+                <svg
+                  className="w-4 h-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12H19M19 12L12 5M19 12L12 19"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            {/* Advance Plan */}
+            <div className="bg-white rounded-lg p-8 shadow-lg">
+              <h3 className="text-3xl text-black text-center font-bold mb-4">
+                Advance Plan
+              </h3>
+              <p className="text-gray-600 text-center mb-8">
+                The Basic Plan offers essential features at an affordable price.
+              </p>
+
+              <div className="mb-8">
+                <span className="text-5xl text-black font-bold">$499</span>
+                <span className="text-gray-600">/Monthly</span>
+              </div>
+
+              <div className="space-y-4 mb-8">
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-cyan-400" />
+                  <span className="text-gray-900">24h customer support</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-cyan-400" />
+                  <span className="text-gray-900">Project Management</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-cyan-400" />
+                  <span className="text-gray-900">Basic Reporting</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-cyan-400" />
+                  <span className="text-gray-900">Up to 10 Team Members</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-cyan-400" />
+                  <span className="text-gray-900">Professional Support</span>
+                </div>
+              </div>
+
+              <button className="w-full py-3 px-4 border border-black text-black bg-white rounded hover:bg-cyan-400 hover:border-cyan-400 hover:text-white transition-colors duration-200 flex items-center justify-center gap-2">
+                Select Plan
+                <svg
+                  className="w-4 h-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12H19M19 12L12 5M19 12L12 19"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
-    );
+      </section>
+
+      <ContactSlider />
+      <ContactTestimonials />
+      <ContectSection />
+    </div>
+  );
 };
-
-
-
 
 // ContectSlider Component
 const ContactSlider = () => {
-    const [selectedClient, setSelectedClient] = useState(null);
-    const [isPaused, setIsPaused] = useState(false);
-  
-    const clients = [
-      {
-        name: "EasyTax",
-        Icon: CircleDashed,
-      },
-      {
-        name: "Europa",
-        Icon: Globe,
-      },
-      {
-        name: "Clandestine",
-        Icon: Plus,
-      },
-      {
-        name: "3Portals",
-        Icon: LayoutGrid,
-      },
-      {
-        name: "Boltshift",
-        Icon: Zap,
-      },
-      {
-        name: "Chromatools",
-        Icon: Circle,
-      },
-    ];
-  
-    const handleClientClick = (clientName) => {
-      setSelectedClient(clientName);
-      setIsPaused(true);
-  
-      setTimeout(() => {
-        setSelectedClient(null);
-        setIsPaused(false);
-      }, 3000);
-    };
-  
-    return (
-      <section className="w-full bg-black py-16 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            {/* <h2 className="text-3xl font-semibold text-white mb-4">
+  const [selectedClient, setSelectedClient] = useState(null);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const clients = [
+    {
+      name: "EasyTax",
+      Icon: CircleDashed,
+    },
+    {
+      name: "Europa",
+      Icon: Globe,
+    },
+    {
+      name: "Clandestine",
+      Icon: Plus,
+    },
+    {
+      name: "3Portals",
+      Icon: LayoutGrid,
+    },
+    {
+      name: "Boltshift",
+      Icon: Zap,
+    },
+    {
+      name: "Chromatools",
+      Icon: Circle,
+    },
+  ];
+
+  const handleClientClick = (clientName) => {
+    setSelectedClient(clientName);
+    setIsPaused(true);
+
+    setTimeout(() => {
+      setSelectedClient(null);
+      setIsPaused(false);
+    }, 3000);
+  };
+
+  return (
+    <section className="w-full bg-black py-16 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          {/* <h2 className="text-3xl font-semibold text-white mb-4">
               Our Trusted Clients
             </h2> */}
-            <p className="text-gray-400 max-w-2xl mx-auto">
-              Trusted by 170+ organizations across diverse industries, driving
-              innovation and excellence
-            </p>
-          </div>
-  
-          <div className="relative">
-            <div
-              className={`flex space-x-16 ${
-                !isPaused ? "animate-scroll" : ""
-              } transition-transform duration-300`}
-            >
-              {[...clients, ...clients].map((client, index) => (
-                <div
-                  key={`${client.name}-${index}`}
-                  className={`group flex items-center space-x-3 min-w-[200px] cursor-pointer transform transition-all duration-300
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            Trusted by 170+ organizations across diverse industries, driving
+            innovation and excellence
+          </p>
+        </div>
+
+        <div className="relative">
+          <div
+            className={`flex space-x-16 ${
+              !isPaused ? "animate-scroll" : ""
+            } transition-transform duration-300`}
+          >
+            {[...clients, ...clients].map((client, index) => (
+              <div
+                key={`${client.name}-${index}`}
+                className={`group flex items-center space-x-3 min-w-[200px] cursor-pointer transform transition-all duration-300
                     ${selectedClient === client.name ? "scale-110" : ""}
                   `}
-                  onClick={() => handleClientClick(client.name)}
-                >
-                  <div className="relative w-6 h-6 group-hover:transform group-hover:rotate-x-180 transition-transform duration-300">
-                    <client.Icon
-                      className={`w-6 h-6 transition-colors duration-300
+                onClick={() => handleClientClick(client.name)}
+              >
+                <div className="relative w-6 h-6 group-hover:transform group-hover:rotate-x-180 transition-transform duration-300">
+                  <client.Icon
+                    className={`w-6 h-6 transition-colors duration-300
                         ${
                           selectedClient === client.name
                             ? "text-white"
                             : "text-gray-400 group-hover:text-white"
                         }
                       `}
-                    />
-                  </div>
-                  <span
-                    className={`font-medium text-lg transition-colors duration-300
+                  />
+                </div>
+                <span
+                  className={`font-medium text-lg transition-colors duration-300
                     ${
                       selectedClient === client.name
                         ? "text-white"
                         : "text-gray-400 group-hover:text-white"
                     }
                   `}
-                  >
-                    {client.name}
-                  </span>
-                </div>
-              ))}
-            </div>
+                >
+                  {client.name}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
-  
-        <style>{`
+      </div>
+
+      <style>{`
           @keyframes scroll {
             0% {
               transform: translateX(0);
@@ -316,30 +371,29 @@ const ContactSlider = () => {
             transform: rotateX(180deg);
           }
         `}</style>
-      </section>
-    );
+    </section>
+  );
 };
-
-
-
-
 
 // ContactTestimonials Component
 const testimonials = [
   {
-    quote: "Pixify Transformed Our Website Into A Powerful Business Tool. The Design Is Sleek, User-Friendly, And Perfectly Aligns With Our Brand. Our Online Presence Has Never Been Stronger, Thanks To Their Incredible Team!",
+    quote:
+      "Pixify Transformed Our Website Into A Powerful Business Tool. The Design Is Sleek, User-Friendly, And Perfectly Aligns With Our Brand. Our Online Presence Has Never Been Stronger, Thanks To Their Incredible Team!",
     author: "Cameron Williamson",
     position: "Head Of Products",
     rating: 5,
   },
   {
-    quote: "Outstanding service and exceptional results! The team went above and beyond our expectations.",
+    quote:
+      "Outstanding service and exceptional results! The team went above and beyond our expectations.",
     author: "Alex Thompson",
     position: "Marketing Director",
     rating: 5,
   },
   {
-    quote: "The most professional and creative team we've worked with. Highly recommended!",
+    quote:
+      "The most professional and creative team we've worked with. Highly recommended!",
     author: "Sarah Parker",
     position: "CEO",
     rating: 5,
@@ -354,7 +408,9 @@ const ContactTestimonials = () => {
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setCurrentSlide(
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+    );
   };
 
   const goToSlide = (index) => {
@@ -363,18 +419,15 @@ const ContactTestimonials = () => {
 
   return (
     <div className="relative max-w-6xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-28">
-      {/* Quote mark decoration */}
-      <div className="absolute top-8 right-2/4 text-6xl sm:text-7xl md:text-8xl text-yellow-300 opacity-50 font-serif">"</div>
-      
       {/* Navigation buttons */}
-      <button 
+      <button
         onClick={prevSlide}
         className="absolute left-2 sm:left-4 md:left-6 top-1/2 transform -translate-y-1/2 p-2 text-cyan-400 hover:text-cyan-600"
       >
         <ChevronLeft size={24} />
       </button>
-      
-      <button 
+
+      <button
         onClick={nextSlide}
         className="absolute right-2 sm:right-4 md:right-6 top-1/2 transform -translate-y-1/2 p-2 text-cyan-400 hover:text-cyan-600"
       >
@@ -420,7 +473,7 @@ const ContactTestimonials = () => {
             key={index}
             onClick={() => goToSlide(index)}
             className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
-              currentSlide === index ? 'bg-cyan-400 w-6 sm:w-8' : 'bg-gray-300'
+              currentSlide === index ? "bg-cyan-400 w-6 sm:w-8" : "bg-gray-300"
             }`}
           />
         ))}
@@ -429,30 +482,26 @@ const ContactTestimonials = () => {
   );
 };
 
-
-
-
 // ContactSection Component
 const ContectSection = () => {
-    return (
-        <div className="relative w-full">
-        {/* Lower Section with Text */}
-        <div className="bg-black text-white text-center py-16 px-4 sm:px-6 md:px-8 lg:px-16">
-          <p className="text-base sm:text-lg text-cyan-400 py-4 sm:py-8">
-            Let's Build Together
-          </p>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl pb-6 sm:pb-8 text-white font-bold mt-2">
-            Need To Rethink Your 
-            <br />
-            Business Process?
-          </h1>
-          <button className="mt-4 px-6 sm:px-8 py-3 sm:py-4 bg-cyan-500 text-white rounded-lg hover:bg-teal-600 transition text-sm sm:text-base md:text-lg">
-            Get In Touch →
-          </button>
-        </div>
+  return (
+    <div className="relative w-full">
+      {/* Lower Section with Text */}
+      <div className="bg-black text-white text-center py-16 px-4 sm:px-6 md:px-8 lg:px-16">
+        <p className="text-base sm:text-lg text-cyan-400 py-4 sm:py-8">
+          Let's Build Together
+        </p>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl pb-6 sm:pb-8 text-white font-bold mt-2">
+          Need To Rethink Your
+          <br />
+          Business Process?
+        </h1>
+        <button className="mt-4 px-6 sm:px-8 py-3 sm:py-4 bg-cyan-500 text-white rounded-lg hover:bg-teal-600 transition text-sm sm:text-base md:text-lg">
+          Get In Touch →
+        </button>
       </div>
-    );
-  };
-
+    </div>
+  );
+};
 
 export default ContactPage;
