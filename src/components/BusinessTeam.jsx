@@ -135,7 +135,7 @@ function BusinessTeam() {
     <div className="min-h-screen bg-black pt-0 py-4">
       <div className="max-w-6xl mx-auto px-4">
         <div className="mb-34">
-          <h1 className="text-sm text-gray-500 mb-2">Our Dedicated Team</h1>
+          <h1 className="text-sm text-gray-300 mb-2">Our Dedicated Team</h1>
           <h2 className="text-4xl font-bold text-white">
             Meet Our Dynamic And Talented<br />
             Corporate Business Team
