@@ -272,9 +272,36 @@ const AboutPage = () => {
         </div>
         <BusinessTeam />
         <TestimonialSection />
+        <AboutSection />
       </main>
     </div>
   );
 };
+
+
+
+
+// AboutSection Component
+const AboutSection = () => {
+  return (
+    <div className="relative w-full">
+      {/* Lower Section with Text */}
+      <div className="bg-black text-white text-center py-16 px-4 sm:px-6 md:px-8 lg:px-16">
+        <p className="text-base sm:text-lg text-cyan-400 py-4 sm:py-8">
+          Let's Build Together
+        </p>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl pb-6 sm:pb-8 text-white font-bold mt-2">
+          Need To Rethink Your 
+          <br />
+          Business Process?
+        </h1>
+        <button className="mt-4 px-6 sm:px-8 py-3 sm:py-4 bg-cyan-500 text-white rounded-lg hover:bg-teal-600 transition text-sm sm:text-base md:text-lg">
+          Get In Touch →
+        </button>
+      </div>
+    </div>
+  );
+};
+
 
 export default AboutPage;
