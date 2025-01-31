@@ -33,7 +33,7 @@ const Navbar = () => {
 
             {/* Navigation Links */}
             <div className="flex items-center space-x-6">
-              {["Home", "Services", "About", "Pages", "Contact"].map((item) => (
+              {["Home", "Services", "About", "Client", "Contact"].map((item) => (
                 <button
                   key={item}
                   className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm"

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar'
 import Footer from './components/Footer';
 import Home from './Pages/Home';
-
+import Client from './Pages/Client';
 
 const App = () => {
   return (
@@ -13,6 +13,7 @@ const App = () => {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/our-clients" element={<Client />} />
             {/* <Route path="/about" element={<About />} />
             <Route path="/services" element={<Service />} />
             <Route path="/industries" element={<Industries />} />
