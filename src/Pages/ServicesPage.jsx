@@ -7,6 +7,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import TestimonialSection from '../components/TestimonialSection';
+
 const ServicesPage = () => {
   const services = [
     {
@@ -54,41 +56,6 @@ const ServicesPage = () => {
     { title: "Recognizing Excellence", subtitle: "Design Awards – Innovation", year: "202" },
     { title: "Construction", subtitle: "Design Awards – Innovation", year: "22" },
     { title: "Projects Planning", subtitle: "Design Awards – Innovation", year: "2024" },
-  ];
-  const testimonials = [
-    {
-      name: "Cameron Williamson",
-      role: "Head Of Products",
-      rating: 5,
-      feedback:
-        "Pixify Transformed Our Website Into A Powerful Business Tool. The Design Is Sleek, User-Friendly, And Perfectly Aligns With Our Brand. Our Online Presence Has Never Been Stronger, Thanks To Their Incredible Team!",
-      image: "/review-1.avif",
-    },
-    {
-      name: "Cameron Williamson",
-      role: "Head Of Products",
-      rating: 5,
-      feedback:
-        "Pixify Transformed Our Website Into A Powerful Business Tool. The Design Is Sleek, User-Friendly, And Perfectly Aligns With Our Brand. Our Online Presence Has Never Been Stronger, Thanks To Their Incredible Team!",
-      image: "/review-1.avif",
-    },
-    {
-      name: "Cameron Williamson",
-      role: "Head Of Products",
-      rating: 5,
-      feedback:
-        "Pixify Transformed Our Website Into A Powerful Business Tool. The Design Is Sleek, User-Friendly, And Perfectly Aligns With Our Brand. Our Online Presence Has Never Been Stronger, Thanks To Their Incredible Team!",
-      image: "/review-1.avif",
-    },
-    {
-      name: "Cameron Williamson",
-      role: "Head Of Products",
-      rating: 5,
-      feedback:
-        "Pixify Transformed Our Website Into A Powerful Business Tool. The Design Is Sleek, User-Friendly, And Perfectly Aligns With Our Brand. Our Online Presence Has Never Been Stronger, Thanks To Their Incredible Team!",
-      image: "/review-1.avif",
-    },
-    // Add more testimonials here
   ];
   
   return (
@@ -177,31 +144,34 @@ const ServicesPage = () => {
 
 
     </div>
-    <div className="relative h-screen w-[133%] left-[-16%] overflow-hidden">
-  {/* Background Image */}
-  <motion.div
-    className="absolute  w-[100%] h-[100%] bg-cover bg-center opacity-20"
-    style={{ backgroundImage: "url('/bac.webp')" }}
-    animate={{ scale: scrolled ? 1.2 : 1 }}
-    transition={{ duration: 4 }}
-  />
-  
-  {/* Video Drop Effect */}
-  {scrolled && (
-    <motion.video
-      className="absolute top-[28%] left-[29%] transform -translate-x-1/2 -translate-y-1/2 rounded-lg shadow-lg"
-      src="/video.mp4"
-      autoPlay
-      loop
-      muted
-      width="600"
-      height="400"
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 2 }}
-    />
-  )}
-</div>
+    <div className="relative w-full min-h-screen overflow-hidden">
+      {/* Background Image */}
+      <motion.div
+        className="absolute inset-0 w-full h-full bg-cover bg-center opacity-20"
+        style={{ backgroundImage: "url('/bac.webp')" }}
+        animate={{ scale: scrolled ? 1.2 : 1 }}
+        transition={{ duration: 4 }}
+      />
+      
+      {/* Video Drop Effect */}
+      {scrolled && (
+        <motion.div className="absolute w-full h-full flex items-center justify-center">
+          <motion.video
+            className="w-full max-w-[90vw] md:max-w-[80vw] lg:max-w-[60vw] xl:max-w-[50vw] 
+                       rounded-lg shadow-lg 
+                       mx-4 sm:mx-8 md:mx-12 lg:mx-16"
+            src="/video.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline // Important for iOS
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 2 }}
+          />
+        </motion.div>
+      )}
+    </div>
 <div className=" py-24 px-6 md:px-16 lg:px-24 flex flex-col md:flex-row items-center md:items-start gap-12">
       {/* Left Image */}
       <div className="w-full md:w-1/2">
@@ -227,8 +197,8 @@ const ServicesPage = () => {
           <div className="relative">
             <span className="absolute left-[-9%] top-[-23%] text-6xl text-gray-200 font-bold">01</span>
             <div className="ml-12">
-              <h4 className="text-lg font-semibold text-blue-900">DISCUSSIONS ABOUT PROJECT</h4>
-              <p className="text-gray-600 mt-1">
+              <h4 className="text-lg font-semibold text-blue-500">DISCUSSIONS ABOUT PROJECT</h4>
+              <p className="text-gray-400 mt-1">
                 Forging relationships between multinational corporations, governments, and global NGOs.
               </p>
             </div>
@@ -238,8 +208,8 @@ const ServicesPage = () => {
           <div className="relative">
             <span className="absolute left-[-9%] top-[-23%] text-6xl text-gray-200 font-bold">02</span>
             <div className="ml-12">
-              <h4 className="text-lg font-semibold text-blue-900">START WORK WITH TEAM</h4>
-              <p className="text-gray-600 mt-1">
+              <h4 className="text-lg font-semibold text-blue-500">START WORK WITH TEAM</h4>
+              <p className="text-gray-400 mt-1">
                 Design studio founded in London and expanded our services, and became a multinational firm.
               </p>
             </div>
@@ -249,22 +219,15 @@ const ServicesPage = () => {
           <div className="relative">
             <span className="absolute left-[-9%] top-[-23%] text-6xl text-gray-200 font-bold">03</span>
             <div className="ml-12">
-              <h4 className="text-lg font-semibold text-blue-900">HANDOVER & SAVE WORLD</h4>
-              <p className="text-gray-600 mt-1">
+              <h4 className="text-lg font-semibold text-blue-500">HANDOVER & SAVE WORLD</h4>
+              <p className="text-gray-400 mt-1">
                 We understand the importance of approaching each work integrally and believe in the power.
               </p>
             </div>
           </div>
         </div>
 
-        {/* Small Image at Bottom Right */}
-        <div className="mt-4 flex justify-end">
-          <img
-            src="/pro.webp"
-            alt="Smiling Woman"
-            className="w-44 h-44 rounded-lg shadow-lg"
-          />
-        </div>
+       
       </div>
     </div>
   
@@ -311,32 +274,10 @@ const ServicesPage = () => {
         slidesPerView={1}
         className="relative"
       >
-        {testimonials.map((testimonial, index) => (
-          <SwiperSlide key={index} className="flex items-center space-x-8">
-            <div className="w-1/3 relative">
-              <img
-                src={testimonial.image}
-                alt={testimonial.name}
-                className="rounded-lg w-full"
-              />
-            </div>
-            <div className="w-2/3">
-              <h4 className="text-white text-sm font-medium">
-                Client Testimonials
-              </h4>
-              <h2 className="text-3xl font-bold mt-2 text-blue-700">
-                Clients Share Their Success Stories
-              </h2>
-              <div className="flex text-red-500 mt-3">
-                {"★".repeat(testimonial.rating)}
-              </div>
-              <p className="mt-4 text-white">{testimonial.feedback}</p>
-              <h3 className="font-semibold mt-4">{testimonial.name}</h3>
-              <p className="text-white text-sm">{testimonial.role}</p>
-            </div>
-          </SwiperSlide>
-        ))}
+        
+        
       </Swiper>
+      <TestimonialSection />
     </div>
       </main>
 
@@ -351,6 +292,7 @@ const ServicesPage = () => {
           100% { transform: translateY(100%); }
         }
       `}</style>
+    
     </div>
     
   );

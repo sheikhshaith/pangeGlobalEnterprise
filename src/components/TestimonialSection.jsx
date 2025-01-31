@@ -360,7 +360,7 @@ const TestimonialSection = () => {
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
       <div className="text-center sm:text-left">
         <h3 className="text-gray-300 font-medium underline">Client Testimonials</h3>
-        <h1 className="text-3xl sm:text-4xl font-bold mt-4 mb-8 sm:mb-12">Clients Share Their Success Stories</h1>
+        <h1 className="text-3xl text-white sm:text-4xl font-bold mt-4 mb-8 sm:mb-12">Clients Share Their Success Stories</h1>
       </div>
 
       <div className="flex flex-col lg:flex-row gap-8 items-center">
@@ -386,7 +386,7 @@ const TestimonialSection = () => {
           
           {/* Testimonial Text */}
           <div className="mb-6 sm:mb-8">
-            <p className="text-xl sm:text-2xl lg:text-3xl font-medium leading-tight">{testimonials[currentIndex].text}</p>
+            <p className="text-white text-xl sm:text-2xl lg:text-3xl font-medium leading-tight">{testimonials[currentIndex].text}</p>
           </div>
           
           {/* Author Details */}
