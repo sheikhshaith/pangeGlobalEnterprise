@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './Pages/Home';
 import About from './Pages/About';
+import Contact from './Pages/Contact';
 import Client from './Pages/Client';
 import ServicesPage from './Pages/ServicesPage';
 
@@ -20,9 +21,9 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="/ServicesPage" element={<ServicesPage />} />
             <Route path="/Client" element={<Client />} />
-
 
 
           </Routes>
