@@ -1,4 +1,3 @@
-
 // import React, { useState, useEffect } from "react";
 // import { useNavigate } from "react-router-dom";
 
@@ -129,15 +128,6 @@
 
 // export default Navbar;
 
-
-
-
-
-
-
-
-
-
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -197,7 +187,7 @@ const Navbar = () => {
                 >
                   Home
                 </button>
-                
+
                 {/* Services Dropdown Container */}
                 <div
                   className="relative"
@@ -205,7 +195,7 @@ const Navbar = () => {
                   onMouseLeave={handleMouseLeave}
                 >
                   <button
-                    onClick={() => navigate("/ServicesPage")}
+                    onClick={() => navigate("/services")}
                     className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm flex items-center"
                   >
                     Services
@@ -225,7 +215,7 @@ const Navbar = () => {
                       />
                     </svg>
                   </button>
-                  
+
                   {/* Dropdown Menu */}
                   <div
                     className={`absolute left-0 mt-2 w-48 bg-black bg-opacity-90 rounded-lg shadow-lg transition-all duration-200 ${
@@ -309,7 +299,7 @@ const Navbar = () => {
               >
                 Home
               </button>
-              
+
               {/* Services Section in Mobile Menu */}
               <div className="space-y-0.5">
                 <button
