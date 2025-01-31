@@ -61,8 +61,8 @@ const AboutPage = () => {
         <section className="max-w-7xl mx-auto px-4 py-12 md:py-16">
           <div className="space-y-8">
             <div className="space-y-2">
-              <h2 className="text-sm uppercase text-gray-400">Who We Are</h2>
-              <h1 className="text-3xl md:text-4xl font-bold leading-tight">
+              <h2 className="text-sm uppercase underline text-gray-300">Who We Are</h2>
+              <h1 className="text-3xl md:text-4xl font-bold leading-tight border-b pb-8 border-gray-300">
                 Empowering Growth With Expert Guidance:
                 <br />
                 Your Trusted Partners In Business Strategy
@@ -84,8 +84,8 @@ const AboutPage = () => {
 
                 {/* Text Container */}
                 <div className="mt-3 text-center">
-                  <p className="text-sm font-bold text-white">Customer Focus</p>
-                  <p className="text-xs text-gray-300 mt-1">
+                  <p className="text-sm font-bold text-left text-white">Customer Focus</p>
+                  <p className="text-xs text-gray-300 mt-1 text-left">
                     We offer strategic planning to drive sustainable growth,
                     operational efficiency
                   </p>
@@ -93,7 +93,7 @@ const AboutPage = () => {
               </div>
 
               <div className="flex-shrink-0 w-full max-w-xl space-y-4">
-                <div className="text-gray-400 text-md">
+                <div className="text-gray-300 text-md">
                   We are a team of dedicated consultants with a passion for
                   helping businesses grow, innovate, and thrive. We offer
                   tailored strategies and actionable insights that drive
@@ -182,6 +182,7 @@ const AboutPage = () => {
           {/* Hero Section */}
           <div className="py-12">
             <div className="space-y-4">
+            <h2 className="text-sm underline text-gray-300">Our Story</h2>
               <h1 className="text-4xl font-bold tracking-tight">
                 Building Success Through Vision,
                 <br />
