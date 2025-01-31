@@ -37,25 +37,25 @@ const LogoSection = () => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <span className="text-3xl font-bold text-teal-400 relative overflow-hidden">
+      <span className="text-3xl font-bold text-cyan-400 relative overflow-hidden">
         Pixify
         <div
-          className={`absolute bottom-0 left-0 w-full h-0.5 bg-teal-400 transform transition-transform duration-300 ${
+          className={`absolute bottom-0 left-0 w-full h-0.5 bg-cyan-400 transform transition-transform duration-300 ${
             isHovered ? "translate-x-0" : "-translate-x-full"
           }`}
         />
         <div
-          className={`absolute top-0 right-0 w-0.5 h-full bg-teal-400 transform transition-transform duration-300 ${
+          className={`absolute top-0 right-0 w-0.5 h-full bg-cyan-400 transform transition-transform duration-300 ${
             isHovered ? "translate-y-0 delay-150" : "-translate-y-full"
           }`}
         />
         <div
-          className={`absolute top-0 left-0 w-full h-0.5 bg-teal-400 transform transition-transform duration-300 ${
+          className={`absolute top-0 left-0 w-full h-0.5 bg-cyan-400 transform transition-transform duration-300 ${
             isHovered ? "translate-x-0 delay-300" : "translate-x-full"
           }`}
         />
         <div
-          className={`absolute top-0 left-0 w-0.5 h-full bg-teal-400 transform transition-transform duration-300 ${
+          className={`absolute top-0 left-0 w-0.5 h-full bg-cyan-400 transform transition-transform duration-300 ${
             isHovered ? "translate-y-0 delay-450" : "translate-y-full"
           }`}
         />
@@ -81,20 +81,20 @@ const ServiceCard = ({ icon: Icon, title, description }) => {
       >
         <Icon
           className={`w-full h-full transition-colors duration-300 ${
-            isHovered ? "text-teal-400" : "text-gray-300"
+            isHovered ? "text-cyan-400" : "text-gray-300"
           }`}
         />
       </div>
       <h3
         className={`text-2xl font-normal transition-colors duration-300 ${
-          isHovered ? "text-teal-400" : "text-gray-200"
+          isHovered ? "text-cyan-400" : "text-gray-200"
         }`}
       >
         {title}
       </h3>
       <p className="text-gray-400 text-lg leading-relaxed">{description}</p>
       <div
-        className={`absolute bottom-0 left-0 h-1 bg-teal-400 transition-all duration-300 ${
+        className={`absolute bottom-0 left-0 h-1 bg-cyan-400 transition-all duration-300 ${
           isHovered ? "w-full" : "w-0"
         }`}
       />
@@ -268,9 +268,9 @@ const ServicesSection = () => {
         </div>
 
         <div className="mt-12 flex items-center justify-center text-gray-400 space-x-2 animate-pulse hover:animate-none cursor-pointer group">
-          <Phone className="w-5 h-5 group-hover:text-teal-400 transition-colors duration-300" />
+          <Phone className="w-5 h-5 group-hover:text-cyan-400 transition-colors duration-300" />
           <span>Have any questions? Free:</span>
-          <span className="text-gray-200 group-hover:text-teal-400 transition-colors duration-300">
+          <span className="text-gray-200 group-hover:text-cyan-400 transition-colors duration-300">
             +1 917 265 8444
           </span>
         </div>

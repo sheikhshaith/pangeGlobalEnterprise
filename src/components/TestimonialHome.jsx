@@ -105,7 +105,7 @@ const TestimonialSlider = () => {
   const TestimonialCard = ({ testimonial }) => (
     <div className="relative bg-gray-800 p-6 lg:p-8 rounded-2xl shadow-xl text-white flex flex-col lg:flex-row gap-4 lg:gap-6 items-center w-full h-full">
       {/* Image - Responsive sizing */}
-      <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-teal-400 md:-mt-8">
+      <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-cyan-400 md:-mt-8">
         <img
           src={testimonial.image}
           alt={testimonial.name}
@@ -120,7 +120,7 @@ const TestimonialSlider = () => {
           {[...Array(testimonial.rating)].map((_, i) => (
             <svg
               key={i}
-              className="w-4 h-4 md:w-5 md:h-5 text-teal-400 fill-current"
+              className="w-4 h-4 md:w-5 md:h-5 text-cyan-400 fill-current"
               viewBox="0 0 20 20"
             >
               <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
@@ -154,7 +154,7 @@ const TestimonialSlider = () => {
     >
       <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-8 md:mb-16 text-center">
         Clients Share Their Success Stories
-        <span className="text-teal-400">.</span>
+        <span className="text-cyan-400">.</span>
       </h1>
 
       <div className="relative w-full max-w-6xl px-2 md:px-4">
@@ -185,7 +185,7 @@ const TestimonialSlider = () => {
           <div className="flex items-center gap-2 md:gap-4">
             <button
               onClick={prevSlide}
-              className="text-white bg-teal-400 rounded-full p-1 md:p-2 shadow-lg hover:bg-teal-500 text-sm md:text-base"
+              className="text-white bg-cyan-400 rounded-full p-1 md:p-2 shadow-lg hover:bg-cyan-500 text-sm md:text-base"
             >
               &#10094;
             </button>
@@ -198,7 +198,7 @@ const TestimonialSlider = () => {
                 key={index}
                 onClick={() => setCurrentSlide(index)}
                 className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-colors ${
-                  index === currentSlide ? "bg-teal-400" : "bg-gray-600"
+                  index === currentSlide ? "bg-cyan-400" : "bg-gray-600"
                 }`}
               />
             ))}
@@ -207,7 +207,7 @@ const TestimonialSlider = () => {
           <div className="flex items-center gap-2 md:gap-4">
             <button
               onClick={nextSlide}
-              className="text-white bg-teal-400 rounded-full p-1 md:p-2 shadow-lg hover:bg-teal-500 text-sm md:text-base"
+              className="text-white bg-cyan-400 rounded-full p-1 md:p-2 shadow-lg hover:bg-cyan-500 text-sm md:text-base"
             >
               &#10095;
             </button>
