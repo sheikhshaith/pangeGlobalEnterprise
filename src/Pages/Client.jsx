@@ -1,9 +1,6 @@
 // src/pages/Client.jsx
 import React from 'react'
 import { Link } from 'react-router-dom'
-
-
-
 const logos = [
   { normal: "bright.svg", bold: "chromatools-bold.svg" },
   { normal: "craig.svg", bold: "c2-logo-12.svg" },
@@ -28,56 +25,30 @@ const logos = [
 ];
 
 const LogoFlip = () => {
-    return (
-      <div className="grid grid-cols-5 gap-6 justify-center py-10">
-        {/* First row with full-width logos */}
-        <div className="col-span-5 grid grid-cols-5 gap-6 justify-center">
-          {logos.map((logo, index) => (
-            <div
-              key={index}
-              className="relative w-full h-24 transition-transform duration-500 perspective-1000 group border-2 border-gray-500 rounded-lg"
-            >
-              {/* Normal Logo */}
-              <img
-                src={logo.normal}
-                alt={`Logo ${index + 1}`}
-                className="absolute w-full h-full transition-opacity duration-500 group-hover:opacity-0"
-              />
-              {/* Bold Logo */}
-              <img
-                src={logo.bold}
-                alt={`Bold Logo ${index + 1}`}
-                className="absolute w-full h-full transition-opacity duration-500 opacity-0 group-hover:opacity-100"
-              />
-            </div>
-          ))}
+  return (
+    <div className="grid  grid-cols-5 gap-6 justify-center py-10">
+      {logos.map((logo, index) => (
+        <div
+          key={index}
+          className="relative w-24 h-16 transition-transform duration-500 perspective-1000 group"
+        >
+          {/* Normal Logo */}
+          <img
+            src={logo.normal}
+            alt={`Logo ${index + 1}`}
+            className="absolute w-full h-full transition-opacity duration-500 group-hover:opacity-0"
+          />
+          {/* Bold Logo */}
+          <img
+            src={logo.bold}
+            alt={`Bold Logo ${index + 1}`}
+            className="absolute w-full h-full transition-opacity duration-500 opacity-0 group-hover:opacity-100"
+          />
         </div>
-  
-        {/* Other rows with logos */}
-        {logos.slice(5).map((logo, index) => (
-          <div
-            key={index + 5}
-            className="relative w-24 h-16 transition-transform duration-500 perspective-1000 group border-2 border-gray-500 rounded-lg"
-          >
-            {/* Normal Logo */}
-            <img
-              src={logo.normal}
-              alt={`Logo ${index + 6}`}
-              className="absolute w-full h-full transition-opacity duration-500 group-hover:opacity-0"
-            />
-            {/* Bold Logo */}
-            <img
-              src={logo.bold}
-              alt={`Bold Logo ${index + 6}`}
-              className="absolute w-full h-full transition-opacity duration-500 opacity-0 group-hover:opacity-100"
-            />
-          </div>
-        ))}
-      </div>
-    );
-  };
-  
-  
+      ))}
+    </div>
+  );
+};
 
 
 const HeroSection = () => {
@@ -98,9 +69,6 @@ const HeroSection = () => {
       </div>
     );
   };
-
-
-
 const Client = () => {
   return (
     <div className="min-h-screen bg-black">
@@ -130,12 +98,6 @@ const Client = () => {
           </div>
         </div>
       </nav>
-
-     
-
-
-
-
 {/* Navigation Links */}
 <div className="flex justify-center mt-6 relative">
   <div className="relative px-6 py-2 rounded-full border border-transparent inline-flex items-center gap-6 bg-white/10 backdrop-blur-md">
@@ -152,14 +114,6 @@ const Client = () => {
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
       {/* Main Content */}
       <div className="container mx-auto px-4 mt-8 text-center text-white ">
         <h1 className="text-4xl font-bold mb-8">
