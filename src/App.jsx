@@ -1,5 +1,3 @@
-
-
 // export default App;
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -11,8 +9,18 @@ import Contact from './Pages/Contact';
 import Client from './Pages/Client';
 import ServicesPage from './Pages/ServicesPage';
 import PgeServices from './services/PgeServices';
-// import services from './services/PgeServices';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
+const ScrollToTop = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
+  return null;
+};
 
 
 const App = () => {
@@ -20,6 +28,7 @@ const App = () => {
     <Router>
       <div className="flex flex-col min-h-screen bg-black">
         <Navbar />
+        <ScrollToTop />
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -33,6 +42,8 @@ const App = () => {
             <Route path="/Client" element={<Client />} />
 
 
+            <Route path="/services" element={<ServicesPage />} /> {/* Consistent path */}
+            <Route path="/client" element={<Client />} /> {/* Consistent path */}
           </Routes>
         </main>
         <Footer />

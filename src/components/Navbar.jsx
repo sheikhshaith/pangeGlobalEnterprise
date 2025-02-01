@@ -205,7 +205,7 @@ const Navbar = () => {
                   onMouseLeave={handleMouseLeave}
                 >
                   <button
-  onClick={() => navigate("/services/PgeServices")}
+  onClick={() => navigate("/services")}
   className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm flex items-center"
 >
                     Services
