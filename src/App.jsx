@@ -10,6 +10,9 @@ import About from './Pages/About';
 import Contact from './Pages/Contact';
 import Client from './Pages/Client';
 import ServicesPage from './Pages/ServicesPage';
+import PgeServices from './services/PgeServices';
+// import services from './services/PgeServices';
+
 
 
 const App = () => {
@@ -22,7 +25,11 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/ServicesPage" element={<ServicesPage />} />
+            <Route path="/Pages/ServicesPage" element={<ServicesPage />} />
+            <Route path="/services/PgeServices" element={<PgeServices />} />
+          <Route path="/services/mobile-apps" element={<ServicesPage />} />
+          <Route path="/services/cloud-services" element={<ServicesPage />} />
+
             <Route path="/Client" element={<Client />} />
 
 

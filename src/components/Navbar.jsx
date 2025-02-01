@@ -157,7 +157,7 @@ const Navbar = () => {
   }, []);
 
   const servicePages = [
-    { name: "Web Development", path: "/services/web-development" },
+    { name: "PGE Services", path: "/services/PgeServices" },
     { name: "Mobile Apps", path: "/services/mobile-apps" },
     { name: "Cloud Services", path: "/services/cloud-services" },
   ];
@@ -205,9 +205,9 @@ const Navbar = () => {
                   onMouseLeave={handleMouseLeave}
                 >
                   <button
-                    onClick={() => navigate("/ServicesPage")}
-                    className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm flex items-center"
-                  >
+  onClick={() => navigate("/services/PgeServices")}
+  className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm flex items-center"
+>
                     Services
                     <svg
                       className={`w-4 h-4 ml-1 transition-transform duration-200 ${
