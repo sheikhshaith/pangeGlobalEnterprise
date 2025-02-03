@@ -65,13 +65,13 @@ const Navbar = () => {
                   onMouseLeave={handleMouseLeave}
                 >
                   <button
-  onClick={() => navigate("/services")}
-  className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm flex items-center"
->
+                    onClick={() => navigate("/services")}
+                    className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm flex items-center"
+                  >
                     Services
                     <svg
                       className={`w-4 h-4 ml-1 transition-transform duration-200 ${
-                        showServicesDropdown ? "rotate-180" : ""
+                        showServicesDropdown ? (isAtTop ? "rotate-180" : "") : (isAtTop ? "" : "rotate-180")
                       }`}
                       fill="none"
                       stroke="currentColor"
@@ -86,15 +86,17 @@ const Navbar = () => {
                     </svg>
                   </button>
                   
-                  {/* Dropdown Menu */}
+                  {/* Dropdown Menu - Direction based on navbar position */}
                   <div
-                    className={`absolute left-0 mt-2 w-48 bg-black bg-opacity-90 rounded-lg shadow-lg transition-all duration-200 ${
+                    className={`absolute ${
+                      isAtTop ? "bottom-full mb-2" : "top-full mt-2"
+                    } left-0 w-48 bg-black bg-opacity-90 rounded-lg shadow-lg transition-all duration-200 ${
                       showServicesDropdown
                         ? "opacity-100 visible translate-y-0"
-                        : "opacity-0 invisible -translate-y-2"
+                        : `opacity-0 invisible ${isAtTop ? "translate-y-2" : "-translate-y-2"}`
                     }`}
                   >
-                    {servicePages.map((service) => (
+                    {servicePages.map((service, index) => (
                       <button
                         key={service.name}
                         onClick={() => {
@@ -109,6 +111,7 @@ const Navbar = () => {
                   </div>
                 </div>
 
+                {/* Rest of the navigation buttons */}
                 <button
                   onClick={() => navigate("/about")}
                   className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm"
@@ -174,9 +177,9 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu - Direction based on navbar position */}
         {isOpen && (
-          <div className="md:hidden mt-2">
+          <div className={`md:hidden ${isAtTop ? "-mt-64" : "mt-2"}`}>
             <div className="bg-black bg-opacity-50 rounded-lg px-3 py-1.5 space-y-0.5">
               <button
                 onClick={() => {
@@ -239,6 +242,33 @@ const Navbar = () => {
                 className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left"
               >
                 Contact
+              </button>
+              <button
+                onClick={() => {
+                  setIsOpen(false);
+                  navigate("/faq");
+                }}
+                className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left"
+              >
+                Faq
+              </button>
+              <button
+                onClick={() => {
+                  setIsOpen(false);
+                  navigate("/ourteam");
+                }}
+                className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left"
+              >
+                our team
+              </button>
+              <button
+                onClick={() => {
+                  setIsOpen(false);
+                  navigate("/OurProject");
+                }}
+                className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left"
+              >
+                OurProject
               </button>
             </div>
           </div>

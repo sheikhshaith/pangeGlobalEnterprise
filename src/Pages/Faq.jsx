@@ -36,14 +36,14 @@ const FAQ = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-2 sm:px-4 mt-[-40%]">
-        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-center text-white fade-in opacity-0 transition-all duration-1000 ease-out delay-300 translate-y-4">
+      <div className="container mx-auto px-2 sm:px-4" style={{ marginTop: "-40%" }}>
+        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6 sm:mb-6 text-center text-white fade-in opacity-0 transition-all duration-1000 ease-out delay-300 translate-y-4">
           Get In Touch: Expert Business
           <br className="hidden sm:block" />
           Consulting Tailored To You
         </h1>
 
-        {/* Hero Image */}
+        {/* Hero Image with responsive sizes */}
         <div className="relative w-full h-[150px] sm:h-[200px] md:h-[300px] lg:h-[400px] mb-4 sm:mb-6 fade-in opacity-0 transition-all duration-1000 ease-out delay-500 scale-95">
           <img
             src="/breadcrumb-img-1.webp"
@@ -61,17 +61,12 @@ const FAQ = () => {
         </p>
       </div>
 
-      {/* Hero Section */}
-    
-
       {/* FAQ Section with zoom effect */}
       <div className="fade-in opacity-0 transition-all duration-1000 ease-out delay-1000 scale-95">
         <FAQSection />
       </div>
 
       {/* Contact Section */}
-
-
       <div className="relative w-full">
         {/* Lower Section with Text */}
         <div className="bg-black text-white text-center py-16 px-4 sm:px-6 md:px-8 lg:px-16 fade-in opacity-0 transition-all duration-1000 ease-out delay-1400">
