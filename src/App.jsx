@@ -12,7 +12,8 @@ import ServicesPage from './Pages/ServicesPage';
 import PgeServices from './services/PgeServices';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import ChatWidget from './components/ChatWidget'
+import ChatWidget from './components/ChatWidget';
+import FAQ from './Pages/Faq';
 
 const ScrollToTop = () => {
   const location = useLocation();
@@ -42,12 +43,13 @@ const App = () => {
             <Route path="/services/PgeServices" element={<PgeServices />} />
           <Route path="/services/mobile-apps" element={<ServicesPage />} />
           <Route path="/services/cloud-services" element={<ServicesPage />} />
-
+          <Route path="/faq" element={<FAQ />} />
             <Route path="/Client" element={<Client />} />
 
 
             <Route path="/services" element={<ServicesPage />} /> {/* Consistent path */}
             <Route path="/client" element={<Client />} /> {/* Consistent path */}
+         
           </Routes>
         </main>
         <Footer />

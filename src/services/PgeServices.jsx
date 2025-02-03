@@ -172,9 +172,8 @@ const DecisionMakingComponent = () => {
     </section>
   );
 };
-
 const ServiceItem = ({ icon, title, description }) => (
-  <div className="bg-gray-900 p-6 sm:p-8 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:bg-gray-800">
+  <div className="bg-gray-900 p-6 sm:p-8 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:bg-gray-800 h-full">
     <div className="text-cyan-400 mb-4 sm:mb-6">{icon}</div>
     <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-white">{title}</h3>
     <p className="text-sm sm:text-base text-gray-300">{description}</p>
@@ -209,9 +208,12 @@ const HRServicesGrid = () => {
     <section className="bg-black py-12 sm:py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="px-4 sm:px-8 md:px-16 lg:px-32">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 md:gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
             {services.map((service, index) => (
-              <div key={index} className="w-full sm:w-11/12 justify-self-center sm:justify-self-auto sm:last:justify-self-end">
+              <div 
+                key={index} 
+                className="w-full flex items-stretch"
+              >
                 <ServiceItem {...service} />
               </div>
             ))}
