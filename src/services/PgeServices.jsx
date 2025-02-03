@@ -27,8 +27,6 @@ const HeroSection = () => {
   );
 };
 
-
-
 const PerformanceSection = () => {
   return (
     <section className="bg-black py-8 sm:py-10 md:py-12">
