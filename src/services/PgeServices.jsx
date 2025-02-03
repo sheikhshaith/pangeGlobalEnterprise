@@ -81,7 +81,7 @@ const ProcessItem = ({ icon, title, description, isHovered, onHover }) => (
       }`}>
         {title}
       </h3>
-      <p className="text-gray-600 text-sm sm:text-base">{description}</p>
+      <p className="text-gray-500 text-sm sm:text-base">{description}</p>
     </div>
   </div>
 );
@@ -507,52 +507,7 @@ const PgeServices = () => {
   return (
     <div className="min-h-screen bg-black">
       {/* Navbar */}
-      <nav className="p-3 sm:p-4">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between">
-            {/* Logo */}
-            <Link to="/" className="text-xl sm:text-2xl font-bold text-cyan-500">
-              Pixify
-            </Link>
-
-            {/* Search and Menu Icons */}
-            <div className="flex items-center gap-3 sm:gap-4">
-              <button className="text-gray-600">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-5 h-5 sm:w-6 sm:h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-                  />
-                </svg>
-              </button>
-              <button className="text-gray-600">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-5 h-5 sm:w-6 sm:h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
+    
 
       {/* Navigation Links */}
       <div className="flex justify-center mt-4 sm:mt-6 px-4">
