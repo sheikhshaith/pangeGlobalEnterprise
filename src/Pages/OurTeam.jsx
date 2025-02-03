@@ -212,7 +212,7 @@ const OurTeamSlider = () => {
           {/* <h2 className="text-3xl font-semibold text-white mb-4">
               Our Trusted Clients
             </h2> */}
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-gray-300 max-w-2xl mx-auto">
             Trusted by 170+ organizations across diverse industries, driving
             innovation and excellence
           </p>
@@ -284,7 +284,7 @@ const OurTeamSlider = () => {
 
 
 
-
+// our team contact from
 const ContactForm = () => {
     const [formData, setFormData] = useState({
       name: '',
@@ -319,12 +319,10 @@ const ContactForm = () => {
           
           <div className="relative mt-8">
             <img 
-              src="/h1-img-1.webp"
+              src="/h3-img-1.webp"
               alt="Business Professional"
-              className="w-72 h-96 object-cover"
+              className="w-full h-full object-cover"
             />
-            <div className="absolute -z-10 top-4 left-4 w-72 h-96 bg-blue-800 transform rotate-6"></div>
-            <div className="absolute bottom-4 right-4 w-32 h-32 bg-yellow-500 rounded-full -z-20"></div>
             <div className="absolute bottom-8 left-8">
               <svg width="100" height="40" className="text-gray-800">
                 <path d="M5 20 Q 25 5, 45 20 T 85 20" stroke="currentColor" fill="none" strokeWidth="2"/>
@@ -341,7 +339,7 @@ const ContactForm = () => {
               {services.map((service, index) => (
                 <button
                   key={index}
-                  className="px-4 py-2 rounded-full border border-gray-200 text-sm hover:bg-gray-50 transition-colors"
+                  className="px-4 py-2 rounded-full border border-gray-200 text-sm hover:bg-cyan-400 hover:border-cyan-400 transition-colors"
                 >
                   {service}
                 </button>
@@ -351,7 +349,7 @@ const ContactForm = () => {
   
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="name" className="text-sm text-gray-600">NAME</label>
+              <label htmlFor="name" className="text-sm text-gray-300">NAME</label>
               <input
                 type="text"
                 id="name"
@@ -363,7 +361,7 @@ const ContactForm = () => {
             </div>
   
             <div>
-              <label htmlFor="phone" className="text-sm text-gray-600">PHONE</label>
+              <label htmlFor="phone" className="text-sm text-gray-300">PHONE</label>
               <input
                 type="tel"
                 id="phone"
@@ -375,7 +373,7 @@ const ContactForm = () => {
             </div>
   
             <div>
-              <label htmlFor="email" className="text-sm text-gray-600">EMAIL</label>
+              <label htmlFor="email" className="text-sm text-gray-300">EMAIL</label>
               <input
                 type="email"
                 id="email"
@@ -387,7 +385,7 @@ const ContactForm = () => {
             </div>
   
             <div>
-              <label htmlFor="message" className="text-sm text-gray-600">MESSAGE</label>
+              <label htmlFor="message" className="text-sm text-gray-300">MESSAGE</label>
               <textarea
                 id="message"
                 placeholder="Write your message here..."
@@ -409,7 +407,7 @@ const ContactForm = () => {
         </div>
       </div>
     );
-  };
+};
 
 
 
