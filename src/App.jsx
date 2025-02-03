@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Home from './Pages/Home';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
+import OurTeam from './Pages/OurTeam';
 import Client from './Pages/Client';
 import ServicesPage from './Pages/ServicesPage';
 import PgeServices from './services/PgeServices';
@@ -36,6 +37,7 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/ourteam" element={<OurTeam />} />
             <Route path="/Pages/ServicesPage" element={<ServicesPage />} />
             <Route path="/services/PgeServices" element={<PgeServices />} />
           <Route path="/services/mobile-apps" element={<ServicesPage />} />
