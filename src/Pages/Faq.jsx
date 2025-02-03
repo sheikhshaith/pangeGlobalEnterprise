@@ -70,17 +70,7 @@ const FAQ = () => {
       </div>
 
       {/* Contact Section */}
-      <div className="text-center py-8 sm:py-10 px-2 sm:px-4 fade-in opacity-0 transition-all duration-1000 ease-out delay-1200">
-        <p className="text-gray-300 mb-3 text-sm sm:text-base">
-          Didn't find what you were looking for?
-        </p>
-        <Link
-          to="/contact"
-          className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 border border-transparent text-sm sm:text-base font-medium rounded-md shadow-sm text-black bg-cyan-400 hover:bg-cyan-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 transition-colors hover:scale-105 transform duration-200"
-        >
-          Contact Us
-        </Link>
-      </div>
+
 
       <div className="relative w-full">
         {/* Lower Section with Text */}
