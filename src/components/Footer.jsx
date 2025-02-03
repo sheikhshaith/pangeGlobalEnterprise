@@ -8,8 +8,8 @@ const Footer = () => {
         {/* Brand Section */}
         <div className="space-y-4">
           <div className="flex items-center space-x-2">
-            <div className="text-cyan-400 text-4xl font-bold">Q</div>
-            <h2 className="text-2xl font-bold text-white">Pixify</h2>
+            <div className="text-cyan-400 text-4xl font-bold">PGE</div>
+            {/* <h2 className="text-2xl font-bold text-white">Pixify</h2> */}
           </div>
         </div>
 

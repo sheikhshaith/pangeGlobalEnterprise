@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from "react";
-// import "./App.css"; // Ensure you add the styles here
-import { ChevronDown, ChevronUp } from "lucide-react";
+import React, { useState,useRef, useEffect } from "react";
 import ServicesSlider from "../components/ServicesSlider";
 import FeaturesSection from "../components/FeaturesSection";
 import TestimonialHome from "../components/TestimonialHome";
@@ -8,15 +6,14 @@ import ContactForm from "../components/ContactForm";
 import ContactSection from "../components/ContactSection";
 import FAQSection from "../components/FAQSection";
 import StatsSection from "../components/StatsSection";
-import {
-  Search,
-  Menu,
+import { Search,Menu,
   Facebook,
   Twitter,
   Linkedin,
   Instagram,
   Briefcase,
   Target,
+  ArrowRight,
   Lightbulb,
   Phone,
   CircleDashed,
@@ -25,6 +22,7 @@ import {
   LayoutGrid,
   Zap,
   Circle,
+  ChevronDown, ChevronUp
 } from "lucide-react";
 
 // Logo Section Component
@@ -65,42 +63,7 @@ const LogoSection = () => {
 };
 
 // Service Card Component
-const ServiceCard = ({ icon: Icon, title, description }) => {
-  const [isHovered, setIsHovered] = useState(false);
 
-  return (
-    <div
-      className="relative flex flex-col items-start space-y-4 p-6 transition-all duration-300 hover:bg-gray-900/30"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <div
-        className={`w-16 h-16 flex items-center justify-center transition-transform duration-500 ${
-          isHovered ? "scale-110" : ""
-        }`}
-      >
-        <Icon
-          className={`w-full h-full transition-colors duration-300 ${
-            isHovered ? "text-cyan-400" : "text-gray-300"
-          }`}
-        />
-      </div>
-      <h3
-        className={`text-2xl font-normal transition-colors duration-300 ${
-          isHovered ? "text-cyan-400" : "text-gray-200"
-        }`}
-      >
-        {title}
-      </h3>
-      <p className="text-gray-400 text-lg leading-relaxed">{description}</p>
-      <div
-        className={`absolute bottom-0 left-0 h-1 bg-cyan-400 transition-all duration-300 ${
-          isHovered ? "w-full" : "w-0"
-        }`}
-      />
-    </div>
-  );
-};
 
 const ClientSlider = () => {
   const [selectedClient, setSelectedClient] = useState(null);
@@ -222,7 +185,70 @@ const ClientSlider = () => {
 };
 
 // Services Section Component
+const ServiceCard = ({ icon: Icon, title, description }) => (
+  <div className="relative py-8 px-6 group cursor-pointer overflow-hidden">
+    {/* Background hover effect */}
+    <div className="absolute inset-0 bg-gradient-to-r from-cyan-900/0 to-cyan-900/0 opacity-0 group-hover:opacity-10 transition-opacity duration-500" />
+    
+    {/* Animated border on hover */}
+    <div className="absolute inset-0 opacity-0 group-hover:opacity-100">
+      <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700" />
+      <div className="absolute bottom-0 right-0 w-full h-[1px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent transform translate-x-full group-hover:translate-x-0 transition-transform duration-700" />
+    </div>
+
+    <div className="relative z-10">
+      {/* Icon with hover animation */}
+      <div className="transform group-hover:-translate-y-1 transition-transform duration-300">
+        <Icon className="w-12 h-12 text-cyan-400 mb-4 transform group-hover:scale-110 transition-all duration-300" />
+      </div>
+
+      {/* Title with hover effect */}
+      <h3 className="text-xl font-medium text-gray-200 mb-4 transform group-hover:translate-x-2 transition-transform duration-300">
+        {title}
+      </h3>
+
+      {/* Description with fade-in effect */}
+      <p className="text-gray-400 transform group-hover:translate-x-2 transition-all duration-300">
+        {description}
+      </p>
+
+      {/* Learn more link that appears on hover */}
+      <div className="mt-6 flex items-center text-cyan-400 opacity-0 transform translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+        <span className="mr-2">Learn more</span>
+        <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" />
+      </div>
+    </div>
+  </div>
+);
+
 const ServicesSection = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      {
+        threshold: 0.1
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   const services = [
     {
       icon: Briefcase,
@@ -245,39 +271,68 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="w-full bg-black py-20 opacity-0 animate-fade-in">
+    <section 
+      ref={sectionRef}
+      className={`w-full bg-black py-20 transition-all duration-1000 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mb-20 transform translate-y-10 animate-slide-up">
-          <h2 className="text-4xl text-gray-200 font-medium leading-tight">
+        {/* Title section with animated underline */}
+        <div className={`max-w-4xl mb-20 relative group cursor-pointer ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}>
+          <h2 className="text-4xl text-gray-200 font-medium leading-tight transform group-hover:translate-x-2 transition-transform duration-300">
             We Offer Expert Consulting For Strategic
             <br />
-            Growth And Operational Excellence Solutions.
+            Growth And Operational Excellence Solutions
+            <span className="text-cyan-400">.</span>
           </h2>
+          {/* Animated underline */}
+          <div className="absolute bottom-0 left-0 w-24 h-1 bg-cyan-400 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-b border-gray-800">
+        {/* Services grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+          {/* Animated border for the grid */}
+          <div className={`absolute inset-0 border-t border-b border-gray-800 transition-opacity duration-1000 ${
+            isVisible ? 'opacity-100' : 'opacity-0'
+          }`} />
+
+          {/* Service cards */}
           {services.map((service, index) => (
             <div
               key={service.title}
-              className="transform translate-y-10 animate-slide-up"
-              style={{ animationDelay: `${index * 200}ms` }}
+              className={`transform transition-all duration-1000`}
+              style={{ 
+                transitionDelay: `${index * 200}ms`,
+                opacity: isVisible ? 1 : 0,
+                transform: isVisible ? 'translateY(0)' : 'translateY(20px)'
+              }}
             >
               <ServiceCard {...service} />
             </div>
           ))}
         </div>
 
-        <div className="mt-12 flex items-center justify-center text-gray-400 space-x-2 animate-pulse hover:animate-none cursor-pointer group">
-          <Phone className="w-5 h-5 group-hover:text-cyan-400 transition-colors duration-300" />
-          <span>Have any questions? Free:</span>
-          <span className="text-gray-200 group-hover:text-cyan-400 transition-colors duration-300">
-            +1 917 265 8444
-          </span>
+        {/* Contact section with hover effects */}
+        <div className={`mt-12 flex items-center justify-center space-x-2 cursor-pointer group transition-all duration-1000 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}>
+          <div className="flex items-center space-x-2 px-6 py-3 rounded-full bg-gray-900/50 hover:bg-gray-900 transition-colors duration-300">
+            <Phone className="w-5 h-5 text-cyan-400 transform group-hover:rotate-12 transition-transform duration-300" />
+            <span className="text-gray-400">Have any questions? Free:</span>
+            <span className="text-gray-200 group-hover:text-cyan-400 transition-colors duration-300">
+              +1 917 265 8444
+            </span>
+          </div>
         </div>
       </div>
     </section>
   );
 };
+
+
 
 const EarthSection = () => {
   return (
@@ -642,15 +697,14 @@ const Home = () => {
       <ClientSlider />
 
       {/* Services Section */}
-      <ServicesSection />
+      <ServicesSection/>
 
       {/* Services Section */}
       <EarthSection />
       <StatsSection />
       <ServicesSlider />
       <div className="min-h-screen bg-black text-white relative">
-        
-        <FeaturesSection />
+       <FeaturesSection />
       </div>
       <Global />
       <FAQSection />
