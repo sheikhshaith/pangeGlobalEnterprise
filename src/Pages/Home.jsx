@@ -678,7 +678,7 @@ const Home = () => {
       <StatsSection />
       <ServicesSlider />
       <div className="min-h-screen bg-black text-white relative">
-        <ServicesSection />
+        
         <FeaturesSection />
       </div>
       <Global />
