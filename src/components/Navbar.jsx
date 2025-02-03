@@ -137,10 +137,10 @@ const Navbar = () => {
                   onClick={() => navigate("/OurTeam")}
                   className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm"
                 >
-                  Out Team
+                  Our Team
                 </button>
                 <button
-                  onClick={() => navigate("/OurProjects")}
+                  onClick={() => navigate("/OurProject")}
                   className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm"
                 >
                   Our Projects

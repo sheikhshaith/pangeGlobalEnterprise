@@ -8,11 +8,13 @@ import About from './Pages/About';
 import Contact from './Pages/Contact';
 import OurTeam from './Pages/OurTeam';
 import Client from './Pages/Client';
+import OurProject from './Pages/OurProject';
 import ServicesPage from './Pages/ServicesPage';
 import PgeServices from './services/PgeServices';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import ChatWidget from './components/ChatWidget'
+import ChatWidget from './components/ChatWidget';
+import FAQ from './Pages/Faq';
 
 const ScrollToTop = () => {
   const location = useLocation();
@@ -38,16 +40,18 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/ourteam" element={<OurTeam />} />
+            <Route path="/OurProject" element={<OurProject />} />
             <Route path="/Pages/ServicesPage" element={<ServicesPage />} />
             <Route path="/services/PgeServices" element={<PgeServices />} />
           <Route path="/services/mobile-apps" element={<ServicesPage />} />
           <Route path="/services/cloud-services" element={<ServicesPage />} />
-
+          <Route path="/faq" element={<FAQ />} />
             <Route path="/Client" element={<Client />} />
 
 
             <Route path="/services" element={<ServicesPage />} /> {/* Consistent path */}
             <Route path="/client" element={<Client />} /> {/* Consistent path */}
+         
           </Routes>
         </main>
         <Footer />
