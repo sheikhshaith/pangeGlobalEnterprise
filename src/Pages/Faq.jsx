@@ -62,14 +62,7 @@ const FAQ = () => {
       </div>
 
       {/* Hero Section */}
-      <div className="text-center py-8 sm:py-10 fade-in opacity-0 transition-all duration-1000 ease-out delay-900">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3">
-          Frequently Asked Questions
-        </h1>
-        <p className="text-gray-400 max-w-2xl mx-auto px-2 sm:px-4 text-sm sm:text-base">
-          Find answers to common questions about our services, processes, and corporate solutions.
-        </p>
-      </div>
+    
 
       {/* FAQ Section with zoom effect */}
       <div className="fade-in opacity-0 transition-all duration-1000 ease-out delay-1000 scale-95">
