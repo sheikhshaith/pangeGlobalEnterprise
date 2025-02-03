@@ -195,10 +195,10 @@ const OurProject = () => {
           </Link>
           <span className="text-gray-400">•</span>
           <Link
-            to="/our-clients"
+            to="/OurProject"
             className="hover:text-blue-300 text-white font-medium"
           >
-            Our Clients
+            Our Project
           </Link>
 
           {/* Animated Border */}
