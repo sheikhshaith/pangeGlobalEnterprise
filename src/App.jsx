@@ -11,6 +11,7 @@ import ServicesPage from './Pages/ServicesPage';
 import PgeServices from './services/PgeServices';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import ChatWidget from './components/ChatWidget'
 
 const ScrollToTop = () => {
   const location = useLocation();
@@ -28,6 +29,7 @@ const App = () => {
     <Router>
       <div className="flex flex-col min-h-screen bg-black">
         <Navbar />
+        <ChatWidget />
         <ScrollToTop />
         <main className="flex-grow">
           <Routes>

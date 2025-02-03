@@ -561,40 +561,11 @@ const Home = () => {
         animation-play-state: paused;
       }
 
-      /* WebChat widget custom styles */
-      chat-widget {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 9999;
-        background-color: #1f2937; /* Dark background matching the theme */
-        border: 2px solid #0d9488; /* Teal border */
-        border-radius: 12px;
-        padding: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Optional shadow */
-      }
+      
     `;
 
-    // Dynamically add custom styles to the document head
-    const styleElement = document.createElement("style");
-    styleElement.textContent = style;
-    document.head.appendChild(styleElement);
-
-    // Dynamically load the WebChat widget script
-    const script = document.createElement("script");
-    script.src = "https://widgets.leadconnectorhq.com/loader.js";
-    script.setAttribute(
-      "data-resources-url",
-      "https://widgets.leadconnectorhq.com/chat-widget/loader.js"
-    );
-    script.async = true;
-    document.body.appendChild(script);
-
-    // Cleanup on unmount
-    return () => {
-      document.head.removeChild(styleElement);
-      document.body.removeChild(script);
-    };
+    
+    
   }, []);
 
   return (
@@ -686,12 +657,7 @@ const Home = () => {
       <TestimonialHome />
       <ContactForm />
       <ContactSection />
-      {/* WebChat Widget */}
-      <chat-widget
-        location-id="RfJOM9hsdaMDshFoyzm2"
-        agency-name="PGE"
-        show-consent-checkbox="true"
-      ></chat-widget>
+      
     </div>
   );
 };
