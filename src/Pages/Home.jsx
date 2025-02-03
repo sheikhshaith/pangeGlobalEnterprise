@@ -503,22 +503,22 @@ const Global = () => {
             />
           </svg>
 
-          {/* Floating Text Elements */}
-          <div className="absolute top-1/4 left-0 transform -translate-x-1/2 bg-gray-900/80 backdrop-blur-sm p-3 rounded-lg">
-            <p className="text-white text-sm whitespace-nowrap">
-              Innovate. Lead.
-              <br />
-              Succeed. Thrive.
-            </p>
-          </div>
+        {/* Floating Text Elements - Hidden on small screens */}
+<div className="hidden md:block absolute top-1/4 left-0 transform -translate-x-1/2 bg-gray-900/80 backdrop-blur-md p-3 rounded-lg text-white shadow-lg border border-cyan-400 shadow-cyan-400/20">
+  <p className="text-white text-sm whitespace-nowrap">
+    Innovate. Lead.
+    <br />
+    Succeed. Thrive.
+  </p>
+</div>
 
-          <div className="absolute top-1/4 right-0 transform translate-x-1/2 bg-gray-900/80 backdrop-blur-sm p-3 rounded-lg">
-            <p className="text-white text-sm whitespace-nowrap">
-              Empowering Growth
-              <br />
-              with Innovation.
-            </p>
-          </div>
+<div className="hidden md:block absolute top-1/4 right-0 transform translate-x-1/2 bg-gray-900/80 backdrop-blur-md p-3 rounded-lg text-white shadow-lg border border-cyan-400 shadow-cyan-400/20">
+  <p className="text-white text-sm whitespace-nowrap">
+    Empowering Growth
+    <br />
+    with Innovation.
+  </p>
+</div>
 
           {/* Glowing Dots */}
           <div className="absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400 rounded-full blur-[2px]"></div>
