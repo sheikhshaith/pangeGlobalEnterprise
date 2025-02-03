@@ -1,11 +1,3 @@
-
-
-
-
-
-
-
-
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -134,6 +126,24 @@ const Navbar = () => {
                   className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm"
                 >
                   Contact
+                </button>
+                <button
+                  onClick={() => navigate("/Faq")}
+                  className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm"
+                >
+                  FAQ
+                </button>
+                <button
+                  onClick={() => navigate("/OurTeam")}
+                  className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm"
+                >
+                  Out Team
+                </button>
+                <button
+                  onClick={() => navigate("/OurProjects")}
+                  className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm"
+                >
+                  Our Projects
                 </button>
               </div>
             </div>
