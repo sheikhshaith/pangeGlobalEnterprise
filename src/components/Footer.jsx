@@ -18,12 +18,12 @@ const Footer = () => {
           <h3 className="text-gray-500 font-bold uppercase">Useful Pages</h3>
           <ul className="space-y-2">
             <li>
-              <a href="#" className="hover:text-white">
+              <a href="/Pages/ServicesPage" className="hover:text-white">
                 Services
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-white">
+              <a href="/Pages/About" className="hover:text-white">
                 About
               </a>
             </li>
@@ -38,7 +38,7 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-white">
+              <a href="/Pages/Contact" className="hover:text-white">
                 Contact
               </a>
             </li>
