@@ -14,32 +14,32 @@ const ServicesPage = () => {
     {
       title: "HR Development",
       description: "We enhance workforce skills through targeted training and professional development ...",
-      image: "s1.webp", // Replace with actual image
+      image: "/s1.webp", // Replace with actual image
     },
     {
       title: "Technology Integration",
       description: "We integrate advanced technology solutions to optimize operations and drive innovation ...",
-      image: "s2.webp",
+      image: "/s2.webp",
     },
     {
       title: "Marketing Strategy",
       description: "Our marketing strategies drive brand awareness, customer engagement, and business growth ...",
-      image: "s3.webp",
+      image: "/s3.webp",
     },
     {
       title: "Strategic Planning",
       description: "Our strategic planning ensures sustainable growth and long-term success for your business ...",
-      image: "s4.webp",
+      image: "/s4.webp",
     },
     {
       title: "Financial Consulting",
       description: "We provide expert financial consulting to maximize profitability and ensure fiscal stability ...",
-      image: "s5.webp",
+      image: "/s5.webp",
     },
     {
       title: "Operational Optimization",
       description: "We optimize operations to enhance efficiency, reduce costs, and improve performance ...",
-      image: "s6.webp",
+      image: "/s6.webp",
     },
   ];
   const [scrolled, setScrolled] = useState(false);
@@ -242,7 +242,7 @@ const ServicesPage = () => {
           <img
             src="/h1-img-1.webp" // Change to your actual image path
             alt="Award Winner"
-            className="absolute -bottom-60 left-0 opacity-20 w-64"
+            className="absolute  -bottom-60 left-0 opacity-80 w-64"
           />
         </div>
 
