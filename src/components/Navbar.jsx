@@ -250,7 +250,7 @@ const Navbar = () => {
                 }}
                 className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left"
               >
-                Faq
+                Faq's
               </button>
               <button
                 onClick={() => {
@@ -259,7 +259,7 @@ const Navbar = () => {
                 }}
                 className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left"
               >
-                our team
+                Our Team
               </button>
               <button
                 onClick={() => {
@@ -268,7 +268,7 @@ const Navbar = () => {
                 }}
                 className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left"
               >
-                OurProject
+                Our Project
               </button>
             </div>
           </div>

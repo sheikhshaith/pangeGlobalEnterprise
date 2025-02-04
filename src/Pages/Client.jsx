@@ -76,7 +76,7 @@ const Client = () => {
           </Link>
           <span className="text-gray-400">•</span>
           <Link
-            to="/our-clients"
+            to="/Client"
             className="hover:text-blue-300 text-white font-medium"
           >
             Our Clients

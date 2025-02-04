@@ -35,7 +35,7 @@ const OurTeam = () => {
             Home
           </Link>
           <Link
-            to="/Contact"
+            to="/ourteam"
             className="text-white hover:text-cyan-400 px-3 py-1 transition-colors duration-200 text-sm"
           >
             Our Team

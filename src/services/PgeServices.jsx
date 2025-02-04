@@ -517,10 +517,10 @@ const PgeServices = () => {
           </Link>
           <span className="text-gray-400">•</span>
           <Link
-            to="/our-clients"
+            to="/services/PgeServices"
             className="text-sm sm:text-base hover:text-blue-300 text-white font-medium"
           >
-            Our Clients
+            Pge Services
           </Link>
 
           {/* Animated Border */}
