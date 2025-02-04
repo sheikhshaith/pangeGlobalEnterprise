@@ -81,7 +81,7 @@ const ProcessItem = ({ icon, title, description, isHovered, onHover }) => (
       }`}>
         {title}
       </h3>
-      <p className="text-gray-600 text-sm sm:text-base">{description}</p>
+      <p className="text-gray-500 text-sm sm:text-base">{description}</p>
     </div>
   </div>
 );
