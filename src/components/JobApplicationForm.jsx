@@ -50,6 +50,7 @@ const JobApplicationForm = () => {
   const sectionDividerClasses = "w-full h-px bg-zinc-700 my-8";
   const fileButtonClasses = "px-4 py-2 border border-cyan-500 text-cyan-500 rounded text-sm hover:bg-cyan-500 hover:text-black transition-all duration-200";
   const submitButtonClasses = "px-6 py-2 border-cyan-500 bg-cyan-500 text-white text-sm rounded hover:bg-black hover:text-white hover:border-white border transition-all duration-200 flex items-center gap-2";
+  const dateInputClasses = "w-full px-0 py-2 bg-transparent border-0 border-b border-zinc-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 [&::-webkit-calendar-picker-indicator]:filter [&::-webkit-calendar-picker-indicator]:invert";
 
   return (
     <div className="min-h-screen bg-black p-6">
@@ -187,7 +188,7 @@ const JobApplicationForm = () => {
               type="date"
               name="dateAvailable"
               placeholder="mm/dd/yyyy"
-              className={inputClasses}
+              className={dateInputClasses}
               onChange={handleInputChange}
             />
           </div>
