@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import BookingWidget from './BookingWidget';
+import BookingWidget from "./BookingWidget";
 
 import {
   Check,
