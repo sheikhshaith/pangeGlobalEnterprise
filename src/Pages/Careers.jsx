@@ -55,7 +55,7 @@ const Careers = () => {
         "Our goal is to work with large and significant projects that will be used by tens or hundreds of thousands of people.",
       type: "Full-Time",
       level: "Intermediate",
-      path: "/careers/mechanical-engineering",
+      path: "/CareersDetails",
     },
     {
       title: "Civil Engineering",
@@ -63,7 +63,7 @@ const Careers = () => {
         "Our goal is to work with large and significant projects that will be used by tens or hundreds of thousands of people.",
       type: "Full-Time",
       level: "Intermediate",
-      path: "/careers/civil-engineering",
+      path: "/CareersDetails",
     },
     {
       title: "Construction Worker",
@@ -71,11 +71,7 @@ const Careers = () => {
         "Our goal is to work with large and significant projects that will be used by tens or hundreds of thousands of people.",
       type: "Full-Time",
       level: "Intermediate",
-<<<<<<< HEAD
-      path: "/CareersDetails"
-=======
-      path: "/careers/construction-worker",
->>>>>>> b2627e54da6bb6a8b1445411ed8172e985adf25c
+      path: "/CareersDetails",
     },
     {
       title: "Industry Manager",
@@ -83,7 +79,7 @@ const Careers = () => {
         "Our goal is to work with large and significant projects that will be used by tens or hundreds of thousands of people.",
       type: "Full-Time",
       level: "Intermediate",
-      path: "/careers/industry-manager",
+      path: "/CareersDetails",
     },
     {
       title: "Skyscraper Construction",
@@ -91,7 +87,7 @@ const Careers = () => {
         "Our goal is to work with large and significant projects that will be used by tens or hundreds of thousands of people.",
       type: "Full-Time",
       level: "Intermediate",
-      path: "/careers/skyscraper-construction",
+      path: "/CareersDetails",
     },
     {
       title: "Global Sales & Marketing",
@@ -99,7 +95,7 @@ const Careers = () => {
         "Our goal is to work with large and significant projects that will be used by tens or hundreds of thousands of people.",
       type: "Full-Time",
       level: "Intermediate",
-      path: "/careers/global-sales-marketing",
+      path: "/CareersDetails",
     },
   ];
 
