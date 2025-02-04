@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 // import React, { useState, useEffect, useRef } from "react";
 
 // const PageSlider = () => {
@@ -231,7 +230,7 @@
 // };
 
 // export default PageSlider;
->>>>>>> aca968b4a132dc5fa9ba6ba84e5ab6600c5de844
+
 import React, { useState, useEffect, useRef } from "react";
 const PageSlider = () => {
   const [activePage, setActivePage] = useState(1);
