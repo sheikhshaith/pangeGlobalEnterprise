@@ -15,6 +15,8 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import ChatWidget from './components/ChatWidget';
 import FAQ from './Pages/Faq';
+import CareersDetails from './components/CareersDetails';
+import JobApplicationForm from './components/JobApplicationForm';
 import Careers from './Pages/Careers';
 const ScrollToTop = () => {
   const location = useLocation();
@@ -42,6 +44,8 @@ const App = () => {
             <Route path="/ourteam" element={<OurTeam />} />
             <Route path="/OurProject" element={<OurProject />} />
             <Route path="/Careers" element={<Careers />} />
+            <Route path="/CareersDetails" element={<CareersDetails />} />
+            <Route path="/JobApplicationForm" element={<JobApplicationForm />} />
             <Route path="/Pages/ServicesPage" element={<ServicesPage />} />
             <Route path="/services/PgeServices" element={<PgeServices />} />
           <Route path="/services/mobile-apps" element={<ServicesPage />} />

@@ -110,3 +110,20 @@ styleSheet.innerText = styles;
 document.head.appendChild(styleSheet);
 
 export default FAQ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

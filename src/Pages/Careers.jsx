@@ -62,7 +62,7 @@ const Careers = () => {
       description: "Our goal is to work with large and significant projects that will be used by tens or hundreds of thousands of people.",
       type: "Full-Time",
       level: "Intermediate",
-      path: "/careers/construction-worker"
+      path: "/CareersDetails"
     },
     {
       title: "Industry Manager",

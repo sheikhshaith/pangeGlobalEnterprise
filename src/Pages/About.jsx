@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import BusinessTeam from "../components/BusinessTeam";
 import TestimonialSection from "../components/TestimonialSection";
 import FeaturesSection from "../components/FeaturesSection";
-import JobApplicationForm from "../components/JobApplicationForm";
 
 const AboutPage = () => {
   return (
@@ -276,7 +275,6 @@ const AboutPage = () => {
         <FeaturesSection/>
         <TestimonialSection />
         <AboutSection />
-        <JobApplicationForm />
       </main>
     </div>
   );
