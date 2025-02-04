@@ -15,7 +15,7 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import ChatWidget from './components/ChatWidget';
 import FAQ from './Pages/Faq';
-
+import Careers from './Pages/Careers';
 const ScrollToTop = () => {
   const location = useLocation();
 
@@ -41,13 +41,14 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/ourteam" element={<OurTeam />} />
             <Route path="/OurProject" element={<OurProject />} />
+            <Route path="/Careers" element={<Careers />} />
             <Route path="/Pages/ServicesPage" element={<ServicesPage />} />
             <Route path="/services/PgeServices" element={<PgeServices />} />
           <Route path="/services/mobile-apps" element={<ServicesPage />} />
           <Route path="/services/cloud-services" element={<ServicesPage />} />
           <Route path="/faq" element={<FAQ />} />
             <Route path="/Client" element={<Client />} />
-
+            
 
             <Route path="/services" element={<ServicesPage />} /> {/* Consistent path */}
             <Route path="/client" element={<Client />} /> {/* Consistent path */}

@@ -140,14 +140,23 @@ const Navbar = () => {
                   onClick={() => navigate("/OurTeam")}
                   className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm"
                 >
-                  Our Team
+                  OurTeam
                 </button>
                 <button
                   onClick={() => navigate("/OurProject")}
                   className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm"
                 >
-                  Our Projects
+                  OurProjects
                 </button>
+                <button
+                onClick={() => {
+                  setIsOpen(false);
+                  navigate("/Careers");
+                }}
+                className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left"
+              >
+                Careers
+              </button>
               </div>
             </div>
           </div>
@@ -269,6 +278,15 @@ const Navbar = () => {
                 className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left"
               >
                 Our Project
+              </button>
+              <button
+                onClick={() => {
+                  setIsOpen(false);
+                  navigate("/Careers");
+                }}
+                className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left"
+              >
+                Careers
               </button>
             </div>
           </div>
