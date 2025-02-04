@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
 
 const JobApplicationForm = () => {
@@ -7,7 +7,8 @@ const JobApplicationForm = () => {
     lastName: '',
     email: '',
     phone: '',
-    company: '',
+    address: '',
+    city: '',
     province: '',
     postalCode: '',
     country: '',
@@ -19,23 +20,42 @@ const JobApplicationForm = () => {
     linkedin: '',
     timeZone: '',
     englishProficiency: '',
-    jobSource: ''
+    jobSource: '',
+    agreement: false
   });
 
+  const [fileNames, setFileNames] = useState({
+    coverLetter: 'No file chosen',
+    resume: 'No file chosen'
+  });
+
+  const coverLetterRef = useRef(null);
+  const resumeRef = useRef(null);
+
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value, type, checked } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: type === 'checkbox' ? checked : value
     }));
   };
 
   const handleFileChange = (e) => {
     const { name, files } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: files[0]
-    }));
+    if (files.length > 0) {
+      setFormData(prev => ({
+        ...prev,
+        [name]: files[0]
+      }));
+      setFileNames(prev => ({
+        ...prev,
+        [name]: files[0].name
+      }));
+    }
+  };
+
+  const handleFileButtonClick = (inputRef) => {
+    inputRef.current.click();
   };
 
   const handleSubmit = (e) => {
@@ -57,11 +77,13 @@ const JobApplicationForm = () => {
       <div className="max-w-2xl mx-auto bg-zinc-900 rounded-lg p-6">
         <h2 className="text-1xl font-semibold mb-8 text-white">Apply for this Position</h2>
         <form onSubmit={handleSubmit} className="space-y-8">
+          {/* Personal Information */}
           <div>
             <label className={labelClasses}>First Name</label>
             <input
               type="text"
               name="firstName"
+              value={formData.firstName}
               placeholder="e.g. Oliver"
               className={inputClasses}
               onChange={handleInputChange}
@@ -73,6 +95,7 @@ const JobApplicationForm = () => {
             <input
               type="text"
               name="lastName"
+              value={formData.lastName}
               placeholder="e.g. Smith"
               className={inputClasses}
               onChange={handleInputChange}
@@ -84,6 +107,7 @@ const JobApplicationForm = () => {
             <input
               type="email"
               name="email"
+              value={formData.email}
               placeholder="info@myemail.co.uk"
               className={inputClasses}
               onChange={handleInputChange}
@@ -95,18 +119,21 @@ const JobApplicationForm = () => {
             <input
               type="tel"
               name="phone"
+              value={formData.phone}
               placeholder="+44 20 XXXX XXXX"
               className={inputClasses}
               onChange={handleInputChange}
             />
           </div>
 
+          {/* Address Information */}
           <div>
             <label className={labelClasses}>Address</label>
             <input
               type="text"
-              name="company"
-              placeholder="e.g. ThamelRiver LLC"
+              name="address"
+              value={formData.address}
+              placeholder="Enter your street address"
               className={inputClasses}
               onChange={handleInputChange}
             />
@@ -116,8 +143,9 @@ const JobApplicationForm = () => {
             <label className={labelClasses}>City</label>
             <input
               type="text"
-              name="company"
-              placeholder="USA"
+              name="city"
+              value={formData.city}
+              placeholder="Enter your city"
               className={inputClasses}
               onChange={handleInputChange}
             />
@@ -128,6 +156,7 @@ const JobApplicationForm = () => {
             <input
               type="text"
               name="province"
+              value={formData.province}
               placeholder="Province"
               className={inputClasses}
               onChange={handleInputChange}
@@ -139,6 +168,7 @@ const JobApplicationForm = () => {
             <input
               type="text"
               name="postalCode"
+              value={formData.postalCode}
               placeholder="90000"
               className={inputClasses}
               onChange={handleInputChange}
@@ -149,7 +179,7 @@ const JobApplicationForm = () => {
             <label className={labelClasses}>Country</label>
             <select
               name="country"
-              
+              value={formData.country}
               className={selectClasses}
               onChange={handleInputChange}
             >
@@ -162,32 +192,58 @@ const JobApplicationForm = () => {
 
           <div className={sectionDividerClasses}></div>
 
+          {/* File Uploads */}
           <div>
             <label className={labelClasses}>Cover Letter</label>
             <div className="flex items-center space-x-2">
-              <button type="button" className={fileButtonClasses}>
+              <input
+                type="file"
+                ref={coverLetterRef}
+                name="coverLetter"
+                onChange={handleFileChange}
+                accept=".pdf,.doc,.docx"
+                className="hidden"
+              />
+              <button
+                type="button"
+                className={fileButtonClasses}
+                onClick={() => handleFileButtonClick(coverLetterRef)}
+              >
                 Choose File
               </button>
-              <span className="text-sm text-gray-400">No file chosen</span>
+              <span className="text-sm text-gray-400">{fileNames.coverLetter}</span>
             </div>
           </div>
 
           <div>
             <label className={labelClasses}>Resume</label>
             <div className="flex items-center space-x-2">
-              <button type="button" className={fileButtonClasses}>
+              <input
+                type="file"
+                ref={resumeRef}
+                name="resume"
+                onChange={handleFileChange}
+                accept=".pdf,.doc,.docx"
+                className="hidden"
+              />
+              <button
+                type="button"
+                className={fileButtonClasses}
+                onClick={() => handleFileButtonClick(resumeRef)}
+              >
                 Choose File
               </button>
-              <span className="text-sm text-gray-400">No file chosen</span>
+              <span className="text-sm text-gray-400">{fileNames.resume}</span>
             </div>
           </div>
 
+          {/* Additional Information */}
           <div>
             <label className={labelClasses}>Date Available</label>
             <input
               type="date"
               name="dateAvailable"
-              placeholder="mm/dd/yyyy"
+              value={formData.dateAvailable}
               className={dateInputClasses}
               onChange={handleInputChange}
             />
@@ -198,6 +254,7 @@ const JobApplicationForm = () => {
             <input
               type="text"
               name="salaryExpectation"
+              value={formData.salaryExpectation}
               placeholder="$30,000 USD"
               className={inputClasses}
               onChange={handleInputChange}
@@ -206,11 +263,13 @@ const JobApplicationForm = () => {
 
           <div className={sectionDividerClasses}></div>
 
+          {/* Professional Links */}
           <div>
             <label className={labelClasses}>Website or Portfolio</label>
             <input
               type="url"
               name="website"
+              value={formData.website}
               placeholder="https://portfolio.com/user/24873"
               className={inputClasses}
               onChange={handleInputChange}
@@ -222,6 +281,7 @@ const JobApplicationForm = () => {
             <input
               type="url"
               name="linkedin"
+              value={formData.linkedin}
               placeholder="https://linkedin.com/in/user/24873"
               className={inputClasses}
               onChange={handleInputChange}
@@ -230,15 +290,30 @@ const JobApplicationForm = () => {
 
           <div className={sectionDividerClasses}></div>
 
+          {/* Additional Questions */}
           <div>
             <label className={labelClasses}>Are You Able To Work According To The European Time Zone?</label>
             <div className="space-x-4">
               <label className="inline-flex items-center">
-                <input type="radio" name="timeZone" value="yes" className="mr-2" onChange={handleInputChange} />
+                <input 
+                  type="radio" 
+                  name="timeZone" 
+                  value="yes" 
+                  checked={formData.timeZone === 'yes'}
+                  className="mr-2" 
+                  onChange={handleInputChange} 
+                />
                 <span className="text-white">Yes</span>
               </label>
               <label className="inline-flex items-center">
-                <input type="radio" name="timeZone" value="no" className="mr-2" onChange={handleInputChange} />
+                <input 
+                  type="radio" 
+                  name="timeZone" 
+                  value="no" 
+                  checked={formData.timeZone === 'no'}
+                  className="mr-2" 
+                  onChange={handleInputChange} 
+                />
                 <span className="text-white">No</span>
               </label>
             </div>
@@ -253,6 +328,7 @@ const JobApplicationForm = () => {
                     type="radio"
                     name="englishProficiency"
                     value={level.toLowerCase()}
+                    checked={formData.englishProficiency === level.toLowerCase()}
                     className="mr-2"
                     onChange={handleInputChange}
                   />
@@ -271,6 +347,7 @@ const JobApplicationForm = () => {
                     type="radio"
                     name="jobSource"
                     value={source.toLowerCase()}
+                    checked={formData.jobSource === source.toLowerCase()}
                     className="mr-2"
                     onChange={handleInputChange}
                   />
@@ -280,10 +357,14 @@ const JobApplicationForm = () => {
             </div>
           </div>
 
+          {/* Agreement */}
           <div className="flex items-start">
             <input
               type="checkbox"
               id="agreement"
+              name="agreement"
+              checked={formData.agreement}
+              onChange={handleInputChange}
               className="mt-1 mr-2"
             />
             <label htmlFor="agreement" className="text-sm text-gray-300">
@@ -291,6 +372,7 @@ const JobApplicationForm = () => {
             </label>
           </div>
 
+          {/* Submit Button */}
           <div className="flex">
             <button
               type="submit"
@@ -306,6 +388,7 @@ const JobApplicationForm = () => {
     </div>
   );
 };
+
 
 
 
