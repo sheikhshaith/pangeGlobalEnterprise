@@ -2,7 +2,6 @@
 import React, { useEffect } from 'react';
 import FAQSection from '../components/FAQSection';
 import { Link } from 'react-router-dom';
-
 const FAQ = () => {
   useEffect(() => {
     const elements = document.querySelectorAll('.fade-in');
@@ -78,6 +77,7 @@ const FAQ = () => {
           </button>
         </div>
       </div>
+  
     </div>
   );
 };
