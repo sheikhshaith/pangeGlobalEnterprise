@@ -44,7 +44,8 @@ const JobApplicationForm = () => {
   };
 
   // Common style classes
-  const inputClasses = "w-full px-0 py-2 bg-transparent border-0 border-b border-zinc-700 text-white placeholder-gray-400 focus:outline-none focus:border-teal-500";
+  const inputClasses = "w-full px-0 py-2 bg-transparent border-0 border-b border-zinc-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500";
+  const selectClasses = "w-full px-0 py-2 bg-transparent border-0 border-b border-zinc-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 [&>option]:bg-zinc-800 [&>option]:text-white";
   const labelClasses = "block text-sm text-gray-100 mb-2";
   const sectionDividerClasses = "w-full h-px bg-zinc-700 my-8";
   const fileButtonClasses = "px-4 py-2 border border-cyan-500 text-cyan-500 rounded text-sm hover:bg-cyan-500 hover:text-black transition-all duration-200";
@@ -100,11 +101,22 @@ const JobApplicationForm = () => {
           </div>
 
           <div>
-            <label className={labelClasses}>Company</label>
+            <label className={labelClasses}>Address</label>
             <input
               type="text"
               name="company"
               placeholder="e.g. ThamelRiver LLC"
+              className={inputClasses}
+              onChange={handleInputChange}
+            />
+          </div>
+
+          <div>
+            <label className={labelClasses}>City</label>
+            <input
+              type="text"
+              name="company"
+              placeholder="USA"
               className={inputClasses}
               onChange={handleInputChange}
             />
@@ -136,7 +148,8 @@ const JobApplicationForm = () => {
             <label className={labelClasses}>Country</label>
             <select
               name="country"
-              className={inputClasses}
+              
+              className={selectClasses}
               onChange={handleInputChange}
             >
               <option value="">Select Country</option>
@@ -184,7 +197,7 @@ const JobApplicationForm = () => {
             <input
               type="text"
               name="salaryExpectation"
-              placeholder="85,000 USD"
+              placeholder="$30,000 USD"
               className={inputClasses}
               onChange={handleInputChange}
             />
