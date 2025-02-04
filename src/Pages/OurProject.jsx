@@ -222,7 +222,7 @@ const OurProject = () => {
         {/* Hero Image */}
         <div className="relative w-full h-[400px] mb-8">
           <img
-            src="client1.webp"
+            src="OurProjectmain.webp"
             alt="Business Meeting"
             className="w-full h-full object-cover rounded-lg"
           />

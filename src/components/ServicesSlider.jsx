@@ -1,13 +1,4 @@
-
-
-
-
-
-
-
-
 import React, { useState, useEffect, useRef } from "react";
-
 const PageSlider = () => {
   const [activePage, setActivePage] = useState(1);
   const isTransitioning = useRef(false);

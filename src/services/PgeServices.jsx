@@ -65,7 +65,7 @@ const PerformanceSection = () => {
 const ProcessItem = ({ icon, title, description, isHovered, onHover }) => (
   <div
     className={`flex flex-col sm:flex-row items-center sm:items-start p-4 sm:p-6 mb-6 border rounded-lg transition-all duration-300 ${
-      isHovered ? 'shadow-lg bg-gray-500' : ''
+      isHovered ? 'shadow-lg bg-gray-200' : ''
     }`}
     onMouseEnter={() => onHover(true)}
     onMouseLeave={() => onHover(false)}
@@ -173,7 +173,7 @@ const DecisionMakingComponent = () => {
   );
 };
 const ServiceItem = ({ icon, title, description }) => (
-  <div className="bg-gray-900 p-6 sm:p-8 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:bg-gray-800 h-full">
+  <div className="bg-gray-900 p-6 sm:p-8 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:bg-gray-700 h-full">
     <div className="text-cyan-400 mb-4 sm:mb-6">{icon}</div>
     <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-white">{title}</h3>
     <p className="text-sm sm:text-base text-gray-300">{description}</p>
