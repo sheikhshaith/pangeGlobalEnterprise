@@ -240,6 +240,34 @@ const Navbar = () => {
               >
                 Contact
               </button>
+              <button
+                onClick={() => {
+                  setIsOpen(false);
+                  navigate("/Faq");
+                }}
+                className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left"
+              >
+                FAQs
+              </button>
+              <button
+                onClick={() => {
+                  setIsOpen(false);
+                  navigate("/OurTeam");
+                }}
+                className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left"
+              >
+                Our Team
+              </button>
+              <button
+                onClick={() => {
+                  setIsOpen(false);
+                  navigate("/OurProject");
+                }}
+                className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left"
+              >
+                Our Projects
+              </button>
+              
             </div>
           </div>
         )}
