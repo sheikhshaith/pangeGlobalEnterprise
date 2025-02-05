@@ -39,13 +39,14 @@ const CareersDetails = () => {
         </h1>
 
         {/* Hero Image */}
-        <div className="relative w-full h-[400px] mb-8">
-          <img
-            src="career-single.webp"
-            alt="Business Meeting"
-            className="w-full h-full object-cover rounded-lg"
-          />
-        </div>
+        <div className="relative w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] mb-8">
+  <img
+    src="career-single.webp"
+    alt="Business Meeting"
+    className="w-full h-full object-cover rounded-lg"
+  />
+</div>
+
       </div>
       <JobPosting/>
       <HeroSection/>
@@ -56,31 +57,18 @@ const CareersDetails = () => {
 const dropdownData = {
   locations: [
     "New Jersey, USA",
-    "New York, USA",
-    "California, USA",
-    "Texas, USA",
-    "Florida, USA"
+    
   ],
   jobTypes: [
     "Full Time",
-    "Part Time",
-    "Contract",
-    "Temporary",
-    "Internship"
+  
   ],
   salaryRanges: [
     "$7k - 15k USD",
-    "$15k - 25k USD",
-    "$25k - 35k USD",
-    "$35k - 45k USD",
-    "$45k+ USD"
+   
   ],
   workingDays: [
     "Weekly 5 days",
-    "Weekly 6 days",
-    "Flexible hours",
-    "Remote work",
-    "Hybrid schedule"
   ]
 };
 
@@ -253,41 +241,45 @@ const JobPosting = ({ applyLink = '/JobApplicationForm' }) => {
             </div>
           </div>
 
-          {/* Right Column */}
-          <div className="w-full lg:w-96 order-1 lg:order-2">
+         {/* Right Column */}
+         <div className="w-full lg:w-96 order-1 lg:order-2">
             <div className="bg-gray-900 rounded-lg p-4 sm:p-6 border border-gray-800">
               <div className="space-y-4">
-                <Dropdown 
-                  label="Locations"
-                  options={dropdownData.locations}
-                  value={location}
-                  onChange={setLocation}
-                />
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <MapPin className="w-5 h-5 text-teal-400" />
+                    <span className="text-gray-400 text-sm sm:text-base">Location:</span>
+                  </div>
+                  <span className="text-white text-sm sm:text-base">New Jersey, USA</span>
+                </div>
                 
-                <Dropdown 
-                  label="Job Type"
-                  options={dropdownData.jobTypes}
-                  value={jobType}
-                  onChange={setJobType}
-                />
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <Briefcase className="w-5 h-5 text-teal-400" />
+                    <span className="text-gray-400 text-sm sm:text-base">Job Type:</span>
+                  </div>
+                  <span className="text-white text-sm sm:text-base">Full Time</span>
+                </div>
                 
-                <Dropdown 
-                  label="Salary"
-                  options={dropdownData.salaryRanges}
-                  value={salary}
-                  onChange={setSalary}
-                />
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <DollarSign className="w-5 h-5 text-teal-400" />
+                    <span className="text-gray-400 text-sm sm:text-base">Salary:</span>
+                  </div>
+                  <span className="text-white text-sm sm:text-base">$7k - 15k USD</span>
+                </div>
                 
-                <Dropdown 
-                  label="Working Days"
-                  options={dropdownData.workingDays}
-                  value={workingDays}
-                  onChange={setWorkingDays}
-                />
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <Calendar className="w-5 h-5 text-teal-400" />
+                    <span className="text-gray-400 text-sm sm:text-base">Working Days:</span>
+                  </div>
+                  <span className="text-white text-sm sm:text-base">Weekly 5 days</span>
+                </div>
               </div>
 
               <button 
-                onClick={handleApply}
+                onClick={() => window.open(applyLink, '_blank', 'noopener noreferrer')}
                 className="w-full bg-teal-600 text-white py-2.5 sm:py-3 rounded-lg mt-4 sm:mt-6 hover:bg-teal-700 transition-colors flex items-center justify-center gap-2 text-sm sm:text-base">
                 Apply Now
                 <span className="transform translate-x-1">→</span>
