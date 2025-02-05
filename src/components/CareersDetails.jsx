@@ -9,7 +9,7 @@ const CareersDetails = () => {
      {/* Navigation Links */}
            <div className="flex justify-center mt-6 relative">
              <div className="relative px-6 py-2 rounded-full border border-transparent inline-flex items-center gap-6 bg-white/10 backdrop-blur-md">
-               <Link to="/Home" className="hover:text-blue-300 text-white font-medium">
+               <Link to="/" className="hover:text-blue-300 text-white font-medium">
                  Home
                </Link>
                <span className="text-gray-400">•</span>
