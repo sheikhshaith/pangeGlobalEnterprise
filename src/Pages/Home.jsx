@@ -36,7 +36,7 @@ const LogoSection = () => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <span className="text-3xl font-bold text-cyan-400 relative overflow-hidden">
-        Pixify
+        Pixifyy
         <div
           className={`absolute bottom-0 left-0 w-full h-0.5 bg-cyan-400 transform transition-transform duration-300 ${
             isHovered ? "translate-x-0" : "-translate-x-full"
