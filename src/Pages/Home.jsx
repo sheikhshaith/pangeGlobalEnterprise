@@ -678,13 +678,13 @@ const Home = () => {
 
             {/* Floating Card - Hidden on mobile */}
             {/* Floating Card */}
-            <div className="hidden sm:block md:absolute top-[25%] sm:top-[30%] md:top-[32%] lg:top-[33%] 2xl:top-[33%] left-24 sm:left-12 md:left-3 lg:left-[-12%] 2xl:left-[23.5%] xl:left-[19.5%] bg-white/3 backdrop-blur-md p-3 rounded-lg text-white shadow-lg border border-cyan-400 shadow-cyan-400/20">
+            <div className="hidden sm:block md:absolute top-[25%] sm:top-[30%] md:top-[32%] lg:top-[33%] 2xl:top-[33%] left-24 sm:left-12 md:left-3 lg:left-[-12%] 2xl:left-[23.5%]  xl:left-[20%] bg-white/3 backdrop-blur-md p-3 rounded-lg text-white shadow-lg border border-cyan-400 shadow-cyan-400/20">
               <p className="text-base">Driving Success</p>
               <p className="text-sm text-gray-300">Through Innovation</p>
             </div>
 
             {/* Connecting Lines */}
-            <div className="hidden sm:block md:absolute top-[30%] sm:top-[20%] md:top-[37%] lg:top-[39%] 2xl:top-[37.5%] right-[60.9%] sm:right-[50%] md:right-[76.9%] lg:right-[75.9%] 2xl:right-[53%] xl:right-[56%] w-[8px] sm:w-[10px] md:w-[12px] h-[8px] sm:h-[10px] md:h-[12px] bg-cyan-400 rounded-full shadow-[0_0_10px_4px_rgba(6,182,212,0.8)]"></div>
+            <div className="hidden sm:block md:absolute top-[30%] sm:top-[20%] md:top-[37%] lg:top-[39%] 2xl:top-[37.5%]  right-[60.9%] sm:right-[50%] md:right-[76.9%] lg:right-[75.9%] 2xl:right-[53%] xl:right-[56%] w-[8px] sm:w-[10px] md:w-[12px] h-[8px] sm:h-[10px] md:h-[12px] bg-cyan-400 rounded-full shadow-[0_0_10px_4px_rgba(6,182,212,0.8)]"></div>
 
             <div className="hidden sm:block md:absolute top-[20%] sm:top-[15%] md:top-[27%] lg:top-[29%] 2xl:top-[26.5%] left-[47.3%] sm:left-[45%] md:left-[30.9%] lg:left-[36.3%] 2xl:left-[56%] xl:left-[51.5%] sm:h-[80px] md:h-[120px] 2xl:h-[130px]  sm:w-[0.8px] md:w-[1px] bg-cyan-400 transform rotate-[90deg] shadow-[0_0_15px_rgba(6,182,212,0.7)]"></div>
 
