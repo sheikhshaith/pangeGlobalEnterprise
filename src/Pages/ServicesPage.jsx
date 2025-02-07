@@ -261,12 +261,14 @@ const ServicesPage = () => {
                 <span className="text-sm font-semibold text-white">{item.year}</span>
               </div>
             ))}
+            
           </div>
+          
         </div>
       </div>
+      
     </div>
-
-    <div className="max-w-5xl mx-auto py-16 px-6">
+    <div className="max-w-5xl mx-auto py-2 px-6">
       <Swiper
         modules={[Navigation]}
         navigation
@@ -279,6 +281,7 @@ const ServicesPage = () => {
       </Swiper>
       <TestimonialSection />
     </div>
+  
       </main>
 
       {/* CSS Animations */}
