@@ -154,7 +154,7 @@ const Careers = () => {
       </div>
 
       {/* Benefits Section */}
-      <div className="px-4 sm:px-8 md:px-16 lg:px-28 py-8 md:py-16 lg:py-28">
+      <div className="px-4 sm:px-8 md:px-16 lg:px-60 py-8 md:py-16 lg:py-28">
         <div className="text-left mb-8 md:mb-12">
           <p className="text-sm md:text-base text-white mb-2">Why Join</p>
           <h2 className="text-2xl sm:text-3xl md:text-4xl text-white font-bold">
@@ -168,7 +168,7 @@ const Careers = () => {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="p-4 md:p-6 bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300"
+              className="p-4 md:p-4 md:w-[90%] bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 "
             >
               <div className="mb-3 md:mb-4">{benefit.icon}</div>
               <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3">
@@ -230,7 +230,7 @@ const Careers = () => {
                   md:right-[2%] md:h-[40%] md:w-40 
                   lg:top-[218%] lg:right-[3%] lg:h-[76%] lg:w-[27%] 
                   xl:top-[300%] xl:right-[2%] xl:h-[110%] xl:w-[30%] 
-                  2xl:top-[250%] 2xl:right-[4%] 2xl:h-[90%] 2xl:w-[25%]"
+                  2xl:top-[220%] 2xl:right-[4%] 2xl:h-[90%] 2xl:w-[25%]"
             />
           </div>
         </div>
