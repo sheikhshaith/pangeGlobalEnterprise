@@ -124,8 +124,9 @@ const ServicesPage = () => {
           <p className="text-gray-600 mt-2">{service.description}</p>
       
           {/* Move the button to the right with percentage positioning */}
-          <button className="absolute right-[2%] bottom-[25%]  text-cyan-500 text-2xl font-bold h-12 w-12 flex items-center justify-center p-4 rounded-full border-2 border-cyan-500 transition-transform duration-300 ease-in-out hover:bg-cyan-500 hover:text-white hover:rotate-45 hover:scale-105 active:scale-95 
-    animate-pulse">
+          <button className="absolute right-[2%] bottom-[25%]  text-cyan-500 text-2xl font-bold h-12 w-12 flex items-center justify-center p-4 rounded-full border-2 border-cyan-500 
+          transition-transform duration-300 ease-in-out hover:bg-cyan-500 hover:text-white hover:rotate-45 hover:scale-105 active:scale-95 
+    ">
               <span className="material-icons transform rotate-[320deg]">→</span>
           </button>
       </div>
@@ -136,9 +137,7 @@ const ServicesPage = () => {
     transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95">
     Browse All Services 
 </button> */}
-<button className="mt-6 px-6 py-3 bg-cyan-400 text-white rounded-lg hover:bg-cyan-500 
-    transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95 
-    animate-pulse">
+<button className="mt-6 px-6 py-3 bg-cyan-400 text-white rounded-lg hover:bg-cyan-500 ">
     Browse All Services 
 </button>
 

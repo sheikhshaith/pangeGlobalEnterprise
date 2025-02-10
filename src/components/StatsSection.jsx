@@ -20,7 +20,7 @@ const StatsSection = () => {
           success and development.
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 text-center text-3xl md:text-4xl text-teal-400">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 text-center text-3xl md:text-4xl text-cyan-400">
           {[
             { value: "13+", label: "Years of Experience" },
             { value: "25+", label: "Projects Worldwide" },
@@ -32,7 +32,7 @@ const StatsSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.2 + 0.5, duration: 0.8 }}
-              whileHover={{ y: -5, boxShadow: "0px 10px 20px rgba(0, 255, 255, 0.3)" }}
+              whileHover={{ y: -5, boxShadow: "0px 10px 20px rgba(0,  183, 227, 0.5)" }}
             >
               <span className="block">{stat.value}</span>
               <span className="block text-lg md:text-xl text-gray-300 mt-2">
@@ -50,11 +50,11 @@ const StatsSection = () => {
           transition={{ delay: 1, duration: 0.8 }}
         >
           <motion.button
-            className="bg-teal-400 text-dark font-medium py-3 px-10 rounded-full shadow-lg transition-all focus:ring-4 focus:ring-teal-200"
+            className="bg-cyan-400 text-dark font-medium py-3 px-10 rounded-full shadow-lg transition-all focus:ring-4 focus:ring-teal-200"
             whileHover={{
               scale: 1.1,
-              boxShadow: "0px 10px 20px rgba(0, 255, 255, 0.5)",
-              backgroundColor: "#20c997",
+              boxShadow: "0px 10px 20px rgba(0, 183, 227, 0.5)",
+              backgroundColor: "cyan-400",
             }}
             whileTap={{ scale: 0.9 }}
             animate={{
