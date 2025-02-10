@@ -17,27 +17,27 @@ const FeatureCard = ({ Icon, title, description }) => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="flex-shrink-0 relative">
-        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-teal-400/10 flex items-center justify-center">
-          <Icon className={`w-5 h-5 sm:w-6 sm:h-6 text-teal-400 transform transition-all duration-500 ${
+        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-cyan-400/10 flex items-center justify-center">
+          <Icon className={`w-5 h-5 sm:w-6 sm:h-6 text-cyan-400 transform transition-all duration-500 ${
             isHovered ? 'scale-110 rotate-12' : ''
           }`} />
         </div>
         {isHovered && (
-          <div className="absolute -inset-1 bg-teal-400/20 rounded-lg blur-sm -z-10" />
+          <div className="absolute -inset-1 bg-cyan-500/20 rounded-lg blur-sm -z-10" />
         )}
       </div>
       <div className="space-y-2 sm:space-y-3">
         <h3 className={`text-lg sm:text-xl font-medium transform transition-all duration-300 ${
-          isHovered ? 'text-teal-400 translate-x-2' : 'text-gray-200'
+          isHovered ? 'text-cyan-400 translate-x-2' : 'text-gray-200'
         }`}>
           {title}
         </h3>
-        <p className={`text-sm sm:text-base text-gray-400 leading-relaxed transition-all duration-300 ${
+        <p className={`text-sm sm:text-base text-gray-300 leading-relaxed transition-all duration-300 ${
           isHovered ? 'translate-x-2' : ''
         }`}>
           {description}
         </p>
-        <div className={`flex items-center gap-2 text-teal-400 transition-all duration-300 ${
+        <div className={`flex items-center gap-2 text-cyan-400 transition-all duration-300 ${
           isHovered ? 'opacity-100 translate-x-2' : 'opacity-0'
         }`}>
           <span className="text-xs sm:text-sm">Learn more</span>
@@ -107,7 +107,7 @@ const FeaturesSection = () => {
             <br className="hidden sm:block" />
             <span className="relative">
               Technology, Innovation, And Expertise
-              <span className="absolute text-teal-400 ml-2">.</span>
+              <span className="absolute text-cyan-400 ml-2">.</span>
             </span>
           </h2>
         </div>
@@ -120,7 +120,7 @@ const FeaturesSection = () => {
               onClick={() => setActiveTab(tab)}
               className={`px-4 sm:px-6 py-1.5 sm:py-2 text-sm sm:text-base rounded-full transition-all duration-300 ${
                 activeTab === tab 
-                  ? 'bg-teal-400 text-black'
+                  ? 'bg-cyan-400 text-black'
                   : 'bg-gray-900 text-gray-400 hover:bg-gray-800'
               }`}
             >
@@ -151,7 +151,7 @@ const FeaturesSection = () => {
 
         {/* CTA Button */}
         <div className="text-center mt-12 sm:mt-16 lg:mt-20">
-          <button className="group px-6 sm:px-8 py-3 sm:py-4 bg-teal-400 text-black text-sm sm:text-base font-medium rounded-lg hover:bg-teal-300 transition-all duration-300 transform hover:-translate-y-1">
+          <button className="group px-6 sm:px-8 py-3 sm:py-4 bg-cyan-400 text-black text-sm sm:text-base font-medium rounded-lg hover:bg-cyan-500 transition-all duration-300 transform hover:-translate-y-1">
             <span className="flex items-center gap-2">
               Browse All Services
               <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 transform transition-transform duration-300 group-hover:translate-x-1" />
