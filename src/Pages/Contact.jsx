@@ -454,13 +454,13 @@ const ContactTestimonials = () => {
         </div>
 
         {/* Quote text */}
-        <p className="text-xl sm:text-2xl md:text-3xl font-medium mb-6 sm:mb-8 transition-opacity duration-300">
+        <p className="text-white text-xl sm:text-2xl md:text-3xl font-medium mb-6 sm:mb-8 transition-opacity duration-300">
           {testimonials[currentSlide].quote}
         </p>
 
         {/* Author info */}
         <div className="space-y-2">
-          <p className="text-lg sm:text-xl font-semibold">
+          <p className="text-lg sm:text-xl font-semibold text-white">
             {testimonials[currentSlide].author}
           </p>
           <p className="text-gray-300 text-sm sm:text-base">
