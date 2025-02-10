@@ -113,7 +113,7 @@ const StatsDisplay = () => {
       </div>
 
       {/* Know About Us Button */}
-      <a href="/contact">
+      <a href="/about">
       <button className="px-8 py-4 bg-cyan-600 text-white rounded-full text-lg 
                        hover:bg-cyan-500 transition-colors duration-300">
         Know About Us
