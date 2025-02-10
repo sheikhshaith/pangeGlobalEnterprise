@@ -103,7 +103,7 @@ const Navbar = () => {
                           navigate(service.path);
                           setShowServicesDropdown(false);
                         }}
-                        className="block w-full text-left text-white hover:bg-cyan-900 px-4 py-2 text-sm first:rounded-t-lg last:rounded-b-lg"
+                        className="block w-full text-left text-white hover:bg-cyan-500 px-4 py-2 text-sm first:rounded-t-lg last:rounded-b-lg"
                       >
                         {service.name}
                       </button>
