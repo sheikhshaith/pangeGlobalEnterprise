@@ -7,7 +7,8 @@ import ContactSection from "../components/ContactSection";
 import FAQSection from "../components/FAQSection";
 import StatsSection from "../components/StatsSection";
 import {
-  Search, Menu,
+  Search,
+  Menu,
   Facebook,
   Twitter,
   Linkedin,
@@ -23,7 +24,8 @@ import {
   LayoutGrid,
   Zap,
   Circle,
-  ChevronDown, ChevronUp
+  ChevronDown,
+  ChevronUp,
 } from "lucide-react";
 
 // Logo Section Component
@@ -39,20 +41,24 @@ const LogoSection = () => {
       <span className="text-3xl font-bold text-cyan-400 relative overflow-hidden">
         Pixify
         <div
-          className={`absolute bottom-0 left-0 w-full h-0.5 bg-cyan-400 transform transition-transform duration-300 ${isHovered ? "translate-x-0" : "-translate-x-full"
-            }`}
+          className={`absolute bottom-0 left-0 w-full h-0.5 bg-cyan-400 transform transition-transform duration-300 ${
+            isHovered ? "translate-x-0" : "-translate-x-full"
+          }`}
         />
         <div
-          className={`absolute top-0 right-0 w-0.5 h-full bg-cyan-400 transform transition-transform duration-300 ${isHovered ? "translate-y-0 delay-150" : "-translate-y-full"
-            }`}
+          className={`absolute top-0 right-0 w-0.5 h-full bg-cyan-400 transform transition-transform duration-300 ${
+            isHovered ? "translate-y-0 delay-150" : "-translate-y-full"
+          }`}
         />
         <div
-          className={`absolute top-0 left-0 w-full h-0.5 bg-cyan-400 transform transition-transform duration-300 ${isHovered ? "translate-x-0 delay-300" : "translate-x-full"
-            }`}
+          className={`absolute top-0 left-0 w-full h-0.5 bg-cyan-400 transform transition-transform duration-300 ${
+            isHovered ? "translate-x-0 delay-300" : "translate-x-full"
+          }`}
         />
         <div
-          className={`absolute top-0 left-0 w-0.5 h-full bg-cyan-400 transform transition-transform duration-300 ${isHovered ? "translate-y-0 delay-450" : "translate-y-full"
-            }`}
+          className={`absolute top-0 left-0 w-0.5 h-full bg-cyan-400 transform transition-transform duration-300 ${
+            isHovered ? "translate-y-0 delay-450" : "translate-y-full"
+          }`}
         />
       </span>
     </div>
@@ -60,7 +66,6 @@ const LogoSection = () => {
 };
 
 // Service Card Component
-
 
 const ClientSlider = () => {
   const [selectedClient, setSelectedClient] = useState(null);
@@ -119,8 +124,9 @@ const ClientSlider = () => {
 
         <div className="relative">
           <div
-            className={`flex space-x-16 ${!isPaused ? "animate-scroll" : ""
-              } transition-transform duration-300`}
+            className={`flex space-x-16 ${
+              !isPaused ? "animate-scroll" : ""
+            } transition-transform duration-300`}
           >
             {[...clients, ...clients].map((client, index) => (
               <div
@@ -133,19 +139,21 @@ const ClientSlider = () => {
                 <div className="relative w-6 h-6 group-hover:transform group-hover:rotate-x-180 transition-transform duration-300">
                   <client.Icon
                     className={`w-6 h-6 transition-colors duration-300
-                      ${selectedClient === client.name
-                        ? "text-white"
-                        : "text-gray-400 group-hover:text-white"
+                      ${
+                        selectedClient === client.name
+                          ? "text-white"
+                          : "text-gray-400 group-hover:text-white"
                       }
                     `}
                   />
                 </div>
                 <span
                   className={`font-medium text-lg transition-colors duration-300
-                  ${selectedClient === client.name
+                  ${
+                    selectedClient === client.name
                       ? "text-white"
                       : "text-gray-400 group-hover:text-white"
-                    }
+                  }
                 `}
                 >
                   {client.name}
@@ -228,7 +236,7 @@ const ServicesSection = () => {
         }
       },
       {
-        threshold: 0.1
+        threshold: 0.1,
       }
     );
 
@@ -267,13 +275,17 @@ const ServicesSection = () => {
   return (
     <section
       ref={sectionRef}
-      className={`w-full bg-black py-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-        }`}
+      className={`w-full bg-black py-20 transition-all duration-1000 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Title section with animated underline */}
-        <div className={`max-w-4xl mb-20 relative group cursor-pointer ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}>
+        <div
+          className={`max-w-4xl mb-20 relative group cursor-pointer ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
           <h2 className="text-4xl text-gray-200 font-medium leading-tight transform group-hover:translate-x-2 transition-transform duration-300">
             We Offer Expert Consulting For Strategic
             <br />
@@ -287,8 +299,11 @@ const ServicesSection = () => {
         {/* Services grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
           {/* Animated border for the grid */}
-          <div className={`absolute inset-0 border-t border-b border-gray-800 transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'
-            }`} />
+          <div
+            className={`absolute inset-0 border-t border-b border-gray-800 transition-opacity duration-1000 ${
+              isVisible ? "opacity-100" : "opacity-0"
+            }`}
+          />
 
           {/* Service cards */}
           {services.map((service, index) => (
@@ -298,7 +313,7 @@ const ServicesSection = () => {
               style={{
                 transitionDelay: `${index * 200}ms`,
                 opacity: isVisible ? 1 : 0,
-                transform: isVisible ? 'translateY(0)' : 'translateY(20px)'
+                transform: isVisible ? "translateY(0)" : "translateY(20px)",
               }}
             >
               <ServiceCard {...service} />
@@ -307,8 +322,11 @@ const ServicesSection = () => {
         </div>
 
         {/* Contact section with hover effects */}
-        <div className={`mt-12 flex items-center justify-center space-x-2 cursor-pointer group transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}>
+        <div
+          className={`mt-12 flex items-center justify-center space-x-2 cursor-pointer group transition-all duration-1000 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
           <div className="flex items-center space-x-2 px-6 py-3 rounded-full bg-gray-900/50 hover:bg-gray-900 transition-colors duration-300">
             <Phone className="w-5 h-5 text-cyan-400 transform group-hover:rotate-12 transition-transform duration-300" />
             <span className="text-gray-400">Have any questions? Free:</span>
@@ -321,8 +339,6 @@ const ServicesSection = () => {
     </section>
   );
 };
-
-
 
 const EarthSection = () => {
   return (
@@ -405,7 +421,8 @@ const EarthSection = () => {
               with Innovation.
             </p>
           </div>
-        </div></div>
+        </div>
+      </div>
 
       {/* Additional Glow Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-transparent to-cyan-500/5"></div>
@@ -481,17 +498,6 @@ const Global = () => {
               className="w-3/5 h-3/5 object-contain"
             />
           </div>
-
-          {/* Curved Lines */}
-          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-            <path
-              d="M 10,50 Q 50,70 90,50"
-              fill="none"
-              stroke="rgb(6, 182, 212)"
-              strokeWidth="0.2"
-              opacity="0.3"
-            />
-          </svg>
 
           {/* Floating Text Elements - Hidden on small screens */}
           <div className="hidden md:block absolute top-1/4 left-0 transform -translate-x-1/2 bg-gray-900/80 backdrop-blur-md p-3 rounded-lg text-white shadow-lg border border-cyan-400 shadow-cyan-400/20">
@@ -608,9 +614,6 @@ const Home = () => {
 
       
     `;
-
-
-
   }, []);
 
   return (
@@ -703,7 +706,6 @@ const Home = () => {
       <TestimonialHome />
       <ContactForm />
       <ContactSection />
-
     </div>
   );
 };
