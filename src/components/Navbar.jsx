@@ -205,7 +205,7 @@ const Navbar = () => {
                 <button
                   onClick={() => {
                     setIsOpen(false);
-                    navigate("/ServicesPage");
+                    navigate("/Services");
                   }}
                   className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left font-medium"
                 >
