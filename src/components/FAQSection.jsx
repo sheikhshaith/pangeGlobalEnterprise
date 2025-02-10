@@ -41,8 +41,8 @@ const FAQSection = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-block px-4 py-1.5 bg-gray-900 rounded-full">
-            <span className="text-sm text-gray-400">Frequently Asked Questions</span>
+          <div className="inline-block px-4 py-1.5 bg-gray-800 rounded-full">
+            <span className="text-sm text-gray-200">Frequently Asked Questions</span>
           </div>
           <h2 className="text-4xl text-gray-200 font-medium mt-6 leading-tight">
             Your Questions Answered: Pixify's
@@ -63,15 +63,15 @@ const FAQSection = () => {
                 onClick={() => handleQuestionClick(faq.id)}
                 className="w-full py-6 flex justify-between items-center text-left group transition-all duration-300"
               >
-                <span className={`text-xl ${openQuestion === faq.id ? 'text-teal-400' : 'text-gray-300'} group-hover:text-teal-400 transition-colors duration-300 flex items-center gap-4`}>
-                  <X className={`w-5 h-5 transform transition-transform duration-300 ${openQuestion === faq.id ? 'rotate-45 text-teal-400' : 'text-gray-600'}`} />
+                <span className={`text-xl ${openQuestion === faq.id ? 'text-cyan-400' : 'text-gray-300'} group-hover:text-cyan-500 transition-colors duration-300 flex items-center gap-4`}>
+                  <X className={`w-5 h-5 transform transition-transform duration-300 ${openQuestion === faq.id ? 'rotate-45 text-teal-400' : 'text-gray-500'}`} />
                   {faq.question}
                 </span>
                 <span className={`transform transition-transform duration-300 ${openQuestion === faq.id ? 'rotate-180' : ''}`}>
                   {openQuestion === faq.id ? (
-                    <Minus className="w-6 h-6 text-teal-400" />
+                    <Minus className="w-6 h-6 text-cyan-400" />
                   ) : (
-                    <Plus className="w-6 h-6 text-gray-600 group-hover:text-teal-400" />
+                    <Plus className="w-6 h-6 text-gray-600 group-hover:text-cyan-400" />
                   )}
                 </span>
               </button>
@@ -80,7 +80,7 @@ const FAQSection = () => {
                 openQuestion === faq.id ? 'grid-rows-[1fr] opacity-100 pb-6' : 'grid-rows-[0fr] opacity-0'
               }`}>
                 <div className="overflow-hidden">
-                  <p className="text-gray-400 text-lg leading-relaxed">
+                  <p className="text-gray-300 text-lg leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>

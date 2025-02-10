@@ -10,7 +10,7 @@ const Careers = () => {
     });
   }, []);
 
-  const benefits = [
+  const benefits = [ 
     {
       icon: <DollarSign className="w-6 h-6 md:w-8 md:h-8" />,
       title: "Competitive Salary",
@@ -254,10 +254,10 @@ const Careers = () => {
           {jobs.map((job, index) => (
             <div
               key={index}
-              className="backdrop-blur-sm bg-white/60 rounded-lg p-6 border border-white/20 shadow-lg hover:bg-white/40 transition-all duration-300"
+              className="backdrop-blur-sm bg-white/40 rounded-lg p-6 border border-white/20 shadow-lg hover:bg-white/40 transition-all duration-300"
             >
               <Link to={job.path}>
-                <h2 className="text-xl md:text-2xl font-semibold mb-3 hover:text-blue-600 transition-colors">
+                <h2 className="text-xl text-cyan-300 md:text-2xl font-semibold mb-3 hover:text-cyan-500 transition-colors">
                   {job.title}
                 </h2>
               </Link>
@@ -265,10 +265,10 @@ const Careers = () => {
                 {job.description}
               </p>
               <div className="flex flex-wrap gap-3">
-                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs bg-red-100 text-red-800">
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs bg-black text-cyan-400">
                   {job.type}
                 </span>
-                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs bg-blue-100 text-blue-800">
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs bg-black text-cyan-400">
                   English Level - {job.level}
                 </span>
               </div>
@@ -285,7 +285,7 @@ const Careers = () => {
           <br />
           Business Process?
         </h2>
-        <button className="px-8 py-4 bg-cyan-500 text-white rounded-lg hover:bg-teal-600 transition text-base md:text-lg hover:scale-105 transform duration-200">
+        <button className="px-8 py-4 bg-cyan-400 text-white rounded-lg hover:bg-cyan-500 transition text-base md:text-lg hover:scale-105 transform duration-200">
           Get In Touch →
         </button>
       </div>

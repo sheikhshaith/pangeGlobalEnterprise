@@ -134,7 +134,7 @@ const JobPosting = ({ applyLink = '/JobApplicationForm' }) => {
           <div className="flex-1 order-2 lg:order-1">
             <h1 className="text-2xl font-bold text-white mb-4">Construction Manager</h1>
             
-            <p className="text-gray-400 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base">
+            <p className="text-gray-300 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base">
               A Construction Manager oversees and coordinates construction projects from 
               inception <br></br>to completion, ensuring they are finished on time, within budget, and to high 
               quality <br></br> standards. They manage a diverse team of professionals, including architects, 
@@ -148,36 +148,36 @@ const JobPosting = ({ applyLink = '/JobApplicationForm' }) => {
               <h2 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-white">Job Responsibilities</h2>
               <ul className="space-y-3">
                 <li className="flex items-start gap-2">
-                  <span className="text-teal-400 mt-2">•</span>
-                  <span className="text-gray-400 text-sm sm:text-base">Manages, designs, and implements policies and procedures relating to a company's <br></br> Employee Assistance Program (EAP)</span>
+                  <span className="text-cyan-400 mt-2">•</span>
+                  <span className="text-gray-300 text-sm sm:text-base">Manages, designs, and implements policies and procedures relating to a company's <br></br> Employee Assistance Program (EAP)</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-teal-400 mt-2">•</span>
-                  <span className="text-gray-400 text-sm sm:text-base">Ensures that inpatient and outpatient counseling and care facilities meet company <br></br> standards.</span>
+                  <span className="text-cyan-400 mt-2">•</span>
+                  <span className="text-gray-300 text-sm sm:text-base">Ensures that inpatient and outpatient counseling and care facilities meet company <br></br> standards.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-teal-400 mt-2">•</span>
-                  <span className="text-gray-400 text-sm sm:text-base">Provides training to management for dealing with medical and behavioral problems.</span>
+                  <span className="text-cyan-400 mt-2">•</span>
+                  <span className="text-gray-300 text-sm sm:text-base">Provides training to management for dealing with medical and behavioral problems.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-teal-400 mt-2">•</span>
-                  <span className="text-gray-400 text-sm sm:text-base">Provides counseling to employees in the program.</span>
+                  <span className="text-cyan-400 mt-2">•</span>
+                  <span className="text-gray-300 text-sm sm:text-base">Provides counseling to employees in the program.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-teal-400 mt-2">•</span>
-                  <span className="text-gray-400 text-sm sm:text-base">Requires a bachelor’s degree in a related area.</span>
+                  <span className="text-cyan-400 mt-2">•</span>
+                  <span className="text-gray-300 text-sm sm:text-base">Requires a bachelor’s degree in a related area.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-teal-400 mt-2">•</span>
-                  <span className="text-gray-400 text-sm sm:text-base">Typically reports to top management.</span>
+                  <span className="text-cyan-400 mt-2">•</span>
+                  <span className="text-gray-300 text-sm sm:text-base">Typically reports to top management.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-teal-400 mt-2">•</span>
-                  <span className="text-gray-400 text-sm sm:text-base">Typically manages through subordinate managers and professionals in larger groups <br></br> of moderate complexity.</span>
+                  <span className="text-cyan-400 mt-2">•</span>
+                  <span className="text-gray-300 text-sm sm:text-base">Typically manages through subordinate managers and professionals in larger groups <br></br> of moderate complexity.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-teal-400 mt-2">•</span>
-                  <span className="text-gray-400 text-sm sm:text-base">Provides input to strategic decisions that affect the functional area of responsibility.</span>
+                  <span className="text-cyan-400 mt-2">•</span>
+                  <span className="text-gray-300 text-sm sm:text-base">Provides input to strategic decisions that affect the functional area of responsibility.</span>
                 </li>
               </ul>
             </div>
@@ -187,32 +187,32 @@ const JobPosting = ({ applyLink = '/JobApplicationForm' }) => {
               <h2 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-white">Qualifications</h2>
               <ul className="space-y-3">
                 <li className="flex items-start gap-2">
-                  <span className="text-teal-400 mt-2">•</span>
-                  <span className="text-gray-400 text-sm sm:text-base">Minimum 8 years work experience as Employee Assistance Professional</span>
+                  <span className="text-cyan-400 mt-2">•</span>
+                  <span className="text-gray-300 text-sm sm:text-base">Minimum 8 years work experience as Employee Assistance Professional</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-teal-400 mt-2">•</span>
-                  <span className="text-gray-400 text-sm sm:text-base">CA Licensed clinical social worker (LCSW) or,</span>
+                  <span className="text-cyan-400 mt-2">•</span>
+                  <span className="text-gray-300 text-sm sm:text-base">CA Licensed clinical social worker (LCSW) or,</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-teal-400 mt-2">•</span>
-                  <span className="text-gray-400 text-sm sm:text-base">CA Marriage and Family Therapist (MFT or LMFT) or,</span>
+                  <span className="text-cyan-400 mt-2">•</span>
+                  <span className="text-gray-300 text-sm sm:text-base">CA Marriage and Family Therapist (MFT or LMFT) or,</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-teal-400 mt-2">•</span>
-                  <span className="text-gray-400 text-sm sm:text-base">A licensed psychologist in the state of California (PhD)</span>
+                  <span className="text-cyan-400 mt-2">•</span>
+                  <span className="text-gray-300 text-sm sm:text-base">A licensed psychologist in the state of California (PhD)</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-teal-400 mt-2">•</span>
-                  <span className="text-gray-400 text-sm sm:text-base">Excellent communication skills to effectively interact with our staff and faculty</span>
+                  <span className="text-cyan-400 mt-2">•</span>
+                  <span className="text-gray-300 text-sm sm:text-base">Excellent communication skills to effectively interact with our staff and faculty</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-teal-400 mt-2">•</span>
-                  <span className="text-gray-400 text-sm sm:text-base">Ability to work effectively both on an individual basis and as part of a team</span>
+                  <span className="text-cyan-400 mt-2">•</span>
+                  <span className="text-gray-300 text-sm sm:text-base">Ability to work effectively both on an individual basis and as part of a team</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-teal-400 mt-2">•</span>
-                  <span className="text-gray-400 text-sm sm:text-base">Strong computer skills to maintain accurate and complete documentation</span>
+                  <span className="text-cyan-400 mt-2">•</span>
+                  <span className="text-gray-300 text-sm sm:text-base">Strong computer skills to maintain accurate and complete documentation</span>
                 </li>
               </ul>
             </div>
@@ -222,20 +222,20 @@ const JobPosting = ({ applyLink = '/JobApplicationForm' }) => {
               <h2 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-white">Other Benefits</h2>
               <ul className="space-y-3">
                 <li className="flex items-start gap-2">
-                  <span className="text-teal-400 mt-2">•</span>
-                  <span className="text-gray-400 text-sm sm:text-base">Health, dental, and vision plans, tuition assistance for our employees and their families,<br></br> paid time off,flexible spending accounts.</span>
+                  <span className="text-cyan-400 mt-2">•</span>
+                  <span className="text-gray-300 text-sm sm:text-base">Health, dental, and vision plans, tuition assistance for our employees and their families,<br></br> paid time off,flexible spending accounts.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-teal-400 mt-2">•</span>
-                  <span className="text-gray-400 text-sm sm:text-base">2:1 retirement plan contributions, child care centers, and up to $50,000 housing subsidy</span>
+                  <span className="text-cyan-400 mt-2">•</span>
+                  <span className="text-gray-300 text-sm sm:text-base">2:1 retirement plan contributions, child care centers, and up to $50,000 housing subsidy</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-teal-400 mt-2">•</span>
-                  <span className="text-gray-400 text-sm sm:text-base">ICF (International Coach Federation) certified</span>
+                  <span className="text-cyan-400 mt-2">•</span>
+                  <span className="text-gray-300 text-sm sm:text-base">ICF (International Coach Federation) certified</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-teal-400 mt-2">•</span>
-                  <span className="text-gray-400 text-sm sm:text-base">CEAP Certified Employee Assistance Professional desired, but not required.</span>
+                  <span className="text-cyan-400 mt-2">•</span>
+                  <span className="text-gray-300 text-sm sm:text-base">CEAP Certified Employee Assistance Professional desired, but not required.</span>
                 </li>
               </ul>
             </div>
@@ -247,7 +247,7 @@ const JobPosting = ({ applyLink = '/JobApplicationForm' }) => {
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <MapPin className="w-5 h-5 text-teal-400" />
+                    <MapPin className="w-5 h-5 text-cyan-400" />
                     <span className="text-gray-400 text-sm sm:text-base">Location:</span>
                   </div>
                   <span className="text-white text-sm sm:text-base">New Jersey, USA</span>
@@ -255,7 +255,7 @@ const JobPosting = ({ applyLink = '/JobApplicationForm' }) => {
                 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <Briefcase className="w-5 h-5 text-teal-400" />
+                    <Briefcase className="w-5 h-5 text-cyan-400" />
                     <span className="text-gray-400 text-sm sm:text-base">Job Type:</span>
                   </div>
                   <span className="text-white text-sm sm:text-base">Full Time</span>
@@ -263,7 +263,7 @@ const JobPosting = ({ applyLink = '/JobApplicationForm' }) => {
                 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <DollarSign className="w-5 h-5 text-teal-400" />
+                    <DollarSign className="w-5 h-5 text-cyan-400" />
                     <span className="text-gray-400 text-sm sm:text-base">Salary:</span>
                   </div>
                   <span className="text-white text-sm sm:text-base">$7k - 15k USD</span>
@@ -271,7 +271,7 @@ const JobPosting = ({ applyLink = '/JobApplicationForm' }) => {
                 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <Calendar className="w-5 h-5 text-teal-400" />
+                    <Calendar className="w-5 h-5 text-cyan-400" />
                     <span className="text-gray-400 text-sm sm:text-base">Working Days:</span>
                   </div>
                   <span className="text-white text-sm sm:text-base">Weekly 5 days</span>
@@ -280,7 +280,7 @@ const JobPosting = ({ applyLink = '/JobApplicationForm' }) => {
 
               <button 
                 onClick={() => window.open(applyLink, '_blank', 'noopener noreferrer')}
-                className="w-full bg-teal-600 text-white py-2.5 sm:py-3 rounded-lg mt-4 sm:mt-6 hover:bg-teal-700 transition-colors flex items-center justify-center gap-2 text-sm sm:text-base">
+                className="w-full bg-cyan-400 text-white py-2.5 sm:py-3 rounded-lg mt-4 sm:mt-6 hover:bg-cyan-500 transition-colors flex items-center justify-center gap-2 text-sm sm:text-base">
                 Apply Now
                 <span className="transform translate-x-1">→</span>
               </button>
@@ -304,7 +304,7 @@ const HeroSection = () => {
             <br />
             Business Process?
           </h1>
-          <button className="mt-4 px-6 sm:px-8 py-3 sm:py-4 bg-cyan-500 text-white rounded-lg hover:bg-teal-600 transition text-sm sm:text-base md:text-lg">
+          <button className="mt-4 px-6 sm:px-8 py-3 sm:py-4 bg-cyan-400 text-white rounded-lg hover:bg-cyan-500 transition text-sm sm:text-base md:text-lg">
             Get In Touch →
           </button>
         </div>

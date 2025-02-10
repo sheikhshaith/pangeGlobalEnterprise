@@ -72,7 +72,7 @@ const FAQ = () => {
             <br />
             Business Process?
           </h2>
-          <button className="px-8 py-4 bg-cyan-500 text-white rounded-lg hover:bg-teal-600 transition text-base md:text-lg hover:scale-105 transform duration-200">
+          <button className="px-8 py-4 bg-cyan-400 text-white rounded-lg hover:bg-cyan-500 transition text-base md:text-lg hover:scale-105 transform duration-200">
             Get In Touch →
           </button>
         </div>

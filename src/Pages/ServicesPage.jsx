@@ -124,7 +124,7 @@ const ServicesPage = () => {
           <p className="text-gray-600 mt-2">{service.description}</p>
       
           {/* Move the button to the right with percentage positioning */}
-          <button className="absolute right-[2%] bottom-[25%]  text-blue-500 text-2xl font-bold h-12 w-12 flex items-center justify-center p-4 rounded-full border-2 border-blue-500 transition-transform duration-300 ease-in-out hover:bg-blue-500 hover:text-white hover:rotate-45 hover:scale-105 active:scale-95 
+          <button className="absolute right-[2%] bottom-[25%]  text-cyan-500 text-2xl font-bold h-12 w-12 flex items-center justify-center p-4 rounded-full border-2 border-cyan-500 transition-transform duration-300 ease-in-out hover:bg-cyan-500 hover:text-white hover:rotate-45 hover:scale-105 active:scale-95 
     animate-pulse">
               <span className="material-icons transform rotate-[320deg]">→</span>
           </button>
@@ -136,7 +136,7 @@ const ServicesPage = () => {
     transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95">
     Browse All Services 
 </button> */}
-<button className="mt-6 px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 
+<button className="mt-6 px-6 py-3 bg-cyan-400 text-white rounded-lg hover:bg-cyan-500 
     transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95 
     animate-pulse">
     Browse All Services 
@@ -184,7 +184,7 @@ const ServicesPage = () => {
 
       {/* Right Content */}
       <div className="w-full md:w-1/2 ">
-        <h5 className="text-gray-500 uppercase tracking-widest text-sm font-medium mb-2">
+        <h5 className="text-gray-300 uppercase tracking-widest text-lg font-medium mb-2 underline">
           How It Work
         </h5>
         <h2 className="text-3xl font-bold text-black mb-8 leading-tight ">
@@ -197,8 +197,8 @@ const ServicesPage = () => {
           <div className="relative">
             <span className="absolute left-[-9%] top-[-23%] text-6xl text-gray-200 font-bold">01</span>
             <div className="ml-12">
-              <h4 className="text-lg font-semibold text-blue-500">DISCUSSIONS ABOUT PROJECT</h4>
-              <p className="text-gray-400 mt-1">
+              <h4 className="text-lg font-semibold text-cyan-400">DISCUSSIONS ABOUT PROJECT</h4>
+              <p className="text-gray-300 mt-1">
                 Forging relationships between multinational corporations, governments, and global NGOs.
               </p>
             </div>
@@ -208,8 +208,8 @@ const ServicesPage = () => {
           <div className="relative">
             <span className="absolute left-[-9%] top-[-23%] text-6xl text-gray-200 font-bold">02</span>
             <div className="ml-12">
-              <h4 className="text-lg font-semibold text-blue-500">START WORK WITH TEAM</h4>
-              <p className="text-gray-400 mt-1">
+              <h4 className="text-lg font-semibold text-cyan-400">START WORK WITH TEAM</h4>
+              <p className="text-gray-300 mt-1">
                 Design studio founded in London and expanded our services, and became a multinational firm.
               </p>
             </div>
@@ -219,8 +219,8 @@ const ServicesPage = () => {
           <div className="relative">
             <span className="absolute left-[-9%] top-[-23%] text-6xl text-gray-200 font-bold">03</span>
             <div className="ml-12">
-              <h4 className="text-lg font-semibold text-blue-500">HANDOVER & SAVE WORLD</h4>
-              <p className="text-gray-400 mt-1">
+              <h4 className="text-lg font-semibold text-cyan-400">HANDOVER & SAVE WORLD</h4>
+              <p className="text-gray-300 mt-1">
                 We understand the importance of approaching each work integrally and believe in the power.
               </p>
             </div>
@@ -235,8 +235,8 @@ const ServicesPage = () => {
       <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-1">
         {/* Left Side Content */}
         <div className="relative flex flex-col justify-center top-[-70%]">
-          <h4 className="text-sm text-white underline ">Our Award</h4>
-          <h2 className="text-4xl font-bold mt-2 text-blue-700">Our Greatest Achievement</h2>
+          <h4 className="text-lg text-white underline ">Our Award</h4>
+          <h2 className="text-4xl font-bold mt-2 text-cyan-400">Our Greatest Achievement</h2>
           
           {/* Background Faded Image */}
           <img
