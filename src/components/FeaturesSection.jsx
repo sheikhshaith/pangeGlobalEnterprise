@@ -151,12 +151,14 @@ const FeaturesSection = () => {
 
         {/* CTA Button */}
         <div className="text-center mt-12 sm:mt-16 lg:mt-20">
+        <a href="/services">
           <button className="group px-6 sm:px-8 py-3 sm:py-4 bg-cyan-400 text-black text-sm sm:text-base font-medium rounded-lg hover:bg-cyan-500 transition-all duration-300 transform hover:-translate-y-1">
             <span className="flex items-center gap-2">
               Browse All Services
               <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 transform transition-transform duration-300 group-hover:translate-x-1" />
             </span>
           </button>
+          </a>
         </div>
       </div>
 

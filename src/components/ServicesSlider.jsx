@@ -164,6 +164,7 @@ const PageSlider = () => {
           <p className="text-gray-300 text-xs sm:text-sm md:text-base lg:text-lg mb-4 sm:mb-6 lg:mb-8">
             {page.text}
           </p>
+          <a href="/services">
           <button
             className="w-full sm:w-auto text-cyan-400 border-2 border-cyan-400 px-4 md:px-6 py-2 
                      rounded-full hover:bg-cyan-400 hover:text-white transition-colors 
@@ -171,6 +172,7 @@ const PageSlider = () => {
           >
             Discover More
           </button>
+          </a>
         </div>
       </div>
     </div>
