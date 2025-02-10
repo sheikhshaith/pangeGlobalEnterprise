@@ -19,7 +19,7 @@ const HeroSection = () => {
           <br />
           Business Process?
         </h1>
-        <button className="mt-4 px-6 sm:px-8 py-3 sm:py-4 bg-cyan-500 text-white rounded-lg hover:bg-teal-600 transition text-sm sm:text-base md:text-lg">
+        <button className="mt-4 px-6 sm:px-8 py-3 sm:py-4 bg-cyan-400 text-white rounded-lg hover:bg-cyan-500 transition text-sm sm:text-base md:text-lg">
           Get In Touch →
         </button>
       </div>
@@ -70,14 +70,14 @@ const ProcessItem = ({ icon, title, description, isHovered, onHover }) => (
     onMouseEnter={() => onHover(true)}
     onMouseLeave={() => onHover(false)}
   >
-    <div className={`p-3 mb-4 sm:mb-0 sm:mr-4 bg-blue-100 rounded-full transition-all duration-300 ${
-      isHovered ? 'bg-blue-200' : ''
+    <div className={`p-3 mb-4 sm:mb-0 sm:mr-4 bg-cyan-400 rounded-full transition-all duration-300 ${
+      isHovered ? 'bg-cyan-500' : ''
     }`}>
       {icon}
     </div>
     <div className="text-center sm:text-left">
       <h3 className={`text-lg sm:text-xl font-semibold mb-2 transition-all duration-300 ${
-        isHovered ? 'text-blue-600' : ''
+        isHovered ? 'text-cyan-500' : ''
       }`}>
         {title}
       </h3>
@@ -91,17 +91,17 @@ const OurProcess = () => {
 
   const processItems = [
     {
-      icon: <Users size={24} className="text-blue-900" />,
+      icon: <Users size={24} className="text-white" />,
       title: "Discussions About Project",
       description: "Forging relationships between multi to national corporations, governments and global NGOs."
     },
     {
-      icon: <Briefcase size={24} className="text-blue-900" />,
+      icon: <Briefcase size={24} className="text-white" />,
       title: "Start Work With Team",
       description: "Design studio founded in London and expanded our services, and become a multinational firm."
     },
     {
-      icon: <Banknote size={24} className="text-blue-900" />,
+      icon: <Banknote size={24} className="text-white" />,
       title: "Handover & Save World",
       description: "We understand the importance of approaching each work integrally and believe in the power"
     }
@@ -145,7 +145,7 @@ const Section = ({ title, content }) => {
         {content}
       </p>
       {!isExpanded && (
-        <div className="text-blue-400 text-sm sm:text-base mt-2 hover:underline">Read more</div>
+        <div className="text-cyan-400 text-sm sm:text-base mt-2 hover:underline">Read more</div>
       )}
     </div>
   );
@@ -308,11 +308,11 @@ const TestimonialSection = () => {
     <section className="bg-black text-white py-8 sm:py-12 md:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="px-4 sm:px-8 md:px-16 lg:px-32">
-          <h2 className="text-2xl sm:text-3xl text-gray-500 font-extrabold text-center mb-6 sm:mb-8 md:mb-12">
+          <h2 className="text-2xl sm:text-3xl text-white font-extrabold text-center mb-6 sm:mb-8 md:mb-12">
             We Work with Clients to Create Solutions that Stand the Test of Time.
           </h2>
           <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-12">
-            <p className="text-sm sm:text-base">
+            <p className="text-sm text-gray-200 sm:text-base">
               Our team is dedicated to delivering exceptional value through close collaboration with our clients. 
               We prioritize understanding their needs and providing success.
             </p>
