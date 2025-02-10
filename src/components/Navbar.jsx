@@ -18,8 +18,8 @@ const Navbar = () => {
 
   const servicePages = [
     { name: "PGE Services", path: "/services/PgeServices" },
-    { name: "Mobile Apps", path: "/services/mobile-apps" },
-    { name: "Cloud Services", path: "/services/cloud-services" },
+    // { name: "Mobile Apps", path: "/services/mobile-apps" },
+    // { name: "Cloud Services", path: "/services/cloud-services" },
   ];
 
   const handleMouseEnter = () => {
@@ -71,7 +71,7 @@ const Navbar = () => {
                     Services
                     <svg
                       className={`w-4 h-4 ml-1 transition-transform duration-200 ${
-                        showServicesDropdown ? (isAtTop ? "rotate-180" : "") : (isAtTop ? "" : "rotate-180")
+                        showServicesDropdown ? (isAtTop ? "-rotate-0" : "") : (isAtTop ? "" : "rotate-0")
                       }`}
                       fill="none"
                       stroke="currentColor"
@@ -81,8 +81,7 @@ const Navbar = () => {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
+                        d={isAtTop ? "M9 15l7-7 7 7" : "M19 9l-7 7-7-7"}                       />
                     </svg>
                   </button>
                   
@@ -110,43 +109,39 @@ const Navbar = () => {
                     ))}
                   </div>
                 </div>
-
-                {/* Rest of the navigation buttons */}
                 <button
                   onClick={() => navigate("/about")}
                   className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm"
                 >
                   About
                 </button>
+                {/* Rest of the navigation buttons */}
+            
                 <button
                   onClick={() => navigate("/Client")}
                   className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm"
                 >
                   Client
                 </button>
+              
+            
                 <button
-                  onClick={() => navigate("/contact")}
+                  onClick={() => navigate("/OurTeam")}
                   className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm"
                 >
-                  Contact
+                  Team
+                </button>
+                <button
+                  onClick={() => navigate("/OurProject")}
+                  className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm"
+                >
+                 Projects
                 </button>
                 <button
                   onClick={() => navigate("/Faq")}
                   className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm"
                 >
                   FAQ
-                </button>
-                <button
-                  onClick={() => navigate("/OurTeam")}
-                  className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm"
-                >
-                  OurTeam
-                </button>
-                <button
-                  onClick={() => navigate("/OurProject")}
-                  className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm"
-                >
-                  OurProjects
                 </button>
                 <button
                 onClick={() => {
@@ -157,6 +152,13 @@ const Navbar = () => {
               >
                 Careers
               </button>
+      
+                <button
+                  onClick={() => navigate("/contact")}
+                  className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm"
+                >
+                  Contact
+                </button>
               </div>
             </div>
           </div>
@@ -228,15 +230,6 @@ const Navbar = () => {
               <button
                 onClick={() => {
                   setIsOpen(false);
-                  navigate("/about");
-                }}
-                className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left"
-              >
-                About
-              </button>
-              <button
-                onClick={() => {
-                  setIsOpen(false);
                   navigate("/Client");
                 }}
                 className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left"
@@ -268,7 +261,7 @@ const Navbar = () => {
                 }}
                 className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left"
               >
-                Our Team
+                Team
               </button>
               <button
                 onClick={() => {
@@ -277,7 +270,7 @@ const Navbar = () => {
                 }}
                 className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left"
               >
-                Our Project
+                Project
               </button>
               <button
                 onClick={() => {
@@ -287,6 +280,16 @@ const Navbar = () => {
                 className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left"
               >
                 Careers
+              </button>
+              
+              <button
+                onClick={() => {
+                  setIsOpen(false);
+                  navigate("/about");
+                }}
+                className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left"
+              >
+                About
               </button>
             </div>
           </div>
