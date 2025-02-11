@@ -87,6 +87,7 @@
 
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const StatsDisplay = () => {
   return (
@@ -113,12 +114,12 @@ const StatsDisplay = () => {
       </div>
 
       {/* Know About Us Button */}
-      <a href="/about">
+      <Link to="/about" className="inline-block">
       <button className="px-8 py-4 bg-cyan-600 text-white rounded-full text-lg 
                        hover:bg-cyan-500 transition-colors duration-300">
         Know About Us
       </button>
-      </a>
+      </Link>
     </div>
   );
 };
