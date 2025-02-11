@@ -19,9 +19,11 @@ const HeroSection = () => {
           <br />
           Business Process?
         </h1>
+        <Link to="/contact" className="inline-block">
         <button className="mt-4 px-6 sm:px-8 py-3 sm:py-4 bg-cyan-400 text-white rounded-lg hover:bg-cyan-500 transition text-sm sm:text-base md:text-lg">
           Get In Touch →
         </button>
+        </Link>
       </div>
     </div>
   );

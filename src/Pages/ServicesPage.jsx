@@ -135,10 +135,11 @@ const ServicesPage = () => {
     transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95">
     Browse All Services 
 </button> */}
+<Link to="/services" className="inline-block">
 <button className="mt-6 px-6 py-3 bg-cyan-400 text-white rounded-lg hover:bg-cyan-500 ">
     Browse All Services 
 </button>
-
+</Link>
 
     </div>
     <div className="relative w-full min-h-screen overflow-hidden">

@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { Link } from 'react-router-dom';
 import ServicesSlider from "../components/ServicesSlider";
 import FeaturesSection from "../components/FeaturesSection";
 import TestimonialHome from "../components/TestimonialHome";
@@ -654,11 +655,11 @@ const Home = () => {
             transforms businesses for lasting success.
           </p>
           <div className="px-4 sm:px-8 lg:px-28">
-            <a href="/contact">
+            <Link to="/contact" className="inline-block">
               <button className="bg-transparent border-2 border-cyan-400 text-cyan-400 px-6 py-2 rounded-full text-base hover:bg-cyan-400 hover:text-white transition-colors">
                 Free Consultation
               </button>
-            </a>
+            </Link>
           </div>
         </div>
 

@@ -156,6 +156,7 @@ const AboutPage = () => {
               </div>
 
               <div>
+              <Link to="/about" className="inline-block">
                 <button className="px-6 py-3 bg-cyan-400 text-black rounded-full font-medium hover:bg-cyan-300 transition-colors flex items-center space-x-2">
                   <span>Know About Us</span>
                   <svg
@@ -168,6 +169,7 @@ const AboutPage = () => {
                     <path d="M5 12h14m-7-7l7 7-7 7" />
                   </svg>
                 </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -291,9 +293,11 @@ const AboutSection = () => {
           <br />
           Business Process?
         </h1>
+        <Link to="/contact" className="inline-block">
         <button className="mt-4 px-6 sm:px-8 py-3 sm:py-4 bg-cyan-400 text-white rounded-lg hover:bg-cyan-500 transition text-sm sm:text-base md:text-lg">
           Get In Touch →
         </button>
+        </Link>
       </div>
     </div>
   );

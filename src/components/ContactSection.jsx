@@ -1,5 +1,6 @@
 
 import React from "react";
+import { Link } from 'react-router-dom';
 
 const ContactSection = () => {
   return (
@@ -39,11 +40,11 @@ const ContactSection = () => {
         </div>
 
         {/* CTA Button */}
-        <a href="/contact">
+        <Link to="/contact" className="inline-block">
         <button className="w-full sm:w-auto px-6 py-3 border border-cyan-400 text-cyan-400 text-sm sm:text-base rounded-full hover:bg-cyan-500 hover:text-white transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-cyan-600">
           Get In Touch
         </button>
-        </a>
+        </Link>
       </div>
 
       {/* Right Side Image */}

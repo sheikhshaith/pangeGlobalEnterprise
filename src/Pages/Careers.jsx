@@ -278,9 +278,11 @@ const Careers = () => {
           <br />
           Business Process?
         </h2>
+        <Link to="/contact" className="inline-block">
         <button className="px-8 py-4 bg-cyan-400 text-white rounded-lg hover:bg-cyan-500 transition text-base md:text-lg hover:scale-105 transform duration-200">
           Get In Touch →
         </button>
+        </Link>
       </div>
     </div>
   );
