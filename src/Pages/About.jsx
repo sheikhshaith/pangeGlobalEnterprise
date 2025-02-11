@@ -11,28 +11,22 @@ const AboutPage = () => {
       
     
           {/* Navigation Links */}
-          <div className="flex justify-center mt-6 relative">
-            <div className="relative px-6 py-2 rounded-full border border-transparent inline-flex items-center gap-6 bg-white/10 backdrop-blur-md">
-              <Link to="/" className="hover:text-blue-300 text-white font-medium">
-                Home
-              </Link>
-              <span className="text-gray-400">•</span>
-              <Link
-                to="/About"
-                className="hover:text-blue-300 text-white font-medium"
-              >
-                 About
-              </Link>
+          <div className="flex justify-center mt-6">
+  <div className="relative px-6 py-2 rounded-full inline-flex items-center gap-6 bg-white/10 backdrop-blur-md">
+    <Link to="/" className="hover:text-blue-300 text-white font-medium">
+      Home
+    </Link>
+    <span className="text-gray-400">•</span>
+    <Link to="/About" className="hover:text-blue-300 text-white font-medium">
+      About
+    </Link>
     
-              {/* Animated Border */}
-              <div className="absolute inset-0 pointer-events-none rounded-full overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveX_2s_linear_infinite]"></div>
-                <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveX_2s_linear_infinite]"></div>
-                <div className="absolute top-0 left-0 h-full w-0.5 bg-gradient-to-b from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveY_2s_linear_infinite]"></div>
-                <div className="absolute top-0 right-0 h-full w-0.5 bg-gradient-to-b from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveY_2s_linear_infinite]"></div>
-              </div>
-            </div>
-          </div>
+    {/* Cyan Border */}
+    <div className="absolute inset-0 rounded-full">
+      <div className="absolute inset-0 rounded-full border border-cyan-400"></div>
+    </div>
+  </div>
+</div>
 
       <main className="container mx-auto px-4">
         {/* Previous sections remain unchanged */}
