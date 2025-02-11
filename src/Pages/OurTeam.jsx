@@ -18,22 +18,21 @@ const OurTeam = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       
-      <div className="flex justify-center mt-6">
-  <div className="relative px-6 py-2 rounded-full inline-flex items-center gap-6 bg-white/10 backdrop-blur-md">
-    <Link to="/" className="hover:text-blue-300 text-white font-medium">
-      Home
-    </Link>
-    <span className="text-gray-400">•</span>
-    <Link to="/Team" className="hover:text-blue-300 text-white font-medium">
-      Team
-    </Link>
-    
-    {/* Cyan Border */}
-    <div className="absolute inset-0 rounded-full">
-      <div className="absolute inset-0 rounded-full border border-cyan-400"></div>
-    </div>
-  </div>
-</div>
+     <div className="flex justify-center mt-6">
+                 <div className="relative px-6 py-2 rounded-full inline-flex items-center gap-6 bg-white/10 backdrop-blur-md">
+                   <Link to="/" className="hover:text-cyan-500 text-white font-medium">
+                     Home
+                   </Link>
+                   <span className="text-gray-400">•</span>
+                   <Link to="/OurTeam" className="hover:text-cyan-500 text-white font-medium">
+                     Team
+                   </Link>
+                   {/* Cyan Border (pointer-events-none prevents it from blocking clicks) */}
+                   <div className="absolute inset-0 rounded-full pointer-events-none">
+                     <div className="absolute inset-0 rounded-full border border-cyan-400"></div>
+                   </div>
+                 </div>
+               </div>
 
       <main className="container mx-auto px-4">
         <div className="text-center py-8 md:py-12">

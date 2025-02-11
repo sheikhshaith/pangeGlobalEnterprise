@@ -7,27 +7,23 @@ import FeaturesSection from "../components/FeaturesSection";
 const AboutPage = () => {
   return (
     <div className="min-h-screen bg-black">
-          {/* Navbar */}
-      
-    
-          {/* Navigation Links */}
-          <div className="flex justify-center mt-6">
-  <div className="relative px-6 py-2 rounded-full inline-flex items-center gap-6 bg-white/10 backdrop-blur-md">
-    <Link to="/" className="hover:text-blue-300 text-white font-medium">
-      Home
-    </Link>
-    <span className="text-gray-400">•</span>
-    <Link to="/About" className="hover:text-blue-300 text-white font-medium">
-      About
-    </Link>
-    
-    {/* Cyan Border */}
-    <div className="absolute inset-0 rounded-full">
-      <div className="absolute inset-0 rounded-full border border-cyan-400"></div>
-    </div>
-  </div>
-</div>
-
+      {/* Navbar */}
+      <div className="flex justify-center mt-6">
+        <div className="relative px-6 py-2 rounded-full inline-flex items-center gap-6 bg-white/10 backdrop-blur-md">
+          <Link to="/" className="hover:text-blue-300 text-white font-medium">
+            Home
+          </Link>
+          <span className="text-gray-400">•</span>
+          <Link to="/about" className="hover:text-blue-300 text-white font-medium">
+            About
+          </Link>
+          {/* Cyan Border (pointer-events-none prevents it from blocking clicks) */}
+          <div className="absolute inset-0 rounded-full pointer-events-none">
+            <div className="absolute inset-0 rounded-full border border-cyan-400"></div>
+          </div>
+        </div>
+      </div>
+          
       <main className="container mx-auto px-4">
         {/* Previous sections remain unchanged */}
         <div className="text-center py-8 md:py-12">
@@ -57,7 +53,7 @@ const AboutPage = () => {
           <div className="space-y-8">
             <div className="space-y-2">
               <h2 className="text-sm uppercase underline text-gray-300">Who We Are</h2>
-              <h1 className="text-3xl md:text-4xl font-bold leading-tight border-b pb-8 border-gray-300">
+              <h1 className="text-3xl md:text-4xl text-white font-bold leading-tight border-b pb-8 border-gray-300">
                 Empowering Growth With Expert Guidance:
                 <br />
                 Your Trusted Partners In Business Strategy
@@ -180,7 +176,7 @@ const AboutPage = () => {
           <div className="py-12">
             <div className="space-y-4">
             <h2 className="text-sm underline text-gray-300">Our Story</h2>
-              <h1 className="text-4xl font-bold tracking-tight">
+              <h1 className="text-4xl text-white font-bold tracking-tight">
                 Building Success Through Vision,
                 <br />
                 Innovation, And Trusted Client Partnerships
