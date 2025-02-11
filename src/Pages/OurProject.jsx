@@ -153,7 +153,7 @@ const OurProject = () => {
             to="/OurProject"
             className="hover:text-blue-300 text-white font-medium"
           >
-            Our Project
+             Project
           </Link>
 
           {/* Animated Border */}

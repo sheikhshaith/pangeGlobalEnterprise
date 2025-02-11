@@ -83,7 +83,7 @@ const Client = () => {
             to="/Client"
             className="hover:text-blue-300 text-white font-medium"
           >
-            Our Clients
+            Clients
           </Link>
 
           {/* Animated Border */}

@@ -11,30 +11,33 @@ const FAQ = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black pt-4 md:pt-8">
-      <div className="container mx-auto px-4 flex flex-col">
-        {/* Navigation */}
-        <div className="flex justify-center mb-8 fade-in opacity-0 transition-all duration-1000 ease-out">
-          <div className="flex space-x-4 bg-black bg-opacity-50 px-4 py-2 rounded-lg relative overflow-hidden">
-            {/* Animated Border */}
-            <div className="absolute inset-0 pointer-events-none">
-              <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveX_2s_linear_infinite]"></div>
-              <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveX_2s_linear_infinite]"></div>
-              <div className="absolute top-0 left-0 h-full w-0.5 bg-gradient-to-b from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveY_2s_linear_infinite]"></div>
-              <div className="absolute top-0 right-0 h-full w-0.5 bg-gradient-to-b from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveY_2s_linear_infinite]"></div>
+    <div className="min-h-screen bg-black text-white">
+      {/* Navigation Links */}
+            <div className="flex justify-center mt-6 relative">
+              <div className="relative px-6 py-2 rounded-full border border-transparent inline-flex items-center gap-6 bg-white/10 backdrop-blur-md">
+                <Link to="/" className="hover:text-blue-300 text-white font-medium">
+                  Home
+                </Link>
+                <span className="text-gray-400">•</span>
+                <Link
+                  to="/Faq"
+                  className="hover:text-blue-300 text-white font-medium"
+                >
+                   FAQ
+                </Link>
+      
+                {/* Animated Border */}
+                <div className="absolute inset-0 pointer-events-none rounded-full overflow-hidden">
+                  <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveX_2s_linear_infinite]"></div>
+                  <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveX_2s_linear_infinite]"></div>
+                  <div className="absolute top-0 left-0 h-full w-0.5 bg-gradient-to-b from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveY_2s_linear_infinite]"></div>
+                  <div className="absolute top-0 right-0 h-full w-0.5 bg-gradient-to-b from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveY_2s_linear_infinite]"></div>
+                </div>
+              </div>
             </div>
 
-            <Link to="/" className="text-white hover:text-cyan-400 px-2 sm:px-3 py-1 transition-colors duration-200 text-sm">
-              Home
-            </Link>
-            <Link to="/Faq" className="text-white hover:text-cyan-400 px-2 sm:px-3 py-1 transition-colors duration-200 text-sm">
-              Faq
-            </Link>
-          </div>
-        </div>
-
         {/* Hero Section */}
-        <div className="flex flex-col items-center mb-12">
+        <div className="flex flex-col mt-5  items-center mb-12">
           <h1 className="text-2xl md:text-4xl font-bold mb-6 text-center text-white fade-in opacity-0 transition-all duration-1000 ease-out delay-300">
             Get In Touch: Expert Business
             <br className="hidden sm:block" />
@@ -78,7 +81,7 @@ const FAQ = () => {
         </div>
       </div>
   
-    </div>
+    
   );
 };
 
