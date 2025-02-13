@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
 
-const JobApplicationForm = () => {
+function JobApplicationForm() {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -24,6 +24,9 @@ const JobApplicationForm = () => {
     agreement: false
   });
 
+  const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
   const [fileNames, setFileNames] = useState({
     coverLetter: 'No file chosen',
     resume: 'No file chosen'
@@ -32,17 +35,71 @@ const JobApplicationForm = () => {
   const coverLetterRef = useRef(null);
   const resumeRef = useRef(null);
 
+ // Style classes
+ const inputClasses = "w-full px-0 py-2 bg-transparent border-0 border-b border-zinc-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500";
+ const selectClasses = "w-full px-0 py-2 bg-transparent border-0 border-b border-zinc-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 [&>option]:bg-zinc-800 [&>option]:text-white";
+ const labelClasses = "block text-sm text-gray-100 mb-2";
+ const sectionDividerClasses = "w-full h-px bg-zinc-700 my-8";
+ const fileButtonClasses = "px-4 py-2 border border-cyan-500 text-cyan-500 rounded text-sm hover:bg-cyan-500 hover:text-black transition-all duration-200";
+ const submitButtonClasses = "px-6 py-2 border-cyan-500 bg-cyan-500 text-white text-sm rounded hover:bg-black hover:text-white hover:border-white border transition-all duration-200 flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed";
+ const dateInputClasses = "w-full px-0 py-2 bg-transparent border-0 border-b border-zinc-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 [&::-webkit-calendar-picker-indicator]:filter [&::-webkit-calendar-picker-indicator]:invert";
+
+
+  const validateForm = () => {
+    const newErrors = {};
+    
+    if (!formData.firstName.trim()) newErrors.firstName = "First name is required";
+    if (!formData.lastName.trim()) newErrors.lastName = "Last name is required";
+    
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = "Invalid email address";
+    }
+    
+    if (!formData.phone.trim()) {
+      newErrors.phone = "Phone number is required";
+    } else if (!/^\+?[\d\s-]+$/.test(formData.phone)) {
+      newErrors.phone = "Invalid phone number";
+    }
+
+    if (!formData.address.trim()) newErrors.address = "Address is required";
+    if (!formData.city.trim()) newErrors.city = "City is required";
+    if (!formData.postalCode.trim()) newErrors.postalCode = "Postal code is required";
+    if (!formData.country) newErrors.country = "Please select a country";
+    if (!formData.resume) newErrors.resume = "Resume is required";
+    if (!formData.dateAvailable) newErrors.dateAvailable = "Start date is required";
+    if (!formData.timeZone) newErrors.timeZone = "Please select your time zone availability";
+    if (!formData.englishProficiency) newErrors.englishProficiency = "Please select your English proficiency";
+    if (!formData.jobSource) newErrors.jobSource = "Please select how you heard about this job";
+    if (!formData.agreement) newErrors.agreement = "Please agree to the terms";
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: type === 'checkbox' ? checked : value
     }));
+    if (errors[name]) {
+      setErrors(prev => ({ ...prev, [name]: '' }));
+    }
   };
 
   const handleFileChange = (e) => {
     const { name, files } = e.target;
     if (files.length > 0) {
+      if (files[0].size > 5 * 1024 * 1024) {
+        setErrors(prev => ({
+          ...prev,
+          [name]: "File size should not exceed 5MB"
+        }));
+        return;
+      }
+      
       setFormData(prev => ({
         ...prev,
         [name]: files[0]
@@ -51,6 +108,9 @@ const JobApplicationForm = () => {
         ...prev,
         [name]: files[0].name
       }));
+      if (errors[name]) {
+        setErrors(prev => ({ ...prev, [name]: '' }));
+      }
     }
   };
 
@@ -58,36 +118,99 @@ const JobApplicationForm = () => {
     inputRef.current.click();
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-  };
+    
+    if (!validateForm()) {
+      return;
+    }
+    
+    setIsSubmitting(true);
+    setSubmitStatus(null);
 
-  // Common style classes
-  const inputClasses = "w-full px-0 py-2 bg-transparent border-0 border-b border-zinc-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500";
-  const selectClasses = "w-full px-0 py-2 bg-transparent border-0 border-b border-zinc-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 [&>option]:bg-zinc-800 [&>option]:text-white";
-  const labelClasses = "block text-sm text-gray-100 mb-2";
-  const sectionDividerClasses = "w-full h-px bg-zinc-700 my-8";
-  const fileButtonClasses = "px-4 py-2 border border-cyan-500 text-cyan-500 rounded text-sm hover:bg-cyan-500 hover:text-black transition-all duration-200";
-  const submitButtonClasses = "px-6 py-2 border-cyan-500 bg-cyan-500 text-white text-sm rounded hover:bg-black hover:text-white hover:border-white border transition-all duration-200 flex items-center gap-2";
-  const dateInputClasses = "w-full px-0 py-2 bg-transparent border-0 border-b border-zinc-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 [&::-webkit-calendar-picker-indicator]:filter [&::-webkit-calendar-picker-indicator]:invert";
+    try {
+      const submitFormData = new FormData();
+      Object.keys(formData).forEach(key => {
+        if (key !== 'coverLetter' && key !== 'resume') {
+          submitFormData.append(key, formData[key]);
+        }
+      });
+
+      if (formData.coverLetter) {
+        submitFormData.append('coverLetter', formData.coverLetter);
+      }
+      if (formData.resume) {
+        submitFormData.append('resume', formData.resume);
+      }
+
+      submitFormData.append('_captcha', 'false');
+      
+      const response = await fetch('https://formsubmit.co/pgeoffice001@gmail.com', {
+        method: 'POST',
+        body: submitFormData
+      });
+
+      if (response.ok) {
+        setSubmitStatus("success");
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          address: '',
+          city: '',
+          province: '',
+          postalCode: '',
+          country: '',
+          coverLetter: null,
+          resume: null,
+          dateAvailable: '',
+          salaryExpectation: '',
+          website: '',
+          linkedin: '',
+          timeZone: '',
+          englishProficiency: '',
+          jobSource: '',
+          agreement: false
+        });
+        setFileNames({
+          coverLetter: 'No file chosen',
+          resume: 'No file chosen'
+        });
+      }
+    } catch (error) {
+      console.error('Submission error:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-black p-6">
       <div className="max-w-2xl mx-auto bg-zinc-900 rounded-lg p-6">
         <h2 className="text-1xl font-semibold mb-8 text-white">Apply for this Position</h2>
+        
+        {submitStatus === "success" && (
+          <div className="mb-6 text-center">
+            <p className="text-blue-500 font-medium">
+              Your application was submitted successfully!
+            </p>
+          </div>
+        )}
+
         <form onSubmit={handleSubmit} className="space-y-8">
           {/* Personal Information */}
           <div>
-            <label className={labelClasses}>First Name</label>
+            <label className="block text-sm text-gray-100 mb-2">First Name</label>
             <input
               type="text"
               name="firstName"
               value={formData.firstName}
               placeholder="e.g. Oliver"
-              className={inputClasses}
+              className={`w-full px-0 py-2 bg-transparent border-0 border-b border-zinc-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 ${errors.firstName ? 'border-red-500' : ''}`}
               onChange={handleInputChange}
             />
+            {errors.firstName && <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>}
           </div>
 
           <div>
@@ -97,9 +220,10 @@ const JobApplicationForm = () => {
               name="lastName"
               value={formData.lastName}
               placeholder="e.g. Smith"
-              className={inputClasses}
+              className={`${inputClasses} ${errors.lastName ? 'border-red-500' : ''}`}
               onChange={handleInputChange}
             />
+            {errors.lastName && <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>}
           </div>
 
           <div>
@@ -109,9 +233,10 @@ const JobApplicationForm = () => {
               name="email"
               value={formData.email}
               placeholder="info@myemail.co.uk"
-              className={inputClasses}
+              className={`${inputClasses} ${errors.email ? 'border-red-500' : ''}`}
               onChange={handleInputChange}
             />
+            {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
           </div>
 
           <div>
@@ -121,9 +246,10 @@ const JobApplicationForm = () => {
               name="phone"
               value={formData.phone}
               placeholder="+44 20 XXXX XXXX"
-              className={inputClasses}
+              className={`${inputClasses} ${errors.phone ? 'border-red-500' : ''}`}
               onChange={handleInputChange}
             />
+            {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
           </div>
 
           {/* Address Information */}
@@ -134,9 +260,10 @@ const JobApplicationForm = () => {
               name="address"
               value={formData.address}
               placeholder="Enter your street address"
-              className={inputClasses}
+              className={`${inputClasses} ${errors.address ? 'border-red-500' : ''}`}
               onChange={handleInputChange}
             />
+            {errors.address && <p className="text-red-500 text-sm mt-1">{errors.address}</p>}
           </div>
 
           <div>
@@ -146,9 +273,10 @@ const JobApplicationForm = () => {
               name="city"
               value={formData.city}
               placeholder="Enter your city"
-              className={inputClasses}
+              className={`${inputClasses} ${errors.city ? 'border-red-500' : ''}`}
               onChange={handleInputChange}
             />
+            {errors.city && <p className="text-red-500 text-sm mt-1">{errors.city}</p>}
           </div>
 
           <div>
@@ -158,9 +286,10 @@ const JobApplicationForm = () => {
               name="province"
               value={formData.province}
               placeholder="Province"
-              className={inputClasses}
+              className={`${inputClasses} ${errors.province ? 'border-red-500' : ''}`}
               onChange={handleInputChange}
             />
+            {errors.province && <p className="text-red-500 text-sm mt-1">{errors.province}</p>}
           </div>
 
           <div>
@@ -170,9 +299,10 @@ const JobApplicationForm = () => {
               name="postalCode"
               value={formData.postalCode}
               placeholder="90000"
-              className={inputClasses}
+              className={`${inputClasses} ${errors.postalCode ? 'border-red-500' : ''}`}
               onChange={handleInputChange}
             />
+            {errors.postalCode && <p className="text-red-500 text-sm mt-1">{errors.postalCode}</p>}
           </div>
 
           <div>
@@ -180,7 +310,7 @@ const JobApplicationForm = () => {
             <select
               name="country"
               value={formData.country}
-              className={selectClasses}
+              className={`${selectClasses} ${errors.country ? 'border-red-500' : ''}`}
               onChange={handleInputChange}
             >
               <option value="">Select Country</option>
@@ -188,6 +318,7 @@ const JobApplicationForm = () => {
               <option value="US">United States</option>
               <option value="CA">Canada</option>
             </select>
+            {errors.country && <p className="text-red-500 text-sm mt-1">{errors.country}</p>}
           </div>
 
           <div className={sectionDividerClasses}></div>
@@ -206,13 +337,14 @@ const JobApplicationForm = () => {
               />
               <button
                 type="button"
-                className={fileButtonClasses}
+                className={`${fileButtonClasses} ${errors.coverLetter ? 'border-red-500' : ''}`}
                 onClick={() => handleFileButtonClick(coverLetterRef)}
               >
                 Choose File
               </button>
               <span className="text-sm text-gray-400">{fileNames.coverLetter}</span>
             </div>
+            {errors.coverLetter && <p className="text-red-500 text-sm mt-1">{errors.coverLetter}</p>}
           </div>
 
           <div>
@@ -228,13 +360,14 @@ const JobApplicationForm = () => {
               />
               <button
                 type="button"
-                className={fileButtonClasses}
+                className={`${fileButtonClasses} ${errors.resume ? 'border-red-500' : ''}`}
                 onClick={() => handleFileButtonClick(resumeRef)}
               >
                 Choose File
               </button>
               <span className="text-sm text-gray-400">{fileNames.resume}</span>
             </div>
+            {errors.resume && <p className="text-red-500 text-sm mt-1">{errors.resume}</p>}
           </div>
 
           {/* Additional Information */}
@@ -291,6 +424,64 @@ const JobApplicationForm = () => {
           <div className={sectionDividerClasses}></div>
 
           {/* Additional Questions */}
+          {/* Additional Information */}
+          <div>
+            <label className={labelClasses}>Date Available</label>
+            <input
+              type="date"
+              name="dateAvailable"
+              value={formData.dateAvailable}
+              className={`${dateInputClasses} ${errors.dateAvailable ? 'border-red-500' : ''}`}
+              onChange={handleInputChange}
+            />
+            {errors.dateAvailable && <p className="text-red-500 text-sm mt-1">{errors.dateAvailable}</p>}
+          </div>
+
+          <div>
+            <label className={labelClasses}>Salary Expectation</label>
+            <input
+              type="text"
+              name="salaryExpectation"
+              value={formData.salaryExpectation}
+              placeholder="$30,000 USD"
+              className={`${inputClasses} ${errors.salaryExpectation ? 'border-red-500' : ''}`}
+              onChange={handleInputChange}
+            />
+            {errors.salaryExpectation && <p className="text-red-500 text-sm mt-1">{errors.salaryExpectation}</p>}
+          </div>
+
+          <div className={sectionDividerClasses}></div>
+
+          {/* Professional Links */}
+          <div>
+            <label className={labelClasses}>Website or Portfolio</label>
+            <input
+              type="url"
+              name="website"
+              value={formData.website}
+              placeholder="https://portfolio.com/user/24873"
+              className={`${inputClasses} ${errors.website ? 'border-red-500' : ''}`}
+              onChange={handleInputChange}
+            />
+            {errors.website && <p className="text-red-500 text-sm mt-1">{errors.website}</p>}
+          </div>
+
+          <div>
+            <label className={labelClasses}>LinkedIn Profile URL</label>
+            <input
+              type="url"
+              name="linkedin"
+              value={formData.linkedin}
+              placeholder="https://linkedin.com/in/user/24873"
+              className={`${inputClasses} ${errors.linkedin ? 'border-red-500' : ''}`}
+              onChange={handleInputChange}
+            />
+            {errors.linkedin && <p className="text-red-500 text-sm mt-1">{errors.linkedin}</p>}
+          </div>
+
+          <div className={sectionDividerClasses}></div>
+
+          {/* Additional Questions */}
           <div>
             <label className={labelClasses}>Are You Able To Work According To The European Time Zone?</label>
             <div className="space-x-4">
@@ -300,7 +491,7 @@ const JobApplicationForm = () => {
                   name="timeZone" 
                   value="yes" 
                   checked={formData.timeZone === 'yes'}
-                  className="mr-2" 
+                  className={`mr-2 ${errors.timeZone ? 'ring-2 ring-red-500' : ''}`}
                   onChange={handleInputChange} 
                 />
                 <span className="text-white">Yes</span>
@@ -311,12 +502,13 @@ const JobApplicationForm = () => {
                   name="timeZone" 
                   value="no" 
                   checked={formData.timeZone === 'no'}
-                  className="mr-2" 
+                  className={`mr-2 ${errors.timeZone ? 'ring-2 ring-red-500' : ''}`}
                   onChange={handleInputChange} 
                 />
                 <span className="text-white">No</span>
               </label>
             </div>
+            {errors.timeZone && <p className="text-red-500 text-sm mt-1">{errors.timeZone}</p>}
           </div>
 
           <div>
@@ -329,13 +521,14 @@ const JobApplicationForm = () => {
                     name="englishProficiency"
                     value={level.toLowerCase()}
                     checked={formData.englishProficiency === level.toLowerCase()}
-                    className="mr-2"
+                    className={`mr-2 ${errors.englishProficiency ? 'ring-2 ring-red-500' : ''}`}
                     onChange={handleInputChange}
                   />
                   <span className="text-white">{level}</span>
                 </label>
               ))}
             </div>
+            {errors.englishProficiency && <p className="text-red-500 text-sm mt-1">{errors.englishProficiency}</p>}
           </div>
 
           <div>
@@ -348,13 +541,14 @@ const JobApplicationForm = () => {
                     name="jobSource"
                     value={source.toLowerCase()}
                     checked={formData.jobSource === source.toLowerCase()}
-                    className="mr-2"
+                    className={`mr-2 ${errors.jobSource ? 'ring-2 ring-red-500' : ''}`}
                     onChange={handleInputChange}
                   />
                   <span className="text-white">{source}</span>
                 </label>
               ))}
             </div>
+            {errors.jobSource && <p className="text-red-500 text-sm mt-1">{errors.jobSource}</p>}
           </div>
 
           {/* Agreement */}
@@ -365,25 +559,36 @@ const JobApplicationForm = () => {
               name="agreement"
               checked={formData.agreement}
               onChange={handleInputChange}
-              className="mt-1 mr-2"
+              className={`mt-1 mr-2 ${errors.agreement ? 'ring-2 ring-red-500' : ''}`}
             />
             <label htmlFor="agreement" className="text-sm text-gray-300">
               I Agree That BB Agency Can Keep My Application In Their Candidate Database And Reach Out To Me Regarding Future Opportunities
             </label>
           </div>
+          {errors.agreement && <p className="text-red-500 text-sm mt-1">{errors.agreement}</p>}
 
           {/* Submit Button */}
           <div className="flex">
             <button
               type="submit"
+              disabled={isSubmitting}
               className={submitButtonClasses}
             >
-              Submit Now
+              {isSubmitting ? 'Submitting...' : 'Submit Now'}
               <ArrowRight size={16} />
             </button>
           </div>
+
+          {submitStatus === "success" && (
+            <div className="mt-4 text-center">
+              <p className="text-cyan-500 font-medium">
+                Your application was submitted successfully!
+              </p>
+            </div>
+          )}
         </form>
       </div>
+      
       <ApplySection />
     </div>
   );
