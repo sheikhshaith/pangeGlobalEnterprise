@@ -121,7 +121,7 @@ const Dropdown = ({ options, value, onChange, label }) => {
   );
 };
 
-const JobPosting = ({ applyLink = "/JobApplicationForm" }) => {
+const JobPosting = () => {
   const [location, setLocation] = useState(dropdownData.locations[0]);
   const [jobType, setJobType] = useState(dropdownData.jobTypes[0]);
   const [salary, setSalary] = useState(dropdownData.salaryRanges[0]);
@@ -362,16 +362,17 @@ const JobPosting = ({ applyLink = "/JobApplicationForm" }) => {
                   </span>
                 </div>
               </div>
-
+              <Link to="/jobapplicationform" className="inline-block">
               <button
-                onClick={() =>
-                  window.open(applyLink, "_blank", "noopener noreferrer")
-                }
-                className="w-full bg-cyan-400 text-white py-2.5 sm:py-3 rounded-lg mt-4 sm:mt-6 hover:bg-cyan-500 transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
+                // onClick={() =>
+                //   window.open(applyLink, "_blank", "noopener noreferrer")
+                // }
+                className="w-full bg-cyan-400 text-white py-2.5 px-8 sm:py-3 rounded-lg mt-4 sm:mt-6 hover:bg-cyan-500 transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
               >
                 Apply Now
                 <span className="transform translate-x-1">→</span>
               </button>
+              </Link>
             </div>
           </div>
         </div>
