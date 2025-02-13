@@ -15,11 +15,7 @@ const Footer = () => {
 
         <div className="space-y-4">
           <div className="flex items-center space-x-2">
-            <img
-              src="/logo-removebg.png"
-              alt="PGE Logo"
-              className="h-10 w-auto"
-            />
+            <img src="/logo-2.png" alt="PGE Logo" className="h-10 w-auto" />
           </div>
         </div>
 
