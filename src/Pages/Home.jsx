@@ -632,7 +632,7 @@ const Home = () => {
 
         <div className="absolute top-4 left-4 px-4 sm:px-8 lg:px-28 z-10">
           <img
-            src="/logo-removebg.png"
+            src="/logo-2.png"
             alt="PGE Logo"
             className="h-8 sm:h-10 lg:h-12 w-auto transform inline-block"
           />
