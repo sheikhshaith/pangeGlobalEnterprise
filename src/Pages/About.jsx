@@ -10,16 +10,16 @@ const AboutPage = () => {
       {/* Navbar */}
       <div className="flex justify-center mt-6">
         <div className="relative px-6 py-2 rounded-full inline-flex items-center gap-6 bg-white/10 backdrop-blur-md">
-          <Link to="/" className="hover:text-cyan-500 text-white font-medium">
+          <Link to="/" className="hover:text-[#C59740] text-white font-medium">
             Home
           </Link>
           <span className="text-gray-400">•</span>
-          <Link to="/about" className="hover:text-cyan-500 text-white font-medium">
+          <Link to="/about" className="hover:text-[#C59740] text-white font-medium">
             About
           </Link>
           {/* Cyan Border (pointer-events-none prevents it from blocking clicks) */}
           <div className="absolute inset-0 rounded-full pointer-events-none">
-            <div className="absolute inset-0 rounded-full border border-cyan-400"></div>
+            <div className="absolute inset-0 rounded-full border border-[#C59740]"></div>
           </div>
         </div>
       </div>
@@ -116,7 +116,7 @@ const AboutPage = () => {
                 alt="Team"
                 className="w-full h-full object-cover rounded-lg"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/30 to-transparent mix-blend-overlay rounded-lg"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#C59740]/30 to-transparent mix-blend-overlay rounded-lg"></div>
             </div>
 
             {/* Right side - Content */}
@@ -153,7 +153,7 @@ const AboutPage = () => {
 
               <div>
               <Link to="/about" className="inline-block">
-                <button className="px-6 py-3 bg-cyan-400 text-black rounded-full font-medium hover:bg-cyan-300 transition-colors flex items-center space-x-2">
+                <button className="px-6 py-3 bg-[#C59740] text-black rounded-full font-medium hover:bg-[#C59740] transition-colors flex items-center space-x-2">
                   <span>Know About Us</span>
                   <svg
                     className="w-4 h-4"
@@ -281,7 +281,7 @@ const AboutSection = () => {
     <div className="relative w-full">
       {/* Lower Section with Text */}
       <div className="bg-black text-white text-center py-16 px-4 sm:px-6 md:px-8 lg:px-16">
-        <p className="text-base sm:text-lg text-cyan-400 py-4 sm:py-8">
+        <p className="text-base sm:text-lg text-[#C59740] py-4 sm:py-8">
           Let's Build Together
         </p>
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl pb-6 sm:pb-8 text-white font-bold mt-2">
@@ -290,7 +290,7 @@ const AboutSection = () => {
           Business Process?
         </h1>
         <Link to="/contact" className="inline-block">
-        <button className="mt-4 px-6 sm:px-8 py-3 sm:py-4 bg-cyan-400 text-white rounded-lg hover:bg-cyan-500 transition text-sm sm:text-base md:text-lg">
+        <button className="mt-4 px-6 sm:px-8 py-3 sm:py-4 bg-[#C59740] text-white rounded-lg hover:bg-[#C59740] transition text-sm sm:text-base md:text-lg">
           Get In Touch →
         </button>
         </Link>

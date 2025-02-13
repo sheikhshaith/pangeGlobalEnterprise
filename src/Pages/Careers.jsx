@@ -106,16 +106,16 @@ const Careers = () => {
     {/* Navbar */}
           <div className="flex justify-center mt-6">
             <div className="relative px-6 py-2 rounded-full inline-flex items-center gap-6 bg-white/10 backdrop-blur-md">
-              <Link to="/" className="hover:text-cyan-500 text-white font-medium">
+              <Link to="/" className="hover:text-[#C59740] text-white font-medium">
                 Home
               </Link>
               <span className="text-gray-400">•</span>
-              <Link to="/Careers" className="hover:text-cyan-500 text-white font-medium">
+              <Link to="/Careers" className="hover:text-[#C59740] text-white font-medium">
                 Careers
               </Link>
               {/* Cyan Border (pointer-events-none prevents it from blocking clicks) */}
               <div className="absolute inset-0 rounded-full pointer-events-none">
-                <div className="absolute inset-0 rounded-full border border-cyan-400"></div>
+                <div className="absolute inset-0 rounded-full border border-[#C59740]"></div>
               </div>
             </div>
           </div>
@@ -246,10 +246,10 @@ const Careers = () => {
           {jobs.map((job, index) => (
             <div
               key={index}
-              className="backdrop-blur-sm bg-white/40 rounded-lg p-6 border border-white/20 shadow-lg hover:bg-white/40 transition-all duration-300"
+              className="backdrop-blur-sm bg-white/20 rounded-lg p-6 border border-white/20 shadow-lg hover:bg-white/30 transition-all duration-300"
             >
               <Link to={job.path}>
-                <h2 className="text-xl text-cyan-300 md:text-2xl font-semibold mb-3 hover:text-cyan-500 transition-colors">
+                <h2 className="text-xl text-[#C59740] md:text-2xl font-semibold mb-3 hover:text-[#C59740] transition-colors">
                   {job.title}
                 </h2>
               </Link>
@@ -257,10 +257,10 @@ const Careers = () => {
                 {job.description}
               </p>
               <div className="flex flex-wrap gap-3">
-                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs bg-black text-cyan-400">
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs bg-black text-[#C59740]">
                   {job.type}
                 </span>
-                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs bg-black text-cyan-400">
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs bg-black text-[#C59740]">
                   English Level - {job.level}
                 </span>
               </div>
@@ -271,14 +271,14 @@ const Careers = () => {
 
       {/* Call to Action Section */}
       <div className="text-center py-16 fade-in opacity-0 transition-all duration-1000 ease-out delay-1400">
-        <p className="text-lg text-cyan-400 mb-4">Let's Build Together</p>
+        <p className="text-lg text-[#C59740] mb-4">Let's Build Together</p>
         <h2 className="text-3xl md:text-5xl text-white font-bold mb-8">
           Need To Rethink Your
           <br />
           Business Process?
         </h2>
         <Link to="/contact" className="inline-block">
-        <button className="px-8 py-4 bg-cyan-400 text-white rounded-lg hover:bg-cyan-500 transition text-base md:text-lg hover:scale-105 transform duration-200">
+        <button className="px-8 py-4 bg-[#C59740] text-white rounded-lg hover:bg-[#C59740] transition text-base md:text-lg hover:scale-105 transform duration-200">
           Get In Touch →
         </button>
         </Link>
