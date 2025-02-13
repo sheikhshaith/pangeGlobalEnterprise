@@ -7,10 +7,19 @@ const Footer = () => {
     <footer className="bg-black text-gray-400 py-16 px-8">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between">
         {/* Brand Section */}
-        <div className="space-y-4">
+        {/* <div className="space-y-4">
           <div className="flex items-center space-x-2">
             <div className="text-cyan-400 text-4xl font-bold">PGE</div>
-            {/* <h2 className="text-2xl font-bold text-white">Pixify</h2> */}
+          </div>
+        </div> */}
+
+        <div className="space-y-4">
+          <div className="flex items-center space-x-2">
+            <img
+              src="/logo-removebg.png"
+              alt="PGE Logo"
+              className="h-10 w-auto"
+            />
           </div>
         </div>
 
@@ -21,12 +30,12 @@ const Footer = () => {
             <li>
               <Link to="/about" className="hover:text-white">
 
-              About
+                About
               </Link>
             </li>
             <li>
               <Link to="/Pages/ServicesPage" className="hover:text-white">
-              Services
+                Services
               </Link>
             </li>
             <li>
