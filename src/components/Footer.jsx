@@ -1,5 +1,6 @@
 // import React from "react";
 import { Facebook, Instagram, Linkedin, Dribbble, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -18,44 +19,45 @@ const Footer = () => {
           <h3 className="text-gray-500 font-bold uppercase">Useful Pages</h3>
           <ul className="space-y-2">
             <li>
-              <a href="/about" className="hover:text-white">
+              <Link to="/about" className="hover:text-white">
+
               About
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/Pages/ServicesPage" className="hover:text-white">
+              <Link to="/Pages/ServicesPage" className="hover:text-white">
               Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/client" className="hover:text-white">
+              <Link to="/client" className="hover:text-white">
                 Client
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/ourteam" className="hover:text-white">
+              <Link to="/ourteam" className="hover:text-white">
                 Team
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/OurProject" className="hover:text-white">
+              <Link to="/OurProject" className="hover:text-white">
                 Projects
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/faq" className="hover:text-white">
+              <Link to="/faq" className="hover:text-white">
                 FAQs
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/careers" className="hover:text-white">
+              <Link to="/careers" className="hover:text-white">
                 Careers
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/Contact" className="hover:text-white">
+              <Link to="/Contact" className="hover:text-white">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
