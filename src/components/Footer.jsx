@@ -25,11 +25,10 @@ const Footer = () => {
 
         {/* Useful Pages */}
         <div className="space-y-3">
-          <h3 className="text-gray-500 font-bold uppercase">Useful Pages</h3>
+          <h3 className="text-[#C59740] font-bold uppercase">Useful Pages</h3>
           <ul className="space-y-2">
             <li>
               <Link to="/about" className="hover:text-white">
-
                 About
               </Link>
             </li>
@@ -73,7 +72,7 @@ const Footer = () => {
 
         {/* Our Services */}
         <div className="space-y-3">
-          <h3 className="text-gray-500 font-bold uppercase">Our Services</h3>
+          <h3 className="text-[#C59740] font-bold uppercase">Our Services</h3>
           <ul className="space-y-2">
             <li>
               <a href="#" className="hover:text-white">
