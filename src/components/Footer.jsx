@@ -18,23 +18,38 @@ const Footer = () => {
           <h3 className="text-gray-500 font-bold uppercase">Useful Pages</h3>
           <ul className="space-y-2">
             <li>
+              <a href="/about" className="hover:text-white">
+              About
+              </a>
+            </li>
+            <li>
               <a href="/Pages/ServicesPage" className="hover:text-white">
-                Services
+              Services
               </a>
             </li>
             <li>
-              <a href="/About" className="hover:text-white">
-                About
+              <a href="/client" className="hover:text-white">
+                Client
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-white">
-                Blog
+              <a href="/ourteam" className="hover:text-white">
+                Team
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-white">
-                Shop
+              <a href="/OurProject" className="hover:text-white">
+                Projects
+              </a>
+            </li>
+            <li>
+              <a href="/faq" className="hover:text-white">
+                FAQs
+              </a>
+            </li>
+            <li>
+              <a href="/careers" className="hover:text-white">
+                Careers
               </a>
             </li>
             <li>
