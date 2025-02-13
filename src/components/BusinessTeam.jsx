@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useState } from "react";
 
 function BusinessTeam() {
@@ -34,10 +32,13 @@ function BusinessTeam() {
       desktop: 4,
     };
 
-    const screenWidth = typeof window !== 'undefined' ? window.innerWidth : 0;
-    const count = screenWidth < 640 ? displayCount.mobile :
-                 screenWidth < 1024 ? displayCount.tablet :
-                 displayCount.desktop;
+    const screenWidth = typeof window !== "undefined" ? window.innerWidth : 0;
+    const count =
+      screenWidth < 640
+        ? displayCount.mobile
+        : screenWidth < 1024
+        ? displayCount.tablet
+        : displayCount.desktop;
 
     const members = [];
     for (let i = 0; i < count; i++) {
@@ -89,7 +90,7 @@ function BusinessTeam() {
             <div
               key={idx}
               className={`w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full transition-colors duration-300 ${
-                idx === currentIndex ? "bg-cyan-400" : "bg-gray-300"
+                idx === currentIndex ? "bg-[#C59740]" : "bg-gray-300"
               }`}
             />
           ))}
@@ -97,11 +98,12 @@ function BusinessTeam() {
 
         <div className="text-center border-t border-gray-700 pt-6 sm:pt-8">
           <p className="text-sm sm:text-base text-gray-300 max-w-2xl mx-auto px-4">
-            Join Our Team: Recruiting Skilled Consulting Workers for Exciting, Rewarding Opportunities
+            Join Our Team: Recruiting Skilled Consulting Workers for Exciting,
+            Rewarding Opportunities
           </p>
           <a
             href="#"
-            className="text-cyan-400 hover:text-cyan-300 hover:underline font-medium mt-3 inline-block text-sm sm:text-base transition-colors duration-300"
+            className="text-[#C59740] hover:text-[#C59740] hover:underline font-medium mt-3 inline-block text-sm sm:text-base transition-colors duration-300"
           >
             Join Our Team
           </a>

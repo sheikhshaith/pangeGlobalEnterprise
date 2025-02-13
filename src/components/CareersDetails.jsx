@@ -28,10 +28,10 @@ const CareersDetails = () => {
 
           {/* Animated Border */}
           <div className="absolute inset-0 pointer-events-none rounded-full overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveX_2s_linear_infinite]"></div>
-            <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveX_2s_linear_infinite]"></div>
-            <div className="absolute top-0 left-0 h-full w-0.5 bg-gradient-to-b from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveY_2s_linear_infinite]"></div>
-            <div className="absolute top-0 right-0 h-full w-0.5 bg-gradient-to-b from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveY_2s_linear_infinite]"></div>
+            <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-800 via-[#C59740] to-cyan-800 animate-[borderMoveX_2s_linear_infinite]"></div>
+            <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-800 via-[#C59740] to-cyan-800 animate-[borderMoveX_2s_linear_infinite]"></div>
+            <div className="absolute top-0 left-0 h-full w-0.5 bg-gradient-to-b from-cyan-800 via-[#C59740] to-cyan-800 animate-[borderMoveY_2s_linear_infinite]"></div>
+            <div className="absolute top-0 right-0 h-full w-0.5 bg-gradient-to-b from-cyan-800 via-[#C59740] to-cyan-800 animate-[borderMoveY_2s_linear_infinite]"></div>
           </div>
         </div>
       </div>
@@ -160,7 +160,7 @@ const JobPosting = () => {
               </h2>
               <ul className="space-y-3">
                 <li className="flex items-start gap-2">
-                  <span className="text-cyan-400 mt-2">•</span>
+                  <span className="text-[#C59740] mt-2">•</span>
                   <span className="text-gray-300 text-sm sm:text-base">
                     Manages, designs, and implements policies and procedures
                     relating to a company's <br></br> Employee Assistance
@@ -168,39 +168,39 @@ const JobPosting = () => {
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-cyan-400 mt-2">•</span>
+                  <span className="text-[#C59740] mt-2">•</span>
                   <span className="text-gray-300 text-sm sm:text-base">
                     Ensures that inpatient and outpatient counseling and care
                     facilities meet company <br></br> standards.
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-cyan-400 mt-2">•</span>
+                  <span className="text-[#C59740] mt-2">•</span>
                   <span className="text-gray-300 text-sm sm:text-base">
                     Provides training to management for dealing with medical and
                     behavioral problems.
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-cyan-400 mt-2">•</span>
+                  <span className="text-[#C59740] mt-2">•</span>
                   <span className="text-gray-300 text-sm sm:text-base">
                     Provides counseling to employees in the program.
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-cyan-400 mt-2">•</span>
+                  <span className="text-[#C59740] mt-2">•</span>
                   <span className="text-gray-300 text-sm sm:text-base">
                     Requires a bachelor’s degree in a related area.
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-cyan-400 mt-2">•</span>
+                  <span className="text-[#C59740] mt-2">•</span>
                   <span className="text-gray-300 text-sm sm:text-base">
                     Typically reports to top management.
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-cyan-400 mt-2">•</span>
+                  <span className="text-[#C59740] mt-2">•</span>
                   <span className="text-gray-300 text-sm sm:text-base">
                     Typically manages through subordinate managers and
                     professionals in larger groups <br></br> of moderate
@@ -208,7 +208,7 @@ const JobPosting = () => {
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-cyan-400 mt-2">•</span>
+                  <span className="text-[#C59740] mt-2">•</span>
                   <span className="text-gray-300 text-sm sm:text-base">
                     Provides input to strategic decisions that affect the
                     functional area of responsibility.
@@ -224,46 +224,46 @@ const JobPosting = () => {
               </h2>
               <ul className="space-y-3">
                 <li className="flex items-start gap-2">
-                  <span className="text-cyan-400 mt-2">•</span>
+                  <span className="text-[#C59740] mt-2">•</span>
                   <span className="text-gray-300 text-sm sm:text-base">
                     Minimum 8 years work experience as Employee Assistance
                     Professional
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-cyan-400 mt-2">•</span>
+                  <span className="text-[#C59740] mt-2">•</span>
                   <span className="text-gray-300 text-sm sm:text-base">
                     CA Licensed clinical social worker (LCSW) or,
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-cyan-400 mt-2">•</span>
+                  <span className="text-[#C59740] mt-2">•</span>
                   <span className="text-gray-300 text-sm sm:text-base">
                     CA Marriage and Family Therapist (MFT or LMFT) or,
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-cyan-400 mt-2">•</span>
+                  <span className="text-[#C59740] mt-2">•</span>
                   <span className="text-gray-300 text-sm sm:text-base">
                     A licensed psychologist in the state of California (PhD)
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-cyan-400 mt-2">•</span>
+                  <span className="text-[#C59740] mt-2">•</span>
                   <span className="text-gray-300 text-sm sm:text-base">
                     Excellent communication skills to effectively interact with
                     our staff and faculty
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-cyan-400 mt-2">•</span>
+                  <span className="text-[#C59740] mt-2">•</span>
                   <span className="text-gray-300 text-sm sm:text-base">
                     Ability to work effectively both on an individual basis and
                     as part of a team
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-cyan-400 mt-2">•</span>
+                  <span className="text-[#C59740] mt-2">•</span>
                   <span className="text-gray-300 text-sm sm:text-base">
                     Strong computer skills to maintain accurate and complete
                     documentation
@@ -279,7 +279,7 @@ const JobPosting = () => {
               </h2>
               <ul className="space-y-3">
                 <li className="flex items-start gap-2">
-                  <span className="text-cyan-400 mt-2">•</span>
+                  <span className="text-[#C59740] mt-2">•</span>
                   <span className="text-gray-300 text-sm sm:text-base">
                     Health, dental, and vision plans, tuition assistance for our
                     employees and their families,<br></br> paid time
@@ -287,20 +287,20 @@ const JobPosting = () => {
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-cyan-400 mt-2">•</span>
+                  <span className="text-[#C59740] mt-2">•</span>
                   <span className="text-gray-300 text-sm sm:text-base">
                     2:1 retirement plan contributions, child care centers, and
                     up to $50,000 housing subsidy
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-cyan-400 mt-2">•</span>
+                  <span className="text-[#C59740] mt-2">•</span>
                   <span className="text-gray-300 text-sm sm:text-base">
                     ICF (International Coach Federation) certified
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-cyan-400 mt-2">•</span>
+                  <span className="text-[#C59740] mt-2">•</span>
                   <span className="text-gray-300 text-sm sm:text-base">
                     CEAP Certified Employee Assistance Professional desired, but
                     not required.
@@ -316,7 +316,7 @@ const JobPosting = () => {
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <MapPin className="w-5 h-5 text-cyan-400" />
+                    <MapPin className="w-5 h-5 text-[#C59740]" />
                     <span className="text-gray-400 text-sm sm:text-base">
                       Location:
                     </span>
@@ -328,7 +328,7 @@ const JobPosting = () => {
 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <Briefcase className="w-5 h-5 text-cyan-400" />
+                    <Briefcase className="w-5 h-5 text-[#C59740]" />
                     <span className="text-gray-400 text-sm sm:text-base">
                       Job Type:
                     </span>
@@ -340,7 +340,7 @@ const JobPosting = () => {
 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <DollarSign className="w-5 h-5 text-cyan-400" />
+                    <DollarSign className="w-5 h-5 text-[#C59740]" />
                     <span className="text-gray-400 text-sm sm:text-base">
                       Salary:
                     </span>
@@ -352,7 +352,7 @@ const JobPosting = () => {
 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <Calendar className="w-5 h-5 text-cyan-400" />
+                    <Calendar className="w-5 h-5 text-[#C59740]" />
                     <span className="text-gray-400 text-sm sm:text-base">
                       Working Days:
                     </span>
@@ -363,15 +363,15 @@ const JobPosting = () => {
                 </div>
               </div>
               <Link to="/jobapplicationform" className="inline-block">
-              <button
-                // onClick={() =>
-                //   window.open(applyLink, "_blank", "noopener noreferrer")
-                // }
-                className="w-full bg-cyan-400 text-white py-2.5 px-8 sm:py-3 rounded-lg mt-4 sm:mt-6 hover:bg-cyan-500 transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
-              >
-                Apply Now
-                <span className="transform translate-x-1">→</span>
-              </button>
+                <button
+                  // onClick={() =>
+                  //   window.open(applyLink, "_blank", "noopener noreferrer")
+                  // }
+                  className="w-full bg-[#C59740] text-white py-2.5 px-8 sm:py-3 rounded-lg mt-4 sm:mt-6 hover:bg-[#C59740] transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
+                >
+                  Apply Now
+                  <span className="transform translate-x-1">→</span>
+                </button>
               </Link>
             </div>
           </div>
@@ -385,7 +385,7 @@ const HeroSection = () => {
     <div className="relative w-full">
       {/* Lower Section with Text */}
       <div className="bg-black text-white text-center py-16 px-4 sm:px-6 md:px-8 lg:px-16">
-        <p className="text-base sm:text-lg text-cyan-400 py-4 sm:py-8">
+        <p className="text-base sm:text-lg text-[#C59740] py-4 sm:py-8">
           Let's Build Together
         </p>
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl pb-6 sm:pb-8 text-white font-bold mt-2">
@@ -393,7 +393,7 @@ const HeroSection = () => {
           <br />
           Business Process?
         </h1>
-        <button className="mt-4 px-6 sm:px-8 py-3 sm:py-4 bg-cyan-400 text-white rounded-lg hover:bg-cyan-500 transition text-sm sm:text-base md:text-lg">
+        <button className="mt-4 px-6 sm:px-8 py-3 sm:py-4 bg-[#C59740] text-white rounded-lg hover:bg-[#C59740] transition text-sm sm:text-base md:text-lg">
           Get In Touch →
         </button>
       </div>

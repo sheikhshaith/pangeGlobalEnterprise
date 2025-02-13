@@ -16,25 +16,27 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const ContactPage = () => {
   return (
-  <div className="min-h-screen bg-black">
-        {/* Navbar */}
-    
-  
-       <div className="flex justify-center mt-6">
-                   <div className="relative px-6 py-2 rounded-full inline-flex items-center gap-6 bg-white/10 backdrop-blur-md">
-                     <Link to="/" className="hover:text-cyan-500 text-white font-medium">
-                       Home
-                     </Link>
-                     <span className="text-gray-400">•</span>
-                     <Link to="/Contact" className="hover:text-cyan-500 text-white font-medium">
-                       Contact
-                     </Link>
-                     {/* Cyan Border (pointer-events-none prevents it from blocking clicks) */}
-                     <div className="absolute inset-0 rounded-full pointer-events-none">
-                       <div className="absolute inset-0 rounded-full border border-cyan-400"></div>
-                     </div>
-                   </div>
-                 </div>
+    <div className="min-h-screen bg-black">
+      {/* Navbar */}
+
+      <div className="flex justify-center mt-6">
+        <div className="relative px-6 py-2 rounded-full inline-flex items-center gap-6 bg-white/10 backdrop-blur-md">
+          <Link to="/" className="hover:text-[#C59740] text-white font-medium">
+            Home
+          </Link>
+          <span className="text-gray-400">•</span>
+          <Link
+            to="/Contact"
+            className="hover:text-[#C59740] text-white font-medium"
+          >
+            Contact
+          </Link>
+          {/* Cyan Border (pointer-events-none prevents it from blocking clicks) */}
+          <div className="absolute inset-0 rounded-full pointer-events-none">
+            <div className="absolute inset-0 rounded-full border border-[#C59740]"></div>
+          </div>
+        </div>
+      </div>
 
       <main className="container mx-auto px-4">
         <div className="text-center py-8 md:py-12">
@@ -89,11 +91,11 @@ const ContactPage = () => {
 
               <div className="space-y-4 mb-8">
                 <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-cyan-400" />
+                  <Check className="w-5 h-5 text-[#C59740]" />
                   <span className="text-gray-900">24h customer support</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-cyan-400" />
+                  <Check className="w-5 h-5 text-[#C59740]" />
                   <span className="text-gray-900">Project Management</span>
                 </div>
                 <div className="flex items-center gap-3">
@@ -110,7 +112,7 @@ const ContactPage = () => {
                 </div>
               </div>
 
-              <button className="w-full py-3 px-4 border border-black text-black bg-white rounded hover:bg-cyan-400 hover:border-cyan-400 hover:text-white transition-colors duration-200 flex items-center justify-center gap-2">
+              <button className="w-full py-3 px-4 border border-black text-black bg-white rounded hover:bg-[#C59740] hover:border-[#C59740] hover:text-white transition-colors duration-200 flex items-center justify-center gap-2">
                 Select Plan
                 <svg
                   className="w-4 h-4"
@@ -145,19 +147,19 @@ const ContactPage = () => {
 
               <div className="space-y-4 mb-8">
                 <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-cyan-400" />
+                  <Check className="w-5 h-5 text-[#C59740]" />
                   <span className="text-gray-900">24h customer support</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-cyan-400" />
+                  <Check className="w-5 h-5 text-[#C59740]" />
                   <span className="text-gray-900">Project Management</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-cyan-400" />
+                  <Check className="w-5 h-5 text-[#C59740]" />
                   <span className="text-gray-900">Basic Reporting</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-cyan-400" />
+                  <Check className="w-5 h-5 text-[#C59740]" />
                   <span className="text-gray-900">Up to 10 Team Members</span>
                 </div>
                 <div className="flex items-center gap-3">
@@ -166,7 +168,7 @@ const ContactPage = () => {
                 </div>
               </div>
 
-              <button className="w-full py-3 px-4 border border-black text-black bg-white rounded hover:bg-cyan-400 hover:border-cyan-400 hover:text-white transition-colors duration-200 flex items-center justify-center gap-2">
+              <button className="w-full py-3 px-4 border border-black text-black bg-white rounded hover:bg-[#C59740] hover:border-[#C59740] hover:text-white transition-colors duration-200 flex items-center justify-center gap-2">
                 Select Plan
                 <svg
                   className="w-4 h-4"
@@ -201,28 +203,28 @@ const ContactPage = () => {
 
               <div className="space-y-4 mb-8">
                 <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-cyan-400" />
+                  <Check className="w-5 h-5 text-[#C59740]" />
                   <span className="text-gray-900">24h customer support</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-cyan-400" />
+                  <Check className="w-5 h-5 text-[#C59740]" />
                   <span className="text-gray-900">Project Management</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-cyan-400" />
+                  <Check className="w-5 h-5 text-[#C59740]" />
                   <span className="text-gray-900">Basic Reporting</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-cyan-400" />
+                  <Check className="w-5 h-5 text-[#C59740]" />
                   <span className="text-gray-900">Up to 10 Team Members</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-cyan-400" />
+                  <Check className="w-5 h-5 text-[#C59740]" />
                   <span className="text-gray-900">Professional Support</span>
                 </div>
               </div>
 
-              <button className="w-full py-3 px-4 border border-black text-black bg-white rounded hover:bg-cyan-400 hover:border-cyan-400 hover:text-white transition-colors duration-200 flex items-center justify-center gap-2">
+              <button className="w-full py-3 px-4 border border-black text-black bg-white rounded hover:bg-[#C59740] hover:border-[#C59740] hover:text-white transition-colors duration-200 flex items-center justify-center gap-2">
                 Select Plan
                 <svg
                   className="w-4 h-4"
@@ -417,14 +419,14 @@ const ContactTestimonials = () => {
       {/* Navigation buttons */}
       <button
         onClick={prevSlide}
-        className="absolute left-2 sm:left-4 md:left-6 top-1/2 transform -translate-y-1/2 p-2 text-cyan-400 hover:text-cyan-600"
+        className="absolute left-2 sm:left-4 md:left-6 top-1/2 transform -translate-y-1/2 p-2 text-[#C59740] hover:text-[#C59740]"
       >
         <ChevronLeft size={24} />
       </button>
 
       <button
         onClick={nextSlide}
-        className="absolute right-2 sm:right-4 md:right-6 top-1/2 transform -translate-y-1/2 p-2 text-cyan-400 hover:text-cyan-600"
+        className="absolute right-2 sm:right-4 md:right-6 top-1/2 transform -translate-y-1/2 p-2 text-[#C59740] hover:text-[#C59740]"
       >
         <ChevronRight size={24} />
       </button>
@@ -436,7 +438,7 @@ const ContactTestimonials = () => {
           {[...Array(testimonials[currentSlide].rating)].map((_, i) => (
             <svg
               key={i}
-              className="w-4 sm:w-5 h-4 sm:h-5 text-cyan-400"
+              className="w-4 sm:w-5 h-4 sm:h-5 text-[#C59740]"
               fill="currentColor"
               viewBox="0 0 20 20"
             >
@@ -468,7 +470,7 @@ const ContactTestimonials = () => {
             key={index}
             onClick={() => goToSlide(index)}
             className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
-              currentSlide === index ? "bg-cyan-400 w-6 sm:w-8" : "bg-gray-300"
+              currentSlide === index ? "bg-[#C59740] w-6 sm:w-8" : "bg-gray-300"
             }`}
           />
         ))}
@@ -483,7 +485,7 @@ const ContectSection = () => {
     <div className="relative w-full">
       {/* Lower Section with Text */}
       <div className="bg-black text-white text-center py-16 px-4 sm:px-6 md:px-8 lg:px-16">
-        <p className="text-base sm:text-lg text-cyan-400 py-4 sm:py-8">
+        <p className="text-base sm:text-lg text-[#C59740] py-4 sm:py-8">
           Let's Build Together
         </p>
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl pb-6 sm:pb-8 text-white font-bold mt-2">
@@ -492,9 +494,9 @@ const ContectSection = () => {
           Business Process?
         </h1>
         <Link to="/contact" className="inline-block">
-        <button className="mt-4 px-6 sm:px-8 py-3 sm:py-4 bg-cyan-400 text-white rounded-lg hover:bg-cyan-500 transition text-sm sm:text-base md:text-lg">
-          Get In Touch →
-        </button>
+          <button className="mt-4 px-6 sm:px-8 py-3 sm:py-4 bg-[#C59740] text-white rounded-lg hover:bg-[#C59740] transition text-sm sm:text-base md:text-lg">
+            Get In Touch →
+          </button>
         </Link>
       </div>
       <BookingWidget />

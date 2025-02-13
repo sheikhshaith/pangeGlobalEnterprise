@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight } from "lucide-react";
 
 import {
   Check,
@@ -17,27 +17,29 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const OurTeam = () => {
   return (
     <div className="min-h-screen bg-black text-white">
-      
-     <div className="flex justify-center mt-6">
-                 <div className="relative px-6 py-2 rounded-full inline-flex items-center gap-6 bg-white/10 backdrop-blur-md">
-                   <Link to="/" className="hover:text-cyan-500 text-white font-medium">
-                     Home
-                   </Link>
-                   <span className="text-gray-400">•</span>
-                   <Link to="/OurTeam" className="hover:text-cyan-500 text-white font-medium">
-                     Team
-                   </Link>
-                   {/* Cyan Border (pointer-events-none prevents it from blocking clicks) */}
-                   <div className="absolute inset-0 rounded-full pointer-events-none">
-                     <div className="absolute inset-0 rounded-full border border-cyan-400"></div>
-                   </div>
-                 </div>
-               </div>
+      <div className="flex justify-center mt-6">
+        <div className="relative px-6 py-2 rounded-full inline-flex items-center gap-6 bg-white/10 backdrop-blur-md">
+          <Link to="/" className="hover:text-[#C59740] text-white font-medium">
+            Home
+          </Link>
+          <span className="text-gray-400">•</span>
+          <Link
+            to="/OurTeam"
+            className="hover:text-[#C59740] text-white font-medium"
+          >
+            Team
+          </Link>
+          {/* Cyan Border (pointer-events-none prevents it from blocking clicks) */}
+          <div className="absolute inset-0 rounded-full pointer-events-none">
+            <div className="absolute inset-0 rounded-full border border-[#C59740]"></div>
+          </div>
+        </div>
+      </div>
 
       <main className="container mx-auto px-4">
         <div className="text-center py-8 md:py-12">
           <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold leading-tight mb-8">
-          Our Team: Passionate Professionals
+            Our Team: Passionate Professionals
             <br />
             for Your Growth
           </h1>
@@ -59,7 +61,6 @@ const OurTeam = () => {
         </div>
       </main>
 
-      
       <TeamGrid />
       <OurTeamSlider />
       <ContactForm />
@@ -68,91 +69,88 @@ const OurTeam = () => {
   );
 };
 
-
-
-
 const TeamMember = ({ name, role, imageUrl }) => (
-    <div className="flex flex-col items-center text-center">
-      <div className="w-64 h-64 overflow-hidden mb-4">
-        <img 
-          src={imageUrl} 
-          alt={name}
-          className="w-full h-full object-cover grayscale transition-all duration-300 hover:grayscale-0"
-        />
+  <div className="flex flex-col items-center text-center">
+    <div className="w-64 h-64 overflow-hidden mb-4">
+      <img
+        src={imageUrl}
+        alt={name}
+        className="w-full h-full object-cover grayscale transition-all duration-300 hover:grayscale-0"
+      />
+    </div>
+    <h3 className="text-xl font-semibold mb-1">{name}</h3>
+    <p className="text-gray-300">{role}</p>
+  </div>
+);
+
+const TeamGrid = () => {
+  const teamMembers = [
+    {
+      name: "Marvin McKinney",
+      role: "Manager",
+      imageUrl: "/t1.webp",
+    },
+    {
+      name: "Jerome Bell",
+      role: "Advisor",
+      imageUrl: "/t2.webp",
+    },
+    {
+      name: "Jenny Wilson",
+      role: "Innovator",
+      imageUrl: "/t3.webp",
+    },
+    {
+      name: "Jacob Jones",
+      role: "Specialist",
+      imageUrl: "/t4.webp",
+    },
+    {
+      name: "John Lomka",
+      role: "Strategist",
+      imageUrl: "/t6.webp",
+    },
+    {
+      name: "Wesley Van't Hart",
+      role: "Executive",
+      imageUrl: "/t7.webp",
+    },
+    {
+      name: "Don Gepulango",
+      role: "Chief Officer",
+      imageUrl: "/t8.webp",
+    },
+    {
+      name: "Emma Doležal",
+      role: "Commercial Director",
+      imageUrl: "/t9.webp",
+    },
+  ];
+
+  return (
+    <div className="container mx-auto px-4 py-16">
+      <div className="text-left mb-12">
+        <p className="text-sm underline mb-2">Our Dedicated Team</p>
+        <h2 className="text-4xl text-white font-bold">
+          Meet Our Dynamic And Talented
+          <br />
+          Corporate Business Team
+        </h2>
       </div>
-      <h3 className="text-xl font-semibold mb-1">{name}</h3>
-      <p className="text-gray-300">{role}</p>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {teamMembers.map((member, index) => (
+          <TeamMember
+            key={index}
+            name={member.name}
+            role={member.role}
+            imageUrl={member.imageUrl}
+          />
+        ))}
+      </div>
     </div>
   );
-  
-  const TeamGrid = () => {
-    const teamMembers = [
-      {
-        name: 'Marvin McKinney',
-        role: 'Manager',
-        imageUrl: '/t1.webp'
-      },
-      {
-        name: 'Jerome Bell',
-        role: 'Advisor',
-        imageUrl: '/t2.webp'
-      },
-      {
-        name: 'Jenny Wilson',
-        role: 'Innovator',
-        imageUrl: '/t3.webp'
-      },
-      {
-        name: 'Jacob Jones',
-        role: 'Specialist',
-        imageUrl: '/t4.webp'
-      },
-      {
-        name: 'John Lomka',
-        role: 'Strategist',
-        imageUrl: '/t6.webp'
-      },
-      {
-        name: "Wesley Van't Hart",
-        role: 'Executive',
-        imageUrl: '/t7.webp'
-      },
-      {
-        name: 'Don Gepulango',
-        role: 'Chief Officer',
-        imageUrl: '/t8.webp'
-      },
-      {
-        name: 'Emma Doležal',
-        role: 'Commercial Director',
-        imageUrl: '/t9.webp'
-      }
-    ];
-  
-    return (
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-left mb-12">
-          <p className="text-sm underline mb-2">Our Dedicated Team</p>
-          <h2 className="text-4xl text-white font-bold">
-            Meet Our Dynamic And Talented<br />
-            Corporate Business Team
-          </h2>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {teamMembers.map((member, index) => (
-            <TeamMember
-              key={index}
-              name={member.name}
-              role={member.role}
-              imageUrl={member.imageUrl}
-            />
-          ))}
-        </div>
-      </div>
-    );
-  };
-
+};
 
 // OurTeam Slider Component
 const OurTeamSlider = () => {
@@ -273,15 +271,13 @@ const OurTeamSlider = () => {
   );
 };
 
-
-
 // our team contact from
 const ContactForm = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    message: ''
+    name: "",
+    phone: "",
+    email: "",
+    message: "",
   });
 
   const [errors, setErrors] = useState({});
@@ -290,50 +286,53 @@ const ContactForm = () => {
 
   const validateForm = () => {
     const newErrors = {};
-    
+
     if (!formData.name.trim()) {
       newErrors.name = "Name is required";
     }
-    
+
     if (!formData.phone.trim()) {
       newErrors.phone = "Phone is required";
     } else if (!/^\+?[\d\s-]+$/.test(formData.phone)) {
       newErrors.phone = "Invalid phone number";
     }
-    
+
     if (!formData.email.trim()) {
       newErrors.email = "Email is required";
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = "Invalid email address";
     }
-    
+
     if (!formData.message.trim()) {
       newErrors.message = "Message is required";
     }
-    
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
-    
+
     setIsSubmitting(true);
     setSubmitStatus(null);
 
     try {
-      const response = await fetch('https://formsubmit.co/ajax/pgeoffice001@gmail.com', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      });
+      const response = await fetch(
+        "https://formsubmit.co/ajax/pgeoffice001@gmail.com",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       if (response.ok) {
         setSubmitStatus("success");
@@ -345,12 +344,12 @@ const ContactForm = () => {
   };
 
   const services = [
-    'Strategic Planning',
-    'Financial Consulting',
-    'Operational Optimization',
-    'HR Development',
-    'Marketing Strategy',
-    'Technology Integration'
+    "Strategic Planning",
+    "Financial Consulting",
+    "Operational Optimization",
+    "HR Development",
+    "Marketing Strategy",
+    "Technology Integration",
   ];
 
   return (
@@ -362,16 +361,21 @@ const ContactForm = () => {
           Collaborate With Ambitious Partners
           <span className="text-gray-400"> And Tackle New Challenges.</span>
         </h1>
-        
+
         <div className="relative mt-8">
-          <img 
+          <img
             src="/h3-img-1.webp"
             alt="Business Professional"
             className="w-full h-full object-cover"
           />
           <div className="absolute bottom-8 left-8">
             <svg width="100" height="40" className="text-gray-800">
-              <path d="M5 20 Q 25 5, 45 20 T 85 20" stroke="currentColor" fill="none" strokeWidth="2"/>
+              <path
+                d="M5 20 Q 25 5, 45 20 T 85 20"
+                stroke="currentColor"
+                fill="none"
+                strokeWidth="2"
+              />
             </svg>
           </div>
         </div>
@@ -380,12 +384,14 @@ const ContactForm = () => {
       {/* Right Section */}
       <div className="lg:w-1/2">
         <div className="mb-8">
-          <h2 className="text-xl text-white font-semibold mb-4">What Can We Help You With?</h2>
+          <h2 className="text-xl text-white font-semibold mb-4">
+            What Can We Help You With?
+          </h2>
           <div className="flex flex-wrap gap-2">
             {services.map((service, index) => (
               <button
                 key={index}
-                className="px-4 py-2 rounded-full border border-gray-200 text-sm hover:bg-cyan-400 hover:border-cyan-400 transition-colors"
+                className="px-4 py-2 rounded-full border border-gray-200 text-sm hover:bg-[#C59740] hover:border-[#C59740] transition-colors"
               >
                 {service}
               </button>
@@ -395,89 +401,105 @@ const ContactForm = () => {
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label htmlFor="name" className="text-sm text-gray-300">NAME</label>
+            <label htmlFor="name" className="text-sm text-gray-300">
+              NAME
+            </label>
             <input
               type="text"
               id="name"
               placeholder="e.g. Oliver Spiteri"
               className={`w-full p-3 border rounded-lg mt-1 bg-transparent ${
-                errors.name ? 'border-red-500' : 'border-gray-200'
+                errors.name ? "border-red-500" : "border-gray-200"
               }`}
               value={formData.name}
               onChange={(e) => {
-                setFormData({...formData, name: e.target.value});
-                if (errors.name) setErrors({...errors, name: ''});
+                setFormData({ ...formData, name: e.target.value });
+                if (errors.name) setErrors({ ...errors, name: "" });
               }}
             />
-            {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
+            {errors.name && (
+              <p className="text-red-500 text-sm mt-1">{errors.name}</p>
+            )}
           </div>
 
           <div>
-            <label htmlFor="phone" className="text-sm text-gray-300">PHONE</label>
+            <label htmlFor="phone" className="text-sm text-gray-300">
+              PHONE
+            </label>
             <input
               type="tel"
               id="phone"
               placeholder="+44 20 8980 9731"
               className={`w-full p-3 border rounded-lg mt-1 bg-transparent ${
-                errors.phone ? 'border-red-500' : 'border-gray-200'
+                errors.phone ? "border-red-500" : "border-gray-200"
               }`}
               value={formData.phone}
               onChange={(e) => {
-                setFormData({...formData, phone: e.target.value});
-                if (errors.phone) setErrors({...errors, phone: ''});
+                setFormData({ ...formData, phone: e.target.value });
+                if (errors.phone) setErrors({ ...errors, phone: "" });
               }}
             />
-            {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
+            {errors.phone && (
+              <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
+            )}
           </div>
 
           <div>
-            <label htmlFor="email" className="text-sm text-gray-300">EMAIL</label>
+            <label htmlFor="email" className="text-sm text-gray-300">
+              EMAIL
+            </label>
             <input
               type="email"
               id="email"
               placeholder="info@forgexindustry.co.uk"
               className={`w-full p-3 border rounded-lg mt-1 bg-transparent ${
-                errors.email ? 'border-red-500' : 'border-gray-200'
+                errors.email ? "border-red-500" : "border-gray-200"
               }`}
               value={formData.email}
               onChange={(e) => {
-                setFormData({...formData, email: e.target.value});
-                if (errors.email) setErrors({...errors, email: ''});
+                setFormData({ ...formData, email: e.target.value });
+                if (errors.email) setErrors({ ...errors, email: "" });
               }}
             />
-            {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
+            {errors.email && (
+              <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+            )}
           </div>
 
           <div>
-            <label htmlFor="message" className="text-sm text-gray-300">MESSAGE</label>
+            <label htmlFor="message" className="text-sm text-gray-300">
+              MESSAGE
+            </label>
             <textarea
               id="message"
               placeholder="Write your message here..."
               rows="4"
               className={`w-full p-3 border rounded-lg mt-1 bg-transparent ${
-                errors.message ? 'border-red-500' : 'border-gray-200'
+                errors.message ? "border-red-500" : "border-gray-200"
               }`}
               value={formData.message}
               onChange={(e) => {
-                setFormData({...formData, message: e.target.value});
-                if (errors.message) setErrors({...errors, message: ''});
+                setFormData({ ...formData, message: e.target.value });
+                if (errors.message) setErrors({ ...errors, message: "" });
               }}
             />
-            {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
+            {errors.message && (
+              <p className="text-red-500 text-sm mt-1">{errors.message}</p>
+            )}
           </div>
 
           <button
             type="submit"
             disabled={isSubmitting}
-            className="flex items-center gap-2 px-6 py-3 bg-cyan-400 text-white rounded-lg hover:bg-cyan-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="flex items-center gap-2 px-6 py-3 bg-[#C59740] text-white rounded-lg hover:bg-[#C59740] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            {isSubmitting ? 'Sending...' : 'Send Message'}
+            {isSubmitting ? "Sending..." : "Send Message"}
             <ArrowRight size={20} />
           </button>
 
           {submitStatus === "success" && (
             <div className="text-center">
-              <p className="text-cyan-500 font-medium">
+              <p className="text-[#C59740] font-medium">
                 Your message was sent successfully!
               </p>
             </div>
@@ -488,16 +510,13 @@ const ContactForm = () => {
   );
 };
 
-
-
-
 // ContactSection Component
 const ContectSection = () => {
   return (
     <div className="relative w-full">
       {/* Lower Section with Text */}
       <div className="bg-black text-white text-center py-16 px-4 sm:px-6 md:px-8 lg:px-16">
-        <p className="text-base sm:text-lg text-cyan-400 py-4 sm:py-8">
+        <p className="text-base sm:text-lg text-[#C59740] py-4 sm:py-8">
           Let's Build Together
         </p>
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl pb-6 sm:pb-8 text-white font-bold mt-2">
@@ -506,9 +525,9 @@ const ContectSection = () => {
           Business Process?
         </h1>
         <Link to="/contact" className="inline-block">
-        <button className="mt-4 px-6 sm:px-8 py-3 sm:py-4 bg-cyan-400 text-white rounded-lg hover:bg-cyan-500 transition text-sm sm:text-base md:text-lg">
-          Get In Touch →
-        </button>
+          <button className="mt-4 px-6 sm:px-8 py-3 sm:py-4 bg-[#C59740] text-white rounded-lg hover:bg-[#C59740] transition text-sm sm:text-base md:text-lg">
+            Get In Touch →
+          </button>
         </Link>
       </div>
     </div>

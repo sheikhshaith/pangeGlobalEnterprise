@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 const ChatWidget = () => {
   useEffect(() => {
@@ -24,9 +24,13 @@ const ChatWidget = () => {
       "https://widgets.leadconnectorhq.com/chat-widget/loader.js"
     );
     script.async = true;
-    
+
     // Check if script is already loaded
-    if (!document.querySelector('script[src="https://widgets.leadconnectorhq.com/loader.js"]')) {
+    if (
+      !document.querySelector(
+        'script[src="https://widgets.leadconnectorhq.com/loader.js"]'
+      )
+    ) {
       document.body.appendChild(script);
     }
 

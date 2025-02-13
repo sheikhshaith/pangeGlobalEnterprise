@@ -20,7 +20,7 @@
 //           success and development.
 //         </motion.h2>
 
-//         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 text-center text-3xl md:text-4xl text-cyan-400">
+//         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 text-center text-3xl md:text-4xl text-[#C59740]">
 //           {[
 //             { value: "13+", label: "Years of Experience" },
 //             { value: "25+", label: "Projects Worldwide" },
@@ -50,11 +50,11 @@
 //           transition={{ delay: 1, duration: 0.8 }}
 //         >
 //           <motion.button
-//             className="bg-cyan-400 text-dark font-medium py-3 px-10 rounded-full shadow-lg transition-all focus:ring-4 focus:ring-teal-200"
+//             className="bg-[#C59740] text-dark font-medium py-3 px-10 rounded-full shadow-lg transition-all focus:ring-4 focus:ring-teal-200"
 //             whileHover={{
 //               scale: 1.1,
 //               boxShadow: "0px 10px 20px rgba(0, 183, 227, 0.5)",
-//               backgroundColor: "cyan-400",
+//               backgroundColor: "[#C59740]",
 //             }}
 //             whileTap={{ scale: 0.9 }}
 //             animate={{
@@ -75,19 +75,8 @@
 
 // export default StatsSection;
 
-
-
-
-
-
-
-
-
-
-
-
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const StatsDisplay = () => {
   return (
@@ -97,28 +86,36 @@ const StatsDisplay = () => {
         {/* Years of Experience Card */}
         <div className="bg-slate-900/50 rounded-3xl p-8 flex-1 min-w-[300px] flex flex-col items-center">
           <div className="text-5xl text-[#C59740] font-light mb-4">13+</div>
-          <div className="text-gray-300 text-xl text-center">Years of Experience</div>
+          <div className="text-gray-300 text-xl text-center">
+            Years of Experience
+          </div>
         </div>
 
         {/* Projects Worldwide Card */}
         <div className="bg-slate-900/50 rounded-3xl p-8 flex-1 min-w-[300px] flex flex-col items-center">
           <div className="text-5xl text-[#C59740] font-light mb-4">25+</div>
-          <div className="text-gray-300 text-xl text-center">Projects Worldwide</div>
+          <div className="text-gray-300 text-xl text-center">
+            Projects Worldwide
+          </div>
         </div>
 
         {/* Clients Worldwide Card */}
         <div className="bg-slate-900/50 rounded-3xl p-8 flex-1 min-w-[300px] flex flex-col items-center">
           <div className="text-5xl text-[#C59740] font-light mb-4">93+</div>
-          <div className="text-gray-300 text-xl text-center">Clients Worldwide</div>
+          <div className="text-gray-300 text-xl text-center">
+            Clients Worldwide
+          </div>
         </div>
       </div>
 
       {/* Know About Us Button */}
       <Link to="/about" className="inline-block">
-      <button className="px-8 py-4 bg-[#C59740] text-white rounded-full text-lg 
-                       hover:bg-[#C59740] transition-colors duration-300">
-        Know About Us
-      </button>
+        <button
+          className="px-8 py-4 bg-[#C59740] text-white rounded-full text-lg 
+                       hover:bg-[#C59740] transition-colors duration-300"
+        >
+          Know About Us
+        </button>
       </Link>
     </div>
   );

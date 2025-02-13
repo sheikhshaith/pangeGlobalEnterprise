@@ -1,11 +1,12 @@
-
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const ContactSection = () => {
   return (
-    <div className="bg-[#0C1122]/70
- relative overflow-hidden min-h-[500px] sm:min-h-[600px]">
+    <div
+      className="bg-[#0C1122]/70
+ relative overflow-hidden min-h-[500px] sm:min-h-[600px]"
+    >
       {/* Main Content Container */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 relative z-10">
         {/* Top Label */}
@@ -42,9 +43,9 @@ const ContactSection = () => {
 
         {/* CTA Button */}
         <Link to="/contact" className="inline-block">
-        <button className="w-full sm:w-auto px-6 py-3 border border-[#C59740] text-[#C59740] text-sm sm:text-base rounded-full hover:bg-[#C59740] hover:text-white transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-cyan-600">
-          Get In Touch
-        </button>
+          <button className="w-full sm:w-auto px-6 py-3 border border-[#C59740] text-[#C59740] text-sm sm:text-base rounded-full hover:bg-[#C59740] hover:text-white transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-[#C59740]">
+            Get In Touch
+          </button>
         </Link>
       </div>
 
@@ -64,8 +65,10 @@ const ContactSection = () => {
       </div>
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-[#0C1122]/70
- to-transparent z-0"></div>
+      <div
+        className="absolute inset-0 bg-[#0C1122]/70
+ to-transparent z-0"
+      ></div>
 
       <style jsx>{`
         @keyframes spin-slow {
@@ -85,13 +88,6 @@ const ContactSection = () => {
 };
 
 export default ContactSection;
-
-
-
-
-
-
-
 
 // import React from "react";
 
