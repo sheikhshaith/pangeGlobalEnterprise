@@ -63,15 +63,15 @@ const FAQSection = () => {
                 onClick={() => handleQuestionClick(faq.id)}
                 className="w-full py-6 flex justify-between items-center text-left group transition-all duration-300"
               >
-                <span className={`text-xl ${openQuestion === faq.id ? 'text-cyan-400' : 'text-gray-300'} group-hover:text-cyan-500 transition-colors duration-300 flex items-center gap-4`}>
+                <span className={`text-xl ${openQuestion === faq.id ? 'text-[#C59740]' : 'text-gray-300'} group-hover:text-[#C59740] transition-colors duration-300 flex items-center gap-4`}>
                   <X className={`w-5 h-5 transform transition-transform duration-300 ${openQuestion === faq.id ? 'rotate-45 text-teal-400' : 'text-gray-500'}`} />
                   {faq.question}
                 </span>
                 <span className={`transform transition-transform duration-300 ${openQuestion === faq.id ? 'rotate-180' : ''}`}>
                   {openQuestion === faq.id ? (
-                    <Minus className="w-6 h-6 text-cyan-400" />
+                    <Minus className="w-6 h-6 text-[#C59740]" />
                   ) : (
-                    <Plus className="w-6 h-6 text-gray-600 group-hover:text-cyan-400" />
+                    <Plus className="w-6 h-6 text-gray-600 group-hover:text-[#C59740]" />
                   )}
                 </span>
               </button>

@@ -118,7 +118,7 @@ const ContactForm = () => {
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-white">
                 Get In Touch
                 <br />
-                With Us Today<span className="text-cyan-500">.</span>
+                With Us Today<span className="text-[#C59740]">.</span>
               </h1>
               <p className="text-gray-400 mb-4 sm:mb-8 text-base sm:text-lg">
                 Our consulting services drive growth, optimize operations, and ensure strategic business success.
@@ -134,7 +134,7 @@ const ContactForm = () => {
           </div>
 
           <div className="w-full lg:w-6/12 lg:ml-auto mt-8 lg:mt-0">
-            <div className="relative bg-black/30 backdrop-blur-sm p-4 sm:p-6 lg:p-8 border border-cyan-500/80 rounded-lg">
+            <div className="relative bg-black/30 backdrop-blur-sm p-4 sm:p-6 lg:p-8 border border-[#C59740]/80 rounded-lg">
               <h2 className="text-xl sm:text-2xl text-white mb-6">Contact Us</h2>
 
 
@@ -143,7 +143,7 @@ const ContactForm = () => {
                 {services.map((service) => (
                   <span
                     key={service}
-                    className="px-2 sm:px-3 py-1 text-xs sm:text-sm text-white border border-cyan-500 rounded-full hover:bg-cyan-500/10 cursor-pointer transition-colors"
+                    className="px-2 sm:px-3 py-1 text-xs sm:text-sm text-white border border-[#C59740] rounded-full hover:bg-[#C59740]/10 cursor-pointer transition-colors"
                   >
                     {service}
                   </span>
@@ -154,7 +154,7 @@ const ContactForm = () => {
                 <div>
                   <label className="block text-xs sm:text-sm text-gray-300 mb-2">NAME</label>
                   <div className="relative">
-                    <User className="absolute left-4 top-1/2 -translate-y-1/2 text-cyan-500 h-5 w-5" />
+                    <User className="absolute left-4 top-1/2 -translate-y-1/2 text-[#C59740] h-5 w-5" />
                     <input
                       type="text"
                       name="name"
@@ -162,7 +162,7 @@ const ContactForm = () => {
                       onChange={handleChange}
                       placeholder="e.g. Oliver Spiteri"
                       className={`w-full bg-black/30 text-white rounded pl-12 p-3 border focus:outline-none transition-colors ${
-                        errors.name ? 'border-red-500' : 'border-cyan-500/30 focus:border-cyan-500'
+                        errors.name ? 'border-red-500' : 'border-[#C59740]/30 focus:border-[#C59740]'
                       }`}
                     />
                     {errors.name && (
@@ -174,7 +174,7 @@ const ContactForm = () => {
                 <div>
                   <label className="block text-xs sm:text-sm text-gray-300 mb-2">PHONE</label>
                   <div className="relative">
-                    <Phone className="absolute left-4 top-1/2 -translate-y-1/2 text-cyan-500 h-5 w-5" />
+                    <Phone className="absolute left-4 top-1/2 -translate-y-1/2 text-[#C59740] h-5 w-5" />
                     <input
                       type="tel"
                       name="phone"
@@ -182,7 +182,7 @@ const ContactForm = () => {
                       onChange={handleChange}
                       placeholder="+44 20 8980 9731"
                       className={`w-full bg-black/30 text-white rounded pl-12 p-3 border focus:outline-none transition-colors ${
-                        errors.phone ? 'border-red-500' : 'border-cyan-500/30 focus:border-cyan-500'
+                        errors.phone ? 'border-red-500' : 'border-[#C59740]/30 focus:border-[#C59740]'
                       }`}
                     />
                     {errors.phone && (
@@ -194,7 +194,7 @@ const ContactForm = () => {
                 <div>
                   <label className="block text-xs sm:text-sm text-gray-300 mb-2">EMAIL</label>
                   <div className="relative">
-                    <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-cyan-500 h-5 w-5" />
+                    <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-[#C59740] h-5 w-5" />
                     <input
                       type="email"
                       name="email"
@@ -202,7 +202,7 @@ const ContactForm = () => {
                       onChange={handleChange}
                       placeholder="info@forgexindustry.co.uk"
                       className={`w-full bg-black/30 text-white rounded pl-12 p-3 border focus:outline-none transition-colors ${
-                        errors.email ? 'border-red-500' : 'border-cyan-500/30 focus:border-cyan-500'
+                        errors.email ? 'border-red-500' : 'border-[#C59740]/30 focus:border-[#C59740]'
                       }`}
                     />
                     {errors.email && (
@@ -214,7 +214,7 @@ const ContactForm = () => {
                 <div>
                   <label className="block text-xs sm:text-sm text-gray-300 mb-2">MESSAGE</label>
                   <div className="relative">
-                    <MessageSquare className="absolute left-4 top-4 text-cyan-500 h-5 w-5" />
+                    <MessageSquare className="absolute left-4 top-4 text-[#C59740] h-5 w-5" />
                     <textarea
                       name="message"
                       value={formData.message}
@@ -222,7 +222,7 @@ const ContactForm = () => {
                       placeholder="Write your message here..."
                       rows={4}
                       className={`w-full bg-black/30 text-white rounded pl-12 p-3 border focus:outline-none transition-colors ${
-                        errors.message ? 'border-red-500' : 'border-cyan-500/30 focus:border-cyan-500'
+                        errors.message ? 'border-red-500' : 'border-[#C59740]/30 focus:border-[#C59740]'
                       }`}
                     />
                     {errors.message && (
@@ -234,14 +234,14 @@ const ContactForm = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full sm:w-auto bg-transparent text-cyan-500 border border-cyan-500 px-4 sm:px-6 py-2 rounded transition-colors hover:bg-cyan-500 hover:text-white text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full sm:w-auto bg-transparent text-[#C59740] border border-[#C59740] px-4 sm:px-6 py-2 rounded transition-colors hover:bg-[#C59740] hover:text-white text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? "Submitting..." : "Submit Now"}
                 </button>
                 
                 {submitStatus === "success" && (
                   <div className="mt-4 text-center w-full">
-                    <p className="text-cyan-500 font-medium">
+                    <p className="text-[#C59740] font-medium">
                       Your message was sent successfully!
                     </p>
                   </div>

@@ -96,27 +96,27 @@ const StatsDisplay = () => {
       <div className="flex flex-wrap justify-center gap-8 w-full max-w-6xl">
         {/* Years of Experience Card */}
         <div className="bg-slate-900/50 rounded-3xl p-8 flex-1 min-w-[300px] flex flex-col items-center">
-          <div className="text-5xl text-cyan-400 font-light mb-4">13+</div>
+          <div className="text-5xl text-[#C59740] font-light mb-4">13+</div>
           <div className="text-gray-300 text-xl text-center">Years of Experience</div>
         </div>
 
         {/* Projects Worldwide Card */}
         <div className="bg-slate-900/50 rounded-3xl p-8 flex-1 min-w-[300px] flex flex-col items-center">
-          <div className="text-5xl text-cyan-400 font-light mb-4">25+</div>
+          <div className="text-5xl text-[#C59740] font-light mb-4">25+</div>
           <div className="text-gray-300 text-xl text-center">Projects Worldwide</div>
         </div>
 
         {/* Clients Worldwide Card */}
         <div className="bg-slate-900/50 rounded-3xl p-8 flex-1 min-w-[300px] flex flex-col items-center">
-          <div className="text-5xl text-cyan-400 font-light mb-4">93+</div>
+          <div className="text-5xl text-[#C59740] font-light mb-4">93+</div>
           <div className="text-gray-300 text-xl text-center">Clients Worldwide</div>
         </div>
       </div>
 
       {/* Know About Us Button */}
       <Link to="/about" className="inline-block">
-      <button className="px-8 py-4 bg-cyan-600 text-white rounded-full text-lg 
-                       hover:bg-cyan-500 transition-colors duration-300">
+      <button className="px-8 py-4 bg-[#C59740] text-white rounded-full text-lg 
+                       hover:bg-[#C59740] transition-colors duration-300">
         Know About Us
       </button>
       </Link>

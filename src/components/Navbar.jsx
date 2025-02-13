@@ -43,23 +43,23 @@
 //             <div className="flex items-center bg-black bg-opacity-50 px-4 py-1 rounded-lg relative">
 //               {/* Animated Border */}
 //               <div className="absolute inset-0 pointer-events-none overflow-hidden">
-//                 <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveX_2s_linear_infinite]"></div>
-//                 <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveX_2s_linear_infinite]"></div>
-//                 <div className="absolute top-0 left-0 h-full w-0.5 bg-gradient-to-b from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveY_2s_linear_infinite]"></div>
-//                 <div className="absolute top-0 right-0 h-full w-0.5 bg-gradient-to-b from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveY_2s_linear_infinite]"></div>
+//                 <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#C59740] via-[#C59740] to-[#C59740] animate-[borderMoveX_2s_linear_infinite]"></div>
+//                 <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#C59740] via-[#C59740] to-[#C59740] animate-[borderMoveX_2s_linear_infinite]"></div>
+//                 <div className="absolute top-0 left-0 h-full w-0.5 bg-gradient-to-b from-[#C59740] via-[#C59740] to-[#C59740] animate-[borderMoveY_2s_linear_infinite]"></div>
+//                 <div className="absolute top-0 right-0 h-full w-0.5 bg-gradient-to-b from-[#C59740] via-[#C59740] to-[#C59740] animate-[borderMoveY_2s_linear_infinite]"></div>
 //               </div>
 
 //               {/* Navigation Links */}
 //               <div className="flex items-center space-x-6">
 //                 <button
 //                   onClick={() => navigate("/")}
-//                   className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm"
+//                   className="text-white hover:text-[#C59740] px-1.5 py-0.5 transition-colors duration-200 text-sm"
 //                 >
 //                   Home
 //                 </button>
 //                 <button
 //                   onClick={() => navigate("/about")}
-//                   className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm"
+//                   className="text-white hover:text-[#C59740] px-1.5 py-0.5 transition-colors duration-200 text-sm"
 //                 >
 //                   About
 //                 </button>
@@ -71,7 +71,7 @@
 //                 >
 //                   <button
 //                     onClick={() => navigate("/services")}
-//                     className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm flex items-center"
+//                     className="text-white hover:text-[#C59740] px-1.5 py-0.5 transition-colors duration-200 text-sm flex items-center"
 //                   >
 //                     Services
 //                     <svg
@@ -116,7 +116,7 @@
 //                           navigate(service.path);
 //                           setShowServicesDropdown(false);
 //                         }}
-//                         className="block w-full text-left text-white hover:bg-cyan-500 px-4 py-2 text-sm first:rounded-t-lg last:rounded-b-lg"
+//                         className="block w-full text-left text-white hover:bg-[#C59740] px-4 py-2 text-sm first:rounded-t-lg last:rounded-b-lg"
 //                       >
 //                         {service.name}
 //                       </button>
@@ -125,26 +125,26 @@
 //                 </div>
 //                 <button
 //                   onClick={() => navigate("/Client")}
-//                   className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm"
+//                   className="text-white hover:text-[#C59740] px-1.5 py-0.5 transition-colors duration-200 text-sm"
 //                 >
 //                   Client
 //                 </button>
 
 //                 <button
 //                   onClick={() => navigate("/OurTeam")}
-//                   className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm"
+//                   className="text-white hover:text-[#C59740] px-1.5 py-0.5 transition-colors duration-200 text-sm"
 //                 >
 //                   Team
 //                 </button>
 //                 <button
 //                   onClick={() => navigate("/OurProject")}
-//                   className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm"
+//                   className="text-white hover:text-[#C59740] px-1.5 py-0.5 transition-colors duration-200 text-sm"
 //                 >
 //                   Projects
 //                 </button>
 //                 <button
 //                   onClick={() => navigate("/Faq")}
-//                   className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm"
+//                   className="text-white hover:text-[#C59740] px-1.5 py-0.5 transition-colors duration-200 text-sm"
 //                 >
 //                   FAQ
 //                 </button>
@@ -153,14 +153,14 @@
 //                     setIsOpen(false);
 //                     navigate("/Careers");
 //                   }}
-//                   className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left"
+//                   className="text-white block px-2 py-1 hover:text-[#C59740] transition-colors duration-200 text-sm w-full text-left"
 //                 >
 //                   Careers
 //                 </button>
 
 //                 <button
 //                   onClick={() => navigate("/contact")}
-//                   className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm"
+//                   className="text-white hover:text-[#C59740] px-1.5 py-0.5 transition-colors duration-200 text-sm"
 //                 >
 //                   Contact
 //                 </button>
@@ -172,7 +172,7 @@
 //           <div className="md:hidden bg-black bg-opacity-50 p-1.5 rounded-lg">
 //             <button
 //               onClick={() => setIsOpen(!isOpen)}
-//               className="text-white hover:text-cyan-400"
+//               className="text-white hover:text-[#C59740]"
 //             >
 //               <svg
 //                 className="h-4 w-4"
@@ -202,7 +202,7 @@
 //                   setIsOpen(false);
 //                   navigate("/");
 //                 }}
-//                 className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left"
+//                 className="text-white block px-2 py-1 hover:text-[#C59740] transition-colors duration-200 text-sm w-full text-left"
 //               >
 //                 Home
 //               </button>
@@ -214,7 +214,7 @@
 //                     setIsOpen(false);
 //                     navigate("/Services");
 //                   }}
-//                   className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left font-medium"
+//                   className="text-white block px-2 py-1 hover:text-[#C59740] transition-colors duration-200 text-sm w-full text-left font-medium"
 //                 >
 //                   Services
 //                 </button>
@@ -225,7 +225,7 @@
 //                       setIsOpen(false);
 //                       navigate(service.path);
 //                     }}
-//                     className="text-white block px-6 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left"
+//                     className="text-white block px-6 py-1 hover:text-[#C59740] transition-colors duration-200 text-sm w-full text-left"
 //                   >
 //                     {service.name}
 //                   </button>
@@ -237,7 +237,7 @@
 //                   setIsOpen(false);
 //                   navigate("/Client");
 //                 }}
-//                 className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left"
+//                 className="text-white block px-2 py-1 hover:text-[#C59740] transition-colors duration-200 text-sm w-full text-left"
 //               >
 //                 Client
 //               </button>
@@ -246,7 +246,7 @@
 //                   setIsOpen(false);
 //                   navigate("/contact");
 //                 }}
-//                 className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left"
+//                 className="text-white block px-2 py-1 hover:text-[#C59740] transition-colors duration-200 text-sm w-full text-left"
 //               >
 //                 Contact
 //               </button>
@@ -255,7 +255,7 @@
 //                   setIsOpen(false);
 //                   navigate("/faq");
 //                 }}
-//                 className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left"
+//                 className="text-white block px-2 py-1 hover:text-[#C59740] transition-colors duration-200 text-sm w-full text-left"
 //               >
 //                 Faq's
 //               </button>
@@ -264,7 +264,7 @@
 //                   setIsOpen(false);
 //                   navigate("/ourteam");
 //                 }}
-//                 className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left"
+//                 className="text-white block px-2 py-1 hover:text-[#C59740] transition-colors duration-200 text-sm w-full text-left"
 //               >
 //                 Team
 //               </button>
@@ -273,7 +273,7 @@
 //                   setIsOpen(false);
 //                   navigate("/OurProject");
 //                 }}
-//                 className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left"
+//                 className="text-white block px-2 py-1 hover:text-[#C59740] transition-colors duration-200 text-sm w-full text-left"
 //               >
 //                 Project
 //               </button>
@@ -282,7 +282,7 @@
 //                   setIsOpen(false);
 //                   navigate("/Careers");
 //                 }}
-//                 className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left"
+//                 className="text-white block px-2 py-1 hover:text-[#C59740] transition-colors duration-200 text-sm w-full text-left"
 //               >
 //                 Careers
 //               </button>
@@ -292,7 +292,7 @@
 //                   setIsOpen(false);
 //                   navigate("/about");
 //                 }}
-//                 className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left"
+//                 className="text-white block px-2 py-1 hover:text-[#C59740] transition-colors duration-200 text-sm w-full text-left"
 //               >
 //                 About
 //               </button>
@@ -366,7 +366,7 @@ const Navbar = () => {
         <div className="fixed top-0 right-0 left-0 z-50 bg-opacity-50 p-4">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-white hover:text-cyan-400 ml-auto block"
+            className="text-white hover:text-[#C59740] ml-auto block"
           >
             <svg
               className="h-4 w-5"
@@ -398,7 +398,7 @@ const Navbar = () => {
                 setIsOpen(false);
                 navigate("/");
               }}
-              className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left"
+              className="text-white block px-2 py-1 hover:text-[#C59740] transition-colors duration-200 text-sm w-full text-left"
             >
               Home
             </button>
@@ -408,7 +408,7 @@ const Navbar = () => {
                 setIsOpen(false);
                 navigate("/about");
               }}
-              className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left"
+              className="text-white block px-2 py-1 hover:text-[#C59740] transition-colors duration-200 text-sm w-full text-left"
             >
               About
             </button>
@@ -420,7 +420,7 @@ const Navbar = () => {
                   setIsOpen(false);
                   navigate("/Services");
                 }}
-                className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left font-medium"
+                className="text-white block px-2 py-1 hover:text-[#C59740] transition-colors duration-200 text-sm w-full text-left font-medium"
               >
                 Services
               </button>
@@ -431,7 +431,7 @@ const Navbar = () => {
                     setIsOpen(false);
                     navigate(service.path);
                   }}
-                  className="text-white block px-6 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left"
+                  className="text-white block px-6 py-1 hover:text-[#C59740] transition-colors duration-200 text-sm w-full text-left"
                 >
                   {service.name}
                 </button>
@@ -443,7 +443,7 @@ const Navbar = () => {
                 setIsOpen(false);
                 navigate("/Client");
               }}
-              className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left"
+              className="text-white block px-2 py-1 hover:text-[#C59740] transition-colors duration-200 text-sm w-full text-left"
             >
               Client
             </button>
@@ -453,7 +453,7 @@ const Navbar = () => {
                 setIsOpen(false);
                 navigate("/OurTeam");
               }}
-              className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left"
+              className="text-white block px-2 py-1 hover:text-[#C59740] transition-colors duration-200 text-sm w-full text-left"
             >
               Team
             </button>
@@ -463,7 +463,7 @@ const Navbar = () => {
                 setIsOpen(false);
                 navigate("/OurProject");
               }}
-              className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left"
+              className="text-white block px-2 py-1 hover:text-[#C59740] transition-colors duration-200 text-sm w-full text-left"
             >
               Projects
             </button>
@@ -473,7 +473,7 @@ const Navbar = () => {
                 setIsOpen(false);
                 navigate("/Faq");
               }}
-              className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left"
+              className="text-white block px-2 py-1 hover:text-[#C59740] transition-colors duration-200 text-sm w-full text-left"
             >
               FAQ
             </button>
@@ -483,7 +483,7 @@ const Navbar = () => {
                 setIsOpen(false);
                 navigate("/Careers");
               }}
-              className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left"
+              className="text-white block px-2 py-1 hover:text-[#C59740] transition-colors duration-200 text-sm w-full text-left"
             >
               Careers
             </button>
@@ -493,7 +493,7 @@ const Navbar = () => {
                 setIsOpen(false);
                 navigate("/contact");
               }}
-              className="text-white block px-2 py-1 hover:text-cyan-400 transition-colors duration-200 text-sm w-full text-left"
+              className="text-white block px-2 py-1 hover:text-[#C59740] transition-colors duration-200 text-sm w-full text-left"
             >
               Contact
             </button>
@@ -513,23 +513,23 @@ const Navbar = () => {
               <div className="flex items-center bg-black bg-opacity-50 px-4 py-1 rounded-lg relative">
                 {/* Animated Border */}
                 <div className="absolute inset-0 pointer-events-none overflow-hidden">
-                  <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveX_2s_linear_infinite]"></div>
-                  <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveX_2s_linear_infinite]"></div>
-                  <div className="absolute top-0 left-0 h-full w-0.5 bg-gradient-to-b from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveY_2s_linear_infinite]"></div>
-                  <div className="absolute top-0 right-0 h-full w-0.5 bg-gradient-to-b from-cyan-800 via-cyan-400 to-cyan-800 animate-[borderMoveY_2s_linear_infinite]"></div>
+                  <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#C59740] via-[#C59740] to-[#C59740] animate-[borderMoveX_2s_linear_infinite]"></div>
+                  <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#C59740] via-[#C59740] to-[#C59740] animate-[borderMoveX_2s_linear_infinite]"></div>
+                  <div className="absolute top-0 left-0 h-full w-0.5 bg-gradient-to-b from-[#C59740] via-[#C59740] to-[#C59740] animate-[borderMoveY_2s_linear_infinite]"></div>
+                  <div className="absolute top-0 right-0 h-full w-0.5 bg-gradient-to-b from-[#C59740] via-[#C59740] to-[#C59740] animate-[borderMoveY_2s_linear_infinite]"></div>
                 </div>
 
                 {/* Desktop Navigation Links */}
                 <div className="flex items-center space-x-6">
                   <button
                     onClick={() => navigate("/")}
-                    className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm"
+                    className="text-white hover:text-[#C59740] px-1.5 py-0.5 transition-colors duration-200 text-sm"
                   >
                     Home
                   </button>
                   <button
                     onClick={() => navigate("/about")}
-                    className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm"
+                    className="text-white hover:text-[#C59740] px-1.5 py-0.5 transition-colors duration-200 text-sm"
                   >
                     About
                   </button>
@@ -541,7 +541,7 @@ const Navbar = () => {
                   >
                     <button
                       onClick={() => navigate("/services")}
-                      className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm flex items-center"
+                      className="text-white hover:text-[#C59740] px-1.5 py-0.5 transition-colors duration-200 text-sm flex items-center"
                     >
                       Services
                       <svg
@@ -585,7 +585,7 @@ const Navbar = () => {
                             navigate(service.path);
                             setShowServicesDropdown(false);
                           }}
-                          className="block w-full text-left text-white hover:bg-cyan-500 px-4 py-2 text-sm first:rounded-t-lg last:rounded-b-lg"
+                          className="block w-full text-left text-white hover:bg-[#C59740] px-4 py-2 text-sm first:rounded-t-lg last:rounded-b-lg"
                         >
                           {service.name}
                         </button>
@@ -594,37 +594,37 @@ const Navbar = () => {
                   </div>
                   <button
                     onClick={() => navigate("/Client")}
-                    className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm"
+                    className="text-white hover:text-[#C59740] px-1.5 py-0.5 transition-colors duration-200 text-sm"
                   >
                     Client
                   </button>
                   <button
                     onClick={() => navigate("/OurTeam")}
-                    className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm"
+                    className="text-white hover:text-[#C59740] px-1.5 py-0.5 transition-colors duration-200 text-sm"
                   >
                     Team
                   </button>
                   <button
                     onClick={() => navigate("/OurProject")}
-                    className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm"
+                    className="text-white hover:text-[#C59740] px-1.5 py-0.5 transition-colors duration-200 text-sm"
                   >
                     Projects
                   </button>
                   <button
                     onClick={() => navigate("/Faq")}
-                    className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm"
+                    className="text-white hover:text-[#C59740] px-1.5 py-0.5 transition-colors duration-200 text-sm"
                   >
                     FAQ
                   </button>
                   <button
                     onClick={() => navigate("/Careers")}
-                    className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm"
+                    className="text-white hover:text-[#C59740] px-1.5 py-0.5 transition-colors duration-200 text-sm"
                   >
                     Careers
                   </button>
                   <button
                     onClick={() => navigate("/contact")}
-                    className="text-white hover:text-cyan-400 px-1.5 py-0.5 transition-colors duration-200 text-sm"
+                    className="text-white hover:text-[#C59740] px-1.5 py-0.5 transition-colors duration-200 text-sm"
                   >
                     Contact
                   </button>

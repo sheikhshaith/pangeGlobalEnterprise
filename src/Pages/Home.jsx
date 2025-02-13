@@ -39,22 +39,22 @@ const LogoSection = () => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <span className="text-3xl font-bold text-cyan-400 relative overflow-hidden">
+      <span className="text-3xl font-bold text-[#C59740] relative overflow-hidden">
         Pixify
         <div
-          className={`absolute bottom-0 left-0 w-full h-0.5 bg-cyan-400 transform transition-transform duration-300 ${isHovered ? "translate-x-0" : "-translate-x-full"
+          className={`absolute bottom-0 left-0 w-full h-0.5 bg-[#C59740] transform transition-transform duration-300 ${isHovered ? "translate-x-0" : "-translate-x-full"
             }`}
         />
         <div
-          className={`absolute top-0 right-0 w-0.5 h-full bg-cyan-400 transform transition-transform duration-300 ${isHovered ? "translate-y-0 delay-150" : "-translate-y-full"
+          className={`absolute top-0 right-0 w-0.5 h-full bg-[#C59740] transform transition-transform duration-300 ${isHovered ? "translate-y-0 delay-150" : "-translate-y-full"
             }`}
         />
         <div
-          className={`absolute top-0 left-0 w-full h-0.5 bg-cyan-400 transform transition-transform duration-300 ${isHovered ? "translate-x-0 delay-300" : "translate-x-full"
+          className={`absolute top-0 left-0 w-full h-0.5 bg-[#C59740] transform transition-transform duration-300 ${isHovered ? "translate-x-0 delay-300" : "translate-x-full"
             }`}
         />
         <div
-          className={`absolute top-0 left-0 w-0.5 h-full bg-cyan-400 transform transition-transform duration-300 ${isHovered ? "translate-y-0 delay-450" : "translate-y-full"
+          className={`absolute top-0 left-0 w-0.5 h-full bg-[#C59740] transform transition-transform duration-300 ${isHovered ? "translate-y-0 delay-450" : "translate-y-full"
             }`}
         />
       </span>
@@ -188,14 +188,14 @@ const ServiceCard = ({ icon: Icon, title, description }) => (
 
     {/* Animated border on hover */}
     <div className="absolute inset-0 opacity-0 group-hover:opacity-100">
-      <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700" />
-      <div className="absolute bottom-0 right-0 w-full h-[1px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent transform translate-x-full group-hover:translate-x-0 transition-transform duration-700" />
+      <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#C59740] to-transparent transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700" />
+      <div className="absolute bottom-0 right-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#C59740] to-transparent transform translate-x-full group-hover:translate-x-0 transition-transform duration-700" />
     </div>
 
     <div className="relative z-10">
       {/* Icon with hover animation */}
       <div className="transform group-hover:-translate-y-1 transition-transform duration-300">
-        <Icon className="w-12 h-12 text-cyan-400 mb-4 transform group-hover:scale-110 transition-all duration-300" />
+        <Icon className="w-12 h-12 text-[#C59740] mb-4 transform group-hover:scale-110 transition-all duration-300" />
       </div>
 
       {/* Title with hover effect */}
@@ -209,7 +209,7 @@ const ServiceCard = ({ icon: Icon, title, description }) => (
       </p>
 
       {/* Learn more link that appears on hover */}
-      <div className="mt-6 flex items-center text-cyan-400 opacity-0 transform translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+      <div className="mt-6 flex items-center text-[#C59740] opacity-0 transform translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
         <span className="mr-2">Learn more</span>
         <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" />
       </div>
@@ -282,10 +282,10 @@ const ServicesSection = () => {
             We Offer Expert Consulting For Strategic
             <br />
             Growth And Operational Excellence Solutions
-            <span className="text-cyan-400">.</span>
+            <span className="text-[#C59740]">.</span>
           </h2>
           {/* Animated underline */}
-          <div className="absolute bottom-0 left-0 w-24 h-1 bg-cyan-400 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+          <div className="absolute bottom-0 left-0 w-24 h-1 bg-[#C59740] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
         </div>
 
         {/* Services grid */}
@@ -318,9 +318,9 @@ const ServicesSection = () => {
             }`}
         >
           <div className="flex items-center space-x-2 px-6 py-3 rounded-full bg-gray-900/50 hover:bg-gray-900 transition-colors duration-300">
-            <Phone className="w-5 h-5 text-cyan-400 transform group-hover:rotate-12 transition-transform duration-300" />
+            <Phone className="w-5 h-5 text-[#C59740] transform group-hover:rotate-12 transition-transform duration-300" />
             <span className="text-gray-400">Have any questions? Free:</span>
-            <span className="text-gray-200 group-hover:text-cyan-400 transition-colors duration-300">
+            <span className="text-gray-200 group-hover:text-[#C59740] transition-colors duration-300">
               +1 917 265 8444
             </span>
           </div>
@@ -351,15 +351,15 @@ const EarthSection = () => {
           {/* Background Lines */}
           <div className="absolute inset-0">
             <div className="absolute w-full h-full">
-              <div className="absolute left-0 right-0 top-1/2 h-0.5 bg-gradient-to-r from-transparent via-cyan-500/20 to-transparent"></div>
-              <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-transparent via-cyan-500/20 to-transparent"></div>
+              <div className="absolute left-0 right-0 top-1/2 h-0.5 bg-gradient-to-r from-transparent via-[#C59740]/20 to-transparent"></div>
+              <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-transparent via-[#C59740]/20 to-transparent"></div>
             </div>
           </div>
 
           {/* Earth Image */}
           <div className="absolute  inset-0  flex items-center justify-center">
             <img
-              src="o1-earth-3.webp"
+              src="a2-earth-3.png"
               alt="Digital Earth"
               className="w-4/5 h-4/5 object-contain animate-rotate-earth"
             />
@@ -396,7 +396,7 @@ const EarthSection = () => {
 
           {/* Floating Text Elements */}
           {/* Floating Text Elements - Hidden on small screens */}
-          <div className="hidden md:block absolute top-1/4 left-0 transform -translate-x-1/2 bg-gray-900/80 backdrop-blur-md p-3 rounded-lg text-white shadow-lg border border-cyan-400 shadow-cyan-400/20">
+          <div className="hidden md:block absolute top-1/4 left-0 transform -translate-x-1/2 bg-gray-900/80 backdrop-blur-md p-3 rounded-lg text-white shadow-lg border border-[#C59740] shadow-[#C59740]/20">
             <p className="text-white text-sm whitespace-nowrap">
               Innovate. Lead.
               <br />
@@ -404,7 +404,7 @@ const EarthSection = () => {
             </p>
           </div>
 
-          <div className="hidden md:block absolute top-1/4 right-0 transform translate-x-1/2 bg-gray-900/80 backdrop-blur-md p-3 rounded-lg text-white shadow-lg border border-cyan-400 shadow-cyan-400/20">
+          <div className="hidden md:block absolute top-1/4 right-0 transform translate-x-1/2 bg-gray-900/80 backdrop-blur-md p-3 rounded-lg text-white shadow-lg border border-[#C59740] shadow-[#C59740]/20">
             <p className="text-white text-sm whitespace-nowrap">
               Empowering Growth
               <br />
@@ -415,8 +415,8 @@ const EarthSection = () => {
       </div>
 
       {/* Additional Glow Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-transparent to-cyan-500/5"></div>
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-500/5 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-[#C59740]/5 via-transparent to-[#C59740]/5"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#C59740]/5 to-transparent"></div>
 
       {/* CSS Animations */}
       <style jsx="true">{`
@@ -475,22 +475,22 @@ const Global = () => {
           {/* Background Lines */}
           <div className="absolute inset-0">
             <div className="absolute w-full h-full">
-              <div className="absolute left-0 right-0 top-1/2 h-0.5 bg-gradient-to-r from-transparent via-cyan-500/20 to-transparent"></div>
-              <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-transparent via-cyan-500/20 to-transparent"></div>
+              <div className="absolute left-0 right-0 top-1/2 h-0.5 bg-gradient-to-r from-transparent via-[#C59740]/20 to-transparent"></div>
+              <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-transparent via-[#C59740]/20 to-transparent"></div>
             </div>
           </div>
 
           {/* Earth Image */}
           <div className="absolute inset-0 flex items-center justify-center">
             <img
-              src="a2-earth.webp"
+              src="a2-earth-3.png"
               alt="Digital Earth"
               className="w-3/5 h-3/5 object-contain"
             />
           </div>
 
           {/* Floating Text Elements - Hidden on small screens */}
-          <div className="hidden md:block absolute top-1/4 left-0 transform -translate-x-1/2 bg-gray-900/80 backdrop-blur-md p-3 rounded-lg text-white shadow-lg border border-cyan-400 shadow-cyan-400/20">
+          <div className="hidden md:block absolute top-1/4 left-0 transform -translate-x-1/2 bg-gray-900/80 backdrop-blur-md p-3 rounded-lg text-white shadow-lg border border-[#C59740] shadow-[#C59740]/20">
             <p className="text-white text-sm whitespace-nowrap">
               Innovate. Lead.
               <br />
@@ -498,7 +498,7 @@ const Global = () => {
             </p>
           </div>
 
-          <div className="hidden md:block absolute top-1/4 right-0 transform translate-x-1/2 bg-gray-900/80 backdrop-blur-md p-3 rounded-lg text-white shadow-lg border border-cyan-400 shadow-cyan-400/20">
+          <div className="hidden md:block absolute top-1/4 right-0 transform translate-x-1/2 bg-gray-900/80 backdrop-blur-md p-3 rounded-lg text-white shadow-lg border border-[#C59740] shadow-[#C59740]/20">
             <p className="text-white text-sm whitespace-nowrap">
               Empowering Growth
               <br />
@@ -507,15 +507,15 @@ const Global = () => {
           </div>
 
           {/* Glowing Dots */}
-          <div className="absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400 rounded-full blur-[2px]"></div>
-          <div className="absolute bottom-1/3 right-1/4 w-2 h-2 bg-cyan-400 rounded-full blur-[2px]"></div>
-          <div className="absolute top-1/2 right-1/3 w-2 h-2 bg-cyan-400 rounded-full blur-[2px]"></div>
+          <div className="absolute top-1/4 left-1/3 w-2 h-2 bg-[#C59740] rounded-full blur-[2px]"></div>
+          <div className="absolute bottom-1/3 right-1/4 w-2 h-2 bg-[#C59740] rounded-full blur-[2px]"></div>
+          <div className="absolute top-1/2 right-1/3 w-2 h-2 bg-[#C59740] rounded-full blur-[2px]"></div>
         </div>
       </div>
 
       {/* Additional Glow Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-transparent to-cyan-500/5"></div>
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-500/5 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-[#C59740]/5 via-transparent to-[#C59740]/5"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#C59740]/5 to-transparent"></div>
     </section>
   );
 };
@@ -607,7 +607,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="min-h-screen w-full overflow-x-hidden bg-gray-900/90 backdrop-blur-md text-white relative">
+    <div className="min-h-screen w-full overflow-x-hidden bg-[#0C1122]/70 backdrop-blur-md text-white relative">
       {/* Main Content */}
       <main className="relative z-10 mx-auto px-4 pt-16 pb-6 flex flex-col lg:flex-row items-center">
         {/* Background Image */}
@@ -618,14 +618,14 @@ const Home = () => {
             className="w-full h-full object-cover"
           />
           {/* Dark Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-900/90 to-gray-800/90" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0C1122]/70 to-gray-800/90" />
           {/* Green Tint Overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-transparent via-emerald-900/10 to-transparent" />
         </div>
 
         {/* Logo */}
         {/* <div className="absolute top-4 left-4 px-4 sm:px-8 lg:px-28 z-10">
-          <span className="text-3xl sm:text-4xl lg:text-5xl text-cyan-400 font-bold inline-block transform ">
+          <span className="text-3xl sm:text-4xl lg:text-5xl text-[#C59740] font-bold inline-block transform ">
             PGE
           </span>
         </div> */}
@@ -645,7 +645,7 @@ const Home = () => {
             <br />
             Businesses With
             <br />
-            Expertise<span className="text-cyan-400">.</span>
+            Expertise<span className="text-[#C59740]">.</span>
           </h1>
           <p className="text-gray-300 text-base sm:text-lg mb-6 px-4 sm:px-8 lg:px-28 max-w-lg">
             Our consulting service drives growth, enhances efficiency, and
@@ -653,7 +653,7 @@ const Home = () => {
           </p>
           <div className="px-4 sm:px-8 lg:px-28">
             <Link to="/contact" className="inline-block">
-              <button className="bg-transparent border-2 border-cyan-400 text-cyan-400 px-6 py-2 rounded-full text-base hover:bg-cyan-400 hover:text-white transition-colors">
+              <button className="bg-transparent border-2 border-[#C59740] text-[#C59740]  px-6 py-2 rounded-full text-base hover:bg-[#C59740]  hover:text-white transition-colors">
                 Free Consultation
               </button>
             </Link>
@@ -671,19 +671,19 @@ const Home = () => {
 
             {/* Floating Card - Hidden on mobile */}
             {/* Floating Card */}
-            <div className="hidden sm:block md:absolute top-[25%] sm:top-[30%] md:top-[32%] lg:top-[33%] 2xl:top-[33%] left-24 sm:left-12 md:left-3 lg:left-[-12%] 2xl:left-[23.5%] xl:left-[11%] bg-white/3 backdrop-blur-md p-3 rounded-lg text-white shadow-lg border border-cyan-400 shadow-cyan-400/20">
+            <div className="hidden sm:block md:absolute top-[25%] sm:top-[30%] md:top-[32%] lg:top-[33%] 2xl:top-[33%] left-24 sm:left-12 md:left-3 lg:left-[-12%] 2xl:left-[23.5%] xl:left-[11%] bg-white/3 backdrop-blur-md p-3 rounded-lg text-white shadow-lg border border-[#C59740] shadow-[#C59740]/20">
               <p className="text-base">Driving Success</p>
               <p className="text-sm text-gray-300">Through Innovation</p>
             </div>
 
             {/* Connecting Lines */}
-            <div className="hidden sm:block md:absolute top-[30%] sm:top-[20%] md:top-[37%] lg:top-[39%] 2xl:top-[37.5%] right-[60.9%] sm:right-[50%] md:right-[76.9%] lg:right-[75.9%] 2xl:right-[53%] xl:right-[61%] w-[8px] sm:w-[10px] md:w-[12px] h-[8px] sm:h-[10px] md:h-[12px] bg-cyan-400 rounded-full shadow-[0_0_10px_4px_rgba(6,182,212,0.8)]"></div>
+            <div className="hidden sm:block md:absolute top-[30%] sm:top-[20%] md:top-[37%] lg:top-[39%] 2xl:top-[37.5%] right-[60.9%] sm:right-[50%] md:right-[76.9%] lg:right-[75.9%] 2xl:right-[53%] xl:right-[61%] w-[8px] sm:w-[10px] md:w-[12px] h-[8px] sm:h-[10px] md:h-[12px] bg-[#C59740] rounded-full shadow-[0_0_10px_4px_rgba(197,151,64,0.8)]"></div>
 
-            <div className="hidden sm:block md:absolute top-[20%] sm:top-[15%] md:top-[27%] lg:top-[29%] 2xl:top-[26.5%] left-[47.3%] sm:left-[45%] md:left-[30.9%] lg:left-[36.3%] 2xl:left-[56%] xl:left-[48.5%] sm:h-[80px] md:h-[120px] 2xl:h-[130px]  sm:w-[0.8px] md:w-[1px] bg-cyan-400 transform rotate-[90deg] shadow-[0_0_15px_rgba(6,182,212,0.7)]"></div>
+            <div className="hidden sm:block md:absolute top-[20%] sm:top-[15%] md:top-[27%] lg:top-[29%] 2xl:top-[26.5%] left-[47.3%] sm:left-[45%] md:left-[30.9%] lg:left-[36.3%] 2xl:left-[56%] xl:left-[48.5%] sm:h-[80px] md:h-[120px] 2xl:h-[130px]  sm:w-[0.8px] md:w-[1px] bg-[#C59740] transform rotate-[90deg] shadow-[0_0_15px_rgba(6,182,212,0.7)]"></div>
 
-            <div className="hidden sm:block md:absolute bottom-[37.1%] sm:bottom-[40%] md:bottom-[30.1%] lg:bottom-[28.1%] 2xl:bottom-[28%] right-[34%] sm:right-[30%] md:right-[52%] lg:right-[36%] 2xl:right-[24%] xl:right-[29%] sm:h-[160px] md:h-[200px] 2xl:h-[210px] sm:w-[0.8px] md:w-[1px] bg-cyan-400 rotate-[140deg] shadow-[0_0_15px_rgba(6,182,212,0.7)]"></div>
+            <div className="hidden sm:block md:absolute bottom-[37.1%] sm:bottom-[40%] md:bottom-[30.1%] lg:bottom-[28.1%] 2xl:bottom-[28%] right-[34%] sm:right-[30%] md:right-[52%] lg:right-[36%] 2xl:right-[24%] xl:right-[29%] sm:h-[160px] md:h-[200px] 2xl:h-[210px] sm:w-[0.8px] md:w-[1px] bg-[#C59740] rotate-[140deg] shadow-[0_0_15px_rgba(6,182,212,0.7)]"></div>
 
-            <div className="hidden sm:block md:absolute bottom-[40%] sm:bottom-[42%] md:bottom-[32%] lg:bottom-[31%] 2xl:bottom-[30%] right-[23.5%] sm:right-[20%] md:right-[41.5%] lg:right-[19.5%] 2xl:right-[12.5%] xl:right-[16.5%] w-[8px] sm:w-[10px] md:w-[12px] h-[8px] sm:h-[10px] md:h-[12px] bg-cyan-400 rounded-full shadow-[0_0_10px_4px_rgba(6,182,212,0.8)]"></div>
+            <div className="hidden sm:block md:absolute bottom-[40%] sm:bottom-[42%] md:bottom-[32%] lg:bottom-[31%] 2xl:bottom-[30%] right-[23.5%] sm:right-[20%] md:right-[41.5%] lg:right-[19.5%] 2xl:right-[12.5%] xl:right-[16.5%] w-[8px] sm:w-[10px] md:w-[12px] h-[8px] sm:h-[10px] md:h-[12px] bg-[#C59740] rounded-full shadow-[0_0_10px_4px_rgba(197,151,64,0.8)]"></div>
           </div>
         </div>
       </main>

@@ -155,7 +155,7 @@ const PageSlider = () => {
 
       <div className="h-2/3 lg:h-full lg:w-1/2 flex items-center bg-gray-900">
         <div className="w-full px-4 sm:px-6 md:px-12 lg:px-16 max-w-2xl mx-auto py-6 lg:py-0">
-          <p className="text-cyan-400 text-xs sm:text-sm md:text-base mb-2 tracking-wider">
+          <p className="text-[#C59740] text-xs sm:text-sm md:text-base mb-2 tracking-wider">
             {String(page.id).padStart(2, "0")} /{" "}
             {String(pages.length).padStart(2, "0")}
           </p>
@@ -167,8 +167,8 @@ const PageSlider = () => {
           </p>
           <Link to="/services" className="inline-block">
           <button
-            className="w-full sm:w-auto text-cyan-400 border-2 border-cyan-400 px-4 md:px-6 py-2 
-                     rounded-full hover:bg-cyan-400 hover:text-white transition-colors 
+            className="w-full sm:w-auto text-[#C59740] border-2 border-[#C59740] px-4 md:px-6 py-2 
+                     rounded-full hover:bg-[#C59740] hover:text-white transition-colors 
                      text-xs sm:text-sm md:text-base"
           >
             Discover More
@@ -233,7 +233,7 @@ const PageSlider = () => {
               text-sm sm:text-base md:text-xl transition-all duration-300
               ${
                 dot.id === activePage
-                  ? "bg-cyan-400 text-white scale-110"
+                  ? "bg-[#C59740] text-white scale-110"
                   : isMobile
                   ? "bg-gray-800 text-gray-400 hover:bg-gray-700 hover:scale-105"
                   : "bg-gray-800 text-gray-400 hover:bg-gray-700"

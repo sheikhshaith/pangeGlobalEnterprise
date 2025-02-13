@@ -9,7 +9,7 @@ const Footer = () => {
         {/* Brand Section */}
         {/* <div className="space-y-4">
           <div className="flex items-center space-x-2">
-            <div className="text-cyan-400 text-4xl font-bold">PGE</div>
+            <div className="text-[#C59740] text-4xl font-bold">PGE</div>
           </div>
         </div> */}
 
@@ -111,7 +111,7 @@ const Footer = () => {
         {/* Contact & Social Media */}
         <div className="space-y-6">
           <div className="flex items-center space-x-2">
-            <Phone className="text-cyan-400" size={24} />
+            <Phone className="text-[#C59740]" size={24} />
             <div>
               <p className="text-gray-500">Have any questions?</p>
               <p className="text-white font-bold">Free: +1 917 265 8444</p>
@@ -119,9 +119,9 @@ const Footer = () => {
           </div>
           <p className="text-white font-bold">
             Join Us <span className="text-gray-400">to shape the future</span>{" "}
-            <span className="text-cyan-400">↗</span>
+            <span className="text-[#C59740]">↗</span>
           </p>
-          <div className="flex space-x-4 text-cyan-400">
+          <div className="flex space-x-4 text-[#C59740]">
             <a href="#" className="hover:text-white">
               <Facebook size={24} />
             </a>
