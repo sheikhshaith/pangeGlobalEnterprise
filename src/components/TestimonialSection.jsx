@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 
 const testimonials = [
@@ -49,7 +48,7 @@ const testimonials = [
     text: "Exceptional service and stunning results. Thank you, Pixify!",
     name: "Marvin McKinney",
     position: "VP of Sales",
-  }
+  },
 ];
 
 const TestimonialSection = () => {
@@ -63,7 +62,9 @@ const TestimonialSection = () => {
   }, []);
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length);
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length
+    );
   };
 
   const handleNext = () => {
@@ -73,15 +74,19 @@ const TestimonialSection = () => {
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
       <div className="text-center sm:text-left">
-        <h3 className="text-gray-300 font-medium underline">Client Testimonials</h3>
-        <h1 className="text-3xl text-white sm:text-4xl font-bold mt-4 mb-8 sm:mb-12">Clients Share Their Success Stories</h1>
+        <h3 className="text-gray-300 font-medium underline">
+          Client Testimonials
+        </h3>
+        <h1 className="text-3xl text-white sm:text-4xl font-bold mt-4 mb-8 sm:mb-12">
+          Clients Share Their Success Stories
+        </h1>
       </div>
 
       <div className="flex flex-col lg:flex-row gap-8 items-center">
         {/* Testimonial Image */}
         <div className="w-full max-w-sm flex items-center justify-center">
-          <img 
-            src={testimonials[currentIndex].image} 
+          <img
+            src={testimonials[currentIndex].image}
             alt="Testimonial"
             className="w-40 h-40 sm:w-64 sm:h-64 object-cover rounded-lg"
           />
@@ -92,40 +97,71 @@ const TestimonialSection = () => {
           {/* Star Rating */}
           <div className="flex gap-1 mb-6 justify-center lg:justify-start">
             {[...Array(5)].map((_, i) => (
-              <svg key={i} className="w-5 sm:w-6 h-5 sm:h-6 text-red-500" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              <svg
+                key={i}
+                className="w-5 sm:w-6 h-5 sm:h-6 text-[#C59740]"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
               </svg>
             ))}
           </div>
-          
+
           {/* Testimonial Text */}
           <div className="mb-6 sm:mb-8">
-            <p className="text-white text-xl sm:text-2xl lg:text-3xl font-medium leading-tight">{testimonials[currentIndex].text}</p>
+            <p className="text-white text-xl sm:text-2xl lg:text-3xl font-medium leading-tight">
+              {testimonials[currentIndex].text}
+            </p>
           </div>
-          
+
           {/* Author Details */}
           <div>
-            <h2 className="text-lg sm:text-xl text-white font-semibold">{testimonials[currentIndex].name}</h2>
-            <p className="text-gray-300 mt-1">{testimonials[currentIndex].position}</p>
+            <h2 className="text-lg sm:text-xl text-white font-semibold">
+              {testimonials[currentIndex].name}
+            </h2>
+            <p className="text-gray-300 mt-1">
+              {testimonials[currentIndex].position}
+            </p>
           </div>
         </div>
 
         {/* Navigation Arrows */}
         <div className="flex lg:flex-col justify-center gap-4 mt-6 lg:mt-0">
-          <button 
-            onClick={handlePrev} 
+          <button
+            onClick={handlePrev}
             className="w-10 sm:w-12 h-10 sm:h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-colors"
           >
-            <svg className="w-5 sm:w-6 h-5 sm:h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 15l7-7 7 7" />
+            <svg
+              className="w-5 sm:w-6 h-5 sm:h-6 text-gray-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M5 15l7-7 7 7"
+              />
             </svg>
           </button>
-          <button 
-            onClick={handleNext} 
+          <button
+            onClick={handleNext}
             className="w-10 sm:w-12 h-10 sm:h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-colors"
           >
-            <svg className="w-5 sm:w-6 h-5 sm:h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+            <svg
+              className="w-5 sm:w-6 h-5 sm:h-6 text-gray-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M19 9l-7 7-7-7"
+              />
             </svg>
           </button>
         </div>
