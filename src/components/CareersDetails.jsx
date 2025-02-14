@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link,  } from "react-router-dom";
 import {
   MapPin,
   Briefcase,
@@ -363,15 +363,13 @@ const JobPosting = ({ applyLink = "/JobApplicationForm" }) => {
                 </div>
               </div>
 
-              <button
-                onClick={() =>
-                  window.open(applyLink, "_blank", "noopener noreferrer")
-                }
-                className="w-full bg-cyan-400 text-white py-2.5 sm:py-3 rounded-lg mt-4 sm:mt-6 hover:bg-cyan-500 transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
-              >
-                Apply Now
-                <span className="transform translate-x-1">→</span>
-              </button>
+              <Link
+      to={applyLink}
+      className="w-full bg-cyan-400 text-white py-2.5 sm:py-3 rounded-lg mt-4 sm:mt-6 hover:bg-cyan-500 transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
+    >
+      Apply Now
+      <span className="transform translate-x-1">→</span>
+    </Link>
             </div>
           </div>
         </div>
