@@ -100,7 +100,7 @@ const FeaturesSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <div className="text-center space-y-4 sm:space-y-6 mb-12 sm:mb-20">
-          <div className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 bg-gray-900 rounded-full hover:bg-gray-800 transition-colors duration-300 cursor-pointer">
+          <div className="inline-block px-3 sm:px-4 py-1 sm:py-1.5 bg-gray-900 rounded-full">
             <span className="text-xs sm:text-sm text-gray-400">Our Unique Way</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl text-gray-200 font-medium leading-tight">
