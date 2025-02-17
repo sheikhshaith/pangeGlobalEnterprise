@@ -702,10 +702,10 @@ const PgeServices = () => {
           </Link>
           <span className="text-gray-400">•</span>
           <Link
-            to="/PgeServices"
+            to="/Pages/ServicesPage"
             className="hover:text-[#C59740] text-white font-medium"
           >
-            Pge Services
+            Services
           </Link>
           {/* Cyan Border (pointer-events-none prevents it from blocking clicks) */}
           <div className="absolute inset-0 rounded-full pointer-events-none">
