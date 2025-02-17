@@ -64,7 +64,7 @@ const FAQSection = () => {
                 className="w-full py-6 flex justify-between items-center text-left group transition-all duration-300"
               >
                 <span className={`text-xl ${openQuestion === faq.id ? 'text-[#C59740]' : 'text-gray-300'} group-hover:text-[#C59740] transition-colors duration-300 flex items-center gap-4`}>
-                  <X className={`w-5 h-5 transform transition-transform duration-300 ${openQuestion === faq.id ? 'rotate-45 text-teal-400' : 'text-gray-500'}`} />
+                  <X className={`w-5 h-5 transform transition-transform duration-300 ${openQuestion === faq.id ? 'rotate-45 text-[#C59740]' : 'text-gray-500'}`} />
                   {faq.question}
                 </span>
                 <span className={`transform transition-transform duration-300 ${openQuestion === faq.id ? 'rotate-180' : ''}`}>
